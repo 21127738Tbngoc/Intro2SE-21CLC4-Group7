@@ -77,9 +77,12 @@
     --scheme-tertiary-container: #B7D179;
     --scheme-on-tertiary-container: #3C4D12;
     --scheme-background: #EFF3E5;
-    --scheme-on-background: #EFF3E5;
-    --scheme-surface: #EFF3E5;
-    --scheme-on-surface: #EFF3E5;
+    --scheme-on-background: #1A1C19;
+    --scheme-surface: #F9FAF4;
+    --scheme-on-surface: #1A1C19;
+    --scheme-surface-variant: #E1E4D7;
+    --scheme-on-surface-variant: #44483F;
+    --scheme-outline: #75796E;
     /*----------Feedback----------*/
     /*--Error--*/
     --feedback-error-error: #F04438;
