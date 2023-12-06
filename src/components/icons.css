@@ -1,0 +1,23 @@
+@font-face {
+    font-family: brands;
+    src: url("../public/icons/fontawesome/webfonts/fa-brands-400.ttf"),
+         url("../public/icons/fontawesome/webfonts/fa-brands-400.woff2");       
+}
+
+@font-face {
+    font-family: icons;
+    src: url("../public/icons/materialdesign/fonts/materialdesignicons-webfont.ttf"),
+         url("../public/icons/materialdesign/fonts/materialdesignicons-webfont.woff2");
+}
+
+/*--- Button styles ---*/
+.icon-btn-nm {
+    background: var(--tone-primary-10);
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    border: none;
+    font-family: brands;
+    font-size: 18px;
+    color: var(--tone-primary-99);
+}
