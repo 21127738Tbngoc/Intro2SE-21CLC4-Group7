@@ -114,7 +114,6 @@ a.link-sm{
 [class$="btn-nm"]:disabled, 
 [class$="btn-md"]:disabled,
 [class$="btn-sm"]:disabled {
-
     color: var(--tone-neutral-90);
     background: var(--tone-neutral-80);
     border: none;
