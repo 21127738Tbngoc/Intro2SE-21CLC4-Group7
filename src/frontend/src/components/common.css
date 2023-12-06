@@ -76,6 +76,10 @@
     --scheme-on-tertiary: #FBFFE7;
     --scheme-tertiary-container: #B7D179;
     --scheme-on-tertiary-container: #3C4D12;
+    --scheme-background: #EFF3E5;
+    --scheme-on-background: #EFF3E5;
+    --scheme-surface: #EFF3E5;
+    --scheme-on-surface: #EFF3E5;
     /*----------Feedback----------*/
     /*--Error--*/
     --feedback-error-error: #F04438;
