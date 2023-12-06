@@ -9,46 +9,46 @@ button {
 }
 
 /*---Normal button---*/
-[class$="btn-nm"] {
+.btn-nm {
     font-size: 18px;
     padding: 19px 24px;
 }
 
 /*---Medium button---*/
-[class$="btn-md"] {
+.btn-md {
     font-size: 16px;
     padding: 15px 24px;
 }
 
 /*---Small button---*/
-[class$="btn-sm"] {
+.btn-sm {
     font-size: 14px;
     padding: 13px 16px;
 }
 
 /* Primary button */
-[class^="prim-btn"] {
+.prim-btn {
     background-color: var(--tone-primary-40);
     color: var(--tone-primary-99);
     border: none;
 }
 
 /* Secondary button */
-[class^="sec-btn"] {
+.sec-btn {
     background-color: var(--tone-secondary-90);
     color: var(--tone-secondary-30);
     border: none;
 }
 
 /* Tertiary button */
-[class^="tert-btn"] {
+.tert-btn {
     background-color: var(--tone-tertiary-80);
     color: var(--tone-tertiary-30);
     border: none;
 }
 
 /* Outline button */
-[class^="outline-btn"] {
+.outline-btn {
     background-color: transparent;
     color: var(--tone-primary-40);
     border: 1.5px solid var(--tone-primary-40);
@@ -78,42 +78,42 @@ a.link-sm{
 /*---------Button States---------*/
 
 /* HOVER Primary button*/
-[class^="prim-btn"]:hover {
+.prim-btn:hover {
     background: var(--tone-primary-30);
     cursor: pointer;
 }
 
 /* HOVER Secondary button*/
-[class^="sec-btn"]:hover {
+.sec-btn:hover {
     background: var(--tone-secondary-80);
     cursor: pointer;
 }
 
 /* HOVER Tertiary button*/
-[class^="tert-btn"]:hover {
+.tert-btn:hover {
     background: var(--tone-tertiary-50);
     color: var(--tone-tertiary-99);
     cursor: pointer;
 }
 
 /* HOVER Outline button*/
-[class^="outline-btn"]:hover {
+.outline-btn:hover {
     background: var(--tone-primary-40);
     color: var(--tone-tertiary-99);
     cursor: pointer;
 }
 
 /* HOVER link*/
-[class^="link"]:hover {
+.link:hover {
     color: var(--tone-primary-50);
     text-decoration: underline;
     cursor: pointer;
 }
 
 /* DISABLED button */
-[class$="btn-nm"]:disabled, 
-[class$="btn-md"]:disabled,
-[class$="btn-sm"]:disabled {
+.btn-nm:disabled, 
+.btn-md:disabled,
+.btn-sm:disabled {
     color: var(--tone-neutral-90);
     background: var(--tone-neutral-80);
     border: none;
