@@ -1,0 +1,47 @@
+@charset "utf-8";
+@import url("../colors.css");
+@import url("../typography.css");
+
+.footer {
+    background: var(--tone-primary-30);
+    padding-top: 72px;
+    padding-bottom: 18px;
+    padding-left: 0px;
+    border-bottom: 1px solid var(--tone-neutral-80);
+}
+.footer-logo {
+    color: var(--tone-tertiary-70);
+    margin-bottom: 8px;
+}
+
+.footer-subtitle {
+    color: var(--tone-tertiary-60);
+}
+
+.footer-social {
+    margin-top: 3em;
+}
+
+.footer-title {
+    color: var(--tone-primary-99);
+}
+
+.footer-section {
+    margin-bottom: 32px;
+}
+
+.footer-section p {
+    color: var(--tone-secondary-60);
+    margin-top: 16px;
+}
+
+.footer-divider {
+    border-top: 1px solid var(--tone-neutral-80);
+    height: 1px;
+}
+
+.copyright {
+    color: var(--tone-secondary-70);
+    background: var(--tone-primary-30);
+    padding-top: 14px;
+}
