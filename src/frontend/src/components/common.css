@@ -100,28 +100,28 @@
 /*---------Font family---------*/
 @font-face {
     font-family: display-font;
-    src: url("../public/fonts/SVN-Canopee.ttf"),
-         url("../public/fonts/SVN-Canopee.woff");       
+    src: url("../../public/fonts/SVN-Canopee.ttf"),
+         url("../../public/fonts/SVN-Canopee.woff");       
 }
 @font-face {
     font-family: bold-font;
-    src: url("../public/fonts/AutautGrotesk-Bold.ttf"),
-         url("../public/fonts/AutautGrotesk-Bold.woff");
+    src: url("../../public/fonts/AutautGrotesk-Bold.ttf"),
+         url("../../public/fonts/AutautGrotesk-Bold.woff");
 }   
 @font-face {
     font-family: semibold-font;
-    src: url("../public/fonts/AutautGrotesk-Semibold.ttf"),
-         url("../public/fonts/AutautGrotesk-Semibold.woff");
+    src: url("../../public/fonts/AutautGrotesk-Semibold.ttf"),
+         url("../../public/fonts/AutautGrotesk-Semibold.woff");
 }
 @font-face {
     font-family: medium-font;
-    src: url("../public/fonts/AutautGrotesk-Medium.ttf"),
-         url("../public/fonts/AutautGrotesk-Medium.woff");
+    src: url("../../public/fonts/AutautGrotesk-Medium.ttf"),
+         url("../../public/fonts/AutautGrotesk-Medium.woff");
 }
 @font-face {
     font-family: regular-font;
-    src: url("../public/fonts/AutautGrotesk-Regular.ttf"),
-         url("../public/fonts/AutautGrotesk-Regular.woff");
+    src: url("../../public/fonts/AutautGrotesk-Regular.ttf"),
+         url("../../public/fonts/AutautGrotesk-Regular.woff");
 }
 
 /*---------Font family---------*/
