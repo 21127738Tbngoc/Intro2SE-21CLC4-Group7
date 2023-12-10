@@ -331,7 +331,7 @@ a:hover {
   color: var(--tone-secondary-60);
   display: inline-block; /* Ensures the width fits the content */
   border-bottom: 1px solid transparent; /* Transparent border initially */
-  transition: border-bottom-color 0.3s ease; /* Transition effect on border color */
+  transition: border-bottom-color 0.6s ease; /* Transition effect on border color */
 }
 
 .slide-border::before {
@@ -342,8 +342,8 @@ a:hover {
   width: 0;
   height: 1px;
   background-color: var(--tone-secondary-60);
-  transition: width 0.3s ease, /* Transition effect for the sliding border width */
-              transform 0.3s ease; /* Transition effect for sliding from left */
+  transition: width 0.6s ease, /* Transition effect for the sliding border width */
+              transform 0.6s ease; /* Transition effect for sliding from left */
   transform-origin: left; /* Ensures transform origin is from the left */
 }
 
