@@ -143,13 +143,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: medium-font;
 }
 
-/*---Body---*/
-p {
-    font-family: regular-font;
-    font-size: 16px;
+.button1, .button2, .button3 {
+    font-family: semibold-font;
 }
 
-.p1, .p2, .p3 {
+/*---Body---*/
+p, .p1, .p2, .p3 {
     font-family: regular-font;
 }
 
@@ -243,13 +242,34 @@ h6 {
     line-height: 20px;
 }
 
+.button1 {
+    font-size: 18px;
+    line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button2 {
+    font-size: 16px;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button3 {
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
+}
+
 /*---Body---*/
 .p1 {
     font-size: 18px;
     line-height: 20px;
 }
 
-.p2 {
+p, .p2 {
     font-size: 16px;
     line-height: 18px;
 }
@@ -279,27 +299,7 @@ h6 {
     line-height: 12px;
 }
 
-/*--Icons--*/
-@font-face {
-    font-family: brands;
-    src: url("../public/icons/fontawesome/webfonts/fa-brands-400.ttf"),
-         url("../public/icons/fontawesome/webfonts/fa-brands-400.woff2");       
-}
-
-@font-face {
-    font-family: icons;
-    src: url("../public/icons/materialdesign/fonts/materialdesignicons-webfont.ttf"),
-         url("../public/icons/materialdesign/fonts/materialdesignicons-webfont.woff2");
-}
-
-/*--- Button styles ---*/
-.icon-btn-nm {
-    background: var(--tone-primary-10);
-    border-radius: 100%;
-    height: 56px;
-    width: 56px;
-    border: none;
-    font-family: brands;
-    font-size: 18px;
-    color: var(--tone-primary-99);
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0!important;
 }
