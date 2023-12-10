@@ -150,6 +150,7 @@ h1, h2, h3, h4, h5, h6 {
 /*---Body---*/
 p, .p1, .p2, .p3 {
     font-family: regular-font;
+    padding-top: 0.2rem;
 }
 
 .label1, .label2, .label3 {
@@ -158,6 +159,7 @@ p, .p1, .p2, .p3 {
 
 .support {
     font-family: medium-font;
+    padding-top: 0;
 }
 /*---------Font size---------*/
 /*---Display---*/
@@ -311,4 +313,41 @@ p, .p2 {
 
 body {
     background-color: var(--scheme-background);
+}
+
+/*-- Link --*/
+a {
+    color: var(--tone-secondary-60);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--tone-secondary-60);
+}
+
+.slide-border {
+  position: relative;
+  text-decoration: none;
+  color: var(--tone-secondary-60);
+  display: inline-block; /* Ensures the width fits the content */
+  border-bottom: 1px solid transparent; /* Transparent border initially */
+  transition: border-bottom-color 0.3s ease; /* Transition effect on border color */
+}
+
+.slide-border::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--tone-secondary-60);
+  transition: width 0.3s ease, /* Transition effect for the sliding border width */
+              transform 0.3s ease; /* Transition effect for sliding from left */
+  transform-origin: left; /* Ensures transform origin is from the left */
+}
+
+.slide-border:hover::before {
+  width: 100%; /* Slide in effect by expanding the width */
+  transform: scaleX(1); /* Scale the element from left to right */
 }
