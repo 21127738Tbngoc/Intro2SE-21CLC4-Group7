@@ -93,23 +93,6 @@ a.link-sm{
     cursor: pointer;
 }
 
-.link:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    color: var();
-    transition: width 0.3s ease;
-}
-
-.link:hover::before {
-    text-decoration: underline;
-    width: 100%;
-    cursor: pointer;
-}
-
 .btn-nm:disabled, 
 .btn-md:disabled,
 .btn-sm:disabled {

@@ -86,4 +86,18 @@ a h5 img {
 .menu-img {
     object-fit: contain;
     width: 526px;
+    position: relative;
+    display: inline-block;
+}
+
+.view-more-btn {
+    position: absolute;
+    top: 30px;
+    right: 32px;
+    color: var(--tone-secondary-95);
+    text-decoration: none;
+}
+
+.view-more-btn:hover {
+    color: var(--tone-primary-99);
 }
