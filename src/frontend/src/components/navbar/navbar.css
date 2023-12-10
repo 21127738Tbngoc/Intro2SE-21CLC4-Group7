@@ -74,7 +74,7 @@ a h5 img {
     transition: 0.4s;
 }
 
-.menu-contact-container {
+.menu-social-container {
     margin-right: 15px;
 }
 
@@ -116,7 +116,7 @@ a h5 img {
     cursor: pointer;
 }
 
-.menu-contact-container:hover .menu-contact-icon {
+.menu-social-container:hover .menu-social-icon {
     background-color: var(--tone-primary-40);
     color: var(--tone-primary-99);
 }
