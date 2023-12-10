@@ -63,14 +63,6 @@ a h5 img {
     border-radius: 50%;
 }
 
-.menu-contact-icon {
-    height: 60px;
-    border-radius: 50%;
-    border: 1px solid var(--tone-primary-40);
-    align-items: center;
-    transition: 0.4s;
-}
-
 .menu-contact-container {
     margin-right: 24px;
 }
@@ -111,11 +103,6 @@ a h5 img {
 .navbar .navbar-open-btn:hover,
 .navbar .navbar-close-btn:hover {
     cursor: pointer;
-}
-
-.menu-contact-container:hover .menu-contact-icon {
-    background-color: var(--tone-primary-40);
-    color: var(--tone-primary-99);
 }
 
 .menu-img-feature-more:hover a {
