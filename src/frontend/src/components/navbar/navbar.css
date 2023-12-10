@@ -1,9 +1,91 @@
 @charset "utf-8";
 @import url("../common.css");
 
-.navbar {
-    background: var(--scheme-background);
-    border: 1px solid bottom var(--tone-primary-40);
-    color: var(--tone-primary-40);
+h5, h6, p {
+    margin-bottom: 0;
 }
 
+.navbar-container {
+    padding: 0 20px;
+    background: var(--tone-neutral-variant-95);
+}
+
+.navbar {
+    color: var(--tone-primary-40);
+    border-bottom: 1px solid var(--tone-secondary-70);
+    min-height: 84px;
+    padding: 0 75px;
+}
+
+.navbar-menu {
+    padding: 55px 75px;
+    color: var(--tone-primary-30);
+}
+
+.navbar-cart-num {
+    padding: 5px 6.5px;
+    color: #fff;
+    background: var(--tone-primary-40);
+    border-radius: 50%;
+}
+
+.menu-contact-icon {
+    padding: 18px;
+    border-radius: 50%;
+    border: 1px solid var(--tone-primary-40);
+    margin-right: 15px;
+    font-size: 24px;
+    align-items: center;
+    height: 60px;
+}
+
+.menu-img-container {
+
+}
+
+
+.menu-img {
+    width: 450px;
+    height: 487px;
+}
+
+.nav-bar-contact {
+    margin-top: 40px;
+}
+
+.menu-img-feature {
+    color: #fff;
+    margin: 30px;
+    border-bottom: 2px solid #fff;
+    padding: 4px 0;
+    width: 390px;
+}
+
+.menu-img-feature-container {
+    width: 377.825px;
+}
+
+.menu-img-des {
+    color: #fff;
+    margin-left: 30px;
+    margin-bottom: 31px;
+}
+
+.navbar-left-section:hover {
+    cursor: pointer;
+}
+
+.navbar-left-section .navbar-close-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-left-section:hover .navbar-open-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.navbar-left-section:hover .navbar-close-btn {
+    display: block;
+    cursor: pointer;
+}

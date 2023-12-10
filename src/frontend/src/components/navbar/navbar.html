@@ -3,9 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <!-- Bootstrap -->
+    <link href ="../../../public/bootstrap-5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../../public/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../button/buttons.css">
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <!-- Icons -->
+<title>Navbar</title>
 </head>
 <body>
-    
+    <div class="w-100 navbar-container">
+        <div class="d-flex justify-content-between navbar">
+            <div class="d-flex flex-row align-items-center">
+                <div class="navbar-left-section">
+                    <h5 class="navbar-open-btn"><embed src="../../../public/imgs/navbar/menu-icon.svg"></h5>
+                    <h5 class="navbar-close-btn"><embed src="../../../public/imgs/navbar/close-icon.svg"></h5>
+                </div>
+                <h5 class="mx-2"><embed src="../../../public/imgs/navbar/search-icon.svg"></h5>
+                <p class="subtitle2 h-50">SEARCH</p>
+            </div>
+            <div class="d-flex flex-row align-items-center">
+                <h5><embed src="../../../public/imgs/navbar/logo.svg"></h5>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="d-flex flex-row align-items-center">
+                    <h5><embed src="../../../public/imgs/navbar/cart-icon.svg"></h5>
+                    <p class="subtitle2 mx-2">BAG</p>
+                    <div class="">
+                        <p class="support navbar-cart-num">0</p>
+                    </div>
+                </div>
+                <div class="d-flex flex-row align-items-center">
+                    <h5 class="mx-2"><embed src="../../../public/imgs/navbar/profile-icon.svg"></h5>
+                    <p class="subtitle2">ACCOUNT</p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-0 w-100 navbar-menu">
+            <div class="col-xl-7">
+                <div class="row">
+                    <div class="col-xl-3">
+                        <d4>ABOUT</d4>
+                        <div class="d-flex flex-column">
+                            <p class="p1 mb-3">About us</p>
+                            <p class="p1 mb-3">Our partners</p>
+                            <p class="p1 mb-3">Our designers</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <d4>SHOP</d4>
+                        <div class="d-flex flex-column">
+                            <p class="p1 mb-3">Shop all</p>
+                            <p class="p1 mb-3">Living room</p>
+                            <p class="p1 mb-3">Bedroom</p>
+                            <p class="p1 mb-3">Dining room</p>
+                            <p class="p1 mb-3">Bathroom</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 ">
+                        <d4>SUPPORT</d4>
+                        <div class="d-flex flex-column">
+                            <p class="p1 mb-3">FAQs</p>
+                            <p class="p1 mb-3">Contact</p>
+                            <p class="p1 mb-3">Warranty policy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3">
+                        <d4>SERVICE</d4>
+                        <div class="d-flex flex-column">
+                            <p class="p1 mb-3">Maintenance</p>
+                            <p class="p1 mb-3">Repairs</p>
+                            <p class="p1 mb-3">Customization</p>
+                            <p class="p1 mb-3">Refurbishment</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 ">
+                        <d4>MEDIA</d4>
+                        <div class="d-flex flex-column">
+                            <p class="p1 mb-3">Articles</p>
+                            <p class="p1 mb-3">Furniture styles</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 ">
+                        <p class="label1">Follow Fitment at</p>
+                        <div class="d-flex flex-row mt-3">
+                            <h5 class="menu-contact-icon">
+                                <embed src="../../../public/imgs/navbar/facebook-logo.svg">
+                            </h5>
+                            <h5 class="menu-contact-icon">
+                                <embed src="../../../public/imgs/navbar/twitter-logo.svg">
+                            </h5>
+                            <h5 class="menu-contact-icon">
+                                <embed src="../../../public/imgs/navbar/instagram-logo.svg">
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 d-flex flex-row-reverse position-relative h-auto mw-100 menu-img-container">
+                <div>
+                    <img src="../../../public/imgs/navbar/navimg.jpg" alt="" class="menu-img">
+                    <div class="position-absolute top-0 menu-img-feature-container">
+                        <div class="d-flex justify-content-between menu-img-feature">
+                            <p class="p1">FEATURED PRODUCTS</p>
+                            <div class="d-inline-flex">
+                                <p class="p1">More details</p>
+                                <embed src="../../../public/imgs/navbar/arrow-right-icon.svg" type="" class="p1 ms-1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-absolute bottom-0">
+                        <div class="d-flex flex-column menu-img-des">
+                            <div class="">
+                                <h6>SUMMER 2023</h6>
+                            </div>
+                            <d4 class="w-100">GRACE <br>DINNING CHAIRS</d4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 </html>
