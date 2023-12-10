@@ -28,24 +28,28 @@ button {
     background-color: var(--tone-primary-40);
     color: var(--tone-primary-99);
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 .sec-btn {
     background-color: var(--tone-secondary-90);
     color: var(--tone-secondary-30);
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 .tert-btn {
     background-color: var(--tone-tertiary-80);
     color: var(--tone-tertiary-30);
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 .outline-btn {
     background-color: transparent;
     color: var(--tone-primary-40);
     border: 1.5px solid var(--tone-primary-40);
+    transition: background-color 0.3s ease;
 }
 
 a.link-nm{
@@ -89,9 +93,20 @@ a.link-sm{
     cursor: pointer;
 }
 
-.link:hover {
-    color: var(--tone-primary-50);
+.link:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    color: var();
+    transition: width 0.3s ease;
+}
+
+.link:hover::before {
     text-decoration: underline;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -139,26 +154,31 @@ a.link-sm{
 .prim-i-btn {
     background: var(--tone-primary-40);
     color: var(--tone-primary-99);
+    transition: background-color 0.3s ease;
 }
 
 .sec-i-btn {
     background: var(--tone-secondary-80);
     color: var(--tone-secondary-30);
+    transition: background-color 0.3s ease;
 }
 
 .tert-i-btn {
     background: var(--tone-tertiary-80);
     color: var(--tone-tertiary-30);
+    transition: background-color 0.3s ease;
 }
 
 .outline-i-btn {
     background: none;
     border: 1px solid var(--tone-primary-40);
+    transition: background-color 0.3s ease;
 }
 
 .noborder-i-btn {
     background: none;
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 /*--- State ---*/
