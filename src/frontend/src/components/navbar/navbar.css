@@ -5,6 +5,21 @@ h5, h6, p {
     margin-bottom: 0;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+a h5 img {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 10px;
+}
+
 .navbar-container {
     background: var(--tone-neutral-variant-95);
     border-bottom: 1px solid var(--tone-secondary-70);
@@ -17,9 +32,18 @@ h5, h6, p {
     padding-right: 0!important;
 }
 
+.navbar .navbar-close-btn {
+    display: none;
+}
+
 .navbar-menu {
     padding: 55px 75px;
     color: var(--tone-primary-30);
+    display: none;
+}
+
+.navbar-menu.open-menu {
+    display: flex;
 }
 
 .navbar-cart-num {
@@ -34,10 +58,14 @@ h5, h6, p {
     padding: 18px;
     border-radius: 50%;
     border: 1px solid var(--tone-primary-40);
-    margin-right: 15px;
     font-size: 24px;
     align-items: center;
     height: 60px;
+    transition: 0.4s;
+}
+
+.menu-contact-container {
+    margin-right: 15px;
 }
 
 .menu-img {
@@ -49,9 +77,9 @@ h5, h6, p {
 }
 
 .menu-img-feature {
-    color: #fff;
+    color: var(--tone-primary-99);
     margin: 30px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--tone-primary-99);
     padding: 4px 0;
     width: 390px;
 }
@@ -60,27 +88,28 @@ h5, h6, p {
     width: 377.825px;
 }
 
+.menu-img-feature-more a {
+    color: var(--tone-primary-99);
+    text-decoration: none;
+    transition: 0.4s;
+}
+
 .menu-img-des {
-    color: #fff;
+    color: var(--tone-primary-99);
     margin-left: 30px;
     margin-bottom: 31px;
 }
 
-.navbar-left-section:hover {
+.navbar .navbar-open-btn:hover,
+.navbar .navbar-close-btn:hover {
     cursor: pointer;
 }
 
-.navbar-left-section .navbar-close-btn {
-    display: none;
-    cursor: pointer;
+.menu-contact-container:hover .menu-contact-icon {
+    background-color: var(--tone-primary-40);
+    color: var(--tone-primary-99);
 }
 
-.navbar-left-section:hover .navbar-open-btn {
-    display: none;
-    cursor: pointer;
-}
-
-.navbar-left-section:hover .navbar-close-btn {
-    display: block;
-    cursor: pointer;
+.menu-img-feature-more:hover a {
+    color: var(--tone-primary-40);
 }
