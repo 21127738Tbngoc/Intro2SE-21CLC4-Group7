@@ -1,6 +1,10 @@
 @charset "utf-8";
 @import url("../common.css");
 
+d4 {
+    line-height: 56px;
+}
+
 h5, h6, p {
     margin-bottom: 0;
 }
@@ -70,7 +74,7 @@ a h5 img {
     transition: 0.4s;
 }
 
-.menu-contact-container {
+.menu-social-container {
     margin-right: 15px;
 }
 
@@ -91,7 +95,8 @@ a h5 img {
 }
 
 .menu-img-feature-container {
-    width: 377.825px;
+    width: auto;
+    padding: 18px 38px;
 }
 
 .menu-img-feature-more a {
@@ -111,7 +116,7 @@ a h5 img {
     cursor: pointer;
 }
 
-.menu-contact-container:hover .menu-contact-icon {
+.menu-social-container:hover .menu-social-icon {
     background-color: var(--tone-primary-40);
     color: var(--tone-primary-99);
 }
