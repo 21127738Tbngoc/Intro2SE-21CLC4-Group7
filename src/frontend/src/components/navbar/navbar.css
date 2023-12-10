@@ -63,18 +63,15 @@ a h5 img {
     border-radius: 50%;
 }
 
-.menu-social-icon {
+.menu-contact-icon {
     height: 60px;
-    padding: 18px;
     border-radius: 50%;
     border: 1px solid var(--tone-primary-40);
-    font-size: 24px;
     align-items: center;
-    height: 60px;
     transition: 0.4s;
 }
 
-.menu-social-container {
+.menu-contact-container {
     margin-right: 15px;
 }
 
@@ -82,7 +79,7 @@ a h5 img {
     width: 526px;
 }
 
-.nav-bar-social {
+.nav-bar-contact {
     margin-top: 40px;
 }
 
@@ -116,7 +113,7 @@ a h5 img {
     cursor: pointer;
 }
 
-.menu-social-container:hover .menu-social-icon {
+.menu-contact-container:hover .menu-contact-icon {
     background-color: var(--tone-primary-40);
     color: var(--tone-primary-99);
 }
