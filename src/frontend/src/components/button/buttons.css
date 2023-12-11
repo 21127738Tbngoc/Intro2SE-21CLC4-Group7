@@ -1,14 +1,13 @@
 @charset "utf-8";
 @import url("../common.css");
 
-/*---------Button styles---------*/
 button {
     border-radius: 4px;
     font-family: semibold-font;
     text-align: center;
 }
-
-/*---Button sizes---*/
+/*---------Button---------*/
+/*--- Size ---*/
 .btn-nm {
     font-size: 18px;
     padding: 20px 24px;
@@ -29,24 +28,28 @@ button {
     background-color: var(--tone-primary-40);
     color: var(--tone-primary-99);
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 .sec-btn {
     background-color: var(--tone-secondary-90);
     color: var(--tone-secondary-30);
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 .tert-btn {
     background-color: var(--tone-tertiary-80);
     color: var(--tone-tertiary-30);
     border: none;
+    transition: background-color 0.3s ease;
 }
 
 .outline-btn {
     background-color: transparent;
     color: var(--tone-primary-40);
     border: 1.5px solid var(--tone-primary-40);
+    transition: background-color 0.3s ease;
 }
 
 a.link-nm{
@@ -67,7 +70,7 @@ a.link-sm{
     text-decoration: none;
 }
 
-/*---------Button States---------*/
+/*--- States ---*/
 .prim-btn:hover {
     background: var(--tone-primary-30);
     cursor: pointer;
@@ -90,12 +93,6 @@ a.link-sm{
     cursor: pointer;
 }
 
-.link:hover {
-    color: var(--tone-primary-50);
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 .btn-nm:disabled, 
 .btn-md:disabled,
 .btn-sm:disabled {
@@ -109,45 +106,88 @@ a.link-sm{
     cursor: default !important;
 }
 
-/*--- Icon Button styles ---*/
-i {
-    border: 100%;
-    font-family: icons;
-}
-
-i.social {
-    font-family: brands;
-}
-
-/*---Icon button sizes---*/
+/*---------Icon btn---------*/
+/*--- Size ---*/
 .i-btn-nm {
     border-radius: 100%;
+    height: 60px;
+    width: 60px;
     border: none;
-    padding: 18px;
     font-size: 24px;
 }
 
 .i-btn-md {
     border-radius: 100%;
+    height: 48px;
+    width: 48px;
     border: none;
-    padding: 12px;
     font-size: 24px;
 }
 
 .i-btn-sm {
     border-radius: 100%;
+    height: 40px;
+    width: 40px;
     border: none;
     padding: 11px;
     font-size: 18px;
 }
 
-/*---Icon button hierarchy---*/
+/*--- Hierarchy---*/
 .prim-i-btn {
     background: var(--tone-primary-40);
     color: var(--tone-primary-99);
+    transition: background-color 0.3s ease;
 }
 
 .sec-i-btn {
     background: var(--tone-secondary-80);
+    color: var(--tone-secondary-30);
+    transition: background-color 0.3s ease;
 }
 
+.tert-i-btn {
+    background: var(--tone-tertiary-80);
+    color: var(--tone-tertiary-30);
+    transition: background-color 0.3s ease;
+}
+
+.outline-i-btn {
+    background: none;
+    border: 1px solid var(--tone-primary-40);
+    transition: background-color 0.3s ease;
+}
+
+.noborder-i-btn {
+    background: none;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+/*--- State ---*/
+.prim-i-btn:hover {
+    background: var(--tone-primary-30);
+    transition: .4s;
+}
+
+.sec-i-btn:hover {
+    background: var(--tone-secondary-30);
+    transition: .4s;
+}
+
+.tert-i-btn:hover {
+    background: var(--tone-tertiary-40);
+    transition: .4s;
+}
+
+.outline-i-btn:hover {
+    background: var(--tone-secondary-90);
+    border: none;
+    transition: .4s;
+}
+
+.noborder-i-btn:hover {
+    background: none;
+    border: 1px solid var(--tone-primary-40);
+    transition: .4s;
+}

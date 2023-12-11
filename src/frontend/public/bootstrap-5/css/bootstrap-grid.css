@@ -267,6 +267,8 @@
 @media (min-width: 1400px) {
   .col-xxl {
     flex: 1 0 0%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .row-cols-xxl-auto > * {
