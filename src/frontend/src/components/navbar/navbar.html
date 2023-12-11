@@ -15,12 +15,12 @@
 </head>
 <body>
     <!-- Navbar -->
-    <div class="container-fluid fixed-top navbar-container justify-content-between">
+    <div class="container-fluid fixed-top navbar-container justify-content-between position-relative">
         <div class="container-xxl navbar">
             <div class="d-flex flex-row g-4 align-items-center justify-content-between">
                 <!-- Menu & Search -->
-                <div class="navbar-left-section">
-                    <h5 class="navbar-open-btn"><img src="../../../public/imgs/navbar/menu-icon.svg" alt="Menu"></h5>
+                <div>
+                    <h5 class="menu-open-btn"><img src="../../../public/imgs/navbar/menu-icon.svg" alt="Menu"></h5>
                 </div>
                 <h5 class="mx-2"><img src="../../../public/imgs/navbar/search-icon.svg" alt="Search"></h5>
                 <p class="button2 align-items-center h-100">SEARCH</p>
@@ -32,7 +32,8 @@
             <!-- Cart & Account -->
             <div class="d-flex align-items-center">
                 <div class="d-flex flex-row align-items-center">
-                    <h5><img src="../../../public/imgs/navbar/cart-icon.svg" alt="Cart"></h5>
+                    <h5 class="cart-modal-open-btn">
+                        <img src="../../../public/imgs/navbar/cart-icon.svg" alt="Cart"></h5>
                     <p class="button2 mx-2 align-items-center">BAG</p>
                     <div class="navbar-cart-num">
                         <p class="support align-items-center">0</p>
@@ -42,6 +43,114 @@
                     <h5 class="mx-2"><img src="../../../public/imgs/navbar/profile-icon.svg" alt="Profile"></h5>
                     <p class="button2 align-items-center">ACCOUNT</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Cart Modal -->
+        <div class="position-absolute navbar-cart">
+            <div class="cart-list-section">
+                <div class="d-flex flex-row-reverse">
+                    <h5 class="w-auto cart-close-btn">
+                        <img src="../../../public/imgs/navbar/close-icon.svg" alt="Close icon">
+                    </h5>
+                </div>
+                <h2 class="navbar-cart-title">Shopping Cart</h2>
+                <ul class="cart-item-list-section">
+                    <li class="d-flex justify-content-between mb-2 cart-item ">
+                        <img src="../../../public/imgs/navbar/productimg.png" alt="Product Image">
+                        <div class="cart-item-info mx-auto">
+                            <p class="subtitle2">Singapore Dark Rattan Arm Chair</p>
+                            <div class="d-inline">
+                                <p class="support d-inline">Size M</p>
+                                <p class="subtitle2 d-inline">.</p>
+                                <p class="support d-inline">Black</p>
+                                <p class="subtitle2 d-inline">.</p>
+                                <p class="support d-inline">SKU 001</p>
+                            </div>
+                            <div class="mt-2 cart-item-quantity-section">
+                                <p class="subtitle2 d-inline">$ 1,500</p>
+                                <div class="d-inline cart-item-quantity mx-3">
+                                    <img src="../../../public/imgs/navbar/minus.svg" alt="Dot">
+                                    <p class="p3 d-inline">2</p>
+                                    <img src="../../../public/imgs/navbar/plus.svg" alt="Dot">
+                                </div>
+                                <p class="subtitle2 d-inline">$ 3,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#">
+                                <button class="outline-i-btn i-btn-nm">
+                                    <img src="../../../public/imgs/navbar/trashcan.svg" alt="trashcan">
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2 cart-item ">
+                        <img src="../../../public/imgs/navbar/productimg.png" alt="Product Image">
+                        <div class="cart-item-info mx-auto">
+                            <p class="subtitle2">Singapore Dark Rattan Arm Chair</p>
+                            <div class="d-inline">
+                                <p class="support d-inline">Size M</p>
+                                <p class="subtitle2 d-inline">.</p>
+                                <p class="support d-inline">Black</p>
+                                <p class="subtitle2 d-inline">.</p>
+                                <p class="support d-inline">SKU 001</p>
+                            </div>
+                            <div class="mt-2">
+                                <p class="subtitle2 d-inline">$ 1,500</p>
+                                <div class="d-inline cart-item-quantity mx-3">
+                                    <img src="../../../public/imgs/navbar/minus.svg" alt="Dot">
+                                    <p class="p3 d-inline">2</p>
+                                    <img src="../../../public/imgs/navbar/plus.svg" alt="Dot">
+                                </div>
+                                <p class="subtitle2 d-inline">$ 3,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#">
+                                <button class="outline-i-btn i-btn-nm">
+                                    <img src="../../../public/imgs/navbar/trashcan.svg" alt="trashcan">
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between mb-2 cart-item ">
+                        <img src="../../../public/imgs/navbar/productimg.png" alt="Product Image">
+                        <div class="cart-item-info mx-auto">
+                            <p class="subtitle2">Singapore Dark Rattan Arm Chair</p>
+                            <div class="d-inline">
+                                <p class="support d-inline">Size M</p>
+                                <p class="subtitle2 d-inline">.</p>
+                                <p class="support d-inline">Black</p>
+                                <p class="subtitle2 d-inline">.</p>
+                                <p class="support d-inline">SKU 001</p>
+                            </div>
+                            <div class="mt-2">
+                                <p class="subtitle2 d-inline">$ 1,500</p>
+                                <div class="d-inline cart-item-quantity mx-3">
+                                    <img src="../../../public/imgs/navbar/minus.svg" alt="Dot">
+                                    <p class="p3 d-inline">2</p>
+                                    <img src="../../../public/imgs/navbar/plus.svg" alt="Dot">
+                                </div>
+                                <p class="subtitle2 d-inline">$ 3,000</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <a href="#">
+                                <button class="outline-i-btn i-btn-nm">
+                                    <img src="../../../public/imgs/navbar/trashcan.svg" alt="trashcan">
+                                </button>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-between align-content-center cart-total-section">
+                    <h4>TOTAL</h4>
+                    <h4> $ 4,895</h4>
+                </div>
+                <button class="prim-btn btn-nm w-100">
+                    SIGN UP
+                </button>
             </div>
         </div>
     </div>
