@@ -7,8 +7,4 @@ input {
     border-radius: 4px;
 }
 
-input .form-nm::placeholder {
-    font-family: regular-font;
-    font-size: 18px;
-    color: var(--tone-neutral-variant-70);
-}
+
