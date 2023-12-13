@@ -100,28 +100,28 @@
 /*---------Font family---------*/
 @font-face {
     font-family: display-font;
-    src: url("../public/fonts/SVN-Canopee.ttf"),
-         url("../public/fonts/SVN-Canopee.woff");       
+    src: url("../../public/fonts/SVN-Canopee.ttf"),
+         url("../../public/fonts/SVN-Canopee.woff");       
 }
 @font-face {
     font-family: bold-font;
-    src: url("../public/fonts/AutautGrotesk-Bold.ttf"),
-         url("../public/fonts/AutautGrotesk-Bold.woff");
+    src: url("../../public/fonts/AutautGrotesk-Bold.ttf"),
+         url("../../public/fonts/AutautGrotesk-Bold.woff");
 }   
 @font-face {
     font-family: semibold-font;
-    src: url("../public/fonts/AutautGrotesk-Semibold.ttf"),
-         url("../public/fonts/AutautGrotesk-Semibold.woff");
+    src: url("../../public/fonts/AutautGrotesk-Semibold.ttf"),
+         url("../../public/fonts/AutautGrotesk-Semibold.woff");
 }
 @font-face {
     font-family: medium-font;
-    src: url("../public/fonts/AutautGrotesk-Medium.ttf"),
-         url("../public/fonts/AutautGrotesk-Medium.woff");
+    src: url("../../public/fonts/AutautGrotesk-Medium.ttf"),
+         url("../../public/fonts/AutautGrotesk-Medium.woff");
 }
 @font-face {
     font-family: regular-font;
-    src: url("../public/fonts/AutautGrotesk-Regular.ttf"),
-         url("../public/fonts/AutautGrotesk-Regular.woff");
+    src: url("../../public/fonts/AutautGrotesk-Regular.ttf"),
+         url("../../public/fonts/AutautGrotesk-Regular.woff");
 }
 
 /*---------Font family---------*/
@@ -143,14 +143,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: medium-font;
 }
 
-/*---Body---*/
-p {
-    font-family: regular-font;
-    font-size: 16px;
+.button1, .button2, .button3 {
+    font-family: semibold-font;
 }
 
-.p1, .p2, .p3 {
+/*---Body---*/
+p, .p1, .p2, .p3 {
     font-family: regular-font;
+    padding-top: 0.2rem;
 }
 
 .label1, .label2, .label3 {
@@ -159,6 +159,7 @@ p {
 
 .support {
     font-family: medium-font;
+    padding-top: 0;
 }
 /*---------Font size---------*/
 /*---Display---*/
@@ -240,7 +241,28 @@ h6 {
 
 .title2 {
     font-size: 16px;
+    line-height: 18px;
+}
+
+.button1 {
+    font-size: 18px;
     line-height: 20px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button2 {
+    font-size: 16px;
+    line-height: 18px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.button3 {
+    font-size: 14px;
+    line-height: 16px;
+    vertical-align: middle;
+    text-align: center;
 }
 
 /*---Body---*/
@@ -249,7 +271,7 @@ h6 {
     line-height: 20px;
 }
 
-.p2 {
+p, .p2 {
     font-size: 16px;
     line-height: 18px;
 }
@@ -275,31 +297,57 @@ h6 {
 }
 
 .support {
-    font-size: 10px;
-    line-height: 10px;
+    font-size: 12px;
+    line-height: 12px;
 }
 
-/*--Icons--*/
-@font-face {
-    font-family: brands;
-    src: url("../public/icons/fontawesome/webfonts/fa-brands-400.ttf"),
-         url("../public/icons/fontawesome/webfonts/fa-brands-400.woff2");       
+.container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0!important;
 }
 
-@font-face {
-    font-family: icons;
-    src: url("../public/icons/materialdesign/fonts/materialdesignicons-webfont.ttf"),
-         url("../public/icons/materialdesign/fonts/materialdesignicons-webfont.woff2");
+.col-xxl-1, .col-xxl-2, .col-xxl-3, .col-xxl-4, .col-xxl-5, .col-xxl-6, .col-xxl-7, .col-xxl-8, .col-xxl-9, .col-xxl-10, .col-xxl-11, .col-xxl-12 {
+    padding-left: 0;
+    padding-right: 0;
 }
 
-/*--- Button styles ---*/
-.icon-btn-nm {
-    background: var(--tone-primary-10);
-    border-radius: 100%;
-    height: 56px;
-    width: 56px;
-    border: none;
-    font-family: brands;
-    font-size: 18px;
-    color: var(--tone-primary-99);
+body {
+    background-color: var(--scheme-background);
+}
+
+/*-- Link --*/
+a {
+    color: var(--tone-secondary-60);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--tone-secondary-60);
+}
+
+.slide-border {
+  position: relative;
+  text-decoration: none;
+  color: var(--tone-secondary-60);
+  display: inline-block; /* Ensures the width fits the content */
+  border-bottom: 1px solid transparent; /* Transparent border initially */
+  transition: border-bottom-color 0.6s ease; /* Transition effect on border color */
+}
+
+.slide-border::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--tone-secondary-60);
+  transition: width 0.6s ease, /* Transition effect for the sliding border width */
+              transform 0.6s ease; /* Transition effect for sliding from left */
+  transform-origin: left; /* Ensures transform origin is from the left */
+}
+
+.slide-border:hover::before {
+  width: 100%; /* Slide in effect by expanding the width */
+  transform: scaleX(1); /* Scale the element from left to right */
 }
