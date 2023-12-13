@@ -12,7 +12,7 @@ const shippingRoute= require("./routes/shipping");
 const paymentRoute=require("./routes/payment");
 
 //const stripeRoute = require("./routes/stripe");
-//const cors = require("cors");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -23,7 +23,7 @@ mongoose
     console.log(err);
   });
 
-//app.use(cors());
+app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
@@ -35,9 +35,6 @@ app.use("/api/payment", paymentRoute);
 app.use("/api/shipping", shippingRoute);
 //app.use("/api/checkout", stripeRoute);
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log("Backend server is running!");
-});
 
 
 
@@ -128,7 +125,7 @@ app.post("/do-something-with-photos", async (req, res) => {
   res.sendStatus(200);
 });
 
-app.get("/view-photos", async (req, res) => {
+app.get("/admin/view-photos", async (req, res) => {
   await fse.ensureFile("./data.txt")
   const existingData = await fse.readFile("./data.txt", "utf8")
   res.send(`<h1>Hello, here are a few photos...</h1>
@@ -151,7 +148,7 @@ app.get("/view-photos", async (req, res) => {
   `)
 })
 
-app.post("/delete-photo", async (req, res) => {
+app.post("/admin/delete-photo", async (req, res) => {
   // do whatever you need to do in your database etc...
   await fse.ensureFile("./data.txt")
   const existingData = await fse.readFile("./data.txt", "utf8")
@@ -166,7 +163,12 @@ app.post("/delete-photo", async (req, res) => {
   // actually delete the photo from cloudinary
   cloudinary.uploader.destroy(req.body.id)
 
-  res.redirect("/view-photos")
+  res.redirect("/admin/view-photos")
 })
 
-app.listen(3000)
+app.listen(3000 )
+
+app.listen(process.env.PORT || 5000, () => {
+  console.log("Backend server is running!");
+});
+
