@@ -1,6 +1,5 @@
 
 import './App.css';
-import Admin from './components/admin/admin';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import { AllProducts } from './components/new_admin/AllProducts';
@@ -14,9 +13,7 @@ function App() {
       <BrowserRouter>
 
       <Routes>
-        <Route path='/admin' element={<Admin/>}>
-
-        </Route>
+        
 
         <Route path='dashboard' element={<Dashboard/>}/>
         <Route path='dashboard/all-products' element={<AllProducts/>}/>

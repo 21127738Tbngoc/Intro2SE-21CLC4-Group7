@@ -166,9 +166,9 @@ app.post("/admin/delete-photo", async (req, res) => {
   res.redirect("/admin/view-photos")
 })
 
-app.listen(3000 )
+
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running!");
-});
 
+});
