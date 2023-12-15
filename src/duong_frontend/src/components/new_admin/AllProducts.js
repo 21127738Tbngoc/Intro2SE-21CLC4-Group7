@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Col, Container, Row} from 'reactstrap';
-import useGetData from './../custom-hooks/useGetData';
+import useGetData from '../custom-hooks/useGetData';
 import { db } from '../firebase/firebase';
 import {doc,deleteDoc} from 'firebase/firestore'
 import { toast } from 'react-toastify';

@@ -4,9 +4,7 @@ import {toast} from "react-toastify"
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
 const AddProduct = () => {
-
   const navigate=useNavigate();
   const [loading,setLoading]=useState(false)
 
@@ -35,9 +33,9 @@ const AddProduct = () => {
 
       
       // Upload image to Cloudinary
-      const signatureResponse = await axios.get("/get-signature");
+      const signatureResponse = await axios.get("http://localhost:5000/get-signature");
       const files = document.querySelector("#file-field").files;
-
+      console.log(files);
       // Check if there are files to upload
       if (files.length === 0) {
         console.log("No files selected for upload");
@@ -76,34 +74,60 @@ const AddProduct = () => {
       setPhotoDataArray(newPhotoDataArray);
 
       // send the array of image info back to our server
-      await axios.post("/do-something-with-photos", { photos: newPhotoDataArray });
+      await axios.post("http://localhost:5000/do-something-with-photos", { photos: newPhotoDataArray });
       console.log("Photos uploaded successfully");
 
       const cloudinaryImageUrl = newPhotoDataArray;
 
-      // // Save product info to MongoDB
-      // const productData = {
-      //   name,
-      //   description,
-      //   category,
-      //   price,
-      //   img: cloudinaryImageUrl,
-      //   brand,
-      //   size,
-      //   color,
-      //   pattern,
-      // };
 
 
-      // const headers = {
-      //   Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjZmOGMzYTU1NzVkZjI3NTdiMzMzYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwMjQ1ODAyNSwiZXhwIjoxNzAyNzE3MjI1fQ.HAlCWuQq_b0tVEQTKR9aavZnZiLVjtqteBpsSX1EyyE"
-      // };
+
+      function generateImageURL(publicId) {
+        return `https://res.cloudinary.com/${cloud_name}/image/upload/${publicId}.jpg`;
+      }
+      
+      // Save product info to MongoDB
+      const productData = {
+        name,
+        desc: description,
+        category,
+        price,
+        img: newPhotoDataArray.map(item => generateImageURL(item.public_id)),
+        brand,
+        size,
+        color,
+        pattern,
+      };
+      console.log(productData);
+
+      const headers = {
+        token: " bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NjZmOGMzYTU1NzVkZjI3NTdiMzMzYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcwMjQ1ODAyNSwiZXhwIjoxNzAyNzE3MjI1fQ.HAlCWuQq_b0tVEQTKR9aavZnZiLVjtqteBpsSX1EyyE"
+      };
 
 
-      // const mongoResponse = await axios.post('/api/products', productData, { headers });
-      // setLoading(false);
-      // toast.success('One Product Added');
-      // navigate('/dashboard/all-products');
+      const mongoResponse = await axios.post('http://localhost:5000/api/products/', productData, { headers });
+
+
+
+
+
+
+
+
+
+      setLoading(false);
+      toast('🦄 Wow so easy!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      //navigate('/dashboard/all-products');
+      
     } catch (err) {
       toast.error(err.message);
       setLoading(false);
@@ -116,7 +140,7 @@ const AddProduct = () => {
     <Row>
       <Col lg="12">
         <h4 className='mb-5'>Add Product</h4>
-        {loading?<h4>Loading....</h4>:(  <form onSubmit={AddProductHandler}>
+         <form onSubmit={AddProductHandler}>
             <FormGroup className='form__group'>
               <span>Product Name</span>
               <input type="text" placeholder='Double Sofa' onChange={(e)=>(setname(e.target.value))} required />
@@ -145,7 +169,7 @@ const AddProduct = () => {
             <div>
             <FormGroup className='form__group'>
               <span>Product Image</span>
-              <input type="file" onChange={(e)=>{setimage(e.target.files[0])}} multiple  required/>
+              <input type="file"  id='file-field' onChange={(e)=>{setimage(e.target.files[0])}} multiple  required/>
             </FormGroup>
             </div>
             <FormGroup className='form__group w-50'>
@@ -168,8 +192,8 @@ const AddProduct = () => {
               <input type="text" placeholder='none'onChange={(e)=>(setpattern(e.target.value))} required/>
             </FormGroup>
 
-            <button className='buy__btn text-white'>Add Product</button>
-          </form>)}
+            <button type="submit" onClick={AddProductHandler} className='buy__btn text-white'>Add Product</button>
+          </form>
       </Col>
     </Row>
   </Container>

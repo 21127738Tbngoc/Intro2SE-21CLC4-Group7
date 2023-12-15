@@ -53,16 +53,7 @@ const cloudinaryConfig = cloudinary.config({
   secure: true
 })
 
-function passwordProtected(req, res, next) {
-  res.set("WWW-Authenticate", "Basic realm='Cloudinary Front-end Upload'")
-  if (req.headers.authorization == "Basic YWRtaW46YWRtaW4=") {
-    next()
-  } else {
-    res.status(401).send("Try again")
-  }
-}
 
-//app.use(passwordProtected)
 
 app.get("/", (req, res) => {
   res.send(`<!DOCTYPE html>
@@ -166,9 +157,9 @@ app.post("/admin/delete-photo", async (req, res) => {
   res.redirect("/admin/view-photos")
 })
 
-app.listen(3000 )
+
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Backend server is running!");
-});
 
+});
