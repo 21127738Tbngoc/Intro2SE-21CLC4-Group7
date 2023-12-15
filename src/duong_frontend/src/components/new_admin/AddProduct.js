@@ -4,9 +4,7 @@ import {toast} from "react-toastify"
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
 const AddProduct = () => {
-
   const navigate=useNavigate();
   const [loading,setLoading]=useState(false)
 
@@ -118,8 +116,17 @@ const AddProduct = () => {
 
 
       setLoading(false);
-      toast.success('One Product Added');
-      navigate('/dashboard/all-products');
+      toast('🦄 Wow so easy!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+      //navigate('/dashboard/all-products');
       
     } catch (err) {
       toast.error(err.message);
