@@ -27,7 +27,9 @@ const Login = () => {
       const response = await axios.post('http://localhost:5000/api/auth/login/', loginData);
 
 
-      const  token  = response.data.accessToken;
+      const token  = response.data.accessToken;
+
+      localStorage.setItem("Token",token);
 
       console.log(token);
 
@@ -67,5 +69,4 @@ const Login = () => {
     </Helmet>
   )
 }
-
-export default Login
+export default Login;
