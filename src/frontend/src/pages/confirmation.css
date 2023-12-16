@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import url("../../src/components/common.css");
+
+.page-title {
+    text-align: center;
+    height: 67px;
+    padding: 0 72px;
+}
+
+.page-breadcrumb {
+    margin-top: 24px;
+    text-align: center;
+    padding: 16px 72px;
+    color: var(--tone-primary-40);
+    border: 1px solid var(--scheme-outline);
+}
+
+.page-sub-breadcrumb {
+    font-weight: 600;
+}
+
+.confirm-noti-message {
+    width: 415px;
+}
+
+.confirm-detail-container {
+    margin: 0 72px;
+}
+
+.order-info-section .order-info-container:not(:first-child) {
+    margin-top: 55px;
+}
+
+.order-info-container {
+    width: 590px;
+}
+
+.order-info {
+    padding: 24px 32px;
+    border-radius: 6px;
+    border: 1px solid var(--scheme-outline);
+}
+
+.order-info li.order-info-detail p:first-child{
+    min-width: 200px;
+}
+
+.order-info li.order-info-shipping p:first-child{
+    min-width: 70px;
+}
+
+.order-info li.order-info-payment p:first-child{
+    min-width: 80px;
+}
+
+.order-summary-container {
+    width: 526px;
+    height: auto;
+    padding: 48px;
+    background: var(--tone-neutral-variant-99);
+    box-shadow: 0px 4px 8px 0px #D8E7CB;
+
+}
+
+.order-summary-items-header {
+    border-bottom: 1px solid var(--scheme-outline);
+}
+
+.order-summary-item-img {
+    width: 60px;
+    height: 60px;
+}
+
+.order-summary-item-quantity,
+.order-summary-item-price {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.order-summary-cost-section {
+    padding: 8px;
+}
+
+.order-summary-total-section {
+    margin-top: 24px;
+}
