@@ -53,16 +53,7 @@ const cloudinaryConfig = cloudinary.config({
   secure: true
 })
 
-function passwordProtected(req, res, next) {
-  res.set("WWW-Authenticate", "Basic realm='Cloudinary Front-end Upload'")
-  if (req.headers.authorization == "Basic YWRtaW46YWRtaW4=") {
-    next()
-  } else {
-    res.status(401).send("Try again")
-  }
-}
 
-//app.use(passwordProtected)
 
 app.get("/", (req, res) => {
   res.send(`<!DOCTYPE html>
