@@ -161,6 +161,11 @@ p, .p1, .p2, .p3 {
     font-family: medium-font;
     padding-top: 0;
 }
+
+.product-price {
+    float: right;
+    font-family: medium-font, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 /*---------Font size---------*/
 /*---Display---*/
 d1 {
@@ -241,7 +246,7 @@ h6 {
 
 .title2 {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 18px;
 }
 
 .button1 {

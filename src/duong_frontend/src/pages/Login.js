@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Helmet } from './../components/helmet/Helmet';
-import { Container, Row, Col, FormGroup } from 'reactstrap';
+// import { Helmet } from './../components/helmet/Helmet';
+// import { Container, Row, Col, FormGroup } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from "react-toastify"
 import axios from 'axios';
@@ -8,9 +8,9 @@ import axios from 'axios';
 // import Img from "../../public/imgs/"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
-import "../components/common.css"
 
 const button1Style = "background: var(--scheme-background);border: 1.5px solid var(--tone-primary-40, #46692A);"
+const formControl = "background: var(--scheme-background);border: 1px solid var(--scheme-outline, #A1B096);"
 
 const Login = () => {
 
@@ -55,7 +55,7 @@ const Login = () => {
       <div class="container-xxl p-0">
         <div class="d-flex">
           <div class="col-xxl-3 d-inline-flex">
-            <img src="../../../public/imgs/login/Img.jpg" />
+            <img src="/login/Img.jpg" />
           </div>
           <div class="col-xxl-9 d-inline-flex flex-grow-1 flex-shrink-0 align-items-center justify-content-center">
             <div class="align-items-start">
@@ -64,13 +64,13 @@ const Login = () => {
                 <div class="row g-4">
                   <h3>Sign In</h3>
                 </div>
-                {/* //<!-- Other sign in method -->  */}
+                {/*//<!-- Other sign in method --> */}
                 <div class="row g-4">
                   <div class="d-flex justify-content-around">
-                    <button class="button1" style={{button1Style}}>
+                    <button class="button1" style={{ button1Style }}>
                       <p> Sign in with Google</p>
                     </button>
-                    <button class="button1" style={{button1Style}}>
+                    <button class="button1" style={{ button1Style }}>
                       <p> Sign in with Facebook</p>
                     </button>
                   </div>
@@ -78,9 +78,9 @@ const Login = () => {
                 {/* <!-- Sign in by email --> */}
                 <div class="row g-4">
                   <div class="d-flex justify-content-center">
-                    <div class="title2">
+                    {/* <div class="title2">
                       Or, sign in with your email
-                    </div>
+                    </div> */}
 
                   </div>
                 </div>
@@ -92,8 +92,8 @@ const Login = () => {
                     <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 11L4 6H20ZM20 18H4V8L12 13L20 8V18Z" fill="#46692A" />
                   </svg> --> */}
                     <span>
-                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="nguyenvana@gmail.com" />
-                      {/* style="background: var(--scheme-background);border: 1px solid var(--scheme-outline, #A1B096);" /> */}
+                      <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="nguyenvana@gmail.com" style={{formControl}} />
+
                     </span>
                   </div>
 
@@ -101,8 +101,7 @@ const Login = () => {
                   <div class="d-flex flex-column gap-2">
                     <label class="label1">Password</label>
                     <span>
-                      <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="•••••••••••••••••" />
-                      {/* // style="background: var(--scheme-background);border: 1px solid var(--scheme-outline, #A1B096);" /> */}
+                      <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="•••••••••••••••••" style={{formControl}}/>
                     </span>
                   </div>
                 </div>

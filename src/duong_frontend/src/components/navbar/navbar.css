@@ -118,12 +118,9 @@ a h5 img {
 }
 
 .cart-item-quantity {
-    color: #000;
-}
-
-.cart-item-quantity {
     padding: 8px;
     padding-top: 0;
+    color: #000;
     border: 1px solid var(--scheme-outline);
 }
 
