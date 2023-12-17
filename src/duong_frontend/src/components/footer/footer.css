@@ -44,3 +44,12 @@
     background: var(--tone-primary-30);
     padding-top: 14px;
 }
+
+.social-btn {
+    background-color: var(--tone-primary-10);
+    color: var(--tone-primary-99);
+    font-size: 20px;
+}
+.social-btn:hover {
+    background-color: var(--tone-primary-20);
+}
