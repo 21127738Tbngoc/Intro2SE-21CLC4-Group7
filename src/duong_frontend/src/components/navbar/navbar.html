@@ -39,9 +39,15 @@
                         <p class="support align-items-center">0</p>
                     </div>
                 </div>
-                <div class="d-flex flex-row align-items-center">
-                    <h5 class="mx-2"><img src="../../../public/imgs/navbar/profile-icon.svg" alt="Profile"></h5>
-                    <p class="button2 align-items-center">ACCOUNT</p>
+                <div class="dropdown">
+                    <div class="d-flex flex-row align-items-center" id="dropdownToggle">
+                      <h5 class="mx-2"><img src="../../../public/imgs/navbar/profile-icon.svg" alt="Profile"></h5>
+                      <p class="button2 align-items-center" id="dropdownButton">ACCOUNT</p>
+                    </div>
+                    <ul class="dropdown-content" id="dropdownContent">
+                        <li><a href="#" id="signIn">Sign In</a></li>
+                        <li><a href="#" id="signUp">Sign Up</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -163,11 +169,10 @@
     <!-- Megamenu -->
     <div class="container-fluid navbar-menu">
         <div class="container-xxl d-flex">
-            <!--<div class="row g-4 w-100 ">-->
                 <div class="col-xxl-7">
-                    <div class="row">
+                    <div class="d-flex">
                         <div class="col-xxl-3">
-                            <d4>ABOUT</d4>
+                            <d5>ABOUT</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">ABOUT US</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">OUR PARTNERS</a></li>
@@ -175,7 +180,7 @@
                             </ul>
                         </div>
                         <div class="col-xxl-3">
-                            <d4>SHOP</d4>
+                            <d5>SHOP</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">SHOP ALL</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">LIVING ROOM</a></li>
@@ -185,7 +190,7 @@
                             </ul>
                         </div>
                         <div class="col-xxl-3 ">
-                            <d4>SUPPORT</d4>
+                            <d5>SUPPORT</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">FAQS</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">CONTACT</a></li>
@@ -193,9 +198,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="d-flex">
                         <div class="col-xxl-3">
-                            <d4>SERVICE</d4>
+                            <d5>SERVICE</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">MAINTENANCE</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">ASSEMBLY</a></li>
@@ -204,7 +209,7 @@
                             </ul>
                         </div>
                         <div class="col-xxl-3 ">
-                            <d4>MEDIA</d4>
+                            <d5>MEDIA</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">ARTICLES</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">COMMUNITY</a></li>
@@ -251,7 +256,7 @@
                         <a href="#" class="button1 view-more-btn">View more</a>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </div>
 

@@ -45,4 +45,37 @@ navbarContainer.addEventListener('click',function(event){
     event.stopPropagation()
 })
 
-// Open Login, Sign up
+// Account dropdown
+// JavaScript to toggle dropdown content
+document.addEventListener("DOMContentLoaded", function() {
+    const dropdownButton = document.getElementById("dropdownButton");
+    const dropdownContent = document.getElementById("dropdownContent");
+  
+    dropdownButton.addEventListener("click", function() {
+      dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+    });
+  
+    // Handling clicks outside the dropdown to close it
+    document.addEventListener("click", function(event) {
+      if (!event.target.matches('#dropdownButton')) {
+        dropdownContent.style.display = "none";
+      }
+    });
+  
+    // Handling sign-in and sign-up click events
+    const signIn = document.getElementById("signIn");
+    const signUp = document.getElementById("signUp");
+  
+    signIn.addEventListener("click", function() {
+      // Handle sign-in action
+      console.log("Sign In clicked");
+      dropdownContent.style.display = "none";
+    });
+  
+    signUp.addEventListener("click", function() {
+      // Handle sign-up action
+      console.log("Sign Up clicked");
+      dropdownContent.style.display = "none";
+    });
+});
+  

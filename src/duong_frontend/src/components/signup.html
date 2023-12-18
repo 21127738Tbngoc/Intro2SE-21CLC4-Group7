@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./common.css">
     <link rel="stylesheet" href="../components/navbar/navbar.css">
     <link rel="stylesheet" href="../components/form/form.css">
-    <title>Login</title>
+    <title>Sign Up</title>
 </head>
 <body>
 
@@ -20,15 +20,24 @@
             <!--<div class="modal" id="loginModal">-->
                 <!--<div class="overlay" id="loginOverlay"></div>-->
                 <div class="d-flex flex-row">
-                    <img src="../../public/imgs/login/Img.jpg" class="modal-img" alt="">
-                    <div class="modal-content-login">
-                        <h3>Sign In</h3>
+                    <img src="../../public/imgs/signup/Img.jpg" class="modal-img" alt="">
+                    <div class="modal-content-signup">
+                        <h3>Sign Up</h3>
                         <div class="social-btn">
-                            <a href="#"><img src="../../public/imgs/login/Google.svg" alt=""></a>
-                            <a href="#"><img src="../../public/imgs/login/Facebook.svg" alt=""></a>
+                            <a href="#"><img src="../../public/imgs/signup/Google.svg" alt=""></a>
+                            <a href="#"><img src="../../public/imgs/signup/Facebook.svg" alt=""></a>
                         </div>
-                        <p class="title2" id="login-or">Or, sign in with your email</p>
+                        <p class="title2" id="signup-or">Or, sign up with your email</p>
                         <form>
+                            <!--Full name-->
+                            <div class="mb-3">
+                                <label for="name" class="form-label label1">Full Name</label>
+                                <div class="input-with-icon">
+                                    <!--User icon-->
+                                    <img src="../../public/imgs/signup/user.svg" alt="user" class="leading-icon">
+                                    <input type="email" class="form-control form-md-icon" placeholder="Enter your full name" required>
+                                </div>
+                            </div>
                             <!--Email-->
                             <div class="mb-3">
                                 <label for="email" class="form-label label1">Email</label>
@@ -49,8 +58,8 @@
                                 </div>
                             </div>
                         </form>
-                        <button class="prim-btn btn-md login-btn w-100">
-                            SIGN IN
+                        <button class="prim-btn btn-md signup-btn w-100">
+                            SIGN UP
                         </button> 
                         <p class="signup-link">Not yet registered? <a href="#">Sign Up</a> now!</p>
                     </div>  

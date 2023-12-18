@@ -36,6 +36,7 @@ a h5 img {
 .navbar {
     color: var(--tone-primary-40);
     min-height: 84px; 
+    width: 1296px;
     padding-left: 0!important;
     padding-right: 0!important;
 }
@@ -161,8 +162,16 @@ a h5 img {
     border: none;
 }
 
-.modal-content {
+.modal-content-login {
     padding-top: 98px;
+    width: 452px;
+    background: var(--scheme-background);
+    border-radius: 8px;
+    border: none;
+}
+
+.modal-content-signup {
+    padding-top: 52px;
     width: 452px;
     background: var(--scheme-background);
     border-radius: 8px;
@@ -207,3 +216,36 @@ a h5 img {
     text-decoration: none;
     font-family: semibold-font;
 }
+
+/*-- Account dropdown --*/
+.dropdown-content {
+    z-index: 1;
+    right: 48px;
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: var(--scheme-background);
+    padding: 0;
+    height: 112px;
+    min-width: 210px;
+    box-shadow: 0px 8px 16px 0px #BCCBB0;
+    z-index: 1;
+    font-family: regular-font;
+    font-size: 18px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 16px 24px;
+    text-decoration: none;
+    color: var(--scheme-on-surface-variant);
+}
+
+.dropdown-content li a:hover {
+    background-color: var(--tone-secondary-90); /* Change background color on hover */
+}
+  
