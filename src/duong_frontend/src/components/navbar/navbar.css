@@ -154,7 +154,7 @@ a h5 img {
 
 .modal {
     top: 50%;
-    left: 300px;
+    left: 0px;
     height: 800px;
     background: var(--scheme-background);
     border-radius: 8px;
@@ -179,11 +179,13 @@ a h5 img {
 
 .modal-img {
     display: inline-flex;
-    height: 800px;
+    left: 0px;
+    width: 90%;
+    height: auto;
     margin-right: 134px;
 }
 
-.social-btn {
+.social-login-btn, .social-signup-btn {
     width: 100%;
     display: flex;
     margin-top: 24px;

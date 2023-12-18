@@ -3,7 +3,7 @@ import { AllProducts } from './components/new_admin/AllProducts';
 import { AddProduct } from './components/new_admin/AddProduct';
 import Dashboard from './components/new_admin/Dashboard';
 import User from './components/new_admin/User';
-import Login from './components/login/Login';
+import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Footer from './components/footer/footer';
 
@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path='/login' element={<div><Login /><Footer/></div>} />
+          <Route path='/login' element={<div><Login /></div>} />
           <Route path='/signup' element={<Signup />} />
 
           <Route path='dashboard' element={<Dashboard />} />
