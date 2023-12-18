@@ -155,43 +155,38 @@ a h5 img {
 .modal {
     top: 50%;
     left: 300px;
-    width: 1140px;
-    height: 650px;
+    height: 800px;
     background: var(--scheme-background);
     border-radius: 8px;
     border: none;
 }
 
 .modal-content-login {
-    padding-top: 98px;
-    width: 452px;
+    padding-top: 174px;
     background: var(--scheme-background);
+    width: fit-content;
     border-radius: 8px;
     border: none;
 }
 
 .modal-content-signup {
-    padding-top: 52px;
-    width: 452px;
+    padding-top: 127px;
     background: var(--scheme-background);
+    width: fit-content;
     border-radius: 8px;
     border: none;
 }
 
 .modal-img {
     display: inline-flex;
-    width: 463px;
-    height: 650px;
-    margin-right: 119px;
+    height: 800px;
+    margin-right: 134px;
 }
 
 .social-btn {
     width: 100%;
     display: flex;
     margin-top: 24px;
-}
-.social-btn a {
-    margin-right: 10px;
 }
 
 #login-or, #signup-or {
