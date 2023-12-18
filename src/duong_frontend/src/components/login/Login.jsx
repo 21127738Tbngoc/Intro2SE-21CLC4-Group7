@@ -5,21 +5,20 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 
-
-
-import loginimg from '../../public/imgs/login/Img.jpg'
-import lock from "../../public/imgs/login/lock.svg"
-import eye_open from "../../public/imgs/login/eye-open.svg"
-import email from "../../public/imgs/login/email.svg"
-import gg from "../../public/imgs/login/Google.svg"
-import fb from "../../public/imgs/login/Facebook.svg"
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../button/buttons.css'; 
 import '../common.css'; 
 import '../navbar/navbar.css';
 import '../form/form.css';
+
+
+const LoginImage =  '/imgs/login/Img.jpg'
+const lock ="/imgs/login/lock.svg"
+const eye_open = "/imgs/login/eye-open.svg"
+const email = "/imgs/login/email.svg"
+const gg = "/imgs/login/Google.svg"
+const fb = "/imgs/login/Facebook.svg"
 
 const Login = () => {
   useEffect(() => {
@@ -65,9 +64,9 @@ const Login = () => {
                 <h5 className="fw-bold">Loading...</h5>
               </Col>
             ) : (
-              <Col lg="6" className="m-auto text-center">
+              // <Col lg="6" className="m-auto text-center">
                 <div class="container-fluid d-flex">
-                  <img src= {loginimg} class="modal-img" alt="login-img" />
+                  <img src={LoginImage} class="modal-img" alt="login-img" />
                   <div class="container">
                     <div class="modal-content-login">
                       <h3>Sign In</h3>
@@ -128,7 +127,7 @@ const Login = () => {
                     </div>
                   </div>
                 </div>
-              </Col>
+              // </Col>
             )}
           </Row>
         </Container>
