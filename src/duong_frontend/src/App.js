@@ -3,7 +3,7 @@ import { AllProducts } from './components/new_admin/AllProducts';
 import { AddProduct } from './components/new_admin/AddProduct';
 import Dashboard from './components/new_admin/Dashboard';
 import User from './components/new_admin/User';
-import Login from './pages/Login';
+import Login from './components/login/Login';
 import Signup from './pages/Signup';
 import Footer from './components/footer/footer';
 
