@@ -83,17 +83,17 @@
     --scheme-on-surface: #1A1C19;
     --scheme-surface-variant: #E1E4D7;
     --scheme-on-surface-variant: #44483F;
-    --scheme-outline: #75796E;
+    --scheme-outline: #A1B096;
     /*----------Feedback----------*/
     /*--Error--*/
-    --feedback-error-error: #F04438;
-    --feedback-error-on-error: #FEE4E2;
+    --feedback-error: #F04438;
+    --feedback-on-error: #FEE4E2;
     /*--Warning--*/
-    --feedback-warning-warning: #FDB022;
-    --feedback-warning-on-warning: #FFEDCC;
+    --feedback-warning: #FDB022;
+    --feedback-on-warning: #FFEDCC;
     /*--Success--*/
-    --feedback-success-success: #12B76A;
-    --feedback-success-on-success: #D1FADF;
+    --feedback-success: #12B76A;
+    --feedback-on-success: #D1FADF;
 }
 
 /*--Typography--*/
