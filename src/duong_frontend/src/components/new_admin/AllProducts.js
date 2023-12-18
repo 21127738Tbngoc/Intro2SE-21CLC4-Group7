@@ -20,20 +20,14 @@ export const AllProducts = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/products/', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          // Add your token here if needed
-          // 'Authorization': 'Bearer YOUR_TOKEN',
-        },
-      });
+      const response = await fetch('http://localhost:5000/api/products/');
 
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
 
       const data = await response.json();
+      console.log(data);
       setProductsData(data);
       setLoading(false);
     } catch (error) {
@@ -62,8 +56,7 @@ export const AllProducts = () => {
       }
 
       toast.success('Deleted');
-      fetchData(); // Fetch data again after deletion
-      window.location.reload();
+      fetchData(); 
     } catch (error) {
       console.error('Error deleting product:', error);
       toast.error('Error deleting product');
