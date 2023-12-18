@@ -44,3 +44,5 @@ closeIconCartModal.addEventListener('click',closeCartModal);
 navbarContainer.addEventListener('click',function(event){
     event.stopPropagation()
 })
+
+// Open Login, Sign up
