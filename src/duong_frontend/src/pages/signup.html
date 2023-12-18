@@ -11,27 +11,36 @@
     <link rel="stylesheet" href="../components/common.css">
     <link rel="stylesheet" href="../components/navbar/navbar.css">
     <link rel="stylesheet" href="../components/form/form.css">
-    <title>Login</title>
+    <title>Sign Up</title>
 </head>
 <body>
 
     <div class="container-fluid d-flex">
         <img src="../../public/imgs/signup/Img.jpg" class="modal-img" alt="signup-img">
         <div class="container">
-            <div class="modal-content-login">
+            <div class="modal-content-signup">
                 <h3>Sign In</h3>
                 <div class="social-btn">
-                    <a href="#"><img src="../../public/imgs/login/Google.svg" class="me-3" alt=""></a>
-                    <a href="#"><img src="../../public/imgs/login/Facebook.svg" alt=""></a>
+                    <a href="#"><img src="../../public/imgs/signup/Facebook.svg" class="me-3" alt="Google"></a>
+                    <a href="#"><img src="../../public/imgs/signup/Google.svg" alt="Facebook"></a>
                 </div>
-                <p class="title2" id="login-or">Or, sign un with your email</p>
+                <p class="title2" id="signup-or">Or, sign up with your email</p>
                 <form>
+                    <!--Name-->
+                    <div class="mb-3">
+                        <label for="user" class="form-label label1">Full Name</label>
+                        <div class="input-with-icon">
+                            <!--User icon-->
+                            <img src="../../public/imgs/signup/user.svg" alt="user" class="leading-icon">
+                            <input type="user" class="form-control form-md-icon" placeholder="Enter your full name here" required>
+                        </div>
+                    </div>
                     <!--Email-->
                     <div class="mb-3">
                         <label for="email" class="form-label label1">Email</label>
                         <div class="input-with-icon">
                             <!--Email icon-->
-                            <img src="../../public/imgs/login/email.svg" alt="email" class="leading-icon">
+                            <img src="../../public/imgs/signup/email.svg" alt="email" class="leading-icon">
                             <input type="email" class="form-control form-md-icon" placeholder="Enter your email address here" required>
                         </div>
                     </div>
@@ -40,13 +49,13 @@
                         <label for="password" class="form-label label1">Password</label>
                         <div class="input-with-icon">
                             <!--Lock icon-->
-                            <img src="../../public/imgs/login/lock.svg" alt="password" class="leading-icon">
+                            <img src="../../public/imgs/signup/lock.svg" alt="password" class="leading-icon">
                             <input type="password" class="form-control form-md-icon" placeholder="•••••••••••••••••" required>
-                            <img src="../../public/imgs/login/eye-open.svg" alt="password" class="trailing-icon">
+                            <img src="../../public/imgs/signup/eye-open.svg" alt="password" class="trailing-icon">
                         </div>
                     </div>
                 </form>
-                <button class="prim-btn btn-md login-btn w-100">
+                <button class="prim-btn btn-md signup-btn w-100">
                     SIGN IN
                 </button> 
                 <p class="signup-link">Not yet registered? <a href="#">Sign Up</a> now!</p>
