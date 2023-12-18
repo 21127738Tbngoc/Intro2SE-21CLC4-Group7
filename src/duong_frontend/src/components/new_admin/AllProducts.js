@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { toast } from 'react-toastify';
 
+
+
+
+const Token = localStorage.getItem("Token")
+
+
+
 export const AllProducts = () => {
   const [productsData, setProductsData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -36,6 +43,9 @@ export const AllProducts = () => {
     }
   };
 
+
+
+
   const deleteProduct = async (id) => {
     try {
       console.log(id);
@@ -43,8 +53,7 @@ export const AllProducts = () => {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
-          // Add your token here if needed
-          'Authorization': 'Bearer YOUR_TOKEN',
+          token: " bearer " + Token
         },
       });
 
@@ -88,7 +97,7 @@ export const AllProducts = () => {
                   {productsData.map((data, index) => (
                     <tr className='table' key={index}>
                       <td>
-                        <img src={data.imgURL} alt='product' />
+                        <img src={data.img} alt='product' style={{ width: '50px', height: '50px' }} />                      
                       </td>
                       <td>{data.name}</td>
                       <td>{data.desc}</td>
