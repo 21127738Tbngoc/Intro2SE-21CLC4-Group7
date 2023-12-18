@@ -152,14 +152,58 @@ a h5 img {
 }
 
 .modal {
+    top: 50%;
+    left: 300px;
     width: 1140px;
     height: 650px;
     background: var(--scheme-background);
     border-radius: 8px;
+    border: none;
+}
+
+.modal-content {
+    padding-top: 98px;
+    width: 452px;
+    background: var(--scheme-background);
+    border-radius: 8px;
+    border: none;
 }
 
 .modal-img {
     display: inline-flex;
+    width: 463px;
     height: 650px;
-    flex-direction: column;
+    margin-right: 119px;
+}
+
+.social-btn {
+    width: 100%;
+    display: flex;
+    margin-top: 24px;
+}
+.social-btn a {
+    margin-right: 10px;
+}
+
+#login-or, #signup-or {
+    color: var(--tone-neutral-70);
+    text-align: center;
+    margin-top: 24px;
+}
+
+.login-btn, .signup-btn {
+    margin-top: 32px;
+}
+.signup-link, .login-link {
+    margin-top: 16px;
+    display: inline-block;
+    font-family: regular-font;
+    color: var(--tone-neutral-60);
+}
+
+.signup-link a {
+    display: inline;
+    color: var(--tone-primary-40);
+    text-decoration: none;
+    font-family: semibold-font;
 }
