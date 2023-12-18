@@ -180,8 +180,8 @@ a h5 img {
 .modal-img {
     display: inline-flex;
     left: 0px;
-    width: 90%;
-    height: auto;
+    width: auto;
+    height: 800px;
     margin-right: 134px;
 }
 
