@@ -99,33 +99,11 @@ const Signup = () => {
         phone,
       };
       console.log(userData);
-      console.log('ahjsdgkljasgdfkjhgaskdjfhgasdf');
-
-
-      const mongoResponse = await axios.post('http://localhost:5000/api/auth/register/', userData);
-
+      
+      const response = await axios.post('http://localhost:5000/api/auth/register/', userData);
 
 
 
-      // const response = await fetch('http://localhost:5000/api/auth/register/', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({
-      //     avatar: '', // Add avatar if needed
-      //     name,
-      //     username,
-      //     email,
-      //     password,
-      //     address,
-      //     phone,
-      //   }),
-      // });
-
-      // if (!response.ok) {
-      //   throw new Error('Signup failed');
-      // }
 
 
       
