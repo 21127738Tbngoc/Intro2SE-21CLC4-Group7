@@ -86,6 +86,9 @@
     position: relative;
     margin-bottom: 0;
 }
+.product-price {
+    float: right;
+}
 .rating-star {
     height: 24px;
     margin-top: 8px;

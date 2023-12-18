@@ -114,6 +114,9 @@ a.link-sm{
     width: 60px;
     border: none;
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .i-btn-md {
@@ -122,6 +125,9 @@ a.link-sm{
     width: 48px;
     border: none;
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .i-btn-sm {
@@ -129,8 +135,11 @@ a.link-sm{
     height: 40px;
     width: 40px;
     border: none;
-    padding: 11px;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 /*--- Hierarchy---*/
