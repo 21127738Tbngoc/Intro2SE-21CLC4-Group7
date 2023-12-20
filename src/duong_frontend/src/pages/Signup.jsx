@@ -47,31 +47,48 @@ const Login = () => {
   };
 
   return (
-    <Helmet title="login">
+    <Helmet title="signup">
       <section>
             {loading ? (
               <Col xxl="12" className="text-center">
                 <h5 className="fw-bold">Loading...</h5>
               </Col>
             ) : (
-              // Login
+              // Signup
               <div class="container-fluid d-flex">
-                  <img src="/imgs/login/Img.jpg" class="modal-img" alt="login-img" />
+                  <img src="/imgs/signup/Img.jpg" class="modal-img" alt="signup-img" />
                   <div class="container">
-                    <div class="modal-content-login">
-                      <h3>Sign In</h3>
+                    <div class="modal-content-signup">
+                      <h3>Sign Up</h3>
                       <div class="social-login-btn">
                         <a href="#">
-                          <img src="/imgs/login/Google.svg" class="me-3" alt="" />
+                          <img src="/imgs/signup/Google.svg" class="me-3" alt="" />
                         </a>
                         <a href="#">
-                          <img src="/imgs/login/Facebook.svg" alt="" />
+                          <img src="/imgs/signup/Facebook.svg" alt="" />
                         </a>
                       </div>
-                      <p class="title2" id="login-or">
-                        Or, sign in with your email
+                      <p class="title2" id="signup-or">
+                        Or, sign up with your email
                       </p>
                       <form>
+                        {/* Full name */}
+                        <div class="mb-3">
+                          <label for="fullName" class="form-label label1">
+                            Full name
+                          </label>
+                          <div class="input-with-icon">
+                            <img src="/imgs/signup/user.svg" alt="fullName" class="leading-icon" />
+                            <input
+                              type="text"
+                              placeholder="Enter your full name here"
+                              class="form-control form-md-icon"
+                              value={username}
+                              onChange={(e) => setEmail(e.target.value)}
+                              required
+                            />
+                          </div>
+                        </div>
                         {/* Email */}
                         <div class="mb-3">
                           <label for="email" class="form-label label1">
