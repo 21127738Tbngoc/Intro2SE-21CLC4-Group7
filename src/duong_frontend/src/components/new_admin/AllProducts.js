@@ -12,7 +12,7 @@ const Token = localStorage.getItem("Token")
 export const AllProducts = () => {
   const [productsData, setProductsData] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [numProducts, setNumProducts] = useState(0);
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchData();
@@ -21,14 +21,19 @@ export const AllProducts = () => {
   const fetchData = async () => {
     try {
       const response = await fetch('http://localhost:5000/api/products/');
-
+  
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }
-
+  
       const data = await response.json();
+  
       console.log(data);
       setProductsData(data);
+      const totalProducts = data.length;
+      setNumProducts(totalProducts);
+      localStorage.setItem('numProducts', totalProducts);
+  
       setLoading(false);
     } catch (error) {
       console.error('Error fetching data:', error);
@@ -36,6 +41,7 @@ export const AllProducts = () => {
       setLoading(false);
     }
   };
+  
 
 
 
@@ -110,9 +116,12 @@ export const AllProducts = () => {
                           Delete
                         </button>
                       </td>
+                      
                     </tr>
+                    
                   ))}
                 </tbody>
+                <h4>Total Number of Products: {numProducts}</h4>
               </table>
             )}
           </Col>

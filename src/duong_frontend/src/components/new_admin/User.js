@@ -11,8 +11,6 @@ const User = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        // Replace 'YOUR_TOKEN' with the actual token
-        const token = 'YOUR_TOKEN';
         const response = await fetch('http://localhost:5000/api/users/', {
           method: 'GET',
           headers: {
