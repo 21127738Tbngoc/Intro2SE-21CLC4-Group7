@@ -9,6 +9,10 @@ import Footer from './components/footer/footer';
 import Navbar from './components/navbar/navbar';
 // import Searchbar from "./components/searchbar/searchbar";
 
+import Testing from './components/testing/Test'
+
+
+
 function App() {
   return (
     <div >
@@ -27,7 +31,7 @@ function App() {
           {/*<Route path='/about' element={<div><Navbar/><Footer/></div>} />*/}
           {/*<Route path='/partners' element={<div><Navbar/><Footer/></div>} />*/}
           {/*<Route path='/designers' element={<div><Navbar/><Footer/></div>} />*/}
-          <Route path={'/test'} element={<div><Navbar/><Footer/></div>}/>
+            <Route path={'/test'} element={<div><Navbar/><Footer/></div>}/>
         </Routes>
       </BrowserRouter>
 

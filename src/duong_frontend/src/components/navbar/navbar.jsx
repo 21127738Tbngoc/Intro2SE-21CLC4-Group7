@@ -35,11 +35,9 @@ const Navbar = () => {
 
     function openCartModal() {
         const cartModal = document.querySelector('.navbar-cart')
-        if (cartModal.classList.value.search("open-cart-modal") === -1)
-        {
+        if (cartModal.classList.value.search("open-cart-modal") === -1) {
             cartModal.classList.add('open-cart-modal');
-        } else
-        {
+        } else {
             cartModal.classList.remove('open-cart-modal');
         }
         console.log(cartModal.classList.value)
@@ -68,32 +66,28 @@ const Navbar = () => {
         }
     }
 
-    const dropDownContent0 = (
-    <ul className="dropdown-content" id="dropdownContent">
-        {/*<!-- Login --> */}
-        <li>
-            <a href="/login" id="signIn" className="list-item">
-                <img src="/imgs/navbar/login.svg" alt="login"/>
-                <span>Sign In
-                                </span>
-            </a>
-        </li>
-        {/*<!-- Sign Up --> */}
-        <li>
-            <a href="/signup" id="signUp" className="list-item">
-                <img src="/imgs/navbar/signup.svg" alt="login"/>
-                <span>Sign Up
-                </span>
-            </a>
-        </li>
-    </ul>
+    const dropDownContent = (
+        <ul className="dropdown-content" id="dropdownContent">
+            {/*<!-- Login --> */}
+            <li>
+                <a href="/login" id="signIn" className="list-item">
+                    <img src="/imgs/navbar/login.svg" alt="login"/>
+                    <span>Sign In</span>
+                </a>
+            </li>
+            {/*<!-- Sign Up --> */}
+            <li>
+                <a href="/signup" id="signUp" className="list-item">
+                    <img src="/imgs/navbar/signup.svg" alt="login"/>
+                    <span>Sign Up</span>
+                </a>
+            </li>
+        </ul>
     )
-    console.log(dropDownContent0.style)
-    const [dropDownContent, dropDownFunc] = useState(dropDownContent0);
 
     return (
         <div>
-        {/*<!-- Navbar --> */}
+            {/*<!-- Navbar --> */}
 
             <div className="container-xxl navbar">
                 <div className="d-flex flex-row g-4 align-items-center justify-content-between">
@@ -110,7 +104,6 @@ const Navbar = () => {
                         <p className="button2 align-items-center h-100 ">SEARCH</p>
                     </div>
                 </div>
-
 
 
                 {/*<!-- Logo --> */}
@@ -134,7 +127,9 @@ const Navbar = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="dropdown" onMouseOver={()=> {console.log("Hello")}}>
+                    <div className="dropdown" onMouseOver={() => {
+                        console.log("Hello")
+                    }}>
                         <div className="d-flex flex-row align-items-center" id="dropdownToggle">
                             <h5 className="mx-2">
                                 <img src="/imgs/navbar/profile-icon.svg" alt="Profile"/>
@@ -142,172 +137,172 @@ const Navbar = () => {
                             <p className="button2 align-items-center" id="dropdownButton">ACCOUNT
                             </p>
                         </div>
-                        {/*{dropDownContent}*/}
+                        <dropDownContent/>
                     </div>
                 </div>
             </div>
 
 
-        <div className="container-fluid fixed-top navbar-container justify-content-between position-relative"
-             onClick={(event) => {
-                 event.stopPropagation()
-             }}>
-            {/*// <!-- Search dropdown -->*/}
-            <Searchbar/>
-            {/*<!-- Cart Modal --> */}
-            <CartModal/>
-        </div>
-        {/*<!-- Megamenu --> */}
-        <div className="container-fluid navbar-menu">
-            <div className="container-xxl d-flex">
-                <div className="col-xxl-7">
-                    <div className="d-flex">
-                        <div className="col-xxl-3">
-                            <d5>ABOUT
-                            </d5>
-                            <ul className="flex-column mt-3">
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">ABOUT US
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">OUR PARTNERS
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">OUR DESIGNERS
-                                    </a>
-                                </li>
-                            </ul>
+            <div className="container-fluid fixed-top navbar-container justify-content-between position-relative"
+                 onClick={(event) => {
+                     event.stopPropagation()
+                 }}>
+                {/*// <!-- Search dropdown -->*/}
+                <Searchbar/>
+                {/*<!-- Cart Modal --> */}
+                <CartModal/>
+            </div>
+            {/*<!-- Megamenu --> */}
+            <div className="container-fluid navbar-menu">
+                <div className="container-xxl d-flex">
+                    <div className="col-xxl-7">
+                        <div className="d-flex">
+                            <div className="col-xxl-3">
+                                <d5>ABOUT
+                                </d5>
+                                <ul className="flex-column mt-3">
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">ABOUT US
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">OUR PARTNERS
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">OUR DESIGNERS
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="col-xxl-3">
+                                <d5>SHOP
+                                </d5>
+                                <ul className="flex-column mt-3">
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">SHOP ALL
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">LIVING ROOM
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">BEDROOM
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">DINING ROOM
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-4">
+                                        <a href="#" className="slide-border">BATH ROOM
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="col-xxl-3 ">
+                                <d5>SUPPORT
+                                </d5>
+                                <ul className="flex-column mt-3">
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">FAQS
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">CONTACT
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">WARRANTY POLICY
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className="col-xxl-3">
-                            <d5>SHOP
-                            </d5>
-                            <ul className="flex-column mt-3">
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">SHOP ALL
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">LIVING ROOM
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">BEDROOM
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">DINING ROOM
-                                    </a>
-                                </li>
-                                <li className="p1 mb-4">
-                                    <a href="#" className="slide-border">BATH ROOM
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="col-xxl-3 ">
-                            <d5>SUPPORT
-                            </d5>
-                            <ul className="flex-column mt-3">
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">FAQS
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">CONTACT
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">WARRANTY POLICY
-                                    </a>
-                                </li>
-                            </ul>
+                        <div className="d-flex">
+                            <div className="col-xxl-3">
+                                <d5>SERVICE
+                                </d5>
+                                <ul className="flex-column mt-3">
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">MAINTENANCE
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">ASSEMBLY
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">UPHOLSTERY
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">REPAIRS
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="col-xxl-3 ">
+                                <d5>MEDIA
+                                </d5>
+                                <ul className="flex-column mt-3">
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">ARTICLES
+                                        </a>
+                                    </li>
+                                    <li className="p1 mb-2">
+                                        <a href="#" className="slide-border">COMMUNITY
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="col-xxl-3 ">
+                                <p className="label1">Follow Fitment at
+                                </p>
+                                <ul className="d-flex flex-row mt-3">
+                                    <li>
+                                        <div className="menu-contact-container">
+                                            <a href="#">
+                                                <button className="outline-i-btn i-btn-nm">
+                                                    <img src="/imgs/navbar/facebook-logo.svg" alt="facebook-logo"/>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="menu-contact-container">
+                                            <a href="#">
+                                                <button className="outline-i-btn i-btn-nm">
+                                                    <img src="/imgs/navbar/twitter-logo.svg" alt="twitter-logo"/>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="menu-contact-container">
+                                            <a href="#">
+                                                <button className="outline-i-btn i-btn-nm">
+                                                    <img src="/imgs/navbar/instagram-logo.svg" alt="instagram-logo"/>
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div className="d-flex">
-                        <div className="col-xxl-3">
-                            <d5>SERVICE
-                            </d5>
-                            <ul className="flex-column mt-3">
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">MAINTENANCE
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">ASSEMBLY
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">UPHOLSTERY
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">REPAIRS
-                                    </a>
-                                </li>
-                            </ul>
+                    {/*<!-- Menu img --> */}
+                    <div className="col-xxl-5 menu-img">
+                        <div>
+                            <img src="/imgs/navbar/navimg.jpg" alt="" className="menu-img"/>
+                            <a href="#" className="button1 view-more-btn">View more
+                            </a>
                         </div>
-                        <div className="col-xxl-3 ">
-                            <d5>MEDIA
-                            </d5>
-                            <ul className="flex-column mt-3">
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">ARTICLES
-                                    </a>
-                                </li>
-                                <li className="p1 mb-2">
-                                    <a href="#" className="slide-border">COMMUNITY
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="col-xxl-3 ">
-                            <p className="label1">Follow Fitment at
-                            </p>
-                            <ul className="d-flex flex-row mt-3">
-                                <li>
-                                    <div className="menu-contact-container">
-                                        <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
-                                                <img src="/imgs/navbar/facebook-logo.svg" alt="facebook-logo"/>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="menu-contact-container">
-                                        <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
-                                                <img src="/imgs/navbar/twitter-logo.svg" alt="twitter-logo"/>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div className="menu-contact-container">
-                                        <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
-                                                <img src="/imgs/navbar/instagram-logo.svg" alt="instagram-logo"/>
-                                            </button>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                {/*<!-- Menu img --> */}
-                <div className="col-xxl-5 menu-img">
-                    <div>
-                        <img src="/imgs/navbar/navimg.jpg" alt="" className="menu-img"/>
-                        <a href="#" className="button1 view-more-btn">View more
-                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>)
+        </div>)
 };
 
 
