@@ -12,7 +12,7 @@ import '../components/common.css';
 import '../components/navbar/navbar.css';
 import '../components/form/form.css';
 
-const Login = () => {
+const Signup = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   });
@@ -22,15 +22,15 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const loginHandler = async (e) => {
+  const signupHandler = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const loginData = {
+    const signupData = {
       username,
       password,
     };
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login/', loginData);
+      const response = await axios.post('http://localhost:5000/api/auth/signup/', signupData);
 
       const token = response.data.accessToken;
       localStorage.setItem('Token', token);
@@ -42,7 +42,7 @@ const Login = () => {
       navigate('');
     } catch (error) {
       setLoading(false);
-      toast.error(error.message || 'Login failed');
+      toast.error(error.message || 'Signup failed');
     }
   };
 
@@ -60,7 +60,7 @@ const Login = () => {
                   <div class="container">
                     <div class="modal-content-signup">
                       <h3>Sign Up</h3>
-                      <div class="social-login-btn">
+                      <div class="social-signup-btn">
                         <a href="#">
                           <img src="/imgs/signup/Google.svg" class="me-3" alt="" />
                         </a>
@@ -95,7 +95,7 @@ const Login = () => {
                             Email
                           </label>
                           <div class="input-with-icon">
-                            <img src="/imgs/login/email.svg" alt="email" class="leading-icon" />
+                            <img src="/imgs/signup/email.svg" alt="email" class="leading-icon" />
                             <input
                               type="text"
                               placeholder="Enter your email address" // Assuming username is equivalent to email in this context
@@ -112,7 +112,7 @@ const Login = () => {
                             Password
                           </label>
                           <div class="input-with-icon">
-                            <img src="/imgs/login/lock.svg" alt="password" class="leading-icon" />
+                            <img src="/imgs/signup/lock.svg" alt="password" class="leading-icon" />
                             <input
                               type="password"
                               class="form-control form-md-icon"
@@ -121,11 +121,11 @@ const Login = () => {
                               onChange={(e) => setPassword(e.target.value)}
                               required
                             />
-                            <img src="/imgs/login/eye-open.svg" alt="password" class="trailing-icon" />
+                            <img src="/imgs/signup/eye-open.svg" alt="password" class="trailing-icon" />
                           </div>
                         </div>
                       </form>
-                      <button onClick={loginHandler} class="prim-btn btn-md login-btn w-100">
+                      <button onClick={signupHandler} class="prim-btn btn-md signup-btn w-100">
                         SIGN IN
                       </button>
                       <p class="signup-link">
@@ -143,4 +143,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;

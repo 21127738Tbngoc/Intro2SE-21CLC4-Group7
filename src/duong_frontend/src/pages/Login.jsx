@@ -69,19 +69,19 @@ const Login = () => {
                         </a>
                       </div>
                       <p class="title2" id="login-or">
-                        Or, sign in with your email
+                        Or, sign in with your username
                       </p>
                       <form>
                         {/* Email */}
                         <div class="mb-3">
                           <label for="email" class="form-label label1">
-                            Email
+                            Username
                           </label>
                           <div class="input-with-icon">
-                            <img src="/imgs/login/email.svg" alt="email" class="leading-icon" />
+                            <img src="/imgs/login/user.svg" alt="username" class="leading-icon" />
                             <input
                               type="text"
-                              placeholder="Enter your email address" // Assuming username is equivalent to email in this context
+                              placeholder="Enter your username" 
                               class="form-control form-md-icon"
                               value={username}
                               onChange={(e) => setEmail(e.target.value)}
