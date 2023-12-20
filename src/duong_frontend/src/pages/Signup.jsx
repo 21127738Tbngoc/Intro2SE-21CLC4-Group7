@@ -26,6 +26,7 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     const signupData = {
+      fullname,
       username,
       password,
     };
@@ -38,7 +39,7 @@ const Signup = () => {
       console.log(token);
 
       setLoading(false);
-      toast.success('Successfully logged in');
+      toast.success('Successfully signed up');
       navigate('');
     } catch (error) {
       setLoading(false);
@@ -50,9 +51,11 @@ const Signup = () => {
     <Helmet title="signup">
       <section>
             {loading ? (
-              <Col xxl="12" className="text-center">
-                <h5 className="fw-bold">Loading...</h5>
-              </Col>
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
             ) : (
               // Signup
               <div class="container-fluid d-flex">

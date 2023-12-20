@@ -50,9 +50,11 @@ const Login = () => {
     <Helmet title="login">
       <section>
             {loading ? (
-              <Col xxl="12" className="text-center">
-                <h5 className="fw-bold">Loading...</h5>
-              </Col>
+              <div class="d-flex justify-content-center">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
             ) : (
               // Login
               <div class="container-fluid d-flex">
