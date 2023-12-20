@@ -15,16 +15,24 @@
     <!-- Icons -->
     <link rel="stylesheet" href="../../../public/icons/fontawesome/css/all.min.css"
     <link rel="stylesheet" href="../../../public/icons/fontawesome/css/brands.css">
+    <!-- Locomotive scroll -->
+    
     <title>Home</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <video src="../../public/imgs/home/hero-banner.mp4" class="hero-banner"></video>
+    <!-- Hero banner -->
+    <div class="container-fluid hero-banner">
+        <video src="../../public/imgs/home/hero-banner.mp4" class="hero-banner" autoplay muted loop></video>
         <div class="container">
-            <div class="col-xxl-12">
-                <d2 class="hero-text">WHERE WE TURN YOUR HOME <br>INTO A MASTERPIECE</d2> 
-            </div>
+            <d2 id="hero-text">WHERE WE TURN YOUR HOME INTO A MASTERPIECE</d2> 
+            <button class="sec-btn btn-md" id="hero-btn">ABOUT US</button>
         </div>
+    </div>
+
+    <!-- Shop all-->
+    <div class="container-fluid shop-bg">
+        <img src="../../public/imgs/home/shop-bg.jpg" alt="shop-all">
+
     </div>
 </body>
 </html>
