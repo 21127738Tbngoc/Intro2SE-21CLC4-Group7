@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import '../styles/Dashboard.css';
-import useGetData from '../custom-hooks/useGetData';
+
 
 const Token = localStorage.getItem("Token")
 
@@ -10,10 +10,6 @@ const Dashboard = () => {
   const [totalProducts, setTotalProducts] = useState(0);
   const [numUser, setnumUser] = useState(0);
   
-  const [userData, setUserData] = useState([]);
-
-  const { data: products } = useGetData('products');
-  const { data: users } = useGetData('user');
 
   useEffect(() => {
     const fetchData = async () => {
