@@ -26,8 +26,8 @@ const Signup = () => {
     e.preventDefault();
     setLoading(true);
     const signupData = {
-      fullname,
       username,
+      email,
       password,
     };
     try {
@@ -101,7 +101,7 @@ const Signup = () => {
                             <img src="/imgs/signup/email.svg" alt="email" class="leading-icon" />
                             <input
                               type="text"
-                              placeholder="Enter your email address" // Assuming username is equivalent to email in this context
+                              placeholder="Enter your email address"
                               class="form-control form-md-icon"
                               value={username}
                               onChange={(e) => setEmail(e.target.value)}
