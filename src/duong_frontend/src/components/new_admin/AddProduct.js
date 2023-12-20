@@ -110,7 +110,7 @@ const AddProduct = () => {
 
       const mongoResponse = await axios.post('http://localhost:5000/api/products/', productData, { headers });
 
-
+      
 
 
 
