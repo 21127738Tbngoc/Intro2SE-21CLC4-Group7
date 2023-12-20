@@ -1,22 +1,23 @@
 // Open menu feature
-const openIconMenu = document.querySelector('.navbar .menu-open-btn img');
+
 let isOpenMenu = false;
 
 
-const menu = document.querySelector('.navbar-menu')
-
-const navbarContainer = document.querySelector('.navbar-container')
+// const navbarContainer = document.querySelector('.navbar-container')
 
 function toggleMenu()
 {
+    const menu = document.querySelector('.navbar-menu')
+    const openIconMenu = document.querySelector('.navbar .menu-open-btn img');
+
     if(isOpenMenu === false)
     {
-        openIconMenu.src = '../../../public/imgs/navbar/close-icon.svg'
+        openIconMenu.src = '/imgs/navbar/close-icon.svg'
         menu.classList.add('open-menu');
         isOpenMenu = true;
     }
     else {
-        openIconMenu.src = '../../../public/imgs/navbar/menu-icon.svg'
+        openIconMenu.src = '/imgs/navbar/menu-icon.svg'
         menu.classList.remove('open-menu');
         isOpenMenu = false
     }
@@ -78,4 +79,4 @@ document.addEventListener("DOMContentLoaded", function() {
       dropdownContent.style.display = "none";
     });
 });
-  
+
