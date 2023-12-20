@@ -8,14 +8,15 @@ const Token = localStorage.getItem("Token")
 
 const Dashboard = () => {
   const [totalProducts, setTotalProducts] = useState(0);
+  const [totalArticle, setTotalArticle] = useState(0);
   const [numUser, setnumUser] = useState(0);
-  
+  const [ordersData, setOrdersData] = useState([]);
+  const [incomeData, setIncomeData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       // Fetch total products in real-time
       try {
-        //product
         const responseProduct = await fetch('http://localhost:5000/api/products/');
         const responseUser = await fetch('http://localhost:5000/api/users/', {
           method: 'GET',
@@ -24,7 +25,34 @@ const Dashboard = () => {
             token: " bearer " + Token
           },
         });
+        const responseArticle = await fetch('http://localhost:5000/api/article/');
+        const responseOrder = await fetch('http://localhost:5000/api/orders', { 
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            token: " bearer " + Token
+          },
+         });
+         const responseIncome = await fetch('http://localhost:5000/api/orders/income/', { 
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            token: " bearer " + Token
+          },
+         });
+        
 
+
+
+
+
+
+        if (!responseIncome.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        if (!responseOrder.ok) {
+          throw new Error('Failed to fetch data');
+        }
         if (!responseProduct.ok) {
           throw new Error('Failed to fetch data');
         }
@@ -32,14 +60,30 @@ const Dashboard = () => {
         if (!responseUser.ok) {
           throw new Error('Failed to fetch user data');
         }
+        if (!responseArticle.ok) {
+          throw new Error('Failed to fetch data');
+        }
+
+
+
+
 
         const dataUser = await responseUser.json();
         setnumUser(dataUser.length);
 
-        const data = await responseProduct.json();
-        setTotalProducts(data.length);
+        const dataProduct = await responseProduct.json();
+        setTotalProducts(dataProduct.length);
 
-        //user
+        const dataArticle = await responseArticle.json();
+        setTotalArticle(dataArticle.length);
+
+        const dataOrder = await responseOrder.json();
+        setOrdersData(dataOrder.length);
+
+        const dataIncome = await responseIncome.json();
+        setIncomeData(dataIncome[0].total)
+
+
         
 
 
@@ -65,14 +109,14 @@ const Dashboard = () => {
           <Row>
             <Col lg='3' md='4'>
               <div className='revenue__box mb-4'>
-                <h5>Total Sales</h5>
-                <h3>$999</h3>
+                <h5>This month income</h5>
+                <h3>${incomeData}</h3>
               </div>
             </Col>
             <Col lg='3' md='4'>
               <div className='orders__box mb-4'>
                 <h5>Total Orders</h5>
-                <h3>999</h3>
+                <h3>{ordersData}</h3>
               </div>
             </Col>
             <Col lg='3' md='4'>
@@ -85,7 +129,7 @@ const Dashboard = () => {
             <Col lg='3' md='4'>
               <div className='products__box mb-4'>
                 <h5>Total Articles</h5>
-                <h3>999</h3>
+                <h3>{totalArticle}</h3>
               </div>
             </Col>
 

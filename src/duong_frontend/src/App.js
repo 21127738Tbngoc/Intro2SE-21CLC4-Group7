@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AllProducts } from './components/new_admin/AllProducts';
 import { AllArticles } from './components/new_admin/AllArticles';
+import { AllOrder } from './components/new_admin/AllOrder';
 
 import { AddProduct } from './components/new_admin/AddProduct';
 import { AddArticle } from './components/new_admin/AddArticle';
@@ -27,7 +28,7 @@ function App() {
           <Route path='dashboard/add-products' element={<AddProduct />} />
           <Route path='dashboard/user' element={<User />} />
           <Route path='dashboard/add-articles' element={<AddArticle />} />
-          <Route path='dashboard/all-articles' element={<AllArticles />} />
+          <Route path='dashboard/all-orders' element={<AllOrder />} />
 
           
           /!*<Route path='/test/searchbar' element={<Searchbar/>} />
