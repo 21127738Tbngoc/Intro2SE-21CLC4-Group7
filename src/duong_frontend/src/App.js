@@ -24,9 +24,6 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-<<<<<<< HEAD
-
-=======
           <Route path='/login' element={<div><Navbar/><Login /><Footer/></div>} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/' element={<div><Navbar/></div>}/>
@@ -43,7 +40,6 @@ function App() {
           <Route path='/partners' element={<div><Navbar/><Footer/></div>} />
           <Route path='/designers' element={<div><Navbar/><Footer/></div>} />
           <Route path={'/test'} element={<div><Navbar/><Footer/></div>}/>
->>>>>>> 2375a3a84ff1dbcc34b88563b19ed7decc22d2d8
         </Routes>
       </BrowserRouter>
 
