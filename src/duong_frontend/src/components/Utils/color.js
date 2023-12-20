@@ -77,7 +77,7 @@ const Color = {
     SchemeOnSurface: '#1A1C19',
     SchemeSurfaceVariant: '#E1E4D7',
     SchemeOnSurfaceVariant: '#44483F',
-    SchemeOutline: '#75796E',
+    SchemeOutline: '#A1B096',
     /*Feedback*/
     /*Error*/
     FeedbackErrorError: '#F04438',

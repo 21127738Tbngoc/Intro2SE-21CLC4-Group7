@@ -1,4 +1,6 @@
 @charset "utf-8";
+@import url('../button/buttons.css');
+@import url('/node_modules/locomotive-scroll/dist/locomotive-scroll.css');
 /*--Colors--*/
 :root {
     --black: #000;
@@ -105,23 +107,23 @@
 }
 @font-face {
     font-family: bold-font;
-    src: url("../../public/fonts/AutautGrotesk-Bold.ttf"),
-         url("../../public/fonts/AutautGrotesk-Bold.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Bold.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Bold.woff");
 }   
 @font-face {
     font-family: semibold-font;
-    src: url("../../public/fonts/AutautGrotesk-Semibold.ttf"),
-         url("../../public/fonts/AutautGrotesk-Semibold.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Semibold.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Semibold.woff");
 }
 @font-face {
     font-family: medium-font;
-    src: url("../../public/fonts/AutautGrotesk-Medium.ttf"),
-         url("../../public/fonts/AutautGrotesk-Medium.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Medium.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Medium.woff");
 }
 @font-face {
     font-family: regular-font;
-    src: url("../../public/fonts/AutautGrotesk-Regular.ttf"),
-         url("../../public/fonts/AutautGrotesk-Regular.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Regular.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Regular.woff");
 }
 
 /*---------Font family---------*/
@@ -162,9 +164,6 @@ p, .p1, .p2, .p3 {
     padding-top: 0;
 }
 
-.product-price {
-    font-family: semibold-font, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 /*---------Font size---------*/
 /*---Display---*/
 d1 {

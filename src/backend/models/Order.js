@@ -22,7 +22,7 @@ const OrderSchema = new  mongoose.Schema(
             },
         ],
         subtotal:{ type: Number, required:true},
-        address:{type:Number, required:true},
+        address:{type:String, required:true},
         status:{type: String, default: "pending"},
 
     },
