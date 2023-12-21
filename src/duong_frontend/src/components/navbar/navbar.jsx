@@ -105,8 +105,8 @@ const Navbar = () => {
                         </h5>
                     </div>
                     <div className="search-label flex-row" onClick={toggleSearch}>
-                        <h5 className="mx-2 my-1"><img src="/imgs/navbar/search-icon.svg" alt="Search"/></h5>
-                        <p className="navbar-text align-items-center my-1">SEARCH</p>
+                        <img className="mx-2 my-2" src="/imgs/navbar/search-icon.svg" alt="Search"/>
+                        <p className="navbar-text my-3">SEARCH</p>
                     </div>
                 </div>
 
@@ -123,11 +123,8 @@ const Navbar = () => {
                 {/*<!-- Cart & Account --> */}
                 <div className="d-flex align-items-center">
                     <div className="d-flex flex-row align-items-center">
-                        <h5 className="cart-modal-open-btn">
-                            <img src="/imgs/navbar/cart-icon.svg" alt="Cart" onClick={openCartModal}/>
-                        </h5>
-                        <p className="navbar-text mx-2 my-1 align-items-center">BAG
-                        </p>
+                        <img className="cart-modal-open-btn" src="/imgs/navbar/cart-icon.svg" alt="Cart" onClick={openCartModal}></img>
+                        <p className="navbar-text mx-2 my-2 align-items-center">BAG</p>
                         <div className="navbar-cart-num">
                             <p className="support align-items-center">0
                             </p>
@@ -135,11 +132,8 @@ const Navbar = () => {
                     </div>
                     <div className="dropdown" onMouseOver={()=> {console.log("Hello")}}>
                         <div className="d-flex flex-row align-items-center" id="dropdownToggle">
-                            <h5 className="mx-2">
-                                <img src="/imgs/navbar/profile-icon.svg" alt="Profile"/>
-                            </h5>
-                            <p className="navbar-text align-items-center my-1" id="dropdownButton">ACCOUNT
-                            </p>
+                            <img className="mx-2" src="/imgs/navbar/profile-icon.svg" alt="Profile"/>
+                            <p className="navbar-text align-items-center my-2" id="dropdownButton">ACCOUNT</p>
                         </div>
                         {/*{dropDownContent}*/}
                     </div>

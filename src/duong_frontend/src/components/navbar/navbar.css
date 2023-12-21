@@ -66,6 +66,7 @@ a h5 img {
     color: var(--tone-primary-99);
     background: var(--tone-primary-40);
     border-radius: 50%;
+    margin-right: 1em;
 }
 
 .menu-contact-container {
@@ -143,6 +144,12 @@ a h5 img {
     padding: 16px 0;
     border-top: 1px solid var(--scheme-outline);
     border-bottom: 1px solid var(--scheme-outline);
+}
+
+.cart-total {
+    font-family: regular-font;
+    font-size: 25px;
+    line-height: 34px;
 }
 
 /*-- Login --*/

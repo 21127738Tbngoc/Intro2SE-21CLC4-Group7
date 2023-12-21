@@ -22,31 +22,22 @@ const Cartmodal = () =>
                     <li className="d-flex justify-content-between mb-1 cart-item ">
                         <img src="/imgs/product/" className="cart-item-img"/>
                         <div className="cart-item-info my-auto">
-                            <p className="title2">Singapore Dark Rattan Arm Chair
-                            </p>
+                            <p className="title2">Singapore Dark Rattan Arm Chair</p>
                             <div className="d-inline">
-                                <p className="support d-inline">Size M
-                                </p>
-                                <p className="d-inline">|
-                                </p>
-                                <p className="support d-inline">Black
-                                </p>
-                                <p className="d-inline">|
-                                </p>
-                                <p className="support d-inline">SKU 001
-                                </p>
+                                <p className="support d-inline">Size M</p>
+                                <p className="d-inline">|</p>
+                                <p className="support d-inline">Black</p>
+                                <p className="d-inline">|</p>
+                                <p className="support d-inline">SKU 001</p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline">$ 1,500
-                                </p>
+                                <p className="d-inline">$ 1,500</p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg"/>
-                                    <p className="p3 d-inline">2
-                                    </p>
+                                    <p className="p3 d-inline">2</p>
                                     <img src="/imgs/navbar/plus.svg"/>
                                 </div>
-                                <p className="d-inline">$ 3,000
-                                </p>
+                                <p className="d-inline">$ 3,000</p>
                             </div>
                         </div>
                         <div className="d-flex align-items-center">
@@ -60,31 +51,23 @@ const Cartmodal = () =>
                     <li className="d-flex justify-content-between mb-1 cart-item ">
                         <img src="/imgs/product/Eskil/shop-5-img-1.jpg" className="cart-item-img"/>
                         <div className="cart-item-info my-auto">
-                            <p className="title2">Singapore Dark Rattan Arm Chair
-                            </p>
+                            <p className="title2">Singapore Dark Rattan Arm Chair</p>
                             <div className="d-inline">
-                                <p className="support d-inline">Size M
-                                </p>
-                                <p className="d-inline">|
-                                </p>
-                                <p className="support d-inline">Black
-                                </p>
-                                <p className="d-inline">|
-                                </p>
-                                <p className="support d-inline">SKU 001
-                                </p>
+                                <p className="support d-inline">Size M</p>
+                                <p className="d-inline">|</p>
+                                <p className="support d-inline">Black</p>
+                                <p className="d-inline">|</p>
+                                <p className="support d-inline">SKU 001</p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline">$ 1,500
-                                </p>
+                                <p className="d-inline">$ 1,500</p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg" alt="Dot"/>
                                     <p className="p3 d-inline">2
                                     </p>
                                     <img src="/imgs/navbar/plus.svg" alt="Dot"/>
                                 </div>
-                                <p className="d-inline">$ 3,000
-                                </p>
+                                <p className="d-inline">$ 3,000</p>
                             </div>
                         </div>
                         <div className="d-flex align-items-center">
@@ -99,31 +82,22 @@ const Cartmodal = () =>
                         <img src="/imgs/product/Eskil/lamp-01-hover-img.jpg" className="cart-item-img"
                              alt="Product Image"/>
                         <div className="cart-item-info my-auto">
-                            <p className="title2">Singapore Dark Rattan Arm Chair
-                            </p>
+                            <p className="title2">Singapore Dark Rattan Arm Chair</p>
                             <div className="d-inline">
-                                <p className="support d-inline">Size M
-                                </p>
-                                <p className="d-inline">|
-                                </p>
-                                <p className="support d-inline">Black
-                                </p>
-                                <p className="d-inline">|
-                                </p>
-                                <p className="support d-inline">SKU 001
-                                </p>
+                                <p className="support d-inline">Size M</p>
+                                <p className="d-inline">|</p>
+                                <p className="support d-inline">Black</p>
+                                <p className="d-inline">|</p>
+                                <p className="support d-inline">SKU 001</p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline">$ 1,500
-                                </p>
+                                <p className="d-inline">$ 1,500</p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg" alt="Dot"/>
-                                    <p className="p3 d-inline">2
-                                    </p>
+                                    <p className="p3 d-inline">2</p>
                                     <img src="/imgs/navbar/plus.svg" alt="Dot"/>
                                 </div>
-                                <p className="d-inline">$ 3,000
-                                </p>
+                                <p className="d-inline">$ 3,000</p>
                             </div>
                         </div>
                         <div className="d-flex align-items-center">
@@ -136,7 +110,7 @@ const Cartmodal = () =>
                     </li>
                 </ul>
                 <div className="d-flex justify-content-between align-content-center cart-total-section">
-                    <h4>TOTAL</h4>
+                    <p className="cart-total">TOTAL</p>
                     <h4>$ 4,895</h4>
                 </div>
                 <div className="d-flex">
