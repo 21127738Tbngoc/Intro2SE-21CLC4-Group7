@@ -269,7 +269,7 @@ const Navbar = () => {
                                 <li>
                                     <div className="menu-contact-container">
                                         <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
+                                            <button className="outline-i-btn i-btn-md">
                                                 <img src="/imgs/navbar/facebook-logo.svg" alt="facebook-logo"/>
                                             </button>
                                         </a>
@@ -278,7 +278,7 @@ const Navbar = () => {
                                 <li>
                                     <div className="menu-contact-container">
                                         <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
+                                            <button className="outline-i-btn i-btn-md">
                                                 <img src="/imgs/navbar/twitter-logo.svg" alt="twitter-logo"/>
                                             </button>
                                         </a>
@@ -287,7 +287,7 @@ const Navbar = () => {
                                 <li>
                                     <div className="menu-contact-container">
                                         <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
+                                            <button className="outline-i-btn i-btn-md">
                                                 <img src="/imgs/navbar/instagram-logo.svg" alt="instagram-logo"/>
                                             </button>
                                         </a>
