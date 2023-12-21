@@ -61,3 +61,11 @@ ul {
 .contact-info-container li p.title2 {
     font-weight: 600;
 }
+
+.social-contact-container {
+    margin-right: 24px;
+}
+
+.map-section-img {
+    width: 100%;
+}
