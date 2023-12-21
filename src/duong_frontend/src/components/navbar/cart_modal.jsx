@@ -20,7 +20,7 @@ const Cartmodal = () =>
                 <h3 className="navbar-cart-title">Shopping Cart</h3>
                 <ul className="cart-item-list-section">
                     <li className="d-flex justify-content-between mb-1 cart-item ">
-                        <img src="/imgs/product/" className="cart-item-img"/>
+                        <img src="/imgs/product/Livingroom/toro-square-weave-table-lamp.jpg" className="cart-item-img my-2"/>
                         <div className="cart-item-info my-auto">
                             <p className="title2">Singapore Dark Rattan Arm Chair</p>
                             <div className="d-inline">
@@ -49,7 +49,7 @@ const Cartmodal = () =>
                         </div>
                     </li>
                     <li className="d-flex justify-content-between mb-1 cart-item ">
-                        <img src="/imgs/product/Eskil/shop-5-img-1.jpg" className="cart-item-img"/>
+                        <img src="/imgs/product/Livingroom/axis-ii-2-piece-sectional-sofa.jpg" className="cart-item-img my-2"/>
                         <div className="cart-item-info my-auto">
                             <p className="title2">Singapore Dark Rattan Arm Chair</p>
                             <div className="d-inline">
@@ -62,10 +62,9 @@ const Cartmodal = () =>
                             <div className="mt-2">
                                 <p className="d-inline">$ 1,500</p>
                                 <div className="d-inline cart-item-quantity mx-3">
-                                    <img src="/imgs/navbar/minus.svg" alt="Dot"/>
-                                    <p className="p3 d-inline">2
-                                    </p>
-                                    <img src="/imgs/navbar/plus.svg" alt="Dot"/>
+                                    <img src="/imgs/navbar/minus.svg"/>
+                                    <p className="p3 d-inline">2</p>
+                                    <img src="/imgs/navbar/plus.svg"/>
                                 </div>
                                 <p className="d-inline">$ 3,000</p>
                             </div>
@@ -73,14 +72,13 @@ const Cartmodal = () =>
                         <div className="d-flex align-items-center">
                             <a href="#">
                                 <button className="outline-i-btn i-btn-sm">
-                                    <img src="/imgs/navbar/trashcan.svg" alt="trashcan"/>
+                                    <img src="/imgs/navbar/trashcan.svg"/>
                                 </button>
                             </a>
                         </div>
                     </li>
                     <li className="d-flex justify-content-between mb-1 cart-item ">
-                        <img src="/imgs/product/Eskil/lamp-01-hover-img.jpg" className="cart-item-img"
-                             alt="Product Image"/>
+                        <img src="/imgs/product/Livingroom/tate-walnut-80-media-console.jpg" className="cart-item-img my-2"/>
                         <div className="cart-item-info my-auto">
                             <p className="title2">Singapore Dark Rattan Arm Chair</p>
                             <div className="d-inline">
@@ -93,9 +91,9 @@ const Cartmodal = () =>
                             <div className="mt-2">
                                 <p className="d-inline">$ 1,500</p>
                                 <div className="d-inline cart-item-quantity mx-3">
-                                    <img src="/imgs/navbar/minus.svg" alt="Dot"/>
+                                    <img src="/imgs/navbar/minus.svg"/>
                                     <p className="p3 d-inline">2</p>
-                                    <img src="/imgs/navbar/plus.svg" alt="Dot"/>
+                                    <img src="/imgs/navbar/plus.svg"/>
                                 </div>
                                 <p className="d-inline">$ 3,000</p>
                             </div>
@@ -103,7 +101,7 @@ const Cartmodal = () =>
                         <div className="d-flex align-items-center">
                             <a href="#">
                                 <button className="outline-i-btn i-btn-sm">
-                                    <img src="/imgs/navbar/trashcan.svg" alt="trashcan"/>
+                                    <img src="/imgs/navbar/trashcan.svg"/>
                                 </button>
                             </a>
                         </div>
