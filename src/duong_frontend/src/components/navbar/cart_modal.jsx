@@ -14,14 +14,13 @@ const Cartmodal = () =>
             <div className="cart-list-section">
                 <div className="d-flex flex-row-reverse">
                     <h5 className="w-auto cart-close-btn">
-                        <img src="/imgs/navbar/close-icon.svg" alt="Close icon" onClick={closeCartModal}/>
+                        <img src="/imgs/navbar/close-icon.svg" onClick={closeCartModal}/>
                     </h5>
                 </div>
                 <h3 className="navbar-cart-title">Shopping Cart</h3>
                 <ul className="cart-item-list-section">
                     <li className="d-flex justify-content-between mb-1 cart-item ">
-                        <img src="/imgs/product/Eskil/shop-28-img-1.jpg" className="cart-item-img"
-                             alt="Product Image"/>
+                        <img src="/imgs/product/Eskil/shop-28-img-1.jpg" className="cart-item-img"/>
                         <div className="cart-item-info my-auto">
                             <p className="title2">Singapore Dark Rattan Arm Chair
                             </p>
@@ -41,10 +40,10 @@ const Cartmodal = () =>
                                 <p className="d-inline product-price">$ 1,500
                                 </p>
                                 <div className="d-inline cart-item-quantity mx-3">
-                                    <img src="/imgs/navbar/minus.svg" alt="Dot"/>
+                                    <img src="/imgs/navbar/minus.svg"/>
                                     <p className="p3 d-inline">2
                                     </p>
-                                    <img src="/imgs/navbar/plus.svg" alt="Dot"/>
+                                    <img src="/imgs/navbar/plus.svg"/>
                                 </div>
                                 <p className="d-inline product-price">$ 3,000
                                 </p>
@@ -53,14 +52,13 @@ const Cartmodal = () =>
                         <div className="d-flex align-items-center">
                             <a href="#">
                                 <button className="outline-i-btn i-btn-sm">
-                                    <img src="/imgs/navbar/trashcan.svg" alt="trashcan"/>
+                                    <img src="/imgs/navbar/trashcan.svg"/>
                                 </button>
                             </a>
                         </div>
                     </li>
                     <li className="d-flex justify-content-between mb-1 cart-item ">
-                        <img src="/imgs/product/Eskil/shop-5-img-1.jpg" className="cart-item-img"
-                             alt="Product Image"/>
+                        <img src="/imgs/product/Eskil/shop-5-img-1.jpg" className="cart-item-img"/>
                         <div className="cart-item-info my-auto">
                             <p className="title2">Singapore Dark Rattan Arm Chair
                             </p>
