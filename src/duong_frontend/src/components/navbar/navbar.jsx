@@ -110,15 +110,10 @@ const Navbar = () => {
                     </div>
                 </div>
 
-
-
                 {/*<!-- Logo --> */}
                 <div className="d-flex flex-row g-4 align-items-center">
-                    <h5>
-                        <img src="/imgs/navbar/logo.svg" alt="Fitment"/>
-                    </h5>
+                    <img src="/imgs/navbar/logo.svg" alt="Fitment"/>
                 </div>
-
 
                 {/*<!-- Cart & Account --> */}
                 <div className="d-flex align-items-center">
