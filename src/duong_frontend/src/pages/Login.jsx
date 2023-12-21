@@ -10,7 +10,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css'; 
 import '../components/common.css'; 
 import '../components/navbar/navbar.css';
-import '../components/form/form.css';
 
 const Login = () => {
   useEffect(() => {

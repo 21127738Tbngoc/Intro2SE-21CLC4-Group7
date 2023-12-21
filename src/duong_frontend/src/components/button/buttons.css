@@ -163,7 +163,7 @@ a.link-sm{
 
 .outline-i-btn {
     background: none;
-    border: 1.2px solid var(--tone-primary-40);
+    border: 1.5px solid var(--tone-primary-40);
     transition: background-color 0.3s ease;
 }
 
@@ -197,6 +197,6 @@ a.link-sm{
 
 .noborder-i-btn:hover {
     background: none;
-    border: 1.2px solid var(--tone-primary-40);
+    border: 1.5px solid var(--tone-primary-40);
     transition: .4s;
 }

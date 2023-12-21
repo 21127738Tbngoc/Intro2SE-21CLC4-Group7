@@ -38,7 +38,7 @@ const Cartmodal = () =>
                                 </p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline product-price">1,500
+                                <p className="d-inline product-price">$ 1,500
                                 </p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg" alt="Dot"/>
@@ -46,7 +46,7 @@ const Cartmodal = () =>
                                     </p>
                                     <img src="/imgs/navbar/plus.svg" alt="Dot"/>
                                 </div>
-                                <p className="d-inline product-price">3,000
+                                <p className="d-inline product-price">$ 3,000
                                 </p>
                             </div>
                         </div>
@@ -77,7 +77,7 @@ const Cartmodal = () =>
                                 </p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline product-price">1,500
+                                <p className="d-inline product-price">$ 1,500
                                 </p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg" alt="Dot"/>
@@ -85,7 +85,7 @@ const Cartmodal = () =>
                                     </p>
                                     <img src="/imgs/navbar/plus.svg" alt="Dot"/>
                                 </div>
-                                <p className="d-inline product-price">3,000
+                                <p className="d-inline product-price">$ 3,000
                                 </p>
                             </div>
                         </div>
@@ -116,7 +116,7 @@ const Cartmodal = () =>
                                 </p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline product-price">1,500
+                                <p className="d-inline product-price">$ 1,500
                                 </p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg" alt="Dot"/>
@@ -124,7 +124,7 @@ const Cartmodal = () =>
                                     </p>
                                     <img src="/imgs/navbar/plus.svg" alt="Dot"/>
                                 </div>
-                                <p className="d-inline product-price">3,000
+                                <p className="d-inline product-price">$ 3,000
                                 </p>
                             </div>
                         </div>
