@@ -70,10 +70,6 @@ a h5 img {
     object-fit: contain;
 }
 
-.nav-bar-contact {
-    margin-top: 40px;
-}
-
 .navbar .menu-open-btn:hover,
 .navbar .cart-modal-open-btn:hover,
 .navbar-cart .cart-close-btn:hover

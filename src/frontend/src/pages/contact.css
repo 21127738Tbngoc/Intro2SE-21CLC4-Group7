@@ -2,7 +2,7 @@
 @import url("../../src/components/common.css");
 
 p {
-    /* margin-bottom: 0; */
+    margin-bottom: 0;
 }
 
 ul {
@@ -29,10 +29,26 @@ ul {
 }
 
 .contact-container {
-    padding: 56px 72px;
+    /* padding: 56px 72px; */
 }
 
 .store-list-title {
     color: var(--scheme-primary);
     margin-bottom: 13px;
+}
+
+.store-info-container {
+    width: 266px;
+}
+
+.store-info-container ul {
+    padding-left: 0;
+}
+
+.store-info-container li {
+    list-style-type: none;
+}
+
+.store-info-container li p.title2 {
+    font-weight: 600;
 }
