@@ -4,9 +4,6 @@ import { toast } from "react-toastify"
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
-const Token = localStorage.getItem("Token")
-
 const AddProduct = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false)
@@ -104,7 +101,7 @@ const AddProduct = () => {
       console.log(productData);
 
       const headers = {
-        token: " bearer " + Token
+        token: " bearer " + localStorage.getItem("Token"),
       };
 
 
@@ -204,4 +201,4 @@ const AddProduct = () => {
   )
 }
 
-export { AddProduct };
+export default AddProduct ;

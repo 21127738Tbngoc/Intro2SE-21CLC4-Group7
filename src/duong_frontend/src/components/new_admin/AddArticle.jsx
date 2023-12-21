@@ -4,8 +4,6 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const Token = localStorage.getItem('Token');
-
 const AddArticle = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -28,7 +26,7 @@ const AddArticle = () => {
       };
 
       const headers = {
-        token: ' bearer ' + Token,
+        token: ' bearer ' + localStorage.getItem('Token'),
       };
 
       const response = await axios.post('http://localhost:5000/api/article/', articleData, { headers });
@@ -90,4 +88,4 @@ const AddArticle = () => {
   );
 };
 
-export { AddArticle };
+export default  AddArticle ;
