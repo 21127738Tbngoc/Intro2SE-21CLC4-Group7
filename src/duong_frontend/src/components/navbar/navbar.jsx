@@ -74,8 +74,7 @@ const Navbar = () => {
         <li>
             <a href="/login" id="signIn" className="list-item">
                 <img src="/imgs/navbar/login.svg" alt="login"/>
-                <span>Sign In
-                                </span>
+                <span>Sign In</span>
             </a>
         </li>
         {/*<!-- Sign Up --> */}

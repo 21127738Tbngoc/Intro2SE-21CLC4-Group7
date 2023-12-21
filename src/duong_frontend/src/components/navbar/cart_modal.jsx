@@ -20,7 +20,7 @@ const Cartmodal = () =>
                 <h3 className="navbar-cart-title">Shopping Cart</h3>
                 <ul className="cart-item-list-section">
                     <li className="d-flex justify-content-between mb-1 cart-item ">
-                        <img src="/imgs/product/Eskil/shop-28-img-1.jpg" className="cart-item-img"/>
+                        <img src="/imgs/product/" className="cart-item-img"/>
                         <div className="cart-item-info my-auto">
                             <p className="title2">Singapore Dark Rattan Arm Chair
                             </p>
@@ -37,7 +37,7 @@ const Cartmodal = () =>
                                 </p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline product-price">$ 1,500
+                                <p className="d-inline">$ 1,500
                                 </p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg"/>
@@ -45,7 +45,7 @@ const Cartmodal = () =>
                                     </p>
                                     <img src="/imgs/navbar/plus.svg"/>
                                 </div>
-                                <p className="d-inline product-price">$ 3,000
+                                <p className="d-inline">$ 3,000
                                 </p>
                             </div>
                         </div>
@@ -75,7 +75,7 @@ const Cartmodal = () =>
                                 </p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline product-price">$ 1,500
+                                <p className="d-inline">$ 1,500
                                 </p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg" alt="Dot"/>
@@ -83,7 +83,7 @@ const Cartmodal = () =>
                                     </p>
                                     <img src="/imgs/navbar/plus.svg" alt="Dot"/>
                                 </div>
-                                <p className="d-inline product-price">$ 3,000
+                                <p className="d-inline">$ 3,000
                                 </p>
                             </div>
                         </div>
@@ -114,7 +114,7 @@ const Cartmodal = () =>
                                 </p>
                             </div>
                             <div className="mt-2">
-                                <p className="d-inline product-price">$ 1,500
+                                <p className="d-inline">$ 1,500
                                 </p>
                                 <div className="d-inline cart-item-quantity mx-3">
                                     <img src="/imgs/navbar/minus.svg" alt="Dot"/>
@@ -122,7 +122,7 @@ const Cartmodal = () =>
                                     </p>
                                     <img src="/imgs/navbar/plus.svg" alt="Dot"/>
                                 </div>
-                                <p className="d-inline product-price">$ 3,000
+                                <p className="d-inline">$ 3,000
                                 </p>
                             </div>
                         </div>
@@ -136,16 +136,12 @@ const Cartmodal = () =>
                     </li>
                 </ul>
                 <div className="d-flex justify-content-between align-content-center cart-total-section">
-                    <h4>TOTAL
-                    </h4>
-                    <h4 className="product-price">$ 4,895
-                    </h4>
+                    <h4>TOTAL</h4>
+                    <h4>$ 4,895</h4>
                 </div>
                 <div className="d-flex">
-                    <button className="prim-btn btn-md w-50 me-2"> VIEW CART
-                    </button>
-                    <button className="sec-btn btn-md w-50"> CHECKOUT
-                    </button>
+                    <button className="prim-btn btn-md w-50 me-2">VIEW CART</button>
+                    <button className="sec-btn btn-md w-50">CHECKOUT</button>
                 </div>
             </div>
         </div>
