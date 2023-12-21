@@ -17,16 +17,52 @@ const AddProduct = () => {
   const [price, setprice] = useState('');
   const [category, setcategory] = useState('');
   const [brand, setbrand] = useState('');
-  const [size, setsize] = useState('');
+  const [qty, setqty] = useState('');
   const [color, setcolor] = useState('');
   const [pattern, setpattern] = useState('');
+  const [categories, setCategories] = useState([]);
+  const [tagInput, setTagInput] = useState('');
+  const [tags, setTags] = useState([]);
 
+  const handleTagInputChange = (e) => {
+    setTagInput(e.target.value);
+  };
 
+  const addTag = () => {
+    if (tagInput.trim() !== '' && !tags.includes(tagInput.trim())) {
+      setTags([...tags, tagInput.trim()]);
+      setTagInput('');
+    }
+  };
+
+  const removeTag = (tagToRemove) => {
+    const updatedTags = tags.filter((tag) => tag !== tagToRemove);
+    setTags(updatedTags);
+  };
 
 
   const [api_key] = useState("739115358895497");
   const [cloud_name] = useState("dxsvumas8");
   const [photoDataArray, setPhotoDataArray] = useState([]);
+
+
+  const handleCategoryChange = (e) => {
+    const selectedCategory = e.target.value;
+
+    // Kiểm tra xem đã chọn category này chưa
+    if (categories.includes(selectedCategory)) {
+      // Nếu đã chọn, hãy loại bỏ nó khỏi danh sách
+      const updatedCategories = categories.filter(
+        (category) => category !== selectedCategory
+      );
+      setCategories(updatedCategories);
+    } else {
+      // Nếu chưa chọn, thêm nó vào danh sách
+      setCategories([...categories, selectedCategory]);
+    }
+  };
+
+
 
   const AddProductHandler = async (e) => {
     setLoading(true);
@@ -93,11 +129,12 @@ const AddProduct = () => {
       const productData = {
         name,
         desc: description,
-        category,
+        categories,
+        tags,
         price,
         img: newPhotoDataArray.map(item => generateImageURL(item.public_id)),
         brand,
-        size,
+        qty,
         color,
         pattern,
       };
@@ -110,7 +147,7 @@ const AddProduct = () => {
 
       const mongoResponse = await axios.post('http://localhost:5000/api/products/', productData, { headers });
 
-      
+
 
 
 
@@ -119,16 +156,7 @@ const AddProduct = () => {
 
 
       setLoading(false);
-      toast('🦄 Wow so easy!', {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+
       //navigate('/dashboard/all-products');
 
     } catch (err) {
@@ -152,22 +180,76 @@ const AddProduct = () => {
                 <span>Description</span>
                 <input type="text" placeholder='Description' onChange={(e) => (setdescription(e.target.value))} required />
               </FormGroup>
+              <FormGroup className='form__group w-50'>
+                <span>Price</span>
+                <input type="number" placeholder='$100' onChange={(e) => (setprice(e.target.value))} required />
+              </FormGroup>
               <div className='d-flex align-items-center justify-content-between gap-5'>
-                <FormGroup className='form__group w-50'>
-                  <span>Price</span>
-                  <input type="number" placeholder='$100' onChange={(e) => (setprice(e.target.value))} required />
-                </FormGroup>
                 <FormGroup className='form__group w-50 '>
-                  <span>Category</span>
-                  <select className='w-100 p-2' onChange={(e) => (setcategory(e.target.value))} required>
-                    <option>Select Category</option>
-                    <option value="sofa">Sofa</option>
-                    <option value="chair">Chair</option>
-                    <option value="table">Table</option>
-                    <option value="khong biet category gi nua ...">khong biet category gi nua ...</option>
-                  </select>
+                  <span>Categories</span>
+                  <div>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="sofa"
+                        onChange={handleCategoryChange}
+                        checked={categories.includes("sofa")}
+                      />
+                      Sofa
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="chair"
+                        onChange={handleCategoryChange}
+                        checked={categories.includes("chair")}
+                      />
+                      Chair
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="table"
+                        onChange={handleCategoryChange}
+                        checked={categories.includes("table")}
+                      />
+                      Table
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        value="Other"
+                        onChange={handleCategoryChange}
+                        checked={categories.includes("Other")}
+                      />
+                      Khong biet category gi nua ...
+                    </label>
+                  </div>
                 </FormGroup>
               </div>
+              <FormGroup className='form__group w-50'>
+                <span>Tags</span>
+                <div>
+                  {tags.map((tag) => (
+                    <div key={tag} className="tag-item">
+                      {tag}
+                      <button type="button" onClick={() => removeTag(tag)}>
+                        X
+                      </button>
+                    </div>
+                  ))}
+                  <input
+                    type="text"
+                    placeholder="Enter a tag"
+                    value={tagInput}
+                    onChange={handleTagInputChange}
+                  />
+                  <button type="button" onClick={addTag}>
+                    +
+                  </button>
+                </div>
+              </FormGroup>
+
 
               <div>
                 <FormGroup className='form__group'>
@@ -177,12 +259,12 @@ const AddProduct = () => {
               </div>
               <FormGroup className='form__group w-50'>
                 <span>Brand</span>
-                <input type="text" placeholder='$100' onChange={(e) => (setbrand(e.target.value))} required />
+                <input type="text" placeholder='' onChange={(e) => (setbrand(e.target.value))} required />
               </FormGroup>
 
               <FormGroup className='form__group w-50'>
-                <span>Size</span>
-                <input type="text" placeholder='XL' onChange={(e) => (setsize(e.target.value))} required />
+                <span>Qty</span>
+                <input type="number" placeholder='999' onChange={(e) => (setqty(e.target.value))} required />
               </FormGroup>
 
               <FormGroup className='form__group w-50'>

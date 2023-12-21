@@ -9,7 +9,7 @@ const ProductSchema = new mongoose.Schema(
     img: { type: Array, required: true },
     categories: { type: Array },
     brand: {type: String},
-    size: { type: String },
+    qty: { type: Number },
     color: { type: String },
     pattern: {type: String},
     feedback: [
