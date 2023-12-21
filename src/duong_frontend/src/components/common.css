@@ -356,3 +356,103 @@ a:hover {
   transform: scaleX(1); /* Scale the element from left to right */
 }
 
+/*-- Form --*/
+.form, .form-control, .input {
+    background: none;
+    border: 1.2px solid var(--scheme-outline);
+    border-radius: 4px;
+}
+
+.form-control {
+    padding: 16px;
+}
+
+.form-label {
+    color: var(--scheme-on-surface-variant);
+    font-family: semibold-font;
+}
+
+.form-control::placeholder {
+    font-family: regular-font;
+    color: var(--tone-neutral-variant-70);
+}
+
+/*-- Form size --*/
+.form-nm {
+    height: 60px;
+    padding: 16px 16px;
+    font-size: 18px;
+    font-family: regular-font;
+}
+
+.form-md {
+    height: 48px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: regular-font;
+}
+
+.form-sm {
+    height: 40px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-family: regular-font;
+}
+
+.form-nm-icon {
+    height: 60px;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-family: regular-font;
+}
+
+.form-md-icon {
+    height: 48px;
+    padding: 12px 48px;
+    font-size: 16px;
+    font-family: regular-font;
+}
+
+.form-sm-icon {
+    height: 40px;
+    padding: 8px 48px;
+    font-size: 16px;
+    font-family: regular-font;
+}
+
+/*-- Input with icon --*/
+.input-with-icon {
+    position: relative;
+}
+
+.leading-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+.trailing-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+/*-- Form states --*/
+form input:hover {
+    background: var(--tone-secondary-90);
+    border: 1.5px solid var(--tone-primary-40);
+}
+
+form input:focus {
+    background: none !important;
+    border: 1.5px solid var(--tone-primary-40) !important;
+    box-shadow: 0 0 0 0.25rem var(--scheme-secondary-container) !important;
+}
+
