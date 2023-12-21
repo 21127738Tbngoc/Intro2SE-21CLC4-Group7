@@ -87,3 +87,25 @@ ul {
 
 }
 
+.contact-banner {
+    margin-top: 145px;
+    position: relative;
+}
+
+.contact-banner-img {
+    width: 1440px;
+    height: 400px;
+}
+
+.contact-banner-title {
+    position: absolute;
+    top: 120px;
+    left: 72px;
+    color: #fff;
+}
+
+.contact-banner button {
+    position: absolute;
+    top: 150px;
+    right: 72px;
+}
