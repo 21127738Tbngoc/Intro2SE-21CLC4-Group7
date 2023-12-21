@@ -332,7 +332,7 @@ a:hover {
   color: var(--tone-secondary-60);
   display: inline-block; /* Ensures the width fits the content */
   border-bottom: 1px solid transparent; /* Transparent border initially */
-  transition: border-bottom-color 0.6s ease; /* Transition effect on border color */
+  transition: border-bottom-color 0.8s ease; /* Transition effect on border color */
 }
 
 .slide-border::before {
@@ -453,3 +453,6 @@ form input:focus {
     box-shadow: 0 0 0 0.25rem var(--scheme-secondary-container) !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}

@@ -289,8 +289,7 @@ const Navbar = () => {
                 <div className="col-xxl-5 menu-img">
                     <div>
                         <img src="/imgs/navbar/navimg.jpg" alt="" className="menu-img"/>
-                        <a href="#" className="button1 view-more-btn">View more
-                        </a>
+                        <a href="#" className="button1 view-more-btn">View more</a>
                     </div>
                 </div>
             </div>
