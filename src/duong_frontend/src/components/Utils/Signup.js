@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from './../components/helmet/Helmet';
+import { Helmet } from '../helmet/Helmet';
 import { Container, Row, Col, FormGroup } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';

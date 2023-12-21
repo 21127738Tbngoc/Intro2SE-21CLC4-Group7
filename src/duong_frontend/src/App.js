@@ -13,6 +13,7 @@ import Footer from './components/footer/footer';
 import Navbar from './components/navbar/navbar';
 import Searchbar from "./components/searchbar/searchbar";
 
+
 function App() {
   return (
     <div >
@@ -23,6 +24,7 @@ function App() {
           <Route path='/login' element={<div><Navbar/><Login /><Footer/></div>} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/' element={<div><Navbar/></div>}/>
+
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='dashboard/all-products' element={<AllProducts />} />
           <Route path='dashboard/add-products' element={<AddProduct />} />

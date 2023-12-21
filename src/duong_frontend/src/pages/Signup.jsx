@@ -49,39 +49,39 @@ const Signup = () => {
     <Helmet title="signup">
       <section>
             {loading ? (
-              <Col xxl="12" className="text-center">
-                <h5 className="fw-bold">Loading...</h5>
+              <Col xxl="12" classNameName="text-center">
+                <h5 classNameName="fw-bold">Loading...</h5>
               </Col>
             ) : (
               // Signup
-              <div class="container-fluid d-flex">
-                  <img src="/imgs/signup/Img.jpg" class="modal-img" alt="signup-img" />
-                  <div class="container">
-                    <div class="modal-content-signup">
+              <div className="container-fluid d-flex">
+                  <img src="/imgs/signup/Img.jpg" className="modal-img" alt="signup-img" />
+                  <div className="container">
+                    <div className="modal-content-signup">
                       <h3>Sign Up</h3>
-                      <div class="social-signup-btn">
+                      <div className="social-signup-btn">
                         <a href="#">
-                          <img src="/imgs/signup/Google.svg" class="me-3" alt="" />
+                          <img src="/imgs/signup/Google.svg" className="me-3" alt="" />
                         </a>
                         <a href="#">
                           <img src="/imgs/signup/Facebook.svg" alt="" />
                         </a>
                       </div>
-                      <p class="title2" id="signup-or">
+                      <p className="title2" id="signup-or">
                         Or, sign up with your email
                       </p>
                       <form>
                         {/* Full name */}
-                        <div class="mb-3">
-                          <label for="fullName" class="form-label label1">
+                        <div className="mb-3">
+                          <label for="fullName" className="form-label label1">
                             Full name
                           </label>
-                          <div class="input-with-icon">
-                            <img src="/imgs/signup/user.svg" alt="fullName" class="leading-icon" />
+                          <div className="input-with-icon">
+                            <img src="/imgs/signup/user.svg" alt="fullName" className="leading-icon" />
                             <input
                               type="text"
                               placeholder="Enter your full name here"
-                              class="form-control form-md-icon"
+                              className="form-control form-md-icon"
                               value={username}
                               onChange={(e) => setEmail(e.target.value)}
                               required
@@ -89,16 +89,16 @@ const Signup = () => {
                           </div>
                         </div>
                         {/* Email */}
-                        <div class="mb-3">
-                          <label for="email" class="form-label label1">
+                        <div className="mb-3">
+                          <label for="email" className="form-label label1">
                             Email
                           </label>
-                          <div class="input-with-icon">
-                            <img src="/imgs/signup/email.svg" alt="email" class="leading-icon" />
+                          <div className="input-with-icon">
+                            <img src="/imgs/signup/email.svg" alt="email" className="leading-icon" />
                             <input
                               type="text"
                               placeholder="Enter your email address" // Assuming username is equivalent to email in this context
-                              class="form-control form-md-icon"
+                              className="form-control form-md-icon"
                               value={username}
                               onChange={(e) => setEmail(e.target.value)}
                               required
@@ -106,28 +106,28 @@ const Signup = () => {
                           </div>
                         </div>
                         {/* Password */}
-                        <div class="mb-3">
-                          <label for="password" class="form-label label1">
+                        <div className="mb-3">
+                          <label for="password" className="form-label label1">
                             Password
                           </label>
-                          <div class="input-with-icon">
-                            <img src="/imgs/signup/lock.svg" alt="password" class="leading-icon" />
+                          <div className="input-with-icon">
+                            <img src="/imgs/signup/lock.svg" alt="password" className="leading-icon" />
                             <input
                               type="password"
-                              class="form-control form-md-icon"
+                              className="form-control form-md-icon"
                               placeholder="•••••••••••••••••"
                               value={password}
                               onChange={(e) => setPassword(e.target.value)}
                               required
                             />
-                            <img src="/imgs/signup/eye-open.svg" alt="password" class="trailing-icon" />
+                            <img src="/imgs/signup/eye-open.svg" alt="password" className="trailing-icon" />
                           </div>
                         </div>
                       </form>
-                      <button onClick={signupHandler} class="prim-btn btn-md signup-btn w-100">
+                      <button onClick={signupHandler} className="prim-btn btn-md signup-btn w-100">
                         SIGN IN
                       </button>
-                      <p class="signup-link">
+                      <p className="signup-link">
                         Not yet registered? <Link to="/signup">Sign Up</Link> now!
                       </p>
                     </div>

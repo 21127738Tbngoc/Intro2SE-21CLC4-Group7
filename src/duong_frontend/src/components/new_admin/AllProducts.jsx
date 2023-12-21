@@ -3,13 +3,8 @@ import { Col, Container, Row } from 'reactstrap';
 import { toast } from 'react-toastify';
 
 
-
-
-const Token = localStorage.getItem("Token")
-
-
-
 export const AllProducts = () => {
+  const Token = localStorage.getItem("Token")
   const [productsData, setProductsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [numProducts, setNumProducts] = useState(0);
