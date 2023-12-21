@@ -107,7 +107,7 @@ const Navbar = () => {
                     </div>
                     <div className="search-label flex-row" onClick={toggleSearch}>
                         <h5 className="mx-2"><img src="/imgs/navbar/search-icon.svg" alt="Search"/></h5>
-                        <p className="button2 align-items-center h-100 ">SEARCH</p>
+                        <p className="button2 align-items-center h-100 m-1">SEARCH</p>
                     </div>
                 </div>
 
@@ -127,7 +127,7 @@ const Navbar = () => {
                         <h5 className="cart-modal-open-btn">
                             <img src="/imgs/navbar/cart-icon.svg" alt="Cart" onClick={openCartModal}/>
                         </h5>
-                        <p className="button2 mx-2 align-items-center">BAG
+                        <p className="button2 mx-2 align-items-center m-1">BAG
                         </p>
                         <div className="navbar-cart-num">
                             <p className="support align-items-center">0
@@ -139,7 +139,7 @@ const Navbar = () => {
                             <h5 className="mx-2">
                                 <img src="/imgs/navbar/profile-icon.svg" alt="Profile"/>
                             </h5>
-                            <p className="button2 align-items-center" id="dropdownButton">ACCOUNT
+                            <p className="button2 align-items-center m-1" id="dropdownButton">ACCOUNT
                             </p>
                         </div>
                         {/*{dropDownContent}*/}

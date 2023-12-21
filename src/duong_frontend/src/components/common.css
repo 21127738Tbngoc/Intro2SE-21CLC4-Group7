@@ -105,23 +105,23 @@
 }
 @font-face {
     font-family: bold-font;
-    src: url("../../public/fonts/AutautGrotesk-Bold.ttf"),
-         url("../../public/fonts/AutautGrotesk-Bold.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Bold.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Bold.woff");
 }   
 @font-face {
     font-family: semibold-font;
-    src: url("../../public/fonts/AutautGrotesk-Semibold.ttf"),
-         url("../../public/fonts/AutautGrotesk-Semibold.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Semibold.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Semibold.woff");
 }
 @font-face {
     font-family: medium-font;
-    src: url("../../public/fonts/AutautGrotesk-Medium.ttf"),
-         url("../../public/fonts/AutautGrotesk-Medium.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Medium.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Medium.woff");
 }
 @font-face {
     font-family: regular-font;
-    src: url("../../public/fonts/AutautGrotesk-Regular.ttf"),
-         url("../../public/fonts/AutautGrotesk-Regular.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Regular.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Regular.woff");
 }
 
 /*---------Font family---------*/
