@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row, Modal, ModalHeader, ModalBody, FormGroup, Label, Input } from 'reactstrap';
 import { toast } from 'react-toastify';
 
-const Token = localStorage.getItem('Token');
+
 
 export const AllOrder = () => {
+  const Token = localStorage.getItem('Token');
   const [ordersData, setOrdersData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [numOrders, setNumOrders] = useState(0);

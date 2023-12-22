@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { toast } from 'react-toastify';
 
-const Token = localStorage.getItem('Token');
 
 export const AllArticles = () => {
+  const Token = localStorage.getItem('Token');
   const [articlesData, setArticlesData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [numArticles, setNumArticles] = useState(0);

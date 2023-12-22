@@ -6,27 +6,27 @@ import {AiOutlineSetting} from "react-icons/ai"
 import useAuth from './../custom-hooks/useAuth';
 import {MdOutlineNotificationsNone} from "react-icons/md"
 
-const adminNav=[
- {
-   displayName:"Dashboard",
-   path:"/dashboard"
-},
-{
-  displayName:"Add Products",
-  path:"/dashboard/add-products"
-},
- {
-   displayName:"All Products",
-   path:"/dashboard/all-products"
-},
- {
-   displayName:"User",
-   path:"/dashboard/user"
-},
-]
 
 export const AdminNav = () => {
-  
+
+  const adminNav=[
+    {
+      displayName:"Dashboard",
+      path:"/dashboard"
+    },
+    {
+      displayName:"Add Products",
+      path:"/dashboard/add-products"
+    },
+    {
+      displayName:"All Products",
+      path:"/dashboard/all-products"
+    },
+    {
+      displayName:"User",
+      path:"/dashboard/user"
+    },
+  ]
 
   const {currentUser} =useAuth();
   const navigate=useNavigate();

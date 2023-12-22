@@ -3,10 +3,8 @@ import { Container, Row, Col } from 'reactstrap';
 import '../styles/Dashboard.css';
 
 
-const Token = localStorage.getItem("Token")
-
-
 const Dashboard = () => {
+  const Token = localStorage.getItem("Token")
   const [totalProducts, setTotalProducts] = useState(0);
   const [totalArticle, setTotalArticle] = useState(0);
   const [numUser, setnumUser] = useState(0);

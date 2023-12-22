@@ -5,9 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
-const Token = localStorage.getItem("Token")
 
 const AddProduct = () => {
+
+  const Token = localStorage.getItem("Token")
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false)
 

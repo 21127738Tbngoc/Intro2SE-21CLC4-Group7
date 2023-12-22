@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Col, Container, Row } from 'reactstrap';
+import React, { useState, useEffect, } from 'react';
+import { Col, Container, Row,} from 'reactstrap';
 import { toast } from 'react-toastify';
 
-const Token = localStorage.getItem("Token")
-
 const User = () => {
+  const Token = localStorage.getItem("Token")
   const [userData, setUserData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -18,6 +17,8 @@ const User = () => {
             token: " bearer " + Token
           },
         });
+
+        console.log(response)
 
         if (!response.ok) {
           throw new Error('Failed to fetch user data');

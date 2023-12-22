@@ -7,7 +7,7 @@ import '../searchbar/searchbar.css'
 
 import Searchbar from "../searchbar/searchbar"
 import CartModal from "./cart_modal"
-import userEvent from "@testing-library/user-event";
+import DropdownContent from "./dropDownContent";
 
 const Navbar = () => {
 
@@ -87,8 +87,6 @@ const Navbar = () => {
         </li>
     </ul>
     )
-    console.log(dropDownContent0.style)
-    const [dropDownContent, dropDownFunc] = useState(dropDownContent0);
 
     return (
         <div>
@@ -112,28 +110,28 @@ const Navbar = () => {
 
                 {/*<!-- Logo --> */}
                 <div className="d-flex flex-row g-4 align-items-center">
+                    <a href="/home">
                     <img src="/imgs/navbar/logo.svg" alt="Fitment"/>
+                    </a>
                 </div>
 
                 {/*<!-- Cart & Account --> */}
                 <div className="d-flex align-items-center">
+
                     <div className="d-flex flex-row align-items-center">
-                        <img className="cart-modal-open-btn" src="/imgs/navbar/cart-icon.svg" alt="Cart" onClick={openCartModal}></img>
-                        <p className="navbar-text mx-2 my-2 align-items-center">BAG</p>
+                        <h5 className="cart-modal-open-btn">
+                            <img src="/imgs/navbar/cart-icon.svg" alt="Cart" onClick={openCartModal}/>
+                        </h5>
+                        <p className="button2 mx-2 align-items-center">BAG
+                        </p>
                         <div className="navbar-cart-num">
                             <p className="support align-items-center">0
                             </p>
                         </div>
                     </div>
-                    <div className="dropdown" onMouseOver={()=> {console.log("Hello")}}>
-                        <div className="d-flex flex-row align-items-center" id="dropdownToggle">
-                            <img className="mx-2" src="/imgs/navbar/profile-icon.svg" alt="Profile"/>
-                            <p className="navbar-text align-items-center my-2" id="dropdownButton">ACCOUNT</p>
-                        </div>
-                        {/*{dropDownContent}*/}
+                    <DropdownContent/>
                     </div>
                 </div>
-            </div>
 
 
         <div className="container-fluid fixed-top navbar-container justify-content-between position-relative"
