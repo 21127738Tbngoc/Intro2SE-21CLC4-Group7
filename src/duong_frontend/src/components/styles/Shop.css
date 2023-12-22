@@ -6,8 +6,6 @@
 
 .container-fluid {
     position: relative;
-    width: 100%;
-    max-width: 100%;
     overflow: hidden;
 }
 
@@ -47,7 +45,7 @@
     color: var(--tone-primary-99);
 }
 
-/*--Products category--*/
+/*--Shop by category--*/
 .category-title {
     margin-top: 56px;
     text-align: center;
@@ -73,12 +71,35 @@
     margin: 0;
     border-bottom: 1px solid var(--tone-neutral-60);
 }
-
-.category-img {
+.dining-room {
+    margin: 0;
+    border-bottom: 1px solid var(--tone-neutral-60);
+}
+.bath-room {
+    margin: 0;
+    border-bottom: 1px solid var(--tone-neutral-60);
+}
+.living-img, .bed-img, .dining-img, .bath-img {
     position: absolute;
-    top: 320px;
-    right: 0;
     transform: translate(-50%, -50%);
     width: 360px;
     height: auto;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+.living-img {
+    top: 320px;
+    right: 0;
+}
+.bed-img {
+    left: 25%;
+}
+.dining-img {
+    right: 0;
+}
+.bath-img {
+    left: 25%;
+}
+.category-section:hover .living-img, .category-section:hover .bed-img, .category-section:hover .dining-img, .category-section:hover .bath-img {
+    opacity: 1;
 }
