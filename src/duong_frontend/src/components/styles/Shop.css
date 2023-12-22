@@ -56,16 +56,21 @@
     margin-top: 8px;
     text-align: center;
 }
-
-.living-room {
+.living-room, .bed-room, .dining-room, .bath-room {
     font-family: regular-font;
     font-size: 45px;
     line-height: 48px;
     text-align: center;
-    margin-top: 83px;
     padding: 32px 0;
     color: var(--tone-neutral-60);
+}
+.living-room {
+    margin: 83px 0 0 0;
     border-top: 1px solid var(--tone-neutral-60);
+    border-bottom: 1px solid var(--tone-neutral-60);
+}
+.bed-room {
+    margin: 0;
     border-bottom: 1px solid var(--tone-neutral-60);
 }
 
