@@ -15,6 +15,10 @@
     font-weight: 600;
 }
 
+.pagecontent .row{
+    margin-bottom: 2rem;
+}
+
 .useravt {
     border-radius: 50%;
 }
