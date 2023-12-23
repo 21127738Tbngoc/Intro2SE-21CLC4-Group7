@@ -15,6 +15,10 @@
     font-weight: 600;
 }
 
+.pagecontent .row{
+    margin-bottom: 2rem;
+}
+
 .useravt {
     border-radius: 50%;
 }
@@ -29,4 +33,11 @@
     border-radius: 50%;
     height: 60px;
     width: 60px;
+}
+
+.tag {
+    border: 1px solid var(--tone-primary-40, #46692A);
+    padding: 6px 12px;
+    border-radius: 3px;
+
 }

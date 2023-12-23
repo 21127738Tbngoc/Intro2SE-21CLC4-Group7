@@ -26,6 +26,10 @@ const User = () => {
 
         const data = await response.json();
         setUserData(data);
+
+
+        console.log(userData.avatar)
+
         setLoading(false);
       } catch (error) {
         console.error(error);
@@ -87,7 +91,7 @@ const User = () => {
               <tbody>
                 {userData.map((user, index) => (
                   <tr className='teble' key={index}>
-                    <td><img src={user.img} alt="avatar" /></td>
+                    <td><img src={user.avatar} alt="avatar" /></td>
                     <td>{user.username}</td>
                     <td>{user.email}</td>
                     <td>{user.isAdmin}</td>

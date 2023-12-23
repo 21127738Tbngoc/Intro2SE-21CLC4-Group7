@@ -38,7 +38,7 @@ const Signup = () => {
 
       setLoading(false);
       toast.success('Successfully logged in');
-      navigate('');
+      navigate('/home');
     } catch (error) {
       setLoading(false);
       toast.error(error.message || 'Signup failed');
