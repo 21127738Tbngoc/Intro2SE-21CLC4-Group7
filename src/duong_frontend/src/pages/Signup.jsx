@@ -113,7 +113,7 @@ const Signup = () => {
                             <img src="/imgs/signup/email.svg" alt="email" className="leading-icon" />
                             <input
                               type="text"
-                              placeholder="Enter your email address" // Assuming username is equivalent to email in this context
+                              placeholder="example@email.com" // Assuming username is equivalent to email in this context
                               className="form-control form-md-icon"
                               value={username}
                               onChange={(e) => setEmail(e.target.value)}
@@ -124,16 +124,16 @@ const Signup = () => {
                         {/* Phone */}
                         <div className="mb-3">
                           <label for="phone" className="form-label label1">
-                            Email
+                            Phone
                           </label>
                           <div className="input-with-icon">
-                            <img src="/imgs/signup/email.svg" alt="email" className="leading-icon" />
+                            <img src="/imgs/signup/phone.svg" alt="phone" className="leading-icon" />
                             <input
                               type="text"
-                              placeholder="Enter your email address" // Assuming username is equivalent to email in this context
+                              placeholder="XXX XXX XXX" 
                               className="form-control form-md-icon"
-                              value={username}
-                              onChange={(e) => setEmail(e.target.value)}
+                              value={phone}
+                              onChange={(e) => setPhone(e.target.value)}
                               required
                             />
                           </div>
@@ -166,7 +166,7 @@ const Signup = () => {
                     </div>
                   </div>
               </div>
-              
+ 
             )}
           
         
