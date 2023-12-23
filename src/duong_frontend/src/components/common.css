@@ -508,3 +508,31 @@ html {
     text-align: center;
 }
 
+/*--Select controls--*/
+.form-check {
+    margin-top: 0.5em;
+}
+.form-check input[type=checkbox] {
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid var(--tone-primary-40);
+    background-color: var(--scheme-background);
+    box-shadow: none;
+    margin-right: 1em;
+}
+.form-check input[type=checkbox]:hover {
+    border: 1.5px solid var(--tone-primary-40);
+    background-color: var(--tone-secondary-90);
+}
+.form-check input[type=checkbox]:checked {
+    background: url("../../public/imgs/signup/checked.svg");
+    background-repeat: no-repeat;
+    border: none;
+}
+.form-check-label {
+    color: var(--scheme-on-background);
+    line-height: 24px;
+}
+
+
+
