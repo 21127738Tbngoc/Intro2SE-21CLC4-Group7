@@ -90,9 +90,9 @@
     padding: 15px 0;
     border: none;
     text-align: center;
-    flex: 1; /* Equal width for both buttons */
+    flex: 1;
     margin: 0;
-    text-decoration: none; /* Remove default underline for links */
+    text-decoration: none;
     transition: .3s ease-in;
 }
 .product-btn-d:hover {
