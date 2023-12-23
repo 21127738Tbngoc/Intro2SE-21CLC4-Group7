@@ -121,6 +121,7 @@
 }
 
 /*-- Shop all --*/
-.product-ctn-l {
+.product-ctn-l, .product-ctn-d {
     height: 450px;
 }
+

@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from '../components/helmet/Helmet';
 import { Container, Row, Col, FormGroup } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import '../components/button/buttons.css'; 
-import '../components/common.css'; 
+import '../components/button/buttons.css';
+import '../components/common.css';
 import '../components/navbar/navbar.css';
+
+//import '../components/form/form.css';
+
+
 
 const Login = () => {
   useEffect(() => {
@@ -23,7 +28,7 @@ const Login = () => {
 
   const loginHandler = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    //setLoading(true);
     const loginData = {
       username,
       password,
@@ -36,9 +41,13 @@ const Login = () => {
 
       console.log(token);
 
-      setLoading(false);
+      console.log(response)
+
+      //setLoading(false);
+      
+      //navigate('/home');
       toast.success('Successfully logged in');
-      navigate('');
+
     } catch (error) {
       setLoading(false);
       toast.error(error.message || 'Login failed');

@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button1, .button2, .button3 {
-    font-family: bold-font;
+    font-family: semibold-font;
 }
 
 /*---Body---*/
@@ -331,8 +331,8 @@ a:hover {
   text-decoration: none;
   color: var(--tone-secondary-60);
   display: inline-block; /* Ensures the width fits the content */
-  border-bottom: 1px solid transparent; /* Transparent border initially */
-  transition: border-bottom-color 0.8s ease; /* Transition effect on border color */
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.8s ease;
 }
 
 .slide-border::before {
@@ -343,14 +343,13 @@ a:hover {
   width: 0;
   height: 1px;
   background-color: var(--tone-secondary-60);
-  transition: width 0.6s ease, /* Transition effect for the sliding border width */
-              transform 0.6s ease; /* Transition effect for sliding from left */
-  transform-origin: left; /* Ensures transform origin is from the left */
+  transition: width 0.6s ease, transform 0.6s ease;
+  transform-origin: left;
 }
 
 .slide-border:hover::before {
-  width: 100%; /* Slide in effect by expanding the width */
-  transform: scaleX(1); /* Scale the element from left to right */
+  width: 100%;
+  transform: scaleX(1);
 }
 
 /*-- Form --*/
