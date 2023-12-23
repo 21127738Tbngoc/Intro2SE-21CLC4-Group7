@@ -71,6 +71,22 @@ const Signup = () => {
                         Or, sign up with your email
                       </p>
                       <form>
+                        {/* Username */}
+                        <div className="mb-3">
+                          <label for="userName" className="form-label label1">
+                            Username
+                          </label>
+                          <div className="input-with-icon">
+                            <input
+                              type="text"
+                              placeholder="Enter your username here"
+                              className="form-control form-md"
+                              value={username}
+                              onChange={(e) => setUsername(e.target.value)}
+                              required
+                            />
+                          </div>
+                        </div>
                         {/* Full name */}
                         <div className="mb-3">
                           <label for="fullName" className="form-label label1">
@@ -105,6 +121,23 @@ const Signup = () => {
                             />
                           </div>
                         </div>
+                        {/* Phone */}
+                        <div className="mb-3">
+                          <label for="phone" className="form-label label1">
+                            Email
+                          </label>
+                          <div className="input-with-icon">
+                            <img src="/imgs/signup/email.svg" alt="email" className="leading-icon" />
+                            <input
+                              type="text"
+                              placeholder="Enter your email address" // Assuming username is equivalent to email in this context
+                              className="form-control form-md-icon"
+                              value={username}
+                              onChange={(e) => setEmail(e.target.value)}
+                              required
+                            />
+                          </div>
+                        </div>
                         {/* Password */}
                         <div className="mb-3">
                           <label for="password" className="form-label label1">
@@ -125,10 +158,10 @@ const Signup = () => {
                         </div>
                       </form>
                       <button onClick={signupHandler} className="prim-btn btn-md signup-btn w-100">
-                        SIGN IN
+                        SIGN UP
                       </button>
                       <p className="signup-link">
-                        Not yet registered? <Link to="/signup">Sign Up</Link> now!
+                        Already have an account? <Link to="/signup">Sign in</Link> here!
                       </p>
                     </div>
                   </div>
