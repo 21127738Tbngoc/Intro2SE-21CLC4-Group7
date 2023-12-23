@@ -174,29 +174,39 @@ a h5 img {
 }
 
 .modal-content-login {
-    padding-top: 174px;
+    position: relative;
+    left: 50%;
+    top: 50%;
     background: var(--scheme-background);
-    width: fit-content;
+    width: auto;
+    max-width: 71%;
     border-radius: 8px;
+    transform: translate(-50%, -50%);
     border: none;
 }
 
 .modal-content-signup {
-    padding-top: 127px;
+    position: relative;
+    left: 50%;
+    top: 50%;
     background: var(--scheme-background);
-    width: fit-content;
+    max-width: 70%;
+    width: auto;
     border-radius: 8px;
+    transform: translate(-50%, -50%);
     border: none;
 }
 
 .modal-img {
+    max-width: 100%;
+    max-height: 100vh;
+    width: auto;
+    height: auto;
     display: inline-flex;
     left: 0;
-    height: 100vh;
-    margin-right: 134px;
 }
 
-.social-login-btn, .social-signup-btn {
+.social-login-btn {
     width: 100%;
     display: flex;
     margin-top: 24px;
@@ -209,7 +219,7 @@ a h5 img {
 }
 
 .login-btn, .signup-btn {
-    margin-top: 32px;
+    margin-top: 24px;
 }
 .signup-link, .login-link {
     margin-top: 16px;
@@ -223,6 +233,47 @@ a h5 img {
     color: var(--tone-primary-40);
     text-decoration: none;
     font-family: semibold-font;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex: 1;
+}   
+.input-with-icon {
+    flex: 1;
+}
+.file-input-container {
+    margin-bottom: 20px;
+}
+
+.file-input {
+    overflow: hidden;
+    position: relative;
+}
+
+.file-input input[type="file"] {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10%;
+    width: 90%;
+    max-width: 100%;
+    z-index: -1;
+}
+.file-button {
+    border: 1px solid var(--scheme-outline);
+    border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    opacity: 1;
+}
+.file-input input:hover {
+    background: none;
+    border: 1px solid var(--scheme-outline);
 }
 
 /*-- Account dropdown --*/
@@ -266,3 +317,4 @@ a h5 img {
 .list-item img {
     margin-right: 8px;
 }
+
