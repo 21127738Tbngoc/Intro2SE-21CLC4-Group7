@@ -1,0 +1,16 @@
+p {
+    margin: 0px;
+}
+.breadcrumb {
+    padding: 24px 72px;
+    border: 1px solid var(--scheme-outline);
+}
+
+.breadcrumb li:not(:last-child) a:after{
+    content: " /\00a0 ";    
+}
+
+.breadcrumb a {
+    color: var(--tone-primary-40);
+    font-weight: 600;
+}
