@@ -1,12 +1,21 @@
 
 import { SearchResult } from "./SearchResult";
+import "./SearchResultList.css"
 
 export const SearchResultsList = ({ results }) => {
+  const color = require('../Utils/color')
   return (
-    <div className="results-list">
-      {results.map((result, id) => {
-        return <SearchResult result={result.name} key={id} />;
-      })}
+
+    <div className="row g-4">
+      <div className=" d-inline-flex gap-1">
+        <div className="results-list d-inline-flex"
+          style={{ color: color.ToneNeutral60, marginLeft: 4 }}
+        >
+          {results.map((result, id) => {
+            return <SearchResult result={result.name} key={id} className={"center"} />;
+          })}
+        </div>
+      </div>
     </div>
   );
 };
