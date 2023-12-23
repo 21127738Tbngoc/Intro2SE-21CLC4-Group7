@@ -7,9 +7,10 @@
 
 .breadcrumb-home a {
     color: var(--tone-primary-10);
+    font-family: regular-font;
 }
 
-.breadcrumb-element a {
+.breadcrumb-element {
     color: var(--tone-primary-40);
-    font-weight: 600;
+    font-family: semibold-font;
 }
