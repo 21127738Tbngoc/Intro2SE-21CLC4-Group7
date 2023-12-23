@@ -219,7 +219,7 @@ a h5 img {
 }
 
 .login-btn, .signup-btn {
-    margin-top: 32px;
+    margin-top: 24px;
 }
 .signup-link, .login-link {
     margin-top: 16px;
@@ -258,16 +258,18 @@ a h5 img {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 10%;
+    width: 90%;
+    max-width: 100%;
     z-index: -1;
 }
-
 .file-button {
     border: 1px solid var(--scheme-outline);
     border-radius: 4px 0px 0px 4px;
     cursor: pointer;
     z-index: 1;
     position: relative;
+    cursor: pointer;
 }
 
 /*-- Account dropdown --*/

@@ -169,16 +169,15 @@ const Signup = () => {
                                   />
                               </div>
                           </div>
-
                           {/* Avatar */}
-                          <div className="file-input-container">
+                          <div className="file-input-container mt-4">
                               <div className="file-input">
-                                  <label for="formFile" className="file-button sec-btn btn-md button2">BROWSE FILE</label>
-                                  <input
+                                  <input 
                                       type="file"
-                                      id="formFile"
-                                      className="form-control form-md" 
+                                      id="formFile" 
+                                      className="form-control form-md"
                                   />
+                                  <label for="formFile" className="file-button sec-btn btn-md button2">BROWSE FILE</label>
                               </div>
                           </div>
                       </form>
