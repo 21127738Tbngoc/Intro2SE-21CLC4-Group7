@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from '../components/helmet/Helmet';
 import { Container, Row, Col, FormGroup } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -27,7 +28,7 @@ const Login = () => {
 
   const loginHandler = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    //setLoading(true);
     const loginData = {
       username,
       password,
@@ -42,11 +43,11 @@ const Login = () => {
 
       console.log(response)
 
-      setLoading(false);
+      //setLoading(false);
+      
+      //navigate('/home');
+      toast.success('Successfully logged in');
 
-      toast.notify('Successfully logged in');
-
-      navigate('');
     } catch (error) {
       setLoading(false);
       toast.error(error.message || 'Login failed');
@@ -127,7 +128,7 @@ const Login = () => {
 
         )}
 
-
+        <ToastContainer />
       </section>
     </Helmet>
   );

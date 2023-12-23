@@ -9,8 +9,14 @@ import Searchbar from "../searchbar/searchbar"
 import CartModal from "./cart_modal"
 import DropdownContent from "./dropDownContent";
 
-const Navbar = () => {
 
+
+import { SearchBar } from "../search/SearchBar";
+import { SearchResultsList } from "../search/SearchResultsList";
+
+
+const Navbar = () => {
+    const [results, setResults] = useState([]);
     const searchTextStyle = {
         background: 'var(--scheme-background)', border: '1px solid var(--scheme-outline, #A1B096)'
     }
@@ -139,7 +145,8 @@ const Navbar = () => {
                  event.stopPropagation()
              }}>
             {/*// <!-- Search dropdown -->*/}
-            <Searchbar/>
+            <SearchBar setResults={setResults} />
+        {results && results.length > 0 && <SearchResultsList results={results} />}
             {/*<!-- Cart Modal --> */}
             <CartModal/>
         </div>

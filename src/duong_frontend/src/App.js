@@ -14,7 +14,13 @@ import Navbar from './components/navbar/navbar';
 import Searchbar from "./components/searchbar/searchbar";
 
 
+import { SearchBar } from "./components/search/SearchBar";
+import { SearchResultsList } from "./components/search/SearchResultsList";
+import { useState } from 'react';
+
+
 function App() {
+
   return (
     <div >
 
@@ -23,7 +29,7 @@ function App() {
 
           <Route path='/login' element={<div><Navbar/><Login /><Footer/></div>} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/' element={<div><Navbar/></div>}/>
+          <Route path='/' element={<div><Navbar/>       </div>}/>
 
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='dashboard/all-products' element={<AllProducts />} />
@@ -38,6 +44,12 @@ function App() {
           <Route path='/partners' element={<div><Navbar/><Footer/></div>} />
           <Route path='/designers' element={<div><Navbar/><Footer/></div>} />
           <Route path={'/test'} element={<div><Navbar/><Footer/></div>}/>
+
+
+
+
+
+
         </Routes>
       </BrowserRouter>
 
