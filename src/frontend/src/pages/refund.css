@@ -14,3 +14,11 @@ p {
     color: var(--tone-primary-40);
     font-weight: 600;
 }
+
+.sidebar .row{
+    margin-bottom: 5rem;
+}
+
+.sidebar h6{
+    margin-bottom: 0;
+}
