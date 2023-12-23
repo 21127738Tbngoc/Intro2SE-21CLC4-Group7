@@ -269,7 +269,11 @@ a h5 img {
     cursor: pointer;
     z-index: 1;
     position: relative;
-    cursor: pointer;
+    opacity: 1;
+}
+.file-input input:hover {
+    background: none;
+    border: 1px solid var(--scheme-outline);
 }
 
 /*-- Account dropdown --*/
