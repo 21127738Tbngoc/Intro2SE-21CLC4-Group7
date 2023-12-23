@@ -111,7 +111,7 @@ const Login = () => {
                         SIGN IN
                       </button>
                       <p class="signup-link">
-                        Not yet registered? <Link to="/signup">Sign Up</Link> now!
+                        Not yet registered? <Link to="/signup" className="slide-border">Sign Up</Link> now!
                       </p>
                     </div>
                   </div>
