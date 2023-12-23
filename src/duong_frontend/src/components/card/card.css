@@ -33,10 +33,12 @@
     display: flex;
     justify-content: space-between; /* Distribute space between buttons */
 }
-.no-right-border {
-    border-right: none;
+.product-buttons-l .no-right-border {
+    border-right: none !important;
 }
-
+.product-buttons-d .no-right-border {
+    border-right: none !important;
+}
 /*------Product card light------*/
 .product-ctn-l {
     background: none;
