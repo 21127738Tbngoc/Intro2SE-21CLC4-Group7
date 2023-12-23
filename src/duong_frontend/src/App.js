@@ -12,7 +12,7 @@ import Signup from './pages/Signup';
 import Footer from './components/footer/footer';
 import Navbar from './components/navbar/navbar';
 import Searchbar from "./components/searchbar/searchbar";
-
+import Shop from './pages/shop'
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path='/login' element={<div><Navbar/><Login /><Footer/></div>} />
+          <Route path='/login' element={<div><Navbar /><Login /><Footer /></div>} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/' element={<div><Navbar/></div>}/>
+          <Route path='/' element={<div><Navbar /></div>} />
 
           <Route path='dashboard' element={<Dashboard />} />
           <Route path='dashboard/all-products' element={<AllProducts />} />
@@ -32,12 +32,17 @@ function App() {
           <Route path='dashboard/add-articles' element={<AddArticle />} />
           <Route path='dashboard/all-orders' element={<AllOrder />} />
 
-          
-          <Route path='/test/searchbar' element={<Searchbar/>} />
-          <Route path='/about' element={<div><Navbar/><Footer/></div>} />
-          <Route path='/partners' element={<div><Navbar/><Footer/></div>} />
-          <Route path='/designers' element={<div><Navbar/><Footer/></div>} />
-          <Route path={'/test'} element={<div><Navbar/><Footer/></div>}/>
+
+          <Route path='/test/searchbar' element={<Searchbar />} />
+          <Route path='/about' element={<div><Navbar /><Footer /></div>} />
+          <Route path='/partners' element={<div><Navbar /><Footer /></div>} />
+          <Route path='/designers' element={<div><Navbar /><Footer /></div>} />
+          <Route path={'/test'} element={
+            <div>
+              <Navbar />
+              <Shop/>
+              <Footer />
+            </div>} />
         </Routes>
       </BrowserRouter>
 

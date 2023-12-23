@@ -2,6 +2,27 @@ const router = require("express").Router();
 const User = require("../models/User")
 const CryptoJS=require("crypto-js")
 const jwt=require("jsonwebtoken")
+const passport = require("passport");
+// const GoogleStrategy = require("passport-google-oauth20").Strategy;
+// const FacebookStrategy = require("passport-facebook").Strategy;
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+//Use passport-local configuration Create passport local Strategy
+passport.use(User.createStrategy());
+
+//Serialize and deserialize are only necessary when using session
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+});
+
+passport.deserializeUser(function(id, done) {
+    User.findById(id, function (err, user) {
+        done(err, user);
+    });
+});
+
 //REGISTER
 router.post("/register", async (req, res)=>{
     const newUser=new User({
@@ -21,12 +42,11 @@ router.post("/register", async (req, res)=>{
     }
 })
 
-
 //LOGIN
-
 router.post("/login", async(req, res)=>{
     try{
-        const user=await User.findOne({username: req.body.username});
+        const user = await User.findOne({username: req.body.username});
+        console.log("User: ",user)
         !user && res.status(401).json("wrong credentials")
         const hashedPassword=CryptoJS.AES.decrypt(user.password, process.env.PASS_SEC);
         const realpassword=hashedPassword.toString(CryptoJS.enc.Utf8);
@@ -42,12 +62,15 @@ router.post("/login", async(req, res)=>{
 
 
         const{password, ...others}=user._doc;
+        console.log(user._doc)
         res.status(200).json({...others, accessToken})
     }
     catch(err){
         res.status(500).json(err);
     }
 })
+
+
 
 
 module.exports = router;
