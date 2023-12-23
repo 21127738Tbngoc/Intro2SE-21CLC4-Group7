@@ -4,7 +4,7 @@ import "../button/buttons.css"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
-export const ProductCardLight = () =>
+
 
     function ProductCardLight() {
         return (

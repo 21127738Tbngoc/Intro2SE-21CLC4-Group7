@@ -36,9 +36,6 @@
 .product-buttons-l .no-right-border {
     border-right: none !important;
 }
-.product-buttons-d .no-right-border {
-    border-right: none !important;
-}
 /*------Product card light------*/
 .product-ctn-l {
     background: none;
@@ -90,9 +87,8 @@
 }
 .product-btn-d {
     color: var(--tone-secondary-90);
-    border: 1.5px solid var(--scheme-outline);
     padding: 15px 0;
-    border-top: none;
+    border: none;
     text-align: center;
     flex: 1; /* Equal width for both buttons */
     margin: 0;
