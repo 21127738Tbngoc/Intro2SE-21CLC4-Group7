@@ -18,3 +18,15 @@
 .useravt {
     border-radius: 50%;
 }
+
+.mediaicon{
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tone-primary-40, #46692A);
+    color: var(--tone-primary-99, #F9FFEE);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
