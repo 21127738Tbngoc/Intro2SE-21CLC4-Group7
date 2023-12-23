@@ -22,3 +22,7 @@ p {
 .sidebar h6{
     margin-bottom: 0;
 }
+
+.section {
+    margin-bottom: 3rem;
+}
