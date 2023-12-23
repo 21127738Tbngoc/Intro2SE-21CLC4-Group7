@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href ="../../public/bootstrap-5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../public/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../components/button/buttons.css">
+    <link rel="stylesheet" href="../components/common.css">
+    <link rel="stylesheet" href="../../public/icons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./articledetail.css">
+    <title>Article Detail</title>
+</head>
+<body>
+    <div class = "container-fluid d-flex flex-column flex-shrink-0 gap-4" style="background: var(--scheme-background);">
+        <!-- BREADCRUMB -->
+        <ol class="breadcrumb">
+            <li class="p"><a href="#">HOME</a></li>
+            <li class="label"><a href="#">ARTICLES</a></li>
+            <li class="button"> <a href="#">ARTICLE DETAIL</a></li>
+        </ol>
+        <!-- ARTICLE TITLE -->
+        <div class = "container-xxl justify-content-center text-center">
+            <div class = "row g-4">                
+                <d3 class ="text-start">The Art of Storytelling: Techniques and Tips for Creative Writing Students</d3>
+            </div>
+        </div>
+        <!-- BODY -->
+        <div class = "container-xxl d-flex flex-row m-5 px-4">
+            <div class = "d-flex flex-row justify-content-between flex-shrink-0 flex-grow-1">
+                <!-- Publish information -->
+                <div class = "d-flex flex-row gap-3">
+                    <!-- <span class ="icon"></span> -->
+                    <img src = "user.jpg" width="65px" class ="useravt">
+                    <div class = "d-flex flex-column justify-content-center">
+                        <div class = "label3">Posted by</div>
+                        <div class = "title2">Oliver Knight</div>
+                    </div>
+                    <div class = "d-flex flex-column justify-content-center">
+                        <div class = "label3">Date posted</div>
+                        <div class = "title2">July 14, 2023</div>
+                    </div>  
+                </div>
+
+                <!-- Media buttons -->
+                <div class = "d-flex flex-row gap-5">
+                    <a href = "#" class="mediaicon fa-brands fa-facebook-f"></i>
+                    <a href = "#" class="mediaicon fa-brands fa-twitter"></a>
+                    <a href = "#" class="mediaicon fa-brands fa-instagram"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

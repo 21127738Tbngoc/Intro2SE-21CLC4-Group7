@@ -38,7 +38,7 @@ const Signup = () => {
 
       setLoading(false);
       toast.success('Successfully logged in');
-      navigate('');
+      navigate('/home');
     } catch (error) {
       setLoading(false);
       toast.error(error.message || 'Signup failed');
@@ -57,83 +57,140 @@ const Signup = () => {
               <div className="container-fluid d-flex">
                   <img src="/imgs/signup/Img.jpg" className="modal-img" alt="signup-img" />
                   <div className="container">
-                    <div className="modal-content-signup">
-                      <h3>Sign Up</h3>
-                      <div className="social-signup-btn">
-                        <a href="#">
-                          <img src="/imgs/signup/Google.svg" className="me-3" alt="" />
-                        </a>
-                        <a href="#">
-                          <img src="/imgs/signup/Facebook.svg" alt="" />
-                        </a>
-                      </div>
-                      <p className="title2" id="signup-or">
-                        Or, sign up with your email
-                      </p>
+                      <div className="modal-content-signup">
+                          <h3 className="mb-5">Sign Up</h3>
                       <form>
-                        {/* Full name */}
-                        <div className="mb-3">
-                          <label for="fullName" className="form-label label1">
-                            Full name
-                          </label>
-                          <div className="input-with-icon">
-                            <img src="/imgs/signup/user.svg" alt="fullName" className="leading-icon" />
-                            <input
-                              type="text"
-                              placeholder="Enter your full name here"
-                              className="form-control form-md-icon"
-                              value={username}
-                              onChange={(e) => setEmail(e.target.value)}
-                              required
-                            />
+                          <div className="form-row">
+                              {/* Username */}
+                              <div className="col mb-3">
+                                  <label for="userName" className="form-label label1">
+                                      Username
+                                  </label>
+                                  <div className="input-with-icon">
+                                      <img src="/imgs/signup/id.svg" alt="userName" className="leading-icon" />
+                                      <input
+                                          type="text"
+                                          placeholder="Enter your username"
+                                          className="form-control form-md-icon"
+                                          value={username}
+                                          onChange={(e) => setEmail(e.target.value)}
+                                          required
+                                      />
+                                  </div>
+                              </div>
+                              {/* Full name */}
+                              <div className="col mb-3">
+                                  <label for="fullName" className="form-label label1">
+                                      Full name
+                                  </label>
+                                  <div className="input-with-icon">
+                                      <img src="/imgs/signup/user.svg" alt="fullName" className="leading-icon" />
+                                      <input
+                                          type="text"
+                                          placeholder="Enter your full name"
+                                          className="form-control form-md-icon"
+                                          value={username}
+                                          onChange={(e) => setEmail(e.target.value)}
+                                          required
+                                      />
+                                  </div>
+                              </div>
                           </div>
-                        </div>
-                        {/* Email */}
-                        <div className="mb-3">
-                          <label for="email" className="form-label label1">
-                            Email
-                          </label>
-                          <div className="input-with-icon">
-                            <img src="/imgs/signup/email.svg" alt="email" className="leading-icon" />
-                            <input
-                              type="text"
-                              placeholder="Enter your email address" // Assuming username is equivalent to email in this context
-                              className="form-control form-md-icon"
-                              value={username}
-                              onChange={(e) => setEmail(e.target.value)}
-                              required
-                            />
+                          <div className="form-row">
+                              {/* Email */}
+                              <div className="col mb-3">
+                                  <label for="userName" className="form-label label1">
+                                      Email
+                                  </label>
+                                  <div className="input-with-icon">
+                                      <img src="/imgs/signup/email.svg" alt="email" className="leading-icon" />
+                                      <input
+                                          type="text"
+                                          placeholder="username@example.com"
+                                          className="form-control form-md-icon"
+                                          value={username}
+                                          onChange={(e) => setEmail(e.target.value)}
+                                          required
+                                      />
+                                  </div>
+                              </div>
+                              {/* Phone */}
+                              <div className="col mb-3">
+                                  <label for="phoneNum" className="form-label label1">
+                                      Phone
+                                  </label>
+                                  <div className="input-with-icon">
+                                      <img src="/imgs/signup/phone.svg" alt="phoneNum" className="leading-icon" />
+                                      <input
+                                          type="text"
+                                          placeholder="XXX XXX XXXX"
+                                          className="form-control form-md-icon"
+                                          value={username}
+                                          onChange={(e) => setEmail(e.target.value)}
+                                          required
+                                      />
+                                  </div>
+                              </div>
                           </div>
-                        </div>
-                        {/* Password */}
-                        <div className="mb-3">
-                          <label for="password" className="form-label label1">
-                            Password
-                          </label>
-                          <div className="input-with-icon">
-                            <img src="/imgs/signup/lock.svg" alt="password" className="leading-icon" />
-                            <input
-                              type="password"
-                              className="form-control form-md-icon"
-                              placeholder="•••••••••••••••••"
-                              value={password}
-                              onChange={(e) => setPassword(e.target.value)}
-                              required
-                            />
-                            <img src="/imgs/signup/eye-open.svg" alt="password" className="trailing-icon" />
+                          
+                          {/* Password */}
+                          <div className="mb-3">
+                              <label for="password" className="form-label label1">
+                                  Password
+                              </label>
+                              <div className="input-with-icon">
+                                  <img src="/imgs/signup/lock.svg" alt="password" className="leading-icon" />
+                                  <input
+                                      type="password"
+                                      className="form-control form-md-icon"
+                                      placeholder="•••••••••••••••••"
+                                      value={password}
+                                      onChange={(e) => setPassword(e.target.value)}
+                                    required
+                                  />
+                                  <img src="/imgs/signup/eye-open.svg" alt="password" className="trailing-icon" />
+                              </div>
                           </div>
-                        </div>
+
+                          {/* Address */}
+                          <div className="mb-3">
+                              <label for="address" className="form-label label1">
+                                  Address
+                              </label>
+                              <div className="input-with-icon">
+                                  <img src="/imgs/signup/address.svg" alt="address" className="leading-icon" />
+                                  <input
+                                      type="text"
+                                      className="form-control form-md-icon"
+                                      placeholder="123 Street, Ward, District, City, Country"
+                                      value={password}
+                                      onChange={(e) => setPassword(e.target.value)}
+                                      required
+                                  />
+                              </div>
+                          </div>
+                          {/* Avatar */}
+                          <div className="file-input-container mt-4">
+                              <div className="file-input">
+                                  <input 
+                                      type="file"
+                                      id="formFile" 
+                                      className="form-control form-md"
+                                  />
+                                  <label for="formFile" className="file-button sec-btn btn-md button2">BROWSE FILE</label>
+                              </div>
+                          </div>
                       </form>
                       <button onClick={signupHandler} className="prim-btn btn-md signup-btn w-100">
-                        SIGN IN
+                          SIGN UP
                       </button>
                       <p className="signup-link">
-                        Not yet registered? <Link to="/signup">Sign Up</Link> now!
+                          Already have an account? <Link to="/signup" className="slide-border">Sign in</Link> here!
                       </p>
                     </div>
                   </div>
               </div>
-              
+ 
             )}
           
         

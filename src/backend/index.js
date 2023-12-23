@@ -54,6 +54,9 @@ const cloudinaryConfig = cloudinary.config({
 })
 
 
+// app.get("/stupid-function", (req,res) => {
+//   throw 
+// })
 
 app.get("/", (req, res) => {
   res.send(`<!DOCTYPE html>
