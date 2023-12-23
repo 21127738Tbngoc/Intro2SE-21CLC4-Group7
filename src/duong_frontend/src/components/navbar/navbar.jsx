@@ -7,7 +7,7 @@ import '../searchbar/searchbar.css'
 
 import Searchbar from "../searchbar/searchbar"
 import CartModal from "./cart_modal"
-import userEvent from "@testing-library/user-event";
+import DropdownContent from "./dropDownContent";
 
 const Navbar = () => {
 
@@ -74,8 +74,7 @@ const Navbar = () => {
         <li>
             <a href="/login" id="signIn" className="list-item">
                 <img src="/imgs/navbar/login.svg" alt="login"/>
-                <span>Sign In
-                                </span>
+                <span>Sign In</span>
             </a>
         </li>
         {/*<!-- Sign Up --> */}
@@ -88,8 +87,6 @@ const Navbar = () => {
         </li>
     </ul>
     )
-    console.log(dropDownContent0.style)
-    const [dropDownContent, dropDownFunc] = useState(dropDownContent0);
 
     return (
         <div>
@@ -106,46 +103,35 @@ const Navbar = () => {
                         </h5>
                     </div>
                     <div className="search-label flex-row" onClick={toggleSearch}>
-                        <h5 className="mx-2"><img src="/imgs/navbar/search-icon.svg" alt="Search"/></h5>
-                        <p className="button2 align-items-center h-100 m-1">SEARCH</p>
+                        <img className="mx-2 my-2" src="/imgs/navbar/search-icon.svg" alt="Search"/>
+                        <p className="navbar-text my-3">SEARCH</p>
                     </div>
                 </div>
 
-
-
                 {/*<!-- Logo --> */}
                 <div className="d-flex flex-row g-4 align-items-center">
-                    <h5>
-                        <img src="/imgs/navbar/logo.svg" alt="Fitment"/>
-                    </h5>
+                    <a href="/home">
+                    <img src="/imgs/navbar/logo.svg" alt="Fitment"/>
+                    </a>
                 </div>
-
 
                 {/*<!-- Cart & Account --> */}
                 <div className="d-flex align-items-center">
+
                     <div className="d-flex flex-row align-items-center">
                         <h5 className="cart-modal-open-btn">
                             <img src="/imgs/navbar/cart-icon.svg" alt="Cart" onClick={openCartModal}/>
                         </h5>
-                        <p className="button2 mx-2 align-items-center m-1">BAG
+                        <p className="button2 mx-2 align-items-center">BAG
                         </p>
                         <div className="navbar-cart-num">
                             <p className="support align-items-center">0
                             </p>
                         </div>
                     </div>
-                    <div className="dropdown" onMouseOver={()=> {console.log("Hello")}}>
-                        <div className="d-flex flex-row align-items-center" id="dropdownToggle">
-                            <h5 className="mx-2">
-                                <img src="/imgs/navbar/profile-icon.svg" alt="Profile"/>
-                            </h5>
-                            <p className="button2 align-items-center m-1" id="dropdownButton">ACCOUNT
-                            </p>
-                        </div>
-                        {/*{dropDownContent}*/}
+                    <DropdownContent/>
                     </div>
                 </div>
-            </div>
 
 
         <div className="container-fluid fixed-top navbar-container justify-content-between position-relative"
@@ -269,7 +255,7 @@ const Navbar = () => {
                                 <li>
                                     <div className="menu-contact-container">
                                         <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
+                                            <button className="outline-i-btn i-btn-md">
                                                 <img src="/imgs/navbar/facebook-logo.svg" alt="facebook-logo"/>
                                             </button>
                                         </a>
@@ -278,7 +264,7 @@ const Navbar = () => {
                                 <li>
                                     <div className="menu-contact-container">
                                         <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
+                                            <button className="outline-i-btn i-btn-md">
                                                 <img src="/imgs/navbar/twitter-logo.svg" alt="twitter-logo"/>
                                             </button>
                                         </a>
@@ -287,7 +273,7 @@ const Navbar = () => {
                                 <li>
                                     <div className="menu-contact-container">
                                         <a href="#">
-                                            <button className="outline-i-btn i-btn-nm">
+                                            <button className="outline-i-btn i-btn-md">
                                                 <img src="/imgs/navbar/instagram-logo.svg" alt="instagram-logo"/>
                                             </button>
                                         </a>
@@ -301,8 +287,7 @@ const Navbar = () => {
                 <div className="col-xxl-5 menu-img">
                     <div>
                         <img src="/imgs/navbar/navimg.jpg" alt="" className="menu-img"/>
-                        <a href="#" className="button1 view-more-btn">View more
-                        </a>
+                        <a href="#" className="button1 view-more-btn">View more</a>
                     </div>
                 </div>
             </div>

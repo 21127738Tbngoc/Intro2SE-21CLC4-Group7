@@ -41,6 +41,11 @@ a h5 img {
     padding-right: 0!important;
 }
 
+.navbar-text {
+    font-family: semibold-font;
+    font-size: 18px;
+    color: var(--tone-primary-40);
+}
 
 .navbar-menu {
     padding: 48px 72px;
@@ -61,6 +66,7 @@ a h5 img {
     color: var(--tone-primary-99);
     background: var(--tone-primary-40);
     border-radius: 50%;
+    margin-right: 1em;
 }
 
 .menu-contact-container {
@@ -140,6 +146,12 @@ a h5 img {
     border-bottom: 1px solid var(--scheme-outline);
 }
 
+.cart-total {
+    font-family: regular-font;
+    font-size: 25px;
+    line-height: 34px;
+}
+
 /*-- Login --*/
 .overlay {
     display: none;
@@ -179,9 +191,8 @@ a h5 img {
 
 .modal-img {
     display: inline-flex;
-    left: 0px;
-    width: auto;
-    height: 800px;
+    left: 0;
+    height: 100vh;
     margin-right: 134px;
 }
 

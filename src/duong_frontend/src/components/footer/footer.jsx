@@ -22,7 +22,7 @@ const Footer = () => {
                         {/* <!-- Logo --> */}
                         <div className="col-5">
                             <d2 className="footer-logo">Fitment</d2>
-                            <p className="title2 footer-subtitle">The Interior Designs and Furnishings Industry Ltd.</p>
+                            <p className="title2 footer-subtitle">The Interior Designs & Furnishings Industry Ltd.</p>
                             <div className="footer-social d-flex">
                                 <button className="social-btn me-3" style={i_btn_nm}><i
                                     className="fa-brands fa-facebook-f"></i></button>
@@ -85,7 +85,7 @@ const Footer = () => {
                 <div className="container">
                     <div className="d-flex justify-content-between">
                         <p className="p2 copyright">2023 MadeinFit Furnishings Industry Ltd. | All right reserved</p>
-                        <p className="p2 copyright">Privacy Policy | Terms and Conditions</p>
+                        <p className="p2 copyright">Privacy Policy | Terms & Conditions</p>
                     </div>
                 </div>
             </div>

@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .button1, .button2, .button3 {
-    font-family: semibold-font;
+    font-family: bold-font;
 }
 
 /*---Body---*/
@@ -162,9 +162,6 @@ p, .p1, .p2, .p3 {
     padding-top: 0;
 }
 
-.product-price {
-    font-family: semibold-font, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 /*---------Font size---------*/
 /*---Display---*/
 d1 {
@@ -335,7 +332,7 @@ a:hover {
   color: var(--tone-secondary-60);
   display: inline-block; /* Ensures the width fits the content */
   border-bottom: 1px solid transparent; /* Transparent border initially */
-  transition: border-bottom-color 0.6s ease; /* Transition effect on border color */
+  transition: border-bottom-color 0.8s ease; /* Transition effect on border color */
 }
 
 .slide-border::before {
@@ -456,3 +453,6 @@ form input:focus {
     box-shadow: 0 0 0 0.25rem var(--scheme-secondary-container) !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
