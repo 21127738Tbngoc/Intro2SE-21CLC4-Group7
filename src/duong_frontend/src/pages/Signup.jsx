@@ -177,7 +177,7 @@ const Signup = () => {
                                   <input
                                       type="file"
                                       id="formFile"
-                                      className="form-control" 
+                                      className="form-control form-md" 
                                   />
                               </div>
                           </div>
