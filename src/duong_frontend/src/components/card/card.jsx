@@ -33,7 +33,7 @@ export const ProductCardLight = () =>
         );
       }
       
-      function ProductCardDark() {
+    function ProductCardDark() {
         return (
           <div className="container-fluid">
             <div className="container">
@@ -60,4 +60,4 @@ export const ProductCardLight = () =>
         );
       }
 
-      export { ProductCardLight, ProductCardDark };
+    export {ProductCardLight, ProductCardDark};

@@ -1,76 +1,6 @@
 @charset "utf-8";
 @import url("../common.css");
 
-/*------Product tag------*/
-/*--Size--*/
-.tag-nm {
-    border-radius: 3px;
-    display: inline-block;
-    padding: 6px 12px;
-    justify-content: center;
-    align-items: center; 
-    top: 1rem;
-    left: 1rem;
-    position: absolute;
-}
-.tag-md {
-    border-radius: 3px;
-    display: inline-block;
-    padding: 4px 12px;
-    justify-content: center;
-    align-items: center;
-    top: 1rem;
-    left: 1rem;
-    position: absolute;
-}
-.tag-sm {
-    border-radius: 3px;
-    display: inline-block;
-    padding: 4px 12px;
-    justify-content: center;
-    align-items: center;
-    top: 1rem;
-    left: 1rem;
-    position: absolute;
-}
-/*--Style--*/
-.tag-fill {
-    background: var(--tone-primary-40);
-    color: var(--scheme-on-primary);
-    text-align: center;
-}
-.tag-outline {
-    background-color: none;
-    border: 1px solid var(--tone-primary-40);
-    color: var(--tone-primary-40);
-    text-align: center;
-}
-.tag-dark {
-    background-color: var(--scheme-secondary-container);
-    color: var(--scheme-on-secondary-container);
-    text-align: center;
-}
-
-/*------Product card------*/
-.product-ctn-l {
-    background: none;
-    border: 1.5px solid var(--scheme-outline);
-    color: var(--tone-primary-40);
-    margin-top: 4rem;
-    padding: 24px 16px 0 16px;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-.product-ctn-d {
-    background: var(--tone-primary-40);
-    border: 1.5px solid var(--scheme-outline);
-    color: var(--tone-primary-99);
-    margin-top: 4rem;
-    padding: 24px 16px 0 16px;
-    position: relative;
-    display: inline-block;
-}
 .product-img {
     position: relative;
     flex-direction: column;
@@ -91,15 +21,6 @@
     position: relative;
     margin-bottom: 0;
 }
-.product-ctn-l .product-cat {
-    color: var(--tone-neutral-60);
-}
-.product-ctn-d .product-cat {
-    color: var(--scheme-outline);
-}
-.product-ctn-d .product-price {
-    color: var(--tone-secondary-90);
-}
 .product-price {
     float: right;
 }
@@ -112,22 +33,26 @@
     display: flex;
     justify-content: space-between; /* Distribute space between buttons */
 }
-.product-buttons-d {
-    background: var(--tone-primary-40);
+.no-right-border {
+    border-right: none;
+}
+
+/*------Product card light------*/
+.product-ctn-l {
+    background: none;
+    border: 1.5px solid var(--scheme-outline);
+    color: var(--tone-primary-40);
+    margin-top: 4rem;
+    padding: 24px 16px 0 16px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.product-ctn-l .product-cat {
+    color: var(--tone-neutral-60);
 }
 .product-btn-l {
     color: var(--tone-primary-40);
-    border: 1.5px solid var(--scheme-outline);
-    padding: 15px 0;
-    border-top: none;
-    text-align: center;
-    flex: 1; /* Equal width for both buttons */
-    margin: 0;
-    text-decoration: none; /* Remove default underline for links */
-    transition: .3s ease-in;
-}
-.product-btn-d {
-    color: var(--tone-secondary-90);
     border: 1.5px solid var(--scheme-outline);
     padding: 15px 0;
     border-top: none;
@@ -141,10 +66,38 @@
     background: var(--tone-primary-40);
     color: var(--tone-primary-99);
 }
+
+/*------Product card dark------*/
+.product-ctn-d {
+    background: var(--tone-primary-40);
+    border: 1.5px solid var(--scheme-outline);
+    color: var(--tone-primary-99);
+    margin-top: 4rem;
+    padding: 24px 16px 0 16px;
+    position: relative;
+    display: inline-block;
+}
+.product-ctn-d .product-cat {
+    color: var(--scheme-outline);
+}
+.product-ctn-d .product-price {
+    color: var(--tone-secondary-90);
+}
+.product-buttons-d {
+    background: var(--tone-primary-40);
+}
+.product-btn-d {
+    color: var(--tone-secondary-90);
+    border: 1.5px solid var(--scheme-outline);
+    padding: 15px 0;
+    border-top: none;
+    text-align: center;
+    flex: 1; /* Equal width for both buttons */
+    margin: 0;
+    text-decoration: none; /* Remove default underline for links */
+    transition: .3s ease-in;
+}
 .product-btn-d:hover {
     background: var(--tone-primary-30);
     color: var(--tone-primary-99);
-}
-.no-right-border {
-    border-right: none;
 }
