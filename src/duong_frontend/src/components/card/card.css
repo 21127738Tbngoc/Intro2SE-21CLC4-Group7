@@ -68,8 +68,8 @@
 
 /*------Product card dark------*/
 .product-ctn-d {
-    background: var(--tone-primary-40);
-    border: 1.5px solid var(--scheme-outline);
+    background: var(--tone-primary-50);
+    border: none;
     color: var(--tone-primary-99);
     margin-top: 4rem;
     padding: 24px 16px 0 16px;
@@ -77,13 +77,13 @@
     display: inline-block;
 }
 .product-ctn-d .product-cat {
-    color: var(--scheme-outline);
+    color: var(--tone-neutral-90);
 }
 .product-ctn-d .product-price {
-    color: var(--tone-secondary-90);
+    color: var(--tone-secondary-95);
 }
 .product-buttons-d {
-    background: var(--tone-primary-40);
+    background: var(--tone-primary-50);
 }
 .product-btn-d {
     color: var(--tone-secondary-90);
@@ -96,6 +96,5 @@
     transition: .3s ease-in;
 }
 .product-btn-d:hover {
-    background: var(--tone-primary-30);
     color: var(--tone-primary-99);
 }
