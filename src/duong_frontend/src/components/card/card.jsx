@@ -1,13 +1,17 @@
-import React from 'react';
+import React ,{ useContext }from 'react';
 import "./card.css"
 import "../button/buttons.css"
 import addToCartHandler from '../Utils/addToCart';
+import { ShopContext } from '../context/ShopContext'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
 
 
 function ProductCardLight(props) {
+  const {addToCart}=useContext(ShopContext);
+
+  
   return (
     <div className="col-3">
     {/* Product container 1 */}
@@ -28,7 +32,7 @@ function ProductCardLight(props) {
 
     {/* Product buttons */}
     <div className="product-buttons-d justify-content-between" style={{width:"100%"}}>
-      <div onClick = {addToCartHandler} className="product-btn-d button2 no-right-border">ADD TO CART</div>
+      <div onClick = {()=>{addToCart(props._id)}} className="product-btn-d button2 no-right-border">ADD TO CART</div>
       <a href="#" className="product-btn-d button2">VIEW PRODUCT</a>
     </div>
 
@@ -37,6 +41,8 @@ function ProductCardLight(props) {
 }
 
 function ProductCardDark(props) {
+  const {addToCart}=useContext(ShopContext);
+
   return (
           <div className="col-3">
             {/* Product container 1 */}
@@ -57,7 +63,7 @@ function ProductCardDark(props) {
 
             {/* Product buttons */}
             <div className="product-buttons-d justify-content-between" style={{width:"100%"}}>
-              <div onClick = {addToCartHandler} className="product-btn-d button2 no-right-border">ADD TO CART</div>
+              <div onClick = {()=>{addToCart(props.id)}} className="product-btn-d button2 no-right-border">ADD TO CART</div>
               <a href="#" className="product-btn-d button2">VIEW PRODUCT</a>
             </div>
 
