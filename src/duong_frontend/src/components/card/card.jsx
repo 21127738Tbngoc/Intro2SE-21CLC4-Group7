@@ -9,11 +9,9 @@ import "bootstrap/dist/js/bootstrap.bundle"
 
 function ProductCardLight(props) {
   return (
-    <div className="col-3">
-    {/* Product container 1 */}
-    <div className="product-ctn-l" style={{width:"100%"}}>
+    <div className="product-ctn-l">
       {/* Product img */}
-      <div style={{width:"100%", height:"15em"}} >
+      <div className="product-img">
       <img src={props.img} alt="product-img" style={{width:"100%", height:"15em"}} ></img>
       </div>
       {/* Product info */}
