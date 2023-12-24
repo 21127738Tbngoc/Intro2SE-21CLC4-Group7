@@ -137,3 +137,41 @@
     padding-top: 48px;
     padding-bottom: 48px;
 }
+/*------Product card dark------*/
+.product-ctn {
+    background: var(--tone-primary-50);
+    border: none;
+    color: var(--tone-primary-99);
+    margin-top: 4rem;
+    padding: 24px 16px 0 16px;
+    position: relative;
+    display: inline-block;
+}
+
+.product-ctn .product-cat {
+    color: var(--tone-neutral-90);
+}
+
+.product-ctn .product-price {
+    color: var(--tone-secondary-95);
+}
+
+.product-buttons {
+    background: var(--tone-primary-50);
+}
+
+.product-btn {
+    color: var(--tone-secondary-90);
+    padding: 15px 0;
+    border: none;
+    text-align: center;
+    flex: 1;
+    margin: 0;
+    text-decoration: none;
+    transition: .3s ease-in;
+}
+
+.product-btn:hover {
+    color: var(--tone-primary-99);
+    background: var(--tone-primary-40);
+}
