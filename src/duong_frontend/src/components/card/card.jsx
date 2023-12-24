@@ -32,4 +32,4 @@ function ProductCard(props) {
   );
 }
 
-export { ProductCard };
+export default { ProductCard };
