@@ -1,6 +1,6 @@
 
 import { SearchResult } from "./SearchResult";
-import "./SearchResultList.css"
+import "./SearchResultsList.css"
 
 export const SearchResultsList = ({ results }) => {
   const color = require('../Utils/color')
