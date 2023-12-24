@@ -5,12 +5,9 @@ import '../button/buttons.css'
 import '../Utils/searchbar'
 import '../searchbar/searchbar.css'
 
-import Searchbar from "../searchbar/searchbar"
+// import Searchbar from "../searchbar/searchbar"
 import CartModal from "./cart_modal"
 import DropdownContent from "./dropDownContent";
-
-
-
 import { SearchBar } from "../search/SearchBar";
 import { SearchResultsList } from "../search/SearchResultsList";
 

@@ -10,19 +10,19 @@ button {
 /*--- Size ---*/
 .btn-nm {
     font-size: 18px;
-    padding: 20px 24px;
+    padding: 18px 24px;
     height: 60px;
 }
 
 .btn-md {
     font-size: 16px;
-    padding: 15px 24px;
+    padding: 14px 24px;
     height: 48px;
 }
 
 .btn-sm {
     font-size: 14px;
-    padding: 13px 24px;
+    padding: 10px 24px;
     height: 40px;
 }
 

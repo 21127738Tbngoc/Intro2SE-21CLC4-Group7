@@ -5,37 +5,50 @@
     position: relative;
     flex-direction: column;
 }
+
 .product-img img {
-    max-width: 100%;
+    max-width: auto;
     height: auto;
 }
+
 .product-info {
     margin-bottom: 24px;
 }
+
 .product-info h6 {
     margin-top: 24px;
     margin-bottom: 0;
 }
-.product-cat, .product-price {
+
+.product-cat,
+.product-price {
     display: inline-block;
     position: relative;
     margin-bottom: 0;
 }
+
 .product-price {
     float: right;
 }
+
 .rating-star {
     height: 24px;
     margin-top: 8px;
     display: block;
 }
-.product-buttons-l, .product-buttons-d {
+
+.product-buttons-l,
+.product-buttons-d {
     display: flex;
-    justify-content: space-between; /* Distribute space between buttons */
+    justify-content: space-between;
+    /* Distribute space between buttons */
 }
-.product-buttons-l .no-right-border {
+
+.product-buttons-l,
+.no-right-border {
     border-right: none !important;
 }
+
 /*------Product card light------*/
 .product-ctn-l {
     background: none;
@@ -47,20 +60,25 @@
     display: inline-block;
     width: 100%;
 }
+
 .product-ctn-l .product-cat {
     color: var(--tone-neutral-60);
 }
+
 .product-btn-l {
     color: var(--tone-primary-40);
     border: 1.5px solid var(--scheme-outline);
     padding: 15px 0;
     border-top: none;
     text-align: center;
-    flex: 1; /* Equal width for both buttons */
+    flex: 1;
+    /* Equal width for both buttons */
     margin: 0;
-    text-decoration: none; /* Remove default underline for links */
+    text-decoration: none;
+    /* Remove default underline for links */
     transition: .3s ease-in;
 }
+
 .product-btn-l:hover {
     background: var(--tone-primary-40);
     color: var(--tone-primary-99);
@@ -76,15 +94,19 @@
     position: relative;
     display: inline-block;
 }
+
 .product-ctn-d .product-cat {
     color: var(--tone-neutral-90);
 }
+
 .product-ctn-d .product-price {
     color: var(--tone-secondary-95);
 }
+
 .product-buttons-d {
     background: var(--tone-primary-50);
 }
+
 .product-btn-d {
     color: var(--tone-secondary-90);
     padding: 15px 0;
@@ -95,6 +117,7 @@
     text-decoration: none;
     transition: .3s ease-in;
 }
+
 .product-btn-d:hover {
     color: var(--tone-primary-99);
     background: var(--tone-primary-40);
