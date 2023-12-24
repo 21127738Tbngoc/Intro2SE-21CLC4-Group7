@@ -14,10 +14,6 @@ import Navbar from './components/navbar/navbar';
 import Searchbar from "./components/searchbar/searchbar";
 import Shop from './pages/shop'
 
-import { SearchBar } from "./components/search/SearchBar";
-import { SearchResultsList } from "./components/search/SearchResultsList";
-import { useState } from 'react';
-
 
 function App() {
 

@@ -108,34 +108,32 @@ function ProductCardLight() {
 
 function ProductCardDark(props) {
   return (
-    // <div className="container-fluid">
-    //     <div className="container">
-    //         <div className="row g-4">
-    <div class="col">
-      {/* Product container 1 */}
-      <div class="product-ctn-d">
-        {/* Product img */}
-        <div class="product-img">
-          <img src={props.image[0]} alt="product-img"></img>
-          <span class="label2 tag-md tag-outline">Sale</span>
-        </div>
-        {/* Product info */}
-        <div class="product-info">
-          <h6>{props.name}</h6>
-          <p class="p3 product-cat">{props.categories}</p>
-          <p class="title2 py-1 product-price">{props.price}</p>
-          <img class="rating-star" src="../../../public/imgs/card/rating-4.png" />
-        </div>
-      </div>
-      {/* Product buttons */}
-      <div class="product-buttons-d justify-content-between">
-        <a href="#" class="product-btn-d button2 no-right-border">ADD TO CART</a>
-        <a href="#" class="product-btn-d button2">VIEW PRODUCT</a>
-      </div>
-    </div>
-            //         </div >
-            //     </div >
-            // </div >
+    <div className="container-fluid">
+      <div className="container">
+        <div className="row g-4">
+          <div class="col">
+            {/* Product container 1 */}
+            <div class="product-ctn-d">
+              {/* Product img */}
+              <img src={props.img} alt="product-img" ></img>
+
+              {/* Product info */}
+              <div class="product-info">
+                <h6>{props.name}</h6>
+                <p class="p3 product-cat">{props.categories}</p>
+                <p class="title2 py-1 product-price">{props.price}</p>
+                <img class="rating-star" src="../../public/imgs/card/rating-4.png" />
+              </div>
+            </div>
+            {/* Product buttons */}
+            <div class="product-buttons-d justify-content-between">
+              <a href="#" class="product-btn-d button2 no-right-border">ADD TO CART</a>
+              <a href="#" class="product-btn-d button2">VIEW PRODUCT</a>
+            </div>
+          </div>
+        </div >
+      </div >
+    </div >
   );
 }
 
