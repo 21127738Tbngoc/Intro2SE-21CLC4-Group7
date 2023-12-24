@@ -1,10 +1,4 @@
-
-
-
-const addToCartHandler = () =>
+export const addToCartHandler = () =>
 {
   // Do something here
 };
-
-
-export default addToCartHandler;

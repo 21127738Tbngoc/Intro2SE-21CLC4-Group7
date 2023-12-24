@@ -4,14 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
 
 import "./footer.css"
-
-const i_btn_nm = {
-    borderRadius: '100%',
-    height: '60px',
-    width: '60px',
-    border: 'none',
-    fontSize: '24px'
-};
+import "../button/buttons.css"
 
 const Footer = () => {
     return (
@@ -24,11 +17,11 @@ const Footer = () => {
                             <d2 className="footer-logo">Fitment</d2>
                             <p className="title2 footer-subtitle">The Interior Designs & Furnishings Industry Ltd.</p>
                             <div className="footer-social d-flex">
-                                <button className="social-btn me-3" style={i_btn_nm}><i
+                                <button className="social-btn me-3 i-btn-nm"><i
                                     className="fa-brands fa-facebook-f"></i></button>
-                                <button className="social-btn me-3" style={i_btn_nm}><i
+                                <button className="social-btn me-3 i-btn-nm"><i
                                     className="fa-brands fa-instagram"></i></button>
-                                <button className="social-btn me-3" style={i_btn_nm}><i
+                                <button className="social-btn me-3 i-btn-nm"><i
                                     className="fa-brands fa-twitter"></i></button>
                             </div>
                         </div>
