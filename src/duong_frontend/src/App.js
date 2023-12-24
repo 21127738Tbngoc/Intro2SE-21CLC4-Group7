@@ -39,17 +39,15 @@ function App() {
           <Route path='dashboard/add-articles' element={<AddArticle />} />
           <Route path='dashboard/all-orders' element={<AllOrder />} />
 
-
-
           <Route path='/test/searchbar' element={<Searchbar />} />
           <Route path='/about' element={<div><Navbar /><Footer /></div>} />
           <Route path='/partners' element={<div><Navbar /><Footer /></div>} />
           <Route path='/designers' element={<div><Navbar /><Footer /></div>} />
           <Route path={'/test'} element={
             <div>
-              <Navbar />
+              {/* <Navbar /> */}
               <Shop/>
-              <Footer />
+              {/* <Footer /> */}
             </div>} />
 
         </Routes>

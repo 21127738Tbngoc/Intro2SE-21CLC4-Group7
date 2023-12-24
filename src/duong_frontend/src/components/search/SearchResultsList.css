@@ -1,3 +1,5 @@
+@import url("../common.css");
+
 .results-list {
   width: 100%;
   background-color: white;
@@ -7,5 +9,5 @@
   border-radius: 10px;
   margin-top: 1rem;
   max-height: 300px;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }

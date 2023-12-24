@@ -50,7 +50,7 @@ const Shop = () => {
                 <div class="row g-4">
                     {
                         productsData.map((item, i) => {
-                            return <ProductCardDark key={i} id={item.id} name={item.name} image={item.image} price={item.price} categories={item.categories} />
+                           <ProductCardDark key={i} id={item.id} name={item.name} image={item.image} price={item.price} categories={item.categories} />
                         })
                     }
                 </div>

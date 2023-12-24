@@ -40,7 +40,7 @@ const Searchbar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row g-4">
+                {/* <div className="row g-4">
                     <div className=" d-inline-flex gap-1">
                         <p className="d-inline-flex" style={color.TonePrimary10}> Label</p>
                         <p className="d-inline-flex" style={color.ToneNeutral60}>Label</p>
@@ -57,7 +57,7 @@ const Searchbar = () => {
                         <p className="d-inline-flex" style={color.TonePrimary10}> Label</p>
                         <p className="d-inline-flex" style={color.ToneNeutral60}>Label</p>
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </div>
