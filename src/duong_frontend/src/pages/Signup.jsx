@@ -17,8 +17,13 @@ const Signup = () => {
   });
 
   const navigate = useNavigate();
-  const [username, setEmail] = useState('');
+  const [username, setUsername] = useState('');
+  const [fullname, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [address, setAddress] = useState('');
+  const [avatar, setAvatar] = useState('');
   const [loading, setLoading] = useState(false);
 
   const signupHandler = async (e) => {
@@ -26,7 +31,12 @@ const Signup = () => {
     setLoading(true);
     const signupData = {
       username,
+      fullname,
+      email,
+      phone,
       password,
+      address,
+      avatar
     };
     try {
       const response = await axios.post('http://localhost:5000/api/auth/signup/', signupData);
@@ -73,7 +83,7 @@ const Signup = () => {
                                             placeholder="Enter your username"
                                             className="form-control form-md-icon"
                                             value={username}
-                                            onChange={(e) => setEmail(e.target.value)}
+                                            onChange={(e) => setUsername(e.target.value)}
                                             required
                                         />
                                     </div>
@@ -89,8 +99,8 @@ const Signup = () => {
                                             type="text"
                                             placeholder="Enter your full name"
                                             className="form-control form-md-icon"
-                                            value={username}
-                                            onChange={(e) => setEmail(e.target.value)}
+                                            value={fullname}
+                                            onChange={(e) => setFullName(e.target.value)}
                                             required
                                         />
                                     </div>
@@ -108,7 +118,7 @@ const Signup = () => {
                                             type="text"
                                             placeholder="user@example.com"
                                             className="form-control form-md-icon"
-                                            value={username}
+                                            value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             required
                                         />
@@ -125,8 +135,8 @@ const Signup = () => {
                                             type="text"
                                             placeholder="XXX XXX XXXX"
                                             className="form-control form-md-icon"
-                                            value={username}
-                                            onChange={(e) => setEmail(e.target.value)}
+                                            value={phone}
+                                            onChange={(e) => setPhone(e.target.value)}
                                             required
                                         />
                                     </div>
@@ -163,8 +173,8 @@ const Signup = () => {
                                         type="text"
                                         className="form-control form-md-icon"
                                         placeholder="123 Street, Ward, District, City, Country"
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        value={address}
+                                        onChange={(e) => setAddress(e.target.value)}
                                         required
                                     />
                                 </div>
@@ -176,6 +186,8 @@ const Signup = () => {
                                         type="file"
                                         id="formFile" 
                                         className="form-control form-md"
+                                        value={avatar}
+                                        onChange={(e) => setAvatar(e.target.value)}
                                     />
                                     <label for="formFile" className="file-button sec-btn btn-md button2">BROWSE FILE</label>
                                 </div>
