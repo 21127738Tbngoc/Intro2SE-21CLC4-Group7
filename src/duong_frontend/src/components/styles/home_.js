@@ -2,44 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const livingRoomSection = document.getElementById('living-room');
     const livingRoomImage = livingRoomSection.querySelector('.category-img');
 
-    livingRoomSection.addEventListener('click', function() {
-        livingRoomImage.style.opacity = '1';
-    });
-
-    
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const bedRoomSection = document.getElementById('bed-room');
-    const bedRoomImage = bedRoomSection.querySelector('.category-img');
-
-    bedRoomSection.addEventListener('click', function() {
-        bedRoomImage.style.opacity = '1';
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const diningRoomSection = document.getElementById('dining-room');
-    const diningRoomImage = diningRoomSection.querySelector('.category-img');
-
-    diningRoomSection.addEventListener('click', function() {
-        diningRoomImage.style.opacity = '1';
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const bathRoomSection = document.getElementById('bath-room');
-    const bathRoomImage = bathRoomSection.querySelector('.category-img');
-
-    bathRoomSection.addEventListener('click', function() {
-        bathRoomImage.style.opacity = '1';
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const livingRoomSection = document.getElementById('living-room');
-    const livingRoomImage = livingRoomSection.querySelector('.category-img');
-
     livingRoomSection.addEventListener('click', function(event) {
         event.stopPropagation(); // Prevents the click event from propagating to the document
         livingRoomImage.style.opacity = '1';
