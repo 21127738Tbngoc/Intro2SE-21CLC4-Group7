@@ -103,12 +103,6 @@ const Signup = () => {
       const response = await axios.post('http://localhost:5000/api/auth/register/', userData);
 
 
-
-
-
-      
-
-
       setLoading(false);
       toast.success('Signup Successful');
       navigate('/login');
