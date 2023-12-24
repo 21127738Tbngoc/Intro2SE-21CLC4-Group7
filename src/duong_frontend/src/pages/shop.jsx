@@ -1,5 +1,5 @@
 import React, { useState, useEffect, } from 'react';
-import { ProductCardDark } from "../components/card/card"
+import { ProductCard } from "../components/card/card"
 import "../components/common.css"
 import { toast } from 'react-toastify';
 
@@ -22,6 +22,7 @@ const Shop = () => {
             }
 
             const data = await response.json();
+
             setProductsData(data);
             setLoading(false);
         } catch (error) {
@@ -36,9 +37,9 @@ const Shop = () => {
         for (let i = 0; i < data.length - 3; i += 3) {
             components.push(
                 <div class="row g-4">
-                    <ProductCardDark key={i} id={data[i].id} name={data[i].name} img={data[i].img} price={data[i].price} categories={data[i].categories} />
-                    <ProductCardDark key={i + 1} id={data[i + 1].id} name={data[i + 1].name} img={data[i + 1].img} price={data[i + 1].price} categories={data[i + 1].categories} />
-                    <ProductCardDark key={i + 2} id={data[i + 2].id} name={data[i + 2].name} img={data[i + 2].img} price={data[i + 2].price} categories={data[i + 2].categories} />
+                    <ProductCard key={i} id={data[i].id} name={data[i].name} img={data[i].img} price={data[i].price} categories={data[i].categories} />
+                    <ProductCard key={i + 1} id={data[i + 1].id} name={data[i + 1].name} img={data[i + 1].img} price={data[i + 1].price} categories={data[i + 1].categories} />
+                    <ProductCard key={i + 2} id={data[i + 2].id} name={data[i + 2].name} img={data[i + 2].img} price={data[i + 2].price} categories={data[i + 2].categories} />
                 </div>
             );
         }
