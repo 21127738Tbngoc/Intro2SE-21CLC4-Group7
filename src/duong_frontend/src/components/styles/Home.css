@@ -91,6 +91,7 @@
 .category-text {
     color: var(--tone-secondary-60);
     margin-top: 1em;
+    width: 90%;
 }
 
 .category-num {
@@ -128,7 +129,7 @@
 .featured-section {
     background: var(--tone-primary-40);
     padding-left: 0;
-    width: 100%;
+    padding-top: 48px;
 }
 .featured-display {
     position:relative;

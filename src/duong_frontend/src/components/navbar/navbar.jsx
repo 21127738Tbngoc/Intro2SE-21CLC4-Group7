@@ -101,7 +101,6 @@ const Navbar = () => {
             <div className="container-xxl navbar">
                 <div className="d-flex flex-row g-4 align-items-center justify-content-between">
 
-
                     {/*<!-- Menu & Search --> */}
                     <div>
                         <h5 className="menu-open-btn">
@@ -157,15 +156,15 @@ const Navbar = () => {
                                 <d5>ABOUT
                                 </d5>
                                 <ul className="flex-column mt-3">
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">ABOUT US
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">OUR PARTNERS
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">OUR DESIGNERS
                                         </a>
                                     </li>
@@ -175,19 +174,19 @@ const Navbar = () => {
                                 <d5>SHOP
                                 </d5>
                                 <ul className="flex-column mt-3">
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">SHOP ALL
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">LIVING ROOM
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">BEDROOM
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">DINING ROOM
                                         </a>
                                     </li>
@@ -201,15 +200,15 @@ const Navbar = () => {
                                 <d5>SUPPORT
                                 </d5>
                                 <ul className="flex-column mt-3">
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">FAQS
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">CONTACT
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">WARRANTY POLICY
                                         </a>
                                     </li>
@@ -221,19 +220,19 @@ const Navbar = () => {
                                 <d5>SERVICE
                                 </d5>
                                 <ul className="flex-column mt-3">
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">MAINTENANCE
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">ASSEMBLY
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">UPHOLSTERY
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">REPAIRS
                                         </a>
                                     </li>
@@ -243,11 +242,11 @@ const Navbar = () => {
                                 <d5>MEDIA
                                 </d5>
                                 <ul className="flex-column mt-3">
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">ARTICLES
                                         </a>
                                     </li>
-                                    <li className="p1 mb-2">
+                                    <li className="p1 mb-3">
                                         <a href="#" className="slide-border">COMMUNITY
                                         </a>
                                     </li>

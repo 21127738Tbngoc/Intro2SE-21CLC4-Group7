@@ -150,7 +150,6 @@ h1, h2, h3, h4, h5, h6 {
 /*---Body---*/
 p, .p1, .p2, .p3 {
     font-family: regular-font;
-    padding-top: 0.2rem;
 }
 
 .label1, .label2, .label3 {
@@ -159,7 +158,6 @@ p, .p1, .p2, .p3 {
 
 .support {
     font-family: medium-font;
-    padding-top: 0;
 }
 
 /*---------Font size---------*/
@@ -318,6 +316,8 @@ body {
 
 /*-- Link --*/
 a {
+    font-family: regular-font !important;
+    box-sizing: border-box;
     color: var(--tone-secondary-60);
     text-decoration: none;
 }
@@ -327,29 +327,30 @@ a:hover {
 }
 
 .slide-border {
-  position: relative;
-  text-decoration: none;
-  color: var(--tone-secondary-60);
-  display: inline-block; /* Ensures the width fits the content */
-  border-bottom: 1px solid transparent;
-  transition: border-bottom-color 0.8s ease;
+    position: relative;
+    text-decoration: none;
+    color: var(--tone-secondary-60);
+    display: inline-block; /* Ensures the width fits the content */
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.8s ease;
 }
 
 .slide-border::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--tone-secondary-60);
-  transition: width 0.6s ease, transform 0.6s ease;
-  transform-origin: left;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    top: 1;
+    height: 1px;
+    background-color: var(--tone-secondary-60);
+    transition: width 0.8s ease, transform 0.8s ease;
+    transform-origin: left;
 }
 
 .slide-border:hover::before {
-  width: 100%;
-  transform: scaleX(1);
+    width: 100%;
+    transform: scaleX(1);
 }
 
 /*-- Form --*/
