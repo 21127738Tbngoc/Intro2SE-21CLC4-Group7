@@ -18,14 +18,23 @@ const ShopContextProvider = (props) => {
     };
 
     fetchProducts();
-  }, []); // The empty dependency array ensures that the effect runs once after the initial render.
+  }, []); 
 
   const addToCart = (itemId) => {
     setCartItems((prev) => [...prev, itemId]);
-    console.log(cartItems)
   };
 
-  const removeFromCart = (itemId) => {
+
+  const remove1FromCart = (itemId) => {
+    const indexToRemove = cartItems.indexOf(itemId);
+    if (indexToRemove !== -1) {
+      const updatedCart = [...cartItems];
+      updatedCart.splice(indexToRemove, 1);
+      setCartItems(updatedCart);
+    }
+  };
+
+  const removeallFromCart = (itemId) => {
     setCartItems((prev) => prev.filter((item) => item !== itemId));
   };
 
@@ -36,6 +45,7 @@ const ShopContextProvider = (props) => {
       totalAmount += itemInfo.price;
     }
     return totalAmount;
+
   };
 
   const getTotalCartItems = () => {
@@ -48,7 +58,8 @@ const ShopContextProvider = (props) => {
     allProducts,
     cartItems,
     addToCart,
-    removeFromCart,
+    removeallFromCart,
+    remove1FromCart,
   };
 
   return (
