@@ -190,9 +190,11 @@
     gap: 1rem;
 }
 .designer-left {
+    align-items: center;
     justify-content: end;
 }
 .designer-right {
+    align-items: center;
     justify-content: start;
 }
 .designer-left .designer-name {
@@ -200,19 +202,35 @@
     color: var(--tone-secondary-80);
 }
 
-.designer-left .designer-role {
+.designer-left .designer-role, .designer-right .designer-role {
     width: 70px;
     text-align: left;
     color: var(--tone-secondary-90);
 }
-
 .designer-right .designer-name {
     text-align: left;
     color: var(--tone-secondary-80);
 }
-
-.designer-right .designer-role {
-    width: 70px;
-    text-align: right;
-    color: var(--tone-secondary-90);
+.designer-img {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 130px;
+    height: 130px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.designer-right .designer-img {
+    left: 100;
+}
+.designer-left:hover .designer-img, .designer-right:hover .designer-img {
+    opacity: 1;
+}
+.designer-left:hover .designer-role, .designer-right:hover .designer-role {
+    opacity: 0;
+}
+.designer-left:hover .designer-name, .designer-right:hover .designer-name {
+    color: var(--tone-primary-99);
+    text-shadow: 0px 4px 6px rgb(62, 74, 54); /* text-shadow: offsetX offsetY blurRadius color */
 }
