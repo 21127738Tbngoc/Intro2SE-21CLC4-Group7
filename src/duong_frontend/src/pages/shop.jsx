@@ -49,13 +49,7 @@ const Shop = () => {
         <div class="container-fluid">
             <div class="container">
                 {
-                    // productsData.map((item, i) => {
-                    //     return (
-                    //         <ProductCard key={i} id={newData[i].id} name={newData[i].name} img={newData[i].img} price={newData[i].price} categories={newData[i].categories} />
-
-                    //     )
-                    // })
-                    //createComponents(productsData)
+                    createComponents(productsData)
                 }
             </div>
         </div>
