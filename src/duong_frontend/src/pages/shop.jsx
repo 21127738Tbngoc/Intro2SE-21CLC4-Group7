@@ -22,7 +22,6 @@ const Shop = () => {
             }
             
             const data = await response.json();
-            console.log(data)
             setProductsData(data);
             setLoading(false);
         } catch (error) {

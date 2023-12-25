@@ -27,7 +27,7 @@ function ProductCard(props) {
             </div>
             {/* Product buttons */}
             <div className="product-buttons justify-content-between">
-                <div onClick = {()=>{addToCart(props._id)}} className="product-btn button2 no-right-border">ADD TO CART</div>
+                <div onClick = {()=>{addToCart(props.id)}} className="product-btn button2 no-right-border">ADD TO CART</div>
                 <a href="#" className="product-btn button2">VIEW PRODUCT</a>
             </div>
         </div>

@@ -48,8 +48,6 @@ const Navbar = () => {
         } else {
             cartModal.classList.remove('open-cart-modal');
         }
-        console.log(cartModal.classList.value)
-        console.log(cartModal.classList.value.search("open-cart-modal"))
         // cartModal.classList.add('open-cart-modal');
     }
 
