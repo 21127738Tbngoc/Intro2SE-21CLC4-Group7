@@ -11,3 +11,9 @@
     color: var(--tone-primary-40);
     font-weight: 600;
 }
+
+.mediaicon {
+    font-size: 18px;
+    width: 24px;
+    color: black;
+}
