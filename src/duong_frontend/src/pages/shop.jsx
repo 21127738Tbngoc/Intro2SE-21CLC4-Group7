@@ -1,6 +1,7 @@
 import React, { useState, useEffect, } from 'react';
 import ProductCard from "../components/card/card"
 import "../components/common.css"
+import "../components/button/button.css"
 import { toast } from 'react-toastify';
 
 const Shop = () => {
@@ -51,7 +52,7 @@ const Shop = () => {
                 {
                     // productsData.map((item, i) => {
                     //     return (
-                    //         <ProductCardDark key={i} id={newData[i].id} name={newData[i].name} img={newData[i].img} price={newData[i].price} categories={newData[i].categories} />
+                    //         <ProductCard key={i} id={newData[i].id} name={newData[i].name} img={newData[i].img} price={newData[i].price} categories={newData[i].categories} />
 
                     //     )
                     // })
