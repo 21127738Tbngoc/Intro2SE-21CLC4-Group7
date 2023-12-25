@@ -12,9 +12,13 @@
     width: 100%;
 }
 
-.product-ctn .product-cat {
+.product-info .product-cat {
     color: var(--tone-neutral-60);
 }
+.product-info .product-price {
+    color: var(--tone-primary-40);
+}
+
 .product-img {
     position: relative;
     flex-direction: column;
@@ -35,7 +39,7 @@
 
 .product-info h6 {
     margin-top: 24px;
-    margin-bottom: 0;
+    margin-bottom: 6px;
 }
 
 .product-cat,
