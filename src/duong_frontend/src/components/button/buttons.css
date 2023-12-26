@@ -6,6 +6,9 @@ button {
     font-family: semibold-font;
     text-align: center;
 }
+a {
+    font-family: semibold-font!important;
+}
 /*---------Button---------*/
 /*--- Size ---*/
 .btn-nm {
@@ -56,18 +59,21 @@ button {
 }
 
 a.link-nm{
+    font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 18px;
     text-decoration: none;
 }
 
 a.link-md{
+    font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 16px;
     text-decoration: none;
 }
 
 a.link-sm{
+    font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 14px;
     text-decoration: none;
