@@ -116,6 +116,11 @@ a {
     border: none;
 }
 
+.link-nm:hover, .link-md:hover, .link-sm:hover {
+    color: var(--tone-primary-50);
+    text-decoration: underline;
+}
+
 .link-disabled {
     color: var(--tone-neutral-80) !important;
     cursor: default !important;
