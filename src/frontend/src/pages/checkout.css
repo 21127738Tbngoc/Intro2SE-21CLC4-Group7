@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import url("../../src/components/common.css");
+
+.page-title {
+    text-align: center;
+    height: 67px;
+    padding: 0 72px;
+}
+
+.page-breadcrumb {
+    margin-top: 24px;
+    text-align: center;
+    padding: 16px 72px;
+    color: var(--tone-primary-40);
+    border: 1px solid var(--scheme-outline);
+}
+
+.page-sub-breadcrumb {
+    font-weight: 600;
+}
+
+.checkout-container {
+    margin: 56px 72px;
+}
