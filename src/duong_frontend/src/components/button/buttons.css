@@ -58,21 +58,27 @@ a {
     transition: background-color 0.3s ease;
 }
 
-a.link-nm{
+.link-nm {
+    background: none;
+    border: none;
     font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 18px;
     text-decoration: none;
 }
 
-a.link-md{
+.link-md {
+    background: none;
+    border: none;
     font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 16px;
     text-decoration: none;
 }
 
-a.link-sm{
+.link-sm {
+    background: none;
+    border: none;
     font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 14px;
