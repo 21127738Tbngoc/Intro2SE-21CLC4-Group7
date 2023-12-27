@@ -21,3 +21,30 @@
 .title{
     margin-bottom: 3rem;
 }
+
+.page {
+    gap: 5rem;
+}
+
+.section .row:not(:last-of-type) {
+    margin-bottom: 5rem;
+}
+
+.card {
+    width: 19rem;
+    background: var(--scheme-background);
+}
+
+.card .cardcontent{
+    padding: 24px 16px;
+    border: 1px solid var(--Scheme-Outline, #A1B096);
+}
+
+.card .cardlink {
+    padding: 1rem 2rem;
+    border: 1px solid var(--Scheme-Outline, #A1B096);
+}
+
+.checked {
+    color: orange;
+}
