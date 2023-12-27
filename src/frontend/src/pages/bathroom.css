@@ -1,0 +1,23 @@
+.breadcrumb {
+    padding: 24px 72px;
+    border: 1px solid var(--scheme-outline);
+}
+
+.breadcrumb li:not(:last-child) a:after{
+    content: " /\00a0 ";    
+}
+
+.breadcrumb a {
+    color: var(--tone-primary-40);
+    font-weight: 600;
+}
+
+.mediaicon {
+    font-size: 18px;
+    width: 24px;
+    color: black;
+}
+
+.title{
+    margin-bottom: 3rem;
+}
