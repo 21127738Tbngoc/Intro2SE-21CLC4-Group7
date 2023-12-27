@@ -54,3 +54,33 @@ p {
 .shipping-option label>div {
     border-radius: 4px;
 }
+
+.invoice-container {
+    width: 526px;
+    height: 750px;
+    padding: 48px;
+    background: var(--tone-neutral-variant-99);
+    box-shadow: 0px 4px 8px 0px #D8E7CB;
+
+}
+
+.invoice {
+
+}
+
+.invoice-title {
+    margin-bottom: 56px;
+}
+
+.invoice-counpon-section {
+    margin: 24px 0;
+}
+
+.invoice-total-section {
+    margin-top: 24px;
+}
+
+.invoice-checkout {
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
