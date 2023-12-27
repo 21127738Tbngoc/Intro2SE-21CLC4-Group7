@@ -9,6 +9,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../components/button/buttons.css">
     <link rel="stylesheet" href="../../public/icons/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../public/icons/fontawesome/css/solid.min.css">
     <link rel="stylesheet" href="../components/common.css">
     <link rel="stylesheet" href="./orderhistory.css">
     <title>Order History</title>
@@ -31,8 +32,82 @@
                 <button class ="btn m-0">SIGN OUT</button>
             </div>
         </div>
-        <div class = "col col-xxl-8 d-flex flex-column">
-
+        <!-- ORDER HISTORY SECTION -->
+        <div class = "col col-xxl-8 d-flex flex-column gap-4 orderhistory">
+            <div>
+                <h2>
+                    Order History
+                </h2>
+                <p1>
+                    The record of your past orders are displayed in the table below.
+                </p1>
+            </div>
+            <div class ="d-flex flex-row justify-content-around gap-5">
+                <input type="text" id="orderid" name="orderid" placeholder="Search by Order ID">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="orderdate" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Order Date
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="orderdate">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="status" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Status
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="status">
+                        <a class="dropdown-item" href="#">Option 1</a>
+                        <a class="dropdown-item" href="#">Option 2</a>
+                        <a class="dropdown-item" href="#">Option 3</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <table class="table borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col" class = "p3">ORDER #</th>
+                            <th scope="col" class = "p3">ORDER DATE</th>
+                            <th scope="col" class = "p3">STATUS</th>
+                            <th scope="col" class = "p3">REVIEWS</th>
+                            <th scope="col" class = "p3">TRACK ORDER</th>
+                        </tr>
+                    </thead>
+                    <tbody class = "title2">
+                        <tr>
+                            <td>#ETD1001</td>
+                            <td>18 MAY, 2023</td>
+                            <td> <div class="tag tag-prepairing">PREPAIRING TO SHIP</div></td>
+                            <td> <a href ="#" class ="rate-off">RATE PRODUCT <span class="fa fa-arrow-right"></span></a></td>
+                            <td><a href = "#" class ="fa fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                            <td>#ETD1001</td>
+                            <td>18 MAY, 2023</td>
+                            <td> <div class="tag tag-transit">IN TRANSIT</div></td>                            
+                            <td><a href ="#" class ="rate-off">RATE PRODUCT <span class="fa fa-arrow-right"></span></a></td>
+                            <td><a href = "#" class ="fa fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                            <td>#ETD1001</td>
+                            <td>18 MAY, 2023</td>
+                            <td> <div class="tag tag-delivered">DELIVERED</div></td>
+                            <td><a href ="#" class ="rate-on">RATE PRODUCT <span class="fa fa-arrow-right"></span></a></td>
+                            <td><a href = "#" class ="fa fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                        <tr>
+                            <td>#ETD1001</td>
+                            <td>18 MAY, 2023</td>
+                            <td> <div class="tag tag-canceled">CANCELED</div></td>
+                            <td><a href ="#" class ="rate-off">RATE PRODUCT <span class="fa fa-arrow-right"></span></a></td>
+                            <td><a href = "#" class ="fa fa-arrow-up-right-from-square"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
     </div>
