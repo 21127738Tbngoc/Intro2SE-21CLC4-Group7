@@ -69,10 +69,12 @@ export const AllProducts = () => {
       <Container>
         <Row>
           <Col lg='12'>
+            <h4></h4>
+            <h4>Total Number of Products: {numProducts}</h4>
             {loading ? (
               <h4 className='pt-4'>Loading......</h4>
-            ) : (
-              <table className='table'>
+              ) : (
+                <table className='table'>
                 <thead>
                   <tr className='tuble'>
                     <th>Image</th>
@@ -81,8 +83,7 @@ export const AllProducts = () => {
                     <th>Price</th>
                     <th>Tags</th>
                     <th>Categories</th>
-                    <th>Size</th>
-                    <th>Color</th>
+                    <th>Qty</th>
                     <th>Pattern</th>
                     <th>Action</th>
                   </tr>
@@ -99,7 +100,6 @@ export const AllProducts = () => {
                       <td>{data.tags}</td>
                       <td>{data.categories}</td>
                       <td>{data.size}</td>
-                      <td>{data.color}</td>
                       <td>{data.pattern}</td>
                       <td>
                         <button
@@ -116,7 +116,6 @@ export const AllProducts = () => {
                     
                   ))}
                 </tbody>
-                <h4>Total Number of Products: {numProducts}</h4>
               </table>
             )}
           </Col>
