@@ -28,3 +28,12 @@
 .billing-form {
     width: 640px;
 }
+
+.payment-method label div {
+    padding: 14px 20px;
+}
+
+.payment-method label div img {
+    width: 64px;
+    height: 64px;
+}

@@ -43,128 +43,51 @@
                 <p class="subtitle1">Choose a payment option below and fill out the appropriate information to finish the purchasing process and place order.</p>
                 <form action="">
                     <div class="form-group row my-4">
-  
-                        <h3 class="mb-4 px-0 " >Shipping Method</h3>
-                        
-                        <ul>
-                            <li class="payment-method">
+                        <ul class=" ps-0"> 
+                            <li class="payment-method d-inline me-4">
                                 <label class="px-0">
-                                    <div class="p-4 btn-nm outline-btn">
-                                        <img src="" alt="">
+                                    <div class="btn-nm sec-btn">
+                                        <img src="../../public/imgs/navbar/visa.svg" alt="">
                                     </div>
                                 </label>
                             </li>
-                            <li>
-                                <div class="payment-method">
-                                    <label class="px-0">
-                                        <div class="p-4 btn-nm outline-btn">
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <div class="shipping-title d-flex">
-                                                    <input type="radio" name="product" selected checked class="w-25 card-input-element" />
-                                                    <p class="subtitle1 ms-3">Standard Shipping</p>
-                                                </div>
-                                                <p class="subtitle1 shipping-price">$ 8.75</p>
-                                            </div>
-                                  
-                                            <div class="shipping-desc">
-                                                <p class="p3">Giao Hang Tiet Kiem</p>
-                                                <p class="p3">Our standard shipping option delivers your order within 7 business days.
-                                                    Expected delivery by Monday, 18/12</p>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
+                            <li class="payment-method d-inline me-4">
+                                <label class="px-0">
+                                    <div class="btn-nm sec-btn">
+                                        <img src="../../public/imgs/navbar/paypal.svg" alt="">
+                                    </div>
+                                </label>
                             </li>
-                            <li>
-                                <div class="payment-method">
-                                    <label class="px-0">
-                                        <div class="p-4 btn-nm outline-btn">
-                                            <div class="d-flex justify-content-between mb-3">
-                                                <div class="shipping-title d-flex">
-                                                    <input type="radio" name="product" selected checked class="w-25 card-input-element" />
-                                                    <p class="subtitle1 ms-3">Standard Shipping</p>
-                                                </div>
-                                                <p class="subtitle1 shipping-price">$ 8.75</p>
-                                            </div>
-                                  
-                                            <div class="shipping-desc">
-                                                <p class="p3">Giao Hang Tiet Kiem</p>
-                                                <p class="p3">Our standard shipping option delivers your order within 7 business days.
-                                                    Expected delivery by Monday, 18/12</p>
-                                            </div>
-                                        </div>
-                                    </label>
-                                </div>
+                            <li class="payment-method d-inline me-4">
+                                <label class="px-0">
+                                    <div class="btn-nm sec-btn">
+                                        <img src="../../public/imgs/navbar/gpay.svg" alt="">
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="payment-method d-inline me-4">
+                                <label class="px-0">
+                                    <div class="btn-nm sec-btn">
+                                        <img src="../../public/imgs/navbar/applepay.svg" alt="">
+                                    </div>
+                                </label>
+                            </li>
+                            <li class="payment-method d-inline">
+                                <label class="px-0">
+                                    <div class="btn-nm sec-btn">
+                                        <img src="../../public/imgs/navbar/mastercard.svg" alt="">
+                                    </div>
+                                </label>
                             </li>
                         </ul>
                     </div>
                     <div class="form-group row">
-                        <div class="col-xxl-11">
+                        <div class="col-xxl-12">
                             <label for="email">EMAIL</label>
                             <input type="text" class="form-control" id="email" placeholder="nguyenvana@gmail.com" required>
                             <img src="../../public/imgs/navbar/mail.svg" alt="">
                         </div>
-                        <div class="col-xxl-11">
-                            <label for="phone">PHONE NUMBER</label>
-                            <input type="text" class="form-control" id="phone" placeholder="e.g Report a problem">
-                            <img src="../../public/imgs/navbar/phone.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="form-group row my-4">
-                        <h3 class="my-4 px-0 checkout-title">Shipping Information</h3>
-                        <div class="row mb-4">
-                            <div class="col-xxl-6 me-4">
-                                <label for="firstname">FIRST NAME *</label>
-                                <input type="text" class="form-control" id="firstname" placeholder="Van A" required>
-                                <img src="../../public/imgs/navbar/mail.svg" alt="">
-                            </div>
-                            <div class="col-xxl-5">
-                                <label for="lastname">LAST NAME *</label>
-                                <input type="text" class="form-control" id="lastname" placeholder="e.g Report a problem">
-                                <img src="../../public/imgs/navbar/phone.svg" alt="">
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-xxl-7 me-4">
-                                <label for="address">ADDRESS *</label>
-                                <input type="text" class="form-control" id="address" placeholder="123 Street name, Ward name" required>
-                                <img src="../../public/imgs/navbar/mail.svg" alt="">
-                            </div>
-                            <div class="col-xxl-4">
-                                <label for="firstname">ADDRESS *</label>
-                                <select class="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn">
-                                    <option value="danh sach quan">District1</option>
-                                    <option value="danh sach quan">District2</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col-xxl-4 me-3">
-                                <label for="city">CITY/PROVINCE *</label>
-                                <select class="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn">
-                                    <option value="danh sach thanh pho">HCM</option>
-                                    <option value="danh sach thanh pho">HANOI</option>
-                                </select>
-                            </div>
-                            <div class="col-xxl-3 me-3">
-                                <label for="firstname">POSTAL CODE *</label>
-                                <input type="text" class="p-3 form-control" id="postal" placeholder="70000" required>
-                            </div>
-                            <div class="col-xxl-4">
-                                <label for="firstname">COUNTRY/REGION *</label>
-                                <select class="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn">
-                                    <option value="danh sach nuoc">VIETNAM</option>
-                                    <option value="danh sach nuoc">LAOS</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row mb-4">
-                            <div class="col-xxl-12">
-                                <label for="title">SHIPPING NOTE</label>
-                                <textarea class="form-control w-100 h-100" id="title" placeholder="Notes about your order (e.g Special notes for delivery)"></textarea>
-                            </div>
-                        </div>
+                       
                     </div>
                 </form>
             </div>
