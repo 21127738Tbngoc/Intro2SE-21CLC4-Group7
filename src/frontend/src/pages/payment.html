@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href ="../../public/bootstrap-5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../public/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../components/button/buttons.css">
+    <link rel="stylesheet" href="../components/common.css">
+    <link rel="stylesheet" href="../../src/components/breadcrumb/breadcrumb.css">
+    <link rel="stylesheet" href="./payment.css">
+    <title>Payment</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav aria-label="breadcrumb" class="navbar-breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item breadcrumb-home"><a href="#">HOME</a></li>
+                <li class="breadcrumb-item breadcrumb-home"><a href="#">CART</a></li>
+                <li class="breadcrumb-item breadcrumb-home"><a href="#">CHECKOUT</a></li>
+                <li class="breadcrumb-item breadcrumb-element"><a href="#">PAYMENT</a></li>
+            </ol>
+        </nav>
+        <div class="page-title">
+            <d3>PAYMENT</d3>
+        </div>
+        <div class="page-breadcrumb">
+            <p class="d-inline-block p1">CART</p>
+            <p class="d-inline-block p1">•</p>
+            <p class="d-inline-block p1">CHECKOUT</p>
+            <p class="d-inline-block p1">•</p>
+            <p class="d-inline-block p1 page-sub-breadcrumb">PAYMENT</p>
+            <p class="d-inline-block p1">•</p>
+            <p class="d-inline-block p1">CONFIRMATION</p>
+        </div>
+
+        <div class="container-fluid-xxl d-flex justify-content-between payment-container">
+            <!-- Billing Information -->
+            <div class="billing-form">
+                <h3 class="mb-4 px-0 billing-title">Billing Information</h3>
+                <p class="subtitle1">Choose a payment option below and fill out the appropriate information to finish the purchasing process and place order.</p>
+                <form action="">
+                    <div class="form-group row my-4">
+  
+                        <h3 class="mb-4 px-0 " >Shipping Method</h3>
+                        
+                        <ul>
+                            <li class="payment-method">
+                                <label class="px-0">
+                                    <div class="p-4 btn-nm outline-btn">
+                                        <img src="" alt="">
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <div class="payment-method">
+                                    <label class="px-0">
+                                        <div class="p-4 btn-nm outline-btn">
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="shipping-title d-flex">
+                                                    <input type="radio" name="product" selected checked class="w-25 card-input-element" />
+                                                    <p class="subtitle1 ms-3">Standard Shipping</p>
+                                                </div>
+                                                <p class="subtitle1 shipping-price">$ 8.75</p>
+                                            </div>
+                                  
+                                            <div class="shipping-desc">
+                                                <p class="p3">Giao Hang Tiet Kiem</p>
+                                                <p class="p3">Our standard shipping option delivers your order within 7 business days.
+                                                    Expected delivery by Monday, 18/12</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="payment-method">
+                                    <label class="px-0">
+                                        <div class="p-4 btn-nm outline-btn">
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="shipping-title d-flex">
+                                                    <input type="radio" name="product" selected checked class="w-25 card-input-element" />
+                                                    <p class="subtitle1 ms-3">Standard Shipping</p>
+                                                </div>
+                                                <p class="subtitle1 shipping-price">$ 8.75</p>
+                                            </div>
+                                  
+                                            <div class="shipping-desc">
+                                                <p class="p3">Giao Hang Tiet Kiem</p>
+                                                <p class="p3">Our standard shipping option delivers your order within 7 business days.
+                                                    Expected delivery by Monday, 18/12</p>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-xxl-11">
+                            <label for="email">EMAIL</label>
+                            <input type="text" class="form-control" id="email" placeholder="nguyenvana@gmail.com" required>
+                            <img src="../../public/imgs/navbar/mail.svg" alt="">
+                        </div>
+                        <div class="col-xxl-11">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="text" class="form-control" id="phone" placeholder="e.g Report a problem">
+                            <img src="../../public/imgs/navbar/phone.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="form-group row my-4">
+                        <h3 class="my-4 px-0 checkout-title">Shipping Information</h3>
+                        <div class="row mb-4">
+                            <div class="col-xxl-6 me-4">
+                                <label for="firstname">FIRST NAME *</label>
+                                <input type="text" class="form-control" id="firstname" placeholder="Van A" required>
+                                <img src="../../public/imgs/navbar/mail.svg" alt="">
+                            </div>
+                            <div class="col-xxl-5">
+                                <label for="lastname">LAST NAME *</label>
+                                <input type="text" class="form-control" id="lastname" placeholder="e.g Report a problem">
+                                <img src="../../public/imgs/navbar/phone.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-xxl-7 me-4">
+                                <label for="address">ADDRESS *</label>
+                                <input type="text" class="form-control" id="address" placeholder="123 Street name, Ward name" required>
+                                <img src="../../public/imgs/navbar/mail.svg" alt="">
+                            </div>
+                            <div class="col-xxl-4">
+                                <label for="firstname">ADDRESS *</label>
+                                <select class="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn">
+                                    <option value="danh sach quan">District1</option>
+                                    <option value="danh sach quan">District2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-xxl-4 me-3">
+                                <label for="city">CITY/PROVINCE *</label>
+                                <select class="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn">
+                                    <option value="danh sach thanh pho">HCM</option>
+                                    <option value="danh sach thanh pho">HANOI</option>
+                                </select>
+                            </div>
+                            <div class="col-xxl-3 me-3">
+                                <label for="firstname">POSTAL CODE *</label>
+                                <input type="text" class="p-3 form-control" id="postal" placeholder="70000" required>
+                            </div>
+                            <div class="col-xxl-4">
+                                <label for="firstname">COUNTRY/REGION *</label>
+                                <select class="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn">
+                                    <option value="danh sach nuoc">VIETNAM</option>
+                                    <option value="danh sach nuoc">LAOS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-xxl-12">
+                                <label for="title">SHIPPING NOTE</label>
+                                <textarea class="form-control w-100 h-100" id="title" placeholder="Notes about your order (e.g Special notes for delivery)"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Order Summary -->
+            <div class="order-summary-container">
+                <div class="order-summary">
+                    <h4 class="order-summary-title">ORDER SUMMARY</h4>
+                    <div class="order-summary-items">
+                        <table class="table table-borderless">
+                            <thead class="order-summary-items-header">
+                              <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">QTY</th>
+                                <th scope="col">PRICE</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">
+                                        <div class="d-flex align-bottom">
+                                            <img src="../../public/imgs/shop-28-img-1.jpg" class="d-inline-block order-summary-item-img" alt="Product Image">
+                                            <div class="d-inline-block order-summary-item-info ms-3">
+                                                <p class="w-100 mb-0 subtitle2">Singapore Dark Rattan Arm Chair</p>
+                                                <div class="d-inline">
+                                                    <p class="support d-inline">Size M</p>
+                                                    <p class="subtitle2 d-inline">.</p>
+                                                    <p class="support d-inline">Black</p>
+                                                    <p class="subtitle2 d-inline">.</p>
+                                                    <p class="support d-inline">SKU 001</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="order-summary-item-quantity"><p>2</p></td>
+                                    <td class="order-summary-item-price"><p>$3,000</p></td>
+                                  </tr>
+                              <tr>
+                                <td scope="row">
+                                    <div class="d-flex align-bottom">
+                                        <img src="../../public/imgs/shop-28-img-1.jpg" class="d-inline-block order-summary-item-img" alt="Product Image">
+                                        <div class="d-inline-block order-summary-item-info ms-3">
+                                            <p class="w-100 mb-0 subtitle2">Singapore Dark Rattan Arm Chair</p>
+                                            <div class="d-inline">
+                                                <p class="support d-inline">Size M</p>
+                                                <p class="subtitle2 d-inline">.</p>
+                                                <p class="support d-inline">Black</p>
+                                                <p class="subtitle2 d-inline">.</p>
+                                                <p class="support d-inline">SKU 001</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="order-summary-item-quantity"><p>2</p></td>
+                                <td class="order-summary-item-price"><p>$3,000</p></td>
+                              </tr>
+                              <tr>
+                                <td scope="row">
+                                    <div class="d-flex align-bottom">
+                                        <img src="../../public/imgs/shop-28-img-1.jpg" class="d-inline-block order-summary-item-img" alt="Product Image">
+                                        <div class="d-inline-block order-summary-item-info ms-3">
+                                            <p class="w-100 mb-0 subtitle2">Singapore Dark Rattan Arm Chair</p>
+                                            <div class="d-inline">
+                                                <p class="support d-inline">Size M</p>
+                                                <p class="subtitle2 d-inline">.</p>
+                                                <p class="support d-inline">Black</p>
+                                                <p class="subtitle2 d-inline">.</p>
+                                                <p class="support d-inline">SKU 001</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="order-summary-item-quantity"><p>2</p></td>
+                                <td class="order-summary-item-price"><p>$3,000</p></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                    <ul class="order-summary-cost-section">
+                        <li class="d-flex justify-content-between order-summary-cost">
+                            <p class="title1">Shipping cost</p>
+                            <p class="cost-money">$ 8.75</p>
+                        </li>
+                        <li class="d-flex justify-content-between order-summary-cost">
+                            <p class="title1">Discount</p>
+                            <p class="cost-money">$ 0</p>
+                        </li>
+                        <li class="d-flex justify-content-between order-summary-cost">
+                            <p class="title1">Additional taxes</p>
+                            <p class="cost-money">$ 5</p>
+                        </li>
+                        <li class="d-flex justify-content-between order-summary-cost">
+                            <p class="title1">Subtotal</p>
+                            <p class="cost-money">$ 4,890</p>
+                        </li>
+                    </ul>
+                    <div class="invoice-counpon-section">
+                        <p class="title2">Discount Code or Coupon</p>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Enter your code here" aria-label="Search">
+                            <button class="tert-i-btn tert-btn btn-sm" type="submit">APPLY</button>
+                        </form>
+                    </div>
+                    <img src="../../public/imgs/navbar/line.svg" alt="line">
+                    <div class="d-flex justify-content-between order-summary-total-section">
+                        <p class="title1">Total Cost</p>
+                        <h4>$ 4,895</h4>
+                    </div>
+                    <a href="#">
+                        <button class="prim-btn btn-nm w-100 invoice-checkout">
+                            PROCEED TO CHECKOUT
+                        </button>
+                    </a>
+                    <a href="#">
+                        <div class="d-flex link-md">
+                            <p class="d-inline mx-auto"><img src="../../public/imgs/navbar/arrow-left-icon.svg" alt="arrow" class="me-2">BACK TO SHOPPING</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
