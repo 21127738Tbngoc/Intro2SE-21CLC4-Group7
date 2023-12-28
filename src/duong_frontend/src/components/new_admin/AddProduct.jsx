@@ -19,7 +19,6 @@ const AddProduct = () => {
   const [category, setcategory] = useState('');
   const [brand, setbrand] = useState('');
   const [qty, setqty] = useState('');
-  const [color, setcolor] = useState('');
   const [pattern, setpattern] = useState('');
   const [categories, setCategories] = useState([]);
   const [tagInput, setTagInput] = useState('');
@@ -136,7 +135,6 @@ const AddProduct = () => {
         img: newPhotoDataArray.map(item => generateImageURL(item.public_id)),
         brand,
         qty,
-        color,
         pattern,
       };
       console.log(productData);
@@ -268,10 +266,6 @@ const AddProduct = () => {
                 <input type="number" placeholder='999' onChange={(e) => (setqty(e.target.value))} required />
               </FormGroup>
 
-              <FormGroup className='form__group w-50'>
-                <span>Color</span>
-                <input type="color" onChange={(e) => (setcolor(e.target.value))} required />
-              </FormGroup>
 
               <FormGroup className='form__group w-50'>
                 <span>Pattern</span>
