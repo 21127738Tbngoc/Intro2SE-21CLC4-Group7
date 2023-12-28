@@ -52,6 +52,38 @@
     margin-left: 230px;
 }
 
+.order-summary-container {
+    width: 526px;
+    height: 100%;
+    padding: 48px;
+    background: var(--tone-neutral-variant-99);
+    box-shadow: 0px 4px 8px 0px #D8E7CB;
+
+}
+
+.order-summary-items-header {
+    border-bottom: 1px solid var(--scheme-outline);
+}
+
+.order-summary-item-img {
+    width: 60px;
+    height: 60px;
+}
+
+.order-summary-item-quantity,
+.order-summary-item-price {
+    text-align: center; 
+    vertical-align: middle;
+}
+
+.order-summary-cost-section {
+    padding: 8px;
+}
+
+.order-summary-total-section {
+    margin-top: 24px;
+}
+
 .invoice-counpon-section {
     margin: 24px 0;
 }
