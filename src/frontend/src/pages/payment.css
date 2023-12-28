@@ -37,3 +37,27 @@
     width: 64px;
     height: 64px;
 }
+
+.card-info-form div input {
+    position: relative;
+}
+
+.card-info-form div button {
+    background-color: transparent;
+    border: none;
+
+    
+    position: absolute;
+    margin-top: -42px;
+    margin-left: 230px;
+}
+
+.invoice-counpon-section {
+    margin: 24px 0;
+}
+
+.invoice-checkout {
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+

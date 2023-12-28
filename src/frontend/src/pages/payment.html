@@ -81,7 +81,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row card-info-form">
                         <div class="row col-xxl-12 mb-4">
                             <label for="cardHolderName">CARD HOLDER NAME</label>
                             <input type="text" class="form-control mt-2 p-3" id="cardHolderName" placeholder="NGUYEN VAN A" required>
@@ -97,9 +97,29 @@
                             </div>
                             <div class="col-xxl-5">
                                 <label for="cvv">CVV</label>
-                                <input type="number" class="form-control mt-2 p-3" id="cvv" placeholder="Enter CVV number here" required>
+                                <input type="password" class="password form-control mt-2 p-3 pe-5" id="cvv" placeholder="Enter CVV number here" required>
+                                <button type="button" onclick="passwordToggle()">
+                                    <img src="../../public/imgs/navbar/lock.svg" alt="">
+                                </button>
                             </div>
                         </div>
+
+                        <div class="row col-xxl-12 mb-4">
+                            <input type="checkbox" class="col-xxl-1" required>
+                            <label class="p1 col-xxl-11">I have read and agree to the terms and conditions.</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="#" class="col-xxl-12">
+                            <button type="submit" class="prim-btn btn-nm w-100 mb-4 invoice-checkout">
+                                PLACE ORDER
+                            </button>
+                        </a>
+                        <a href="#" class="col-xxl-12">
+                            <div class="d-flex link-md">
+                                <p class="d-inline mx-auto"><img src="../../public/imgs/navbar/arrow-left-icon.svg" alt="arrow" class="me-2">BACK TO CHECKOUT</p>
+                            </div>
+                        </a>
                     </div>
                 </form>
             </div>
@@ -207,19 +227,11 @@
                         <p class="title1">Total Cost</p>
                         <h4>$ 4,895</h4>
                     </div>
-                    <a href="#">
-                        <button class="prim-btn btn-nm w-100 invoice-checkout">
-                            PROCEED TO CHECKOUT
-                        </button>
-                    </a>
-                    <a href="#">
-                        <div class="d-flex link-md">
-                            <p class="d-inline mx-auto"><img src="../../public/imgs/navbar/arrow-left-icon.svg" alt="arrow" class="me-2">BACK TO SHOPPING</p>
-                        </div>
-                    </a>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="./togglePassword.js"></script>
 </body>
 </html>
