@@ -96,18 +96,18 @@ const Navbar = () => {
         <div>
             {/*<!-- Navbar --> */}
 
-            <div className="container-xxl navbar">
-                <div className="d-flex flex-row g-4 align-items-center justify-content-between">
+            <div className="container navbar">
+                <div className="d-flex flex-row g-4 align-items-center align-content-center justify-content-between">
 
                     {/*<!-- Menu & Search --> */}
                     <div>
-                        <h5 className="menu-open-btn">
+                        <p className="menu-open-btn">
                             <img src="/imgs/navbar/menu-icon.svg" alt="Menu" onClick={toggleMenu} />
-                        </h5>
+                        </p>
                     </div>
                     <div className="search-label flex-row" onClick={toggleSearch}>
                         <img className="mx-2 my-2" src="/imgs/navbar/search-icon.svg" alt="Search" />
-                        <p className="navbar-text my-3">SEARCH</p>
+                        <p className="navbar-text my-3 align-content-center">SEARCH</p>
                     </div>
                 </div>
 
@@ -119,17 +119,18 @@ const Navbar = () => {
                 </div>
 
                 {/*<!-- Cart & Account --> */}
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-center align-content-center">
 
                     <div className="d-flex flex-row align-items-center">
-                        <h5 className="cart-modal-open-btn">
+                        <p className="cart-modal-open-btn">
                             <img src="/imgs/navbar/cart-icon.svg" alt="Cart" onClick={openCartModal} />
-                        </h5>
-                        <p className="button2 mx-2 align-items-center">BAG
+                        </p>
+                        <p className="button2 mx-2 align-content-center">BAG
                         </p>
                         <div className="navbar-cart-num">
-                            <div className="support align-items-center">{totalCartItems}</div>
-                        </div>                    </div>
+                            <div className="support">{totalCartItems}</div>
+                        </div>
+                    </div>
                     <DropdownContent />
                 </div>
             </div>
@@ -147,12 +148,12 @@ const Navbar = () => {
             </div>
             {/*<!-- Megamenu --> */}
             <div className="container-fluid navbar-menu">
-                <div className="container-xxl d-flex">
-                    <div className="col-xxl-7">
+                <div className="container d-flex">
+                    <div className="col-7">
                         <div className="d-flex">
-                            <div className="col-xxl-3">
-                                <d5>ABOUT
-                                </d5>
+                            <div className="col-3">
+                                <d6>ABOUT
+                                </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
                                         <a href="#" className="slide-border">ABOUT US
@@ -168,9 +169,9 @@ const Navbar = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-xxl-3">
-                                <d5>SHOP
-                                </d5>
+                            <div className="col-3">
+                                <d6>SHOP
+                                </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
                                         <a href="#" className="slide-border">SHOP ALL
@@ -194,9 +195,9 @@ const Navbar = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-xxl-3 ">
-                                <d5>SUPPORT
-                                </d5>
+                            <div className="col-3 ">
+                                <d6>SUPPORT
+                                </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
                                         <a href="#" className="slide-border">FAQS
@@ -214,9 +215,9 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className="d-flex">
-                            <div className="col-xxl-3">
-                                <d5>SERVICE
-                                </d5>
+                            <div className="col-3">
+                                <d6>SERVICE
+                                </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
                                         <a href="#" className="slide-border">MAINTENANCE
@@ -236,9 +237,9 @@ const Navbar = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-xxl-3 ">
-                                <d5>MEDIA
-                                </d5>
+                            <div className="col-3 ">
+                                <d6>MEDIA
+                                </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
                                         <a href="#" className="slide-border">ARTICLES
@@ -250,7 +251,7 @@ const Navbar = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="col-xxl-3 ">
+                            <div className="col-3 ">
                                 <p className="label1">Follow Fitment at
                                 </p>
                                 <ul className="d-flex flex-row mt-3">
@@ -286,7 +287,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     {/*<!-- Menu img --> */}
-                    <div className="col-xxl-5 menu-img">
+                    <div className="col-5 menu-img">
                         <div>
                             <img src="/imgs/navbar/navimg.jpg" alt="" className="menu-img" />
                             <a href="#" className="button1 view-more-btn">View more</a>

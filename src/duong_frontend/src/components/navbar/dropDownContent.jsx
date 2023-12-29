@@ -7,11 +7,11 @@ const dropDownContent = () => {
     return (
         <div className="dropdown" onMouseEnter={() => {
             document.getElementById("dropdownContent").style.display = "block";}}>
-            <div className="d-flex flex-row align-items-center" id="dropdownToggle">
-                <h5 className="mx-2">
+            <div className="d-flex flex-row align-items-center align-baseline" id="dropdownToggle">
+                <p className="mx-2">
                     <img src="/imgs/navbar/profile-icon.svg" alt="Profile"/>
-                </h5>
-                <p className="button2 align-items-center" id="dropdownButton">ACCOUNT
+                </p>
+                <p className="button2 align-items-center align-content-center" id="dropdownButton">ACCOUNT
                 </p>
             </div>
             <ul className="dropdown-content" id="dropdownContent" style={{zIndex: 9999}}
