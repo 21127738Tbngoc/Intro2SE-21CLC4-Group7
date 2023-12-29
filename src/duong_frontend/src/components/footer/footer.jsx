@@ -28,14 +28,14 @@ const Footer = () => {
                         <div className="col-1"></div>
                         {/* <!-- Footer sections --> */}
                         <div className="col-2 footer-section">
-                            <d5 className="footer-title">ABOUT</d5>
+                            <h4 className="footer-title">ABOUT</h4>
                             <p className="p1">ABOUT US</p>
                             <p className="p1">OUR PARTNERS</p>
                             <p className="p1">OUR DESIGNERS</p>
                             <p className="p1">ARTICLES</p>
                         </div>
                         <div className="col-2 footer-section">
-                            <d5 className="footer-title">SHOP</d5>
+                            <h4 className="footer-title">SHOP</h4>
                             <p className="p1">SHOP ALL</p>
                             <p className="p1">LIVING ROOMS</p>
                             <p className="p1">BEDROOM</p>
@@ -44,7 +44,7 @@ const Footer = () => {
                         </div>
 
                         <div className="col-2 footer-section">
-                            <d5 className="footer-title">SUPPORT</d5>
+                            <h4 className="footer-title">SUPPORT</h4>
                             <p className="p1">FAQS</p>
                             <p className="p1">CONTACT</p>
                             <p className="p1">REFUND POLICY</p>
@@ -60,14 +60,14 @@ const Footer = () => {
                         <div className="col-1"></div>
                         {/* <!-- Footer sections --> */}
                         <div className="col-2 footer-section">
-                            <d5 className="footer-title">SERVICE</d5>
+                            <h4 className="footer-title">SERVICE</h4>
                             <p className="p1">MAINTENANCE</p>
                             <p className="p1">ASSEMBLY</p>
                             <p className="p1">UPHOLSTERY</p>
                             <p className="p1">REPAIRS</p>
                         </div>
                         <div className="col-2 footer-section">
-                            <d5 className="footer-title">MEDIA</d5>
+                            <h4 className="footer-title">MEDIA</h4>
                             <p className="p1">ARTICLES</p>
                             <p className="p1">GUIDELINES</p>
                         </div>

@@ -22,7 +22,7 @@
 }
 
 .footer-title {
-    color: var(--tone-primary-99);
+    color: var(--tone-secondary-90);
 }
 
 .footer-section {
@@ -42,7 +42,7 @@
 .copyright {
     color: var(--tone-primary-99);
     background: var(--tone-primary-30);
-    padding-top: 14px;
+    padding: 10px 0;
 }
 
 .social-btn {
