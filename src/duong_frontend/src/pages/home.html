@@ -349,10 +349,10 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col">
-                    <h5 class="mt-4" style="text-align: right; margin-right: 48px;">LATEST NEWS</h5>
+                    <h5 style="text-align: right; margin-right: 48px;">LATEST NEWS</h5>
                 </div>
                 <div class="col">
-                    <h5 class="mt-4" style="text-align: right;">INSPIRATIONS</h5>
+                    <h5 style="text-align: right;">INSPIRATIONS</h5>
                 </div>
             </div>
             <div class="row g-4">
@@ -374,8 +374,16 @@
         </div>
         <div class="container">
             <div class="row g-4">
-                <div class="article-card">
-                    
+                <div class="col article-card">
+                    <img src="" class="article-img" alt="">
+                    <p class="subtitle1 article-tag">INTERIOR DESIGN</p>
+                    <h5 class="article-title">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
+                    <p class="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.”</p>
+                    <div class="author">
+                        <img src="" class="author-avatar" alt="">
+                        <p class="label3 author-name">Oliver Knight</p>
+                        <p class="article-date"> • July 14, 2023 • 3 min</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -386,26 +394,50 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col"></div>
-                <div class="col">
-                    <h4 class="mb-4">Complete the information and let us get in touch with you!</h4>
+                <div class="col inquiry-content">
+                    <h4 class="mb-5">Complete the information and let us get in touch with you!</h4>
                     <form>
-                        <div class="form-row">
+                        <div class="row form-row">
                             <!-- Full name -->
                             <div class="col mb-3">
                                 <label for="fullName" class="form-label label1">
                                     Full name
                                 </label>
-                                <div class="input">
+                                <div class="input-with-icon">
                                     <input
                                         type="text"
                                         placeholder="Enter your full name"
-                                        class="form-control form-md"
+                                        class="form-control form-nm"
                                         required
                                     />
                                 </div>
                             </div>
-                        </div>                        
+                            <!-- Phone -->
+                            <div class="col mb-3">
+                                <label for="userName" class="form-label label1">
+                                    Phone
+                                </label>
+                                <div class="input-with-icon">
+                                    <input
+                                        type="text"
+                                        placeholder="Enter your phone"
+                                        class="form-control form-nm"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label label1">Email</label>
+                            <div class="input-with-icon">
+                                <input type="email" class="form-control form-nm" placeholder="Enter your email address here" required>
+                            </div>
+                        </div>
                     </form>
+                    <div class="justify-content-between d-flex">
+                        <button class="btn-nm prim-btn me-3" style="flex: 1;"">SEND INQUIRY</button>
+                        <button class="btn-nm sec-btn" style="flex: 1;">DIRECT US</button>
+                    </div>
                 </div>
             </div>
         </div>

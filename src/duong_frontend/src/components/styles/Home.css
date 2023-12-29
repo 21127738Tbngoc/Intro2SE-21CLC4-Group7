@@ -246,8 +246,10 @@
     background-image: url("/src/duong_frontend/public/imgs/home/articles-bg.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
+    margin-top: 32px;
+    margin-bottom: 0;
     z-index: -1;
 }
 .article-tile {
@@ -286,4 +288,18 @@
 }
 .articles-btn:hover{
     color: var(--tone-primary-40);
+}
+
+.inquiry-section {
+    background: url("/src/duong_frontend/public/imgs/home/inquiry-bg.jpg");
+    background-size: cover;
+    margin-top: 56px;
+    margin-bottom: 64px;
+    background-repeat: no-repeat;
+    padding: 100px;
+    box-shadow: 0px 4px 25px 0px #9FAF8E;
+    z-index: 0;
+}
+.inquiry-content {
+    margin-left: 80px;
 }

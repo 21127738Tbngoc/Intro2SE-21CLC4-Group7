@@ -316,7 +316,7 @@ body {
 
 /*-- Link --*/
 a {
-    font-family: regular-font !important;
+    font-family: regular-font;
     box-sizing: border-box;
     color: var(--tone-secondary-60);
     text-decoration: none;
