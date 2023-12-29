@@ -237,6 +237,7 @@ a h5 img {
 .form-row {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 24px;
     flex: 1;
 }   
@@ -275,9 +276,12 @@ a h5 img {
     background: none;
     border: 1px solid var(--scheme-outline);
 }
-.signup-checkbox {
+.form-check-label {
     font-family: regular-font;
-    margin: 20px 0;
+    margin-bottom: 0;
+}
+.form-check-input {
+    margin: 0;
 }
 /*-- Account dropdown --*/
 .dropdown-content {
