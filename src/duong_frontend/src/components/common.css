@@ -530,11 +530,56 @@ html {
     background-repeat: no-repeat;
     border: none;
 }
-
 .form-check-label {
     color: var(--scheme-on-background);
     line-height: 24px;
+    font-family: regular-font;
+    margin-bottom: 0;
+}
+.form-check-input {
+    margin: 0;
 }
 
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}   
+.input-with-icon {
+    flex: 1;
+}
+.file-input-container {
+    margin-bottom: 20px;
+}
 
+.file-input {
+    overflow: hidden;
+    position: relative;
+}
+
+.file-input input[type="file"] {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10%;
+    width: 90%;
+    max-width: 100%;
+    z-index: -1;
+}
+.file-button {
+    border: 1px solid var(--scheme-outline);
+    border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    opacity: 1;
+}
+.file-input input:hover {
+    background: none;
+    border: 1px solid var(--scheme-outline);
+}
 
