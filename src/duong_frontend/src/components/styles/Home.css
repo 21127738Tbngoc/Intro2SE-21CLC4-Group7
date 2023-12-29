@@ -289,7 +289,33 @@
 .articles-btn:hover{
     color: var(--tone-primary-40);
 }
+.article-card {
+    padding: 24px 24px;
+    border: 1.5px solid var(--scheme-outline);
+    margin-top: 2rem;
+}
+.article-img {
+    width: 100%;
+    height: auto;
+}
+.author {
+    display: flex;
+    margin: 0;
+    line-height: 14px;
+    padding: 0;
+}
+.article-tag {
+    color: var(--scheme-secondary);
+}
+.article-text {
+    color: var(--tone-neutral-variant-50);
+}
+.article-date {
+    font-size: 12px;
+    display: flex;
+}
 
+/*--Inquiry--*/
 .inquiry-section {
     background: url("/src/duong_frontend/public/imgs/home/inquiry-bg.jpg");
     background-size: cover;
