@@ -4,11 +4,11 @@
     margin-top: 32px;
 }
 .shop-headline {
-    margin-top: 8px;
+    margin-top: 16px;
     text-align: center;
 }
 .shop-title {
-    margin-top: 56px;
+    margin: 56px 0 0px 0;
     text-align: center;
 }
 
@@ -55,7 +55,7 @@
 
 /*--Shop by category--*/
 .category {
-    height: 800px;
+    height: 770px;
 }
 .category-section {
     display: block;
@@ -93,6 +93,7 @@
     height: auto;
     opacity: 0;
     z-index: 1;
+    transition: transform 0.5s ease-in-out;
 }
 .living-img {
     top: -65%;
@@ -115,13 +116,22 @@
     transform: translateX(-100%);
 }
 
-.category-link:hover img {
+.livingroom-link:hover .living-img, .bedroom-link:hover .bed-img, .diningroom-link:hover .dining-img, .bathroom-link:hover .bath-img {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* Product filter */
+.form-check-label {
+    color: var(--tone-neutral-60);
+}
+.product-filter {
+    margin: 32px 0 0 0;
 }
 
 /*-- Shop all --*/
 .product-ctn-l, .product-ctn-d {
     height: 450px;
 }
+
 

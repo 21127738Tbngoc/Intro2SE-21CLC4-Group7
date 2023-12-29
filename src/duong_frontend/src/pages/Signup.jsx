@@ -116,7 +116,7 @@ const Signup = () => {
                 <div className="container">
                     <div className="modal-content-signup">
                         <h3 className="mb-5">Sign Up</h3>
-                        <form>
+                        <form class="mb-5">
                             <div className="form-row">
                                 {/* Username */}
                                 <div className="col mb-3">
@@ -124,7 +124,7 @@ const Signup = () => {
                                         Username
                                     </label>
                                     <div className="input-with-icon">
-                                        <img src="/imgs/signup/id.svg" alt="userName" className="leading-icon" />
+                                        <img src="/imgs/signup/user.svg" alt="userName" className="leading-icon" />
                                         <input
                                             type="text"
                                             placeholder="Enter your username"
@@ -180,7 +180,7 @@ const Signup = () => {
                                         <img src="/imgs/signup/phone.svg" alt="phoneNum" className="leading-icon" />
                                         <input
                                             type="text"
-                                            placeholder="XXX XXX XXXX"
+                                            placeholder="+1 123 123 123"
                                             className="form-control form-md-icon"
                                             value={phone}
                                             onChange={(e) => setPhone(e.target.value)}
@@ -225,10 +225,6 @@ const Signup = () => {
                                         required
                                     />
                                 </div>
-
-                                <p className="signup-link">
-                                    Already have an account? <Link to="/login" className="slide-border">Sign in</Link> here!
-                                </p>
                             </div>
                             {/* Avatar */}
                             <div className="file-input-container mt-4">
@@ -244,13 +240,16 @@ const Signup = () => {
                                 </div>
                             </div>
                         </form>
-                        <button onClick={SignUpHandler} className="prim-btn btn-md signup-btn w-100">
-                            SIGN UP
-                        </button>
                         <div className="form-check">
                             <input className="form-check-input" type="checkbox" id="check1" name="option1" value="something" />
                             <label className="form-check-label p1">I Agree to the Terms & Conditions</label>
                         </div>
+                        <button onClick={SignUpHandler} className="prim-btn btn-md signup-btn w-100">
+                            SIGN UP
+                        </button>
+                        <p className="signup-link">
+                            Already have an account? <Link to="/login" className="slide-border">Sign in</Link> here!
+                        </p>
                     </div>
                 </div>
             </div>
