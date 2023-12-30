@@ -128,7 +128,32 @@
 .product-filter {
     margin: 32px 0 0 0;
 }
-
+.chip {
+    display: inline-block;
+    height: 33px;
+    border-radius: 4px;
+    padding: 8px 12px;
+    border: 1.2px solid var(--scheme-outline);
+    padding: 0 12px;
+    align-items: center;
+    align-content: center;
+    color: var(--tone-primary-40);
+    transition: background 0.5s ease-in-out;
+}
+.chip:hover {
+    background: var(--tone-secondary-90);
+}
+.chip .clicked {
+    border: var(--tone-secondary-90);
+    background: var(--tone-secondary-90);
+}
+.closebtn {
+    color: var(--tone-primary-40);
+    float: right;
+    font-size: 20px;
+    padding: 0 0 0 8px;
+    cursor: pointer;
+} 
 /*-- Shop all --*/
 .product-ctn-l, .product-ctn-d {
     height: 450px;
