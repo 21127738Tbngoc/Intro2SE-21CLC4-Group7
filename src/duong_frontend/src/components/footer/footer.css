@@ -4,9 +4,9 @@
 .footer {
     background: var(--tone-primary-30);
     padding-top: 72px;
-    padding-bottom: 18px;
+    padding-bottom: 32px;
     padding-left: 0px;
-    border-bottom: 1px solid var(--tone-neutral-80);
+    border-bottom: 0.07em solid var(--scheme-outline);
 }
 .footer-logo {
     color: var(--tone-tertiary-70);
@@ -35,14 +35,14 @@
 }
 
 .footer-divider {
-    border-top: 1px solid var(--tone-neutral-80);
+    border-top: 1px solid var(--scheme-outline);
     height: 1px;
 }
 
 .copyright {
     color: var(--tone-primary-99);
     background: var(--tone-primary-30);
-    padding: 10px 0;
+    padding: 12px 0;
 }
 
 .social-btn {
