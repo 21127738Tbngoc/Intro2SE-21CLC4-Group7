@@ -118,7 +118,7 @@ const Navbar = () => {
                 </div>
 
                 {/*<!-- Logo --> */}
-                <div className="d-flex flex-row g-4 align-items-center">
+                <div className="d-flex flex-row g-4 align-items-center" style={{marginLeft: '7rem'}}>
                     <a href="/home">
                         <img src="/imgs/navbar/logo.svg" alt="Fitment" />
                     </a>
@@ -151,7 +151,7 @@ const Navbar = () => {
                 {results && results.length > 0 && <SearchResultsList results={results} />}
                 {/*<!-- Cart Modal --> */}
                 <CartModal />
-                <button onClick={handleLogout}>Logout</button>
+                
             </div>
             {/*<!-- Megamenu --> */}
             <div className="container-fluid navbar-menu">

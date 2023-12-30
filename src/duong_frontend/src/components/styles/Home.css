@@ -34,30 +34,26 @@
 
 /*--Shop--*/
 .shop-bg {
+    position: relative;
+    background: url("/imgs/home/shop-all-bg.jpg");
     width: 100%;
+    height: auto;
     margin-top: 4em;
-}
-
-.shop-display, .shop-text {
-    position: absolute;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .shop-display {
-    margin-top: 450px;
     color: var(--scheme-on-background);
-    left: 50%;
-    width: 60%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 1;
 }
 
 .shop-text {
-    top: 1324px;
     color: var(--tone-neutral-variant-50);
-    left: 50%;
-    width: 40%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    width: 60%;
+    z-index: 1;
 }
 
 .shop-btn {
@@ -243,7 +239,7 @@
     margin-bottom: 32px;
 }
 .articles-section {
-    background-image: url("../../../public/imgs/home/articles-bg.jpg");
+    background-image: url("/imgs/home/articles-bg.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     /*position: absolute;*/
@@ -317,7 +313,7 @@
 
 /*--Inquiry--*/
 .inquiry-section {
-    background: url("../../../public/imgs/home/inquiry-bg.jpg");
+    background: url("/imgs/home/inquiry-bg.jpg");
     background-size: cover;
     margin-top: 64px;
     margin-bottom: 64px;
@@ -327,7 +323,7 @@
     z-index: 0;
 }
 .inquiry-content {
-    margin-left: 90px;
+    margin-left: 0px;
 }
 .inquiry-btn {
     margin-top: 2rem;
