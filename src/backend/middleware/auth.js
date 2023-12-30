@@ -26,6 +26,10 @@ passport.deserializeUser(function(id, done) {
 //REGISTER
 router.post("/register", async (req, res)=>{
     const newUser=new User({
+        avatar: req.body.avatar,
+        phone: req.body.phone,
+        fullname: req.body.fullname,
+        address: req.body.address,
         username: req.body.username,
         email:req.body.email,
         password: CryptoJS.AES.encrypt(req.body.password, process.env.PASS_SEC).toString(),
