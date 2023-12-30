@@ -63,6 +63,7 @@ const Home = () => {
                 <button className="sec-btn btn-md button2 hero-btn">ABOUT US</button>
                 </div>
             </div>
+
             {/* Shop all */}
             <div className="container-fluid shop-bg">
                 <div className="row g-4 justify-content-center">
@@ -75,6 +76,7 @@ const Home = () => {
                     <button className="outline-btn btn-md button2 shop-btn">SHOP ALL</button>
                 </div>
             </div>
+
             {/* Product Category */}
             <div className="container-fluid">
                 <div className="row">
@@ -151,64 +153,198 @@ const Home = () => {
                 </div>
             </div>
             <div className="container-fluid designer-section">
-            <div className="row">
-                <d5 className="designer-display">OUR DESIGNERS</d5>
+                <div className="row">
+                    <d5 className="designer-display">OUR DESIGNERS</d5>
+                </div>
+                <div className="container">
+                    <div className="row g-4 mt-5"  style={{ marginBottom: '95px' }}>
+                        <div className="col designer-left">
+                            <d3 className="designer-name">LUCAS NILSSEN</d3>
+                            <p className="designer-role title2">Product Designer</p>
+                            <img className="designer-img" src="/imgs/home/designer-0.jpg" />
+                        </div>
+                        <div className="col designer-right flex-row-reverse">
+                            <img className="designer-img" src="/imgs/home/designer-1.jpg" style={{ marginLeft: '250px' }}/>
+                            <p className="designer-role title2">Product Designer</p>  
+                            <d3 className="designer-name">MILLE HANSEN</d3>
+                        </div>
+                    </div>
+                    <div className="row g-4"  style={{ marginBottom: '95px' }}>
+                        <div className="col designer-left">
+                            <d3 className="designer-name">HANS J. WEGNER</d3>
+                            <p className="designer-role title2">Product Designer</p>
+                            <img className="designer-img" src="/imgs/home/designer-2.jpg" />
+                        </div>
+                        <div className="col designer-right flex-row-reverse">
+                            <img className="designer-img" src="/imgs/home/designer-3.jpg"  style={{ marginLeft: '330px' }} />
+                            <p className="designer-role title2">Product Designer</p>
+                            <d3 className="designer-name">ARNE JACOBSEN</d3>
+                        </div>
+                    </div>
+                    <div className="row g-4"  style={{ marginBottom: '95px' }}>
+                        <div className="col designer-left">
+                            <d3 className="designer-name">FRANK LLOYED</d3>
+                            <p className="designer-role title2">Product Designer</p>
+                            <img className="designer-img" src="/imgs/home/designer-4.jpg" />
+                        </div>
+                        <div className="col designer-right flex-row-reverse">
+                            <img className="designer-img" src="/imgs/home/designer-5.jpg" style={{ marginLeft: '280px' }}/>
+                            <p className="designer-role title2">Product Designer</p>
+                            <d3 className="designer-name">ANNIE STANLEY</d3>
+                        </div>
+                    </div>
+                    <div className="row g-4"  style={{ marginBottom: '95px' }}>
+                        <div className="col designer-left">
+                            <d3 className="designer-name">OLIVIA RHYE</d3>
+                            <p className="designer-role title2">Product Designer</p>
+                            <img className="designer-img" src="/imgs/home/designer-6.jpg" />
+                        </div>
+                        <div className="col designer-right flex-row-reverse">
+                            <img className="designer-img" src="/imgs/home/designer-7.jpg" style={{ marginLeft: '240px' }}/>
+                            <p className="designer-role title2">Product Designer</p>
+                            <d3 className="designer-name">EILEEN GRAY</d3>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="container">
-                <div className="row g-4 mt-5"  style={{ marginBottom: '95px' }}>
-                    <div className="col designer-left">
-                        <d3 className="designer-name">LUCAS NILSSEN</d3>
-                        <p className="designer-role title2">Product Designer</p>
-                        <img className="designer-img" src="/imgs/home/designer-0.jpg" />
-                    </div>
-                    <div className="col designer-right flex-row-reverse">
-                        <img className="designer-img" src="/imgs/home/designer-1.jpg" style={{ marginLeft: '250px' }}/>
-                        <p className="designer-role title2">Product Designer</p>  
-                        <d3 className="designer-name">MILLE HANSEN</d3>
-                    </div>
-                </div>
-                <div className="row g-4"  style={{ marginBottom: '95px' }}>
-                    <div className="col designer-left">
-                        <d3 className="designer-name">HANS J. WEGNER</d3>
-                        <p className="designer-role title2">Product Designer</p>
-                        <img className="designer-img" src="/imgs/home/designer-2.jpg" />
-                    </div>
-                    <div className="col designer-right flex-row-reverse">
-                        <img className="designer-img" src="/imgs/home/designer-3.jpg"  style={{ marginLeft: '330px' }} />
-                        <p className="designer-role title2">Product Designer</p>
-                        <d3 className="designer-name">ARNE JACOBSEN</d3>
-                    </div>
-                </div>
-                <div className="row g-4"  style={{ marginBottom: '95px' }}>
-                    <div className="col designer-left">
-                        <d3 className="designer-name">FRANK LLOYED</d3>
-                        <p className="designer-role title2">Product Designer</p>
-                        <img className="designer-img" src="/imgs/home/designer-4.jpg" />
-                    </div>
-                    <div className="col designer-right flex-row-reverse">
-                        <img className="designer-img" src="/imgs/home/designer-5.jpg" style={{ marginLeft: '280px' }}/>
-                        <p className="designer-role title2">Product Designer</p>
-                        <d3 className="designer-name">ANNIE STANLEY</d3>
-                    </div>
-                </div>
-                <div className="row g-4"  style={{ marginBottom: '95px' }}>
-                    <div className="col designer-left">
-                        <d3 className="designer-name">OLIVIA RHYE</d3>
-                        <p className="designer-role title2">Product Designer</p>
-                        <img className="designer-img" src="/imgs/home/designer-6.jpg" />
-                    </div>
-                    <div className="col designer-right flex-row-reverse">
-                        <img className="designer-img" src="/imgs/home/designer-7.jpg" style={{ marginLeft: '240px' }}/>
-                        <p className="designer-role title2">Product Designer</p>
-                        <d3 className="designer-name">EILEEN GRAY</d3>
-                    </div>
-                </div>
-            </div>
-    </div>
 
             {/* Articles */}
+            <div className="container-fluid">
+                <div className="row">
+                    <d5 className="articles-display">ENJOY OUR ARTICLES</d5>
+                </div>
+            </div>
 
+            <div className="container-fluid articles-section">
+                <div className="container">
+                    <div className="row g-4">
+                        <div className="col">
+                            <h5 style={{ textAlign: 'right', marginRight: '48px' }}>LATEST NEWS</h5>
+                        </div>
+                        <div className="col">
+                            <h5 style={{ textAlign: 'right' }}>INSPIRATIONS</h5>
+                        </div>
+                    </div>
+                    <div className="row g-4">
+                        <div className="col">
+                            <d3 className="article-title mb-5">MANHATTAN PIED-À-TERRE FOR A NEW CHICAGO APARTMENT</d3>
+                            <div className="article-brief">
+                                <img src="/imgs/home/quotation.png" className="article-quote" />
+                                <p className="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
+                            </div>
+                            <button className="link-nm">CONTINUE READING</button>
+                        </div>
+                        <div className="col">
+                            <img src="/imgs/home/articles-featured.jpg" className="article-featured" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <button className="articles-btn button1">VIEW ALL ARTICLES</button>
+                </div>
+                <div className="container">
+                    <div className="row g-4">
+                        <div className="col">
+                            <div className="article-card">
+                                <img src="/imgs/home/articles-1.jpg" className="article-img" alt="" />
+                                <p className="subtitle1 article-tag mt-4">TOURISM</p>
+                                <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
+                                <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
+                                <div className="author align-items-center align-content-center">
+                                    <img src="" className="author-avatar" alt="" />
+                                    <p className="label3 author-name me-1">Oliver Knight </p>
+                                    <p className="article-date"> • July 14, 2023 • 3 min</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className="article-card">
+                                <img src="/imgs/home/articles-2.jpg" className="article-img" alt="" />
+                                <p className="subtitle1 article-tag mt-4">TOURISM</p>
+                                <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
+                                <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
+                                <div className="author align-items-center align-content-center">
+                                    <img src="" className="author-avatar" alt="" />
+                                    <p className="label3 author-name me-1">Oliver Knight </p>
+                                    <p className="article-date"> • July 14, 2023 • 3 min</p>
+                                </div>
+                            </div>
+                        </div>   
+                        <div className="col">
+                            <div className="article-card">
+                                <img src="/imgs/home/articles-3.jpg" className="article-img" alt="" />
+                                <p className="subtitle1 article-tag mt-4">TOURISM</p>
+                                <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
+                                <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
+                                <div className="author align-items-center align-content-center">
+                                    <img src="" className="author-avatar" alt="" />
+                                    <p className="label3 author-name me-1">Oliver Knight </p>
+                                    <p className="article-date"> • July 14, 2023 • 3 min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             {/* Inquiry */}
+            <div className="container-fluid inquiry-section">
+                <div className="container">
+                    <div className="row g-4">
+                        <div className="col"></div>
+                        <div className="col inquiry-content">
+                            <h4 className="mb-5">Complete the information and let us get in touch with you!</h4>
+                            <form>
+                                <div className="form-row">
+                                    {/* Full name */}
+                                    <div className="col mb-3">
+                                        <label for="fullName" className="form-label label1">
+                                            Full name
+                                        </label>
+                                        <div className="input-with-icon">
+                                            <input
+                                                type="text"
+                                                placeholder="Enter your full name"
+                                                className="form-control form-nm"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                    {/* Phone */}
+                                    <div className="col mb-3">
+                                        <label for="userName" className="form-label label1">
+                                            Phone
+                                        </label>
+                                        <div className="input-with-icon">
+                                            <input
+                                                type="text"
+                                                placeholder="Enter your phone"
+                                                className="form-control form-nm"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mb-4">
+                                    <label for="email" className="form-label label1">Email</label>
+                                    <div className="input-with-icon">
+                                        <input 
+                                            type="email" 
+                                            className="form-control form-nm" 
+                                            placeholder="Enter your email address here" 
+                                            required 
+                                        />
+                                    </div>
+                                </div>
+                            </form>
+                            <div className="inquiry-btn justify-content-between">
+                                <button className="btn-nm prim-btn me-3" id="send-btn">SEND INQUIRY</button>
+                                <button className="btn-nm sec-btn" id="contact-btn">CONTACT US</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
         </div>
     );
