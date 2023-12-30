@@ -309,6 +309,10 @@
     line-height: 14px;
     padding: 0;
 }
+.author-avatar {
+    width: 28px;
+    height: 28px;
+}
 .article-tag {
     color: var(--scheme-secondary);
 }

@@ -250,8 +250,8 @@ const Home = () => {
                                 <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                 <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
                                 <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
-                                <div className="author align-items-center align-content-center">
-                                    <img src="" className="author-avatar" alt="" />
+                                <div className="author align-items-center">
+                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" alt="" />
                                     <p className="label3 author-name me-1">Oliver Knight </p>
                                     <p className="article-date"> • July 14, 2023 • 3 min</p>
                                 </div>
@@ -263,8 +263,8 @@ const Home = () => {
                                 <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                 <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
                                 <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
-                                <div className="author align-items-center align-content-center">
-                                    <img src="" className="author-avatar" alt="" />
+                                <div className="author align-items-center">
+                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" alt="" />
                                     <p className="label3 author-name me-1">Oliver Knight </p>
                                     <p className="article-date"> • July 14, 2023 • 3 min</p>
                                 </div>
@@ -276,8 +276,8 @@ const Home = () => {
                                 <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                 <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
                                 <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
-                                <div className="author align-items-center align-content-center">
-                                    <img src="" className="author-avatar" alt="" />
+                                <div className="author align-items-center">
+                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" alt="" />
                                     <p className="label3 author-name me-1">Oliver Knight </p>
                                     <p className="article-date"> • July 14, 2023 • 3 min</p>
                                 </div>
