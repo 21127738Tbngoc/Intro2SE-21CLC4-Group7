@@ -65,9 +65,15 @@ const Home = () => {
             </div>
             {/* Shop all */}
             <div className="container-fluid shop-bg">
-                <d3 className="shop-display">CREATING PERFECT LINES AND IMPOSING PRESENCE</d3>
-                <p className="p2 shop-text">Developed the concept of exclusivity, a Sol’ace features timeless furniture, with natural fabrics, curved lines, plenty of mirrors and classic design, which can be incorporated into any decor project. The pieces enchant for their sobriety, to last for generations, faithful to the shapes of each period, with a touch of the present.</p>
-                <button className="outline-btn btn-md button2 shop-btn">SHOP ALL</button>
+                <div className="row g-4 justify-content-center">
+                    <d3 className="shop-display">CREATING PERFECT LINES AND IMPOSING PRESENCE</d3>
+                </div>
+                <div className="row g-4 justify-content-center">
+                    <p className="p2 shop-text">Developed the concept of exclusivity, a Sol’ace features timeless furniture, with natural fabrics, curved lines, plenty of mirrors and classic design, which can be incorporated into any decor project. The pieces enchant for their sobriety, to last for generations, faithful to the shapes of each period, with a touch of the present.</p>
+                </div>
+                <div className="row g-4 justify-content-center">
+                    <button className="outline-btn btn-md button2 shop-btn">SHOP ALL</button>
+                </div>
             </div>
             {/* Product Category */}
             <div className="container-fluid">
@@ -77,7 +83,7 @@ const Home = () => {
                 <div className="d-flex">
                     {/* Living Room */}
                     <div className="col category-section" id="living-room">
-                        <h2>Living Room</h2>
+                        <h2 style={{ marginBottom: '32px' }} >Living Room</h2>
                         <p className="p2 category-text slide-border">SOFA & BENCH</p>
                         <p className="p2 category-text slide-border">ACCENT CHAIR</p>
                         <p className="p2 category-text slide-border">COFFEE & ACCENT TABLE</p>
@@ -90,7 +96,7 @@ const Home = () => {
                     </div>
                     {/* Bed Room */}
                     <div className="col category-section" id="bed-room">
-                        <h2>Bed Room</h2>
+                        <h2 style={{ marginBottom: '32px' }} >Bed Room</h2>
                         <p className="p2 category-text slide-border">BED & HEADBOARD</p>
                         <p className="p2 category-text slide-border">NIGHSTAND & DRESSER</p>
                         <p className="p2 category-text slide-border">CHILDREN BED</p>
@@ -103,7 +109,7 @@ const Home = () => {
                     </div>
                     {/* Dining Room */}
                     <div className="col category-section" id="dining-room">
-                        <h2>Dining Room</h2>
+                        <h2 style={{ marginBottom: '32px' }}>Dining Room</h2>
                         <p className="p2 category-text slide-border">DINING TABLE</p>
                         <p className="p2 category-text slide-border">DINING CHAIR</p>
                         <p className="p2 category-text slide-border">BAR CART & CABINET</p>
@@ -115,7 +121,7 @@ const Home = () => {
                     </div>
                     {/* Bath Room */}
                     <div className="col category-section" id="bath-room">
-                        <h2>Bath Room</h2>
+                        <h2 style={{ marginBottom: '32px' }} >Bath Room</h2>
                         <p className="p2 category-text slide-border">BATH VANITIES</p>
                         <p className="p2 category-text slide-border">BATH HARDWARE</p>
                         <p className="p2 category-text slide-border">LIGHTING</p>
@@ -140,10 +146,65 @@ const Home = () => {
             <div className="container-fluid">
                 <img src="/imgs/home/designer-bg.jpg" className="designer-bg" alt="designer-bg" />
                 <div className="row">
-                <h1 className="designer-bg-display">MEET OUR TALENTED DESIGNERS</h1>
+                <d1 className="designer-bg-display">MEET OUR TALENTED DESIGNERS</d1>
                 <button className="designer-btn sec-btn btn-nm button1">VIEW DESIGNERS</button> {/* Link to the designers section in About us page */}
                 </div>
             </div>
+            <div className="container-fluid designer-section">
+            <div className="row">
+                <d5 className="designer-display">OUR DESIGNERS</d5>
+            </div>
+            <div className="container">
+                <div className="row g-4 mt-5"  style={{ marginBottom: '95px' }}>
+                    <div className="col designer-left">
+                        <d3 className="designer-name">LUCAS NILSSEN</d3>
+                        <p className="designer-role title2">Product Designer</p>
+                        <img className="designer-img" src="/imgs/home/designer-0.jpg" />
+                    </div>
+                    <div className="col designer-right flex-row-reverse">
+                        <img className="designer-img" src="/imgs/home/designer-1.jpg" style={{ marginLeft: '250px' }}/>
+                        <p className="designer-role title2">Product Designer</p>  
+                        <d3 className="designer-name">MILLE HANSEN</d3>
+                    </div>
+                </div>
+                <div className="row g-4"  style={{ marginBottom: '95px' }}>
+                    <div className="col designer-left">
+                        <d3 className="designer-name">HANS J. WEGNER</d3>
+                        <p className="designer-role title2">Product Designer</p>
+                        <img className="designer-img" src="/imgs/home/designer-2.jpg" />
+                    </div>
+                    <div className="col designer-right flex-row-reverse">
+                        <img className="designer-img" src="/imgs/home/designer-3.jpg"  style={{ marginLeft: '330px' }} />
+                        <p className="designer-role title2">Product Designer</p>
+                        <d3 className="designer-name">ARNE JACOBSEN</d3>
+                    </div>
+                </div>
+                <div className="row g-4"  style={{ marginBottom: '95px' }}>
+                    <div className="col designer-left">
+                        <d3 className="designer-name">FRANK LLOYED</d3>
+                        <p className="designer-role title2">Product Designer</p>
+                        <img className="designer-img" src="/imgs/home/designer-4.jpg" />
+                    </div>
+                    <div className="col designer-right flex-row-reverse">
+                        <img className="designer-img" src="/imgs/home/designer-5.jpg" style={{ marginLeft: '280px' }}/>
+                        <p className="designer-role title2">Product Designer</p>
+                        <d3 className="designer-name">ANNIE STANLEY</d3>
+                    </div>
+                </div>
+                <div className="row g-4"  style={{ marginBottom: '95px' }}>
+                    <div className="col designer-left">
+                        <d3 className="designer-name">OLIVIA RHYE</d3>
+                        <p className="designer-role title2">Product Designer</p>
+                        <img className="designer-img" src="/imgs/home/designer-6.jpg" />
+                    </div>
+                    <div className="col designer-right flex-row-reverse">
+                        <img className="designer-img" src="/imgs/home/designer-7.jpg" style={{ marginLeft: '240px' }}/>
+                        <p className="designer-role title2">Product Designer</p>
+                        <d3 className="designer-name">EILEEN GRAY</d3>
+                    </div>
+                </div>
+            </div>
+    </div>
 
             {/* Articles */}
 

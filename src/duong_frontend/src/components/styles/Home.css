@@ -10,13 +10,13 @@
 .hero-banner {
     width: 100%;
     width: 100%;
-    height: 662px;
+    height: 700px;
     object-fit: cover;
 }
 
 .hero-display {
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     width: 50%;
     transform: translate(-50%, -50%);
@@ -26,7 +26,7 @@
 
 .hero-btn {
     position: absolute;
-    top: 55%;
+    top: 60%;
     left: 50%;
     width: 180px;
     transform: translate(-50%, -50%);
@@ -34,12 +34,16 @@
 
 /*--Shop--*/
 .shop-bg {
-    position: relative;
-    background: url("/imgs/home/shop-all-bg.jpg");
+    background: url("/public/imgs/home/shop-all-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 330px 0 162px 0;
     width: 100%;
-    height: auto;
-    margin-top: 4em;
-    object-fit: cover;
+    height: 100%;
+    margin: 5em 0 3em 0;
     z-index: -1;
 }
 
@@ -47,21 +51,23 @@
     color: var(--scheme-on-background);
     text-align: center;
     z-index: 1;
+    width: 50%;
+    margin-bottom: 32px;
 }
 
 .shop-text {
     color: var(--tone-neutral-variant-50);
     text-align: center;
-    width: 60%;
+    width: 40%;
+    display: block;
     z-index: 1;
+    margin-bottom: 48px;
 }
 
 .shop-btn {
-    position: absolute;
-    top: 1450px;
+    display: block;
     width: 180px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 /*--Category--*/
@@ -86,7 +92,7 @@
 
 .category-text {
     color: var(--tone-secondary-60);
-    margin-top: 0.5em;
+    margin-bottom: 1em;
     width: 90%;
     transition: opacity 1s ease-in-out;
 }
@@ -102,7 +108,7 @@
     font-size: 250px;
     line-height: 200px;
     right: 64px;
-    bottom: 5px;
+    bottom: 32px;
     z-index: 2;
 }
 .category-img {
@@ -239,7 +245,7 @@
     margin-bottom: 32px;
 }
 .articles-section {
-    background-image: url("/imgs/home/articles-bg.jpg");
+    background-image: url("/public/imgs/home/articles-bg.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     /*position: absolute;*/
@@ -313,7 +319,7 @@
 
 /*--Inquiry--*/
 .inquiry-section {
-    background: url("/imgs/home/inquiry-bg.jpg");
+    background: url("/public/imgs/home/inquiry-bg.jpg");
     background-size: cover;
     margin-top: 64px;
     margin-bottom: 64px;
