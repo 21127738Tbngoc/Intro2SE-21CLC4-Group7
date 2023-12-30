@@ -92,7 +92,7 @@ export const AllProducts = () => {
                   {productsData.map((data, index) => (
                     <tr className='table' key={index}>
                       <td>
-                        <img src={data.img} alt='product' style={{ width: '50px', height: '50px' }} />                      
+                        <img src={data.thumbnail} alt='product' style={{ width: '50px', height: '50px' }} />                      
                       </td>
                       <td>{data.name}</td>
                       <td>{data.desc}</td>

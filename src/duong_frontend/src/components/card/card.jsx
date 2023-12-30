@@ -15,7 +15,7 @@ function ProductCard(props) {
             <div className="product-ctn">
                 {/* Product img */}
                 <div className="product-img" >
-                    <img src={props.img} alt="product-img"></img>
+                    <img src={props.thumbnail} alt="product-img"></img>
                 </div>
                 {/* Product info */}
                 <div className="product-info">

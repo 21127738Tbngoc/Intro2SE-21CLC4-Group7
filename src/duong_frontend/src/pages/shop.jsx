@@ -35,9 +35,9 @@ const Shop = () => {
         for (let i = 0; i < data.length - 3; i += 3) {
             components.push(
                 <div class="row g-4">
-                    <ProductCard key={i} id={data[i]._id} name={data[i].name} img={data[i].img} price={data[i].price} categories={data[i].categories} />
-                    <ProductCard key={i + 1} id={data[i + 1]._id} name={data[i + 1].name} img={data[i + 1].img} price={data[i + 1].price} categories={data[i + 1].categories} />
-                    <ProductCard key={i + 2} id={data[i + 2]._id} name={data[i + 2].name} img={data[i + 2].img} price={data[i + 2].price} categories={data[i + 2].categories} />
+                    <ProductCard key={i} id={data[i]._id} name={data[i].name} thumbnail={data[i].thumbnail} img={data[i].img} price={data[i].price} categories={data[i].categories} />
+                    <ProductCard key={i + 1} id={data[i + 1]._id} name={data[i + 1].name} thumbnail={data[i + 1].thumbnail} img={data[i].img} price={data[i + 1].price} categories={data[i + 1].categories} />
+                    <ProductCard key={i + 2} id={data[i + 2]._id} name={data[i + 2].name} thumbnail={data[i + 2].thumbnail} img={data[i].img} price={data[i + 2].price} categories={data[i + 2].categories} />
                 </div>
             );
         }

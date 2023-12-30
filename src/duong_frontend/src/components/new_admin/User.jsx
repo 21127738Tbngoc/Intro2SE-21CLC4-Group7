@@ -1,5 +1,5 @@
 import React, { useState, useEffect, } from 'react';
-import { Col, Container, Row,} from 'reactstrap';
+import { Col, Container, Row, } from 'reactstrap';
 import { toast } from 'react-toastify';
 
 const User = () => {
@@ -51,9 +51,9 @@ const User = () => {
       const response = await fetch(`http://localhost:5000/api/users/${id}`, {
         method: 'DELETE',
         headers: {
-            'Content-Type': 'application/json',
-            token: " bearer " + Token
-          },
+          'Content-Type': 'application/json',
+          token: " bearer " + Token
+        },
       });
 
       if (!response.ok) {
@@ -91,7 +91,7 @@ const User = () => {
               <tbody>
                 {userData.map((user, index) => (
                   <tr className='teble' key={index}>
-                    <td><img src={user.avatar} alt="avatar" /></td>
+                    <td><img src={user.avatar} alt="avatar" style={{ width: '100px', height: '100px' }} /></td>
                     <td>{user.username}</td>
                     <td>{user.email}</td>
                     <td>{user.isAdmin}</td>

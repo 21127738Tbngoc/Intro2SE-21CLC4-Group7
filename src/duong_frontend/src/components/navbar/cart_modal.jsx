@@ -41,12 +41,9 @@ const Cartmodal = () => {
                 return (
                   <div key={product._id}>
                     <div className="cartitems-format cartitems-format-main">
-                      <img src={product.img[0]} alt="" className="cart-item-img my-2" />
+                      <img src={product.thumbnail} alt="" className="cart-item-img my-2" />
                       <p className="title2"> {product.name}</p>
-                      <div className="d-inline">
-                        <p className="support d-inline">{product.color}</p>
 
-                      </div>
                       <div className="mt-2">
                         <p className="d-inline">${product.price}</p>
                         <div className="d-inline cart-item-quantity mx-3">
