@@ -14,6 +14,12 @@ import { SearchResultsList } from "../search/SearchResultsList";
 
 const Navbar = () => {
 
+    const handleLogout = () => {
+        localStorage.removeItem('Token');
+        console.log('Logout successful.');
+        // Thực hiện các hành động khác sau khi đăng xuất thành công
+      };
+
     const { getTotalCartItems } = useContext(ShopContext);
     const totalCartItems = getTotalCartItems() || 0;
 
@@ -145,6 +151,7 @@ const Navbar = () => {
                 {results && results.length > 0 && <SearchResultsList results={results} />}
                 {/*<!-- Cart Modal --> */}
                 <CartModal />
+                <button onClick={handleLogout}>Logout</button>
             </div>
             {/*<!-- Megamenu --> */}
             <div className="container-fluid navbar-menu">
