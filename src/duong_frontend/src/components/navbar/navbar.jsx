@@ -6,7 +6,7 @@ import '../Utils/searchbar'
 import '../searchbar/searchbar.css'
 
 // import Searchbar from "../searchbar/searchbar"
-import CartModal from "./cart_modal"
+import CartModal from "./cart_modal";
 import DropdownContent from "./dropDownContent";
 import { SearchBar } from "../search/SearchBar";
 import { SearchResultsList } from "../search/SearchResultsList";
@@ -141,7 +141,6 @@ const Navbar = () => {
                 </div>
             </div>
 
-
             <div className="container-fluid fixed-top navbar-container justify-content-between position-relative"
                 onClick={(event) => {
                     event.stopPropagation()
@@ -151,7 +150,6 @@ const Navbar = () => {
                 {results && results.length > 0 && <SearchResultsList results={results} />}
                 {/*<!-- Cart Modal --> */}
                 <CartModal />
-                
             </div>
             {/*<!-- Megamenu --> */}
             <div className="container-fluid navbar-menu">

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 
 
-const Cartmodal = () => {
+const CartModal = () => {
   const { getTotalCartAmount, allProducts, cartItems, addToCart, removeallFromCart ,remove1FromCart} = useContext(ShopContext);
 
   function closeCartModal() {
@@ -93,4 +93,4 @@ const Cartmodal = () => {
   );
 };
 
-export default Cartmodal;
+export default CartModal;
