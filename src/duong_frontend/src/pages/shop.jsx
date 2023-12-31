@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../components/card/card';
 import '../components/common.css';
+import '../components/styles/Shop.css';
 import { toast } from 'react-toastify';
 
 const Shop = () => {
@@ -55,7 +56,7 @@ const Shop = () => {
     const components = [];
     for (let i = 0; i < filteredData.length - 3; i += 3) {
       components.push(
-        <div class="row g-4">
+        <div className="row g-4">
           <ProductCard
             key={i}
             id={filteredData[i]._id}
@@ -109,39 +110,40 @@ const Shop = () => {
   ];
   
 return (
-    <div class="container-fluid">
-      <div class="container">
-        <div class="row">
-          {/* Product filter */}
-          <div class="col-3">
-            <div class="product-filter">
-              <h5 class="mb-4">CATEGORIES</h5>
-              {/* Add event handlers for checkbox changes */}
-              {categoryData.map((category) => (
-                <div class="form-check" key={category.value}>
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    id={category.id}
-                    name={category.name}
-                    value={category.value}
-                    checked={selectedCategories.includes(category.value)}
-                    onChange={() => 
-                        handleCategoryChange(category.value)}
-                  />
-                  <label class="form-check-label p1" for={category.id}>
-                    {category.name}
-                  </label>
+    <div className="container-fluid justify-content-center">
+        <p class="title1 shop-title">SHOP ALL</p>
+        <h2 class="shop-headline">All Products</h2>
+        <div className="container">
+            <div className="row g-4">
+                {/* Product filter */}
+                <div className="col-3">
+                    <div className="product-filter">
+                    <h5 className="mb-4" style={{ marginTop: '3em' }}>CATEGORIES</h5>
+                    {/* Add event handlers for checkbox changes */}
+                    {categoryData.map((category) => (
+                        <div className="form-check" key={category.value}>
+                            <input
+                                className="form-check-input"
+                                type="checkbox"
+                                id={category.id}
+                                name={category.name}
+                                value={category.value}
+                                checked={selectedCategories.includes(category.value)}
+                                onChange={() => handleCategoryChange(category.value)}
+                            />
+                            <label className="form-check-label p1" for={category.id}>
+                                {category.name}
+                            </label>
+                        </div>
+                  ))}
+                  <h5 className="mt-5 mb-4">TAGS</h5>
                 </div>
-              ))}
-              <h5 class="mt-5 mb-4">TAGS</h5>
-            </div>
-          </div>
+                </div>
   
-          {/* Product cards */}
-          <div class="col-9">{createComponents(productsData)}</div>
+                {/* Product cards */}
+                <div className="col-9">{createComponents(productsData)}</div>
+            </div>
         </div>
-      </div>
     </div>
   );
 };
