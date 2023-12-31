@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import { Helmet } from '../components/helmet/Helmet';
 import { Container, Row, Col, FormGroup } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import ProductCard from "../components/card/card"
+import ProductCard from "../components/card/card";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -93,7 +93,7 @@ const Home = () => {
                         <p className="p2 category-text slide-border">LIGHTING</p>
                         <Link to="/livingroom" className="category-link">
                             <p className="category-num">1</p>
-                            <img src="/imgs/home/livingroom.jpg" className="category-img" alt="Living Room" />
+                            <img src="/imgs/home/livingroom.jpg" className="category-img" />
                         </Link>
                     </div>
                     {/* Bed Room */}
@@ -146,7 +146,7 @@ const Home = () => {
 
             {/* Designers */}
             <div className="container-fluid">
-                <img src="/imgs/home/designer-bg.jpg" className="designer-bg" alt="designer-bg" />
+                <img src="/imgs/home/designer-bg.jpg" className="designer-bg" />
                 <div className="row">
                 <d1 className="designer-bg-display">MEET OUR TALENTED DESIGNERS</d1>
                 <button className="designer-btn sec-btn btn-nm button1">VIEW DESIGNERS</button> {/* Link to the designers section in About us page */}
@@ -235,7 +235,7 @@ const Home = () => {
                             <button className="link-nm">CONTINUE READING</button>
                         </div>
                         <div className="col">
-                            <img src="/imgs/home/articles-featured.jpg" className="article-featured" alt="" />
+                            <img src="/imgs/home/articles-featured.jpg" className="article-featured" />
                         </div>
                     </div>
                 </div>
@@ -246,12 +246,12 @@ const Home = () => {
                     <div className="row g-4">
                         <div className="col">
                             <div className="article-card">
-                                <img src="/imgs/home/articles-1.jpg" className="article-img" alt="" />
+                                <img src="/imgs/home/articles-1.jpg" className="article-img" />
                                 <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                 <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
                                 <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
                                 <div className="author align-items-center">
-                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" alt="" />
+                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" />
                                     <p className="label3 author-name me-1">Oliver Knight </p>
                                     <p className="article-date"> • July 14, 2023 • 3 min</p>
                                 </div>
@@ -259,12 +259,12 @@ const Home = () => {
                         </div>
                         <div className="col">
                             <div className="article-card">
-                                <img src="/imgs/home/articles-2.jpg" className="article-img" alt="" />
+                                <img src="/imgs/home/articles-2.jpg" className="article-img" />
                                 <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                 <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
                                 <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
                                 <div className="author align-items-center">
-                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" alt="" />
+                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" />
                                     <p className="label3 author-name me-1">Oliver Knight </p>
                                     <p className="article-date"> • July 14, 2023 • 3 min</p>
                                 </div>
@@ -272,12 +272,12 @@ const Home = () => {
                         </div>   
                         <div className="col">
                             <div className="article-card">
-                                <img src="/imgs/home/articles-3.jpg" className="article-img" alt="" />
+                                <img src="/imgs/home/articles-3.jpg" className="article-img" />
                                 <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                 <h5 className="article-name">Inside a playful, bohemian beach house on Martha’s Vineyard</h5>
                                 <p className="p1 article-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
                                 <div className="author align-items-center">
-                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" alt="" />
+                                    <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" />
                                     <p className="label3 author-name me-1">Oliver Knight </p>
                                     <p className="article-date"> • July 14, 2023 • 3 min</p>
                                 </div>

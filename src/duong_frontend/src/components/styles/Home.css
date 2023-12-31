@@ -289,7 +289,7 @@
     margin-top: 64px;
 }
 .articles-btn:hover{
-    color: var(--tone-primary-40);
+    color: var(--scheme-on-background);
 }
 .article-card {
     padding: 24px 24px;
