@@ -32,8 +32,8 @@ const Cartmodal = () => {
           </h5>
         </div>
         <h3 className="navbar-cart-title">Shopping Cart</h3>
-        <ul className="cart-item-list-section">
-          <li className="d-flex justify-content-between mb-1 cart-item ">
+        <ul className="cart-list-section">
+          <li className="d-flex justify-content-between mb-1 cart-item">
             {uniqueCartItems.map((productId) => {
               const product = allProducts.find((p) => String(p._id) === productId);
               if (product) {

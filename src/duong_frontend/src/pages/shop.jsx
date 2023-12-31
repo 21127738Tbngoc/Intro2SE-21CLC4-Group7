@@ -89,9 +89,23 @@ const Shop = () => {
     return components;
   };
   const categoryData = [
-    { value: "Sofa", id: 'check1', name: 'SOFA' },
-    { value: 'Accent Chair', id: 'check2', name: 'ACCENT CHAIR' },
-    // ... add other categories
+    { value: "Sofa", id: 'check1', name: 'SOFA & BENCH' },
+    { value: 'Chair', id: 'check2', name: 'ACCENT CHAIR' },
+    { value: 'Table', id: 'check3', name: 'ACCENT TABLE' },
+    { value: 'Media', id: 'check4', name: 'TV STAND & MEDIA CONSOLE' },
+    { value: 'Bed', id: 'check5', name: 'BED & HEADBOARD' },
+    { value: 'Children Bed', id: 'check6', name: 'CHILDREN BED' },
+    { value: 'Nightstand', id: 'check7', name: 'NIGHTSTAND & DRESSER' },
+    { value: 'Dining Table', id: 'check8', name: 'DINING TABLE' },
+    { value: 'Dining Chair', id: 'check9', name: 'DINING CHAIR' },
+    { value: 'Shelf', id: 'check10', name: 'SHELF & CARBINET' },
+    { value: 'Bath Vanities', id: 'check11', name: 'BATH VANITIES' },
+    { value: 'Bath Hardware', id: 'check12', name: 'BATH HARDWARE' },
+    { value: 'Ceiling Lighting', id: 'check13', name: 'CEILING LIGHTING' },
+    { value: 'Table Lighting', id: 'check14', name: 'TABLE LIGHTING' },
+    { value: 'Wall Lighting', id: 'check15', name: 'WALL LIGHTING' },
+    { value: 'Floor Lighting', id: 'check16', name: 'FLOOR LIGHTING' },
+    { value: 'Wall Decor', id: 'check17', name: 'WALL DECORATION' },
   ];
   
 return (

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href ="../../public/bootstrap-5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../public/bootstrap-5/js/bootstrap.bundle.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../components/button/buttons.css">
+    <link rel="stylesheet" href="../components/common.css">
+    <link rel="stylesheet" href="../../src/components/breadcrumb/breadcrumb.css">
+    <link rel="stylesheet" href="./cart.css">
+    <title>Cart</title>
+</head>
+<body>
+   <div class="container-fluid">
+        <nav aria-label="breadcrumb" class="navbar-breadcrumb">
+            <ol class="breadcrumb">
+            <li class="breadcrumb-item breadcrumb-home"><a href="#">HOME</a></li>
+            <li class="breadcrumb-item breadcrumb-element"><a href="#">CART</a></li>
+            </ol>
+        </nav>
+        <div class="page-title">
+            <d3>Cart</d3>
+        </div>
+        <div class="page-breadcrumb">
+            <p class="d-inline-block p1 page-sub-breadcrumb">CART</p>
+            <p class="d-inline-block p1">•</p>
+            <p class="d-inline-block p1">CHECKOUT</p>
+            <p class="d-inline-block p1">•</p>
+            <p class="d-inline-block p1">PAYMENT</p>
+            <p class="d-inline-block p1">•</p>
+            <p class="d-inline-block p1">CONFIRMATION</p>
+        </div>
+        <div class="container-fluid-xxl d-flex justify-content-between cart-container" style="height: 1000px;">
+            <!-- Cart list items -->
+            <div class="cart-list-section">
+                <h3 class="cart-list-title">Cart Items (3)</h3>
+                    <ul class="cart-item-list-section">
+                        <li class="d-flex justify-content-between mb-2 cart-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="#">
+                                    <button class="cart-item-check-btn">
+                                        <img src="../../public/imgs/navbar/check.svg" alt="trashcan">
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="d-flex align-bottom mx-5">
+                                <img src="../../public/imgs/shop-28-img-1.jpg" class="d-inline-block cart-item-img" alt="Product Image">
+                                <div class="d-inline-block cart-item-info ms-3">
+                                    <p class="w-100 subtitle2">Singapore Dark Rattan Arm Chair</p>
+                                    <div class="d-inline">
+                                        <p class="support d-inline">Size M</p>
+                                        <p class="subtitle2 d-inline">.</p>
+                                        <p class="support d-inline">Black</p>
+                                        <p class="subtitle2 d-inline">.</p>
+                                        <p class="support d-inline">SKU 001</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="subtitle2 d-inline">$ 1,500</p>
+                                        <div class="d-inline cart-item-quantity mx-3">
+                                            <img src="../../public/imgs/navbar/minus.svg" alt="Dot">
+                                            <p class="p3 d-inline">2</p>
+                                            <img src="../../public/imgs/navbar/plus.svg" alt="Dot">
+                                        </div>
+                                        <p class="subtitle2 d-inline">$ 3,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="#">
+                                    <button class="outline-i-btn i-btn-nm">
+                                        <img src="../../public/imgs/navbar/trashcan.svg" alt="trashcan">
+                                    </button>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2 cart-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="#">
+                                    <button class="cart-item-check-btn">
+                                        <img src="../../public/imgs/navbar/check.svg" alt="trashcan">
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="d-flex align-bottom mx-5">
+                                <img src="../../public/imgs/shop-28-img-1.jpg" class="d-inline-block cart-item-img" alt="Product Image">
+                                <div class="d-inline-block cart-item-info ms-3">
+                                    <p class="w-100 subtitle2">Singapore Dark Rattan Arm Chair</p>
+                                    <div class="d-inline">
+                                        <p class="support d-inline">Size M</p>
+                                        <p class="subtitle2 d-inline">.</p>
+                                        <p class="support d-inline">Black</p>
+                                        <p class="subtitle2 d-inline">.</p>
+                                        <p class="support d-inline">SKU 001</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="subtitle2 d-inline">$ 1,500</p>
+                                        <div class="d-inline cart-item-quantity mx-3">
+                                            <img src="../../public/imgs/navbar/minus.svg" alt="Dot">
+                                            <p class="p3 d-inline">2</p>
+                                            <img src="../../public/imgs/navbar/plus.svg" alt="Dot">
+                                        </div>
+                                        <p class="subtitle2 d-inline">$ 3,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="#">
+                                    <button class="outline-i-btn i-btn-nm">
+                                        <img src="../../public/imgs/navbar/trashcan.svg" alt="trashcan">
+                                    </button>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="d-flex justify-content-between mb-2 cart-item ">
+                            <div class="d-flex align-items-center">
+                                <a href="#">
+                                    <button class="cart-item-check-btn">
+                                        <img src="../../public/imgs/navbar/check.svg" alt="trashcan">
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="d-flex align-bottom mx-5">
+                                <img src="../../public/imgs/shop-28-img-1.jpg" class="d-inline-block cart-item-img" alt="Product Image">
+                                <div class="d-inline-block cart-item-info ms-3">
+                                    <p class="w-100 subtitle2">Singapore Dark Rattan Arm Chair</p>
+                                    <div class="d-inline">
+                                        <p class="support d-inline">Size M</p>
+                                        <p class="subtitle2 d-inline">.</p>
+                                        <p class="support d-inline">Black</p>
+                                        <p class="subtitle2 d-inline">.</p>
+                                        <p class="support d-inline">SKU 001</p>
+                                    </div>
+                                    <div class="mt-4">
+                                        <p class="subtitle2 d-inline">$ 1,500</p>
+                                        <div class="d-inline cart-item-quantity mx-3">
+                                            <img src="../../public/imgs/navbar/minus.svg" alt="Dot">
+                                            <p class="p3 d-inline">2</p>
+                                            <img src="../../public/imgs/navbar/plus.svg" alt="Dot">
+                                        </div>
+                                        <p class="subtitle2 d-inline">$ 3,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <a href="#">
+                                    <button class="outline-i-btn i-btn-nm">
+                                        <img src="../../public/imgs/navbar/trashcan.svg" alt="trashcan">
+                                    </button>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+            </div>
+            <!-- Invoice -->
+            <div class="invoice-container">
+                <div class="invoice">
+                    <h4 class="invoice-title">ORDER SUMMARY</h4>
+                    <ul class="cost-list-section">
+                        <li class="d-flex justify-content-between cost">
+                            <p class="title1">Shipping cost</p>
+                            <p class="cost-money">$ 0</p>
+                        </li>
+                        <li class="d-flex justify-content-between cost">
+                            <p class="title1">Discount</p>
+                            <p class="cost-money">$ 0</p>
+                        </li>
+                        <li class="d-flex justify-content-between cost">
+                            <p class="title1">Additional taxes</p>
+                            <p class="cost-money">$ 0</p>
+                        </li>
+                        <li class="d-flex justify-content-between cost">
+                            <p class="title1">Subtotal</p>
+                            <p class="cost-money">$ 0</p>
+                        </li>
+                    </ul>
+                    <div class="invoice-counpon-section">
+                        <p class="title2">Discount Code or Coupon</p>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Enter your code here" aria-label="Search">
+                            <button class="tert-i-btn tert-btn btn-sm" type="submit">APPLY</button>
+                        </form>
+                    </div>
+                    <img src="../../public/imgs/navbar/line.svg" alt="line">
+                    <div class="d-flex justify-content-between invoice-total-section">
+                        <p class="title1">Total Cost</p>
+                        <h4>$ 4,895</h4>
+                    </div>
+                </div>
+                <a href="#">
+                    <button class="prim-btn btn-nm w-100 invoice-checkout">
+                        PROCEED TO CHECKOUT
+                    </button>
+                </a>
+                <a href="#">
+                    <div class="d-flex link-md">
+                        <p class="d-inline mx-auto"><img src="../../public/imgs/navbar/arrow-left-icon.svg" alt="arrow" class="me-2">BACK TO SHOPPING</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+   </div>
+</body>
+</html>
