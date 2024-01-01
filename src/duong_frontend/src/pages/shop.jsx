@@ -65,6 +65,7 @@ const Shop = () => {
             img={filteredData[i].img}
             price={filteredData[i].price}
             categories={filteredData[i].categories}
+            rating = {filteredData[i].rating}
           />
           <ProductCard
             key={i + 1}
@@ -74,6 +75,7 @@ const Shop = () => {
             img={filteredData[i + 1].img}
             price={filteredData[i + 1].price}
             categories={filteredData[i + 1].categories}
+            rating = {filteredData[i+1].rating}
           />
           <ProductCard
             key={i + 2}
@@ -83,6 +85,7 @@ const Shop = () => {
             img={filteredData[i + 2].img}
             price={filteredData[i + 2].price}
             categories={filteredData[i + 2].categories}
+            rating = {filteredData[i+2].rating}
           />
         </div>
       );

@@ -3,11 +3,12 @@ import { ShopContext } from '../context/ShopContext';
 
 
 const Cartmodal = () => {
-  const { getTotalCartAmount, allProducts, cartItems, addToCart, removeallFromCart ,remove1FromCart} = useContext(ShopContext);
+  const { getTotalCartAmount, allProducts, cartItems, addToCart, removeallFromCart, remove1FromCart } = useContext(ShopContext);
 
+  
   function closeCartModal() {
     const cartModal = document.querySelector('.navbar-cart');
-    cartModal.classList.remove('open-cart-modal');
+    cartModal.style.display = "None";
   }
 
   const handleAddToCart = (productId) => {
@@ -32,8 +33,8 @@ const Cartmodal = () => {
           </h5>
         </div>
         <h3 className="navbar-cart-title">Shopping Cart</h3>
-        <ul className="cart-item-list-section">
-          <li className="d-flex justify-content-between mb-1 cart-item ">
+        <ul className="cart-list-section">
+          <li className="d-flex justify-content-between mb-1 cart-item">
             {uniqueCartItems.map((productId) => {
               const product = allProducts.find((p) => String(p._id) === productId);
               if (product) {
@@ -65,7 +66,7 @@ const Cartmodal = () => {
                           <button className="outline-i-btn i-btn-sm" onClick={() => handleRemoveFromCart(product._id)}>
                             <img
                               src="/imgs/navbar/trashcan.svg"
-                              
+
                               alt="Remove"
                             />
                           </button>

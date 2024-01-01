@@ -21,8 +21,8 @@ function ProductCard(props) {
                 <div className="product-info">
                     <h6>{props.name}</h6>
                     <p className="p3 product-cat">{props.categories}</p>
-                    <p className="title2 py-1 product-price">{props.price}</p>
-                    <img className="rating-star" src="/imgs/card/rating-4.png" />
+                    <p className="title2 py-1 product-price">${props.price}</p>
+                    <img className="rating-star" src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(props.rating)}`}/>
                 </div>
             </div>
             {/* Product buttons */}
