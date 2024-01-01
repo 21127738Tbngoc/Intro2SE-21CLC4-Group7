@@ -13,8 +13,8 @@ import Signup from './pages/Signup';
 import Footer from './components/footer/footer';
 import Navbar from './components/navbar/navbar';
 import Searchbar from "./components/searchbar/searchbar";
-import Shop from './pages/Shop';
 import Home from './pages/Home';
+import Shop from "./pages/Shop";
 
 function App() {
   return (
