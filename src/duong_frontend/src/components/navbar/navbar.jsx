@@ -48,6 +48,7 @@ const Navbar = () => {
     }
 
     function openCartModal() {
+        console.log("clicked")
         const cartModal = document.querySelector('.navbar-cart')
         if (cartModal.classList.value.search("open-cart-modal") === -1) {
             cartModal.classList.add('open-cart-modal');

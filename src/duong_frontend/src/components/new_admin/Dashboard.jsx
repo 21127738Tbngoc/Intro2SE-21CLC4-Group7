@@ -24,21 +24,21 @@ const Dashboard = () => {
           },
         });
         const responseArticle = await fetch('http://localhost:5000/api/article/');
-        const responseOrder = await fetch('http://localhost:5000/api/orders', { 
+        const responseOrder = await fetch('http://localhost:5000/api/orders', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
             token: " bearer " + Token
           },
-         });
-         const responseIncome = await fetch('http://localhost:5000/api/orders/income/', { 
+        });
+        const responseIncome = await fetch('http://localhost:5000/api/orders/income/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
             token: " bearer " + Token
           },
-         });
-        
+        });
+
 
 
 
@@ -82,7 +82,7 @@ const Dashboard = () => {
         setIncomeData(dataIncome[0].total)
         console.log(incomeData)
 
-        
+
 
 
       } catch (error) {
@@ -103,6 +103,33 @@ const Dashboard = () => {
   return (
     <>
       <section>
+          <a href="http://localhost:3000/dashboard/add-articles" target="_self" rel="noopener noreferrer">
+            <button>Add Article</button>
+          </a>        
+          
+          <a href="http://localhost:3000/dashboard/add-products" target="_self" rel="noopener noreferrer">
+            <button>Add Product</button>
+          </a>   
+          
+          <a href="http://localhost:3000/dashboard/all-products" target="_self" rel="noopener noreferrer">
+            <button>Manage Products</button>
+          </a>   
+          
+          <a href="http://localhost:3000/dashboard/all-orders" target="_self" rel="noopener noreferrer">
+            <button>Manage Orders</button>
+          </a>   
+          
+          <a href="http://localhost:3000/dashboard/all-articles" target="_self" rel="noopener noreferrer">
+            <button>Manage Articles</button>
+          </a>   
+          
+          <a href="https://www.example.com" target="_self" rel="noopener noreferrer">
+            <button>Manage Contact</button>
+          </a>   
+          
+          <a href="http://localhost:3000/dashboard/user" target="_self" rel="noopener noreferrer">
+            <button>Manage Users</button>
+          </a>   
         <Container>
           <Row>
             <Col lg='3' md='4'>
@@ -138,7 +165,15 @@ const Dashboard = () => {
               </div>
             </Col>
           </Row>
-        </Container>
+
+          
+          
+
+          
+          
+          
+          </Container>
+
       </section>
     </>
   );

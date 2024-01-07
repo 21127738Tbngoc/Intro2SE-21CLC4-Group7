@@ -14,7 +14,7 @@ import Footer from './components/footer/footer';
 import Navbar from './components/navbar/navbar';
 import Searchbar from "./components/searchbar/searchbar";
 import Home from './pages/Home';
-import Shop from "./pages/Shop";
+import Shop from "./pages/shop";
 
 function App() {
   return (
