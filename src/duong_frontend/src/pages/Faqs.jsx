@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../components/common.css';
 import '../components/styles/Faqs.css';
-
-import '../../public/bootstrap-5/css/bootstrap.min.css';
-import '../../public/bootstrap-5/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
-import '../components/common.css';
-import '../../src/components/breadcrumb/breadcrumb.css';
+import '../components/breadcrumb/breadcrumb.css';
 
 const Faqs = () => {
   return (
@@ -16,9 +13,9 @@ const Faqs = () => {
         </div>
         <nav aria-label="breadcrumb" className="navbar-breadcrumb page-breadcrumb">
             <ul className="breadcrumb">
-                <li className="breadcrumb-item breadcrumb-home"><a href="#">HOME</a></li>
+                <li className="breadcrumb-item breadcrumb-home"><a href="/">HOME</a></li>
                 <li className="breadcrumb-item breadcrumb-home"><a href="#">SUPPORT</a></li>
-                <li className="breadcrumb-item breadcrumb-element"><a href="#">CONTACT US</a></li>
+                <li className="breadcrumb-item breadcrumb-element"><a href="/contact">CONTACT US</a></li>
             </ul>
         </nav>
         {/* <!-- Search section --> */}
