@@ -89,7 +89,7 @@ const Bedroom = () => {
         return (
             <div className="container">
                 <div className="d-flex justify-content-center">
-                    <div className="d-flex flex-column justify-content-center">
+                    <div className="d-flex flex-column">
                         <div className="title text-center">
                             <div className="title1">
                                 {title1}

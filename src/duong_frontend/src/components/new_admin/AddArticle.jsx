@@ -3,8 +3,9 @@ import { Container, Row, Col, FormGroup } from 'reactstrap';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import ReactQuill from 'react-quill';  // Import ReactQuill
 
-
+import 'react-quill/dist/quill.snow.css';  // Import styles for ReactQuill
 
 const AddArticle = () => {
   const Token = localStorage.getItem('Token');
@@ -19,6 +20,7 @@ const AddArticle = () => {
   const AddArticleHandler = async (e) => {
     setLoading(true);
     e.preventDefault();
+    console.log(description)
 
     try {
       const articleData = {
@@ -77,7 +79,21 @@ const AddArticle = () => {
               </FormGroup>
               <FormGroup className="form__group">
                 <span>Description</span>
-                <input type="text" placeholder="Description" onChange={(e) => setDescription(e.target.value)} required />
+                {/* Use ReactQuill for rich text editing */}
+                <ReactQuill
+                  value={description}
+                  onChange={(value) => setDescription(value)}
+                  theme="snow"
+                  modules={{
+                    toolbar: [
+                      [{ header: [1, 2, false] }],
+                      ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+                      [{ list: 'ordered' }, { list: 'bullet' }],
+                      ['link', 'image'],
+                      ['clean'],
+                    ],
+                  }}
+                />
               </FormGroup>
 
               <button type="submit" className="buy__btn text-white">
