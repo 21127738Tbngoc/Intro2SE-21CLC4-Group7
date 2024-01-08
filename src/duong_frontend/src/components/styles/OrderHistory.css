@@ -34,12 +34,6 @@
     color: #FEE4E2;
 }
 
-input {
-    width: 100%;
-    height: 3rem;
-    background-color: var(--scheme-background);
-}
-
 .dropdown>button {
     height: 3rem;
     background-color: var(--scheme-background);
