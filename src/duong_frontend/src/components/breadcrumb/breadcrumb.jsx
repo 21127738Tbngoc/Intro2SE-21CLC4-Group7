@@ -1,13 +1,11 @@
 import React from 'react';
 
-import '../styles/navbar.css'
 import '../button/buttons.css';
+import '../common.css';
 import "../styles/breadcrumb.css";
 import '../Utils/searchbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import '../components/button/buttons.css';
-import '../components/common.css';
 
 const Breadcrumb = () => {
     return (
