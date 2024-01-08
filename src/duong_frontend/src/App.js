@@ -22,6 +22,7 @@ import OrderHistory from './pages/OrderHistory';
 import ProductDetail from './pages/ProductDetail';
 import About from './pages/About';
 import Warranty from './pages/Warranty';
+import Refund from './pages/Refund';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path='/test/searchbar' element={<Searchbar />} />
             <Route path='/about' element={<div><Navbar /><About /><Footer /></div>} />
             <Route path='/warranty' element={<div><Navbar /><Warranty /><Footer /></div>} />
+            <Route path='/refund' element={<div><Navbar /><Refund /><Footer /></div>} />
             <Route path="/product/:productId" element={<div><Navbar /><ProductDetail /><Footer/></div>} />
                         <Route path='/designers' element={<div><Navbar /><Footer /></div>} />
             <Route path='/test' element={
