@@ -80,7 +80,7 @@ const Home = () => {
             {/* Product Category */}
             <div className="container-fluid">
                 <div className="row">
-                    <h5 className="category-display">PRODUCT CATEGORY</h5>
+                    <d5 className="category-display">PRODUCT CATEGORY</d5>
                 </div>
                 <div className="d-flex">
                     {/* Living Room */}
@@ -138,7 +138,16 @@ const Home = () => {
             {/* Featured products */}
             <div className="container-fluid">
                 <div className="container">
-
+                    <div className="row">
+                        <d5 className="featured-display">DISCOVER OUR FEATURED PRODUCTS</d5>
+                    </div>
+                    {/* Row of 4 products tag featured */} {/* 2 rows, 8 products */}
+                    <div className="row g-4 d-flex flex-row">
+                        
+                    </div>
+                    <div className="row g-4 d-flex flex-row">
+                        
+                    </div>
                 </div>
             </div>
 
