@@ -1,9 +1,7 @@
 import React ,{ useContext }from 'react';
 import "./card.css"
 import "../button/buttons.css"
-import addToCartHandler from '../Utils/addToCart';
 import { ShopContext } from '../context/ShopContext'
-
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
 
@@ -20,7 +18,7 @@ function ProductCard(props) {
                 {/* Product info */}
                 <div className="product-info">
                     <h6>{props.name}</h6>
-                    <p className="p3 product-cat">{props.categories}</p>
+                    <p className="p3 product-cat">{props.categories.join(" & ")}</p>
                     <p className="title2 py-1 product-price">${props.price}</p>
                     <img className="rating-star" src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(props.rating)}`}/>
                 </div>
