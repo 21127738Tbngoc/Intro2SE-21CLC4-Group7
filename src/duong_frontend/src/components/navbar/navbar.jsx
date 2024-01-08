@@ -163,7 +163,7 @@ const Navbar = () => {
                                 </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">ABOUT US
+                                        <a href="/about" className="slide-border">ABOUT US
                                         </a>
                                     </li>
                                     <li className="p1 mb-3">
@@ -181,23 +181,23 @@ const Navbar = () => {
                                 </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">SHOP ALL
+                                        <a href="/shop" className="slide-border">SHOP ALL
                                         </a>
                                     </li>
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">LIVING ROOM
+                                        <a href="/livingroom" className="slide-border">LIVING ROOM
                                         </a>
                                     </li>
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">BEDROOM
+                                        <a href="/bedroom" className="slide-border">BEDROOM
                                         </a>
                                     </li>
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">DINING ROOM
+                                        <a href="/diningroom" className="slide-border">DINING ROOM
                                         </a>
                                     </li>
                                     <li className="p1 mb-4">
-                                        <a href="#" className="slide-border">BATH ROOM
+                                        <a href="/bathroom" className="slide-border">BATH ROOM
                                         </a>
                                     </li>
                                 </ul>
@@ -207,15 +207,15 @@ const Navbar = () => {
                                 </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">FAQS
+                                        <a href="/faqs" className="slide-border">FAQS
                                         </a>
                                     </li>
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">CONTACT
+                                        <a href="/contact" className="slide-border">CONTACT
                                         </a>
                                     </li>
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">WARRANTY POLICY
+                                        <a href="/warranty" className="slide-border">WARRANTY POLICY
                                         </a>
                                     </li>
                                 </ul>
@@ -249,7 +249,7 @@ const Navbar = () => {
                                 </d6>
                                 <ul className="flex-column mt-3">
                                     <li className="p1 mb-3">
-                                        <a href="#" className="slide-border">ARTICLES
+                                        <a href="/articles" className="slide-border">ARTICLES
                                         </a>
                                     </li>
                                     <li className="p1 mb-3">
