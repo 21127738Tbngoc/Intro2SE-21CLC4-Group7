@@ -48,7 +48,6 @@ const Shop = () => {
     if (selectedCategories.length === 0) {
       return data;
     }
-
     return data.filter((product) =>
     selectedCategories.some((category) => product.categories.includes(category))
   );
