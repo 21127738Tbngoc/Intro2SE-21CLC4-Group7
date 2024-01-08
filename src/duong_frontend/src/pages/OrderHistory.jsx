@@ -3,7 +3,7 @@ import ProductCard from '../components/card/card';
 import '../components/common.css';
 import '../components/button/buttons.css';
 import '../components/styles/OrderHistory.css';
-import '../../public/icons/fontawesome/css/all.min.css';
+//import '../../public/icons/fontawesome/css/all.min.css';
 import { toast } from 'react-toastify';
 
 

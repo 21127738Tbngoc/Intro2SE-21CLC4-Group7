@@ -119,6 +119,8 @@ export const AllOrder = () => {
                   <thead>
                     <tr className='tuble'>
                       <th>User ID</th>
+                      <th>Phone</th>
+                      <th>Email</th>
                       <th>Products</th>
                       <th>Subtotal</th>
                       <th>Address</th>
@@ -130,6 +132,8 @@ export const AllOrder = () => {
                     {ordersData.map((data, index) => (
                       <tr className='table' key={index}>
                         <td>{data.userId}</td>
+                        <td>{data.phone}</td>
+                        <td>{data.email}</td>
                         <td>
                           <ul>
                             {data.products.map((product, productIndex) => (
