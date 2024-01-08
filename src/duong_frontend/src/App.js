@@ -24,6 +24,8 @@ import ProductDetail from './pages/ProductDetail';
 import About from './pages/About';
 import Warranty from './pages/Warranty';
 import Refund from './pages/Refund';
+import Articles from './pages/Articles';
+import LivingRoom from './pages/LivingRoom';
 
 function App() {
     return (
@@ -56,15 +58,17 @@ function App() {
                         <Route path='/user/orderhistory' element={<div><Navbar/><OrderHistory/><Footer/></div>}/>
                         <Route path='/user/diningroom' element={<div><Navbar/><DiningRoom/><Footer/></div>}/>
                         <Route path='/user/bathroom' element={<div><Navbar/><Bathroom/><Footer/></div>}/>
+                        <Route path='/user/articles' element={<div><Navbar/><Articles/><Footer/></div>}/>
                         <Route path='/user/articledetail' element={<div><Navbar/><ArticleDetail/><Footer/></div>}/>
                         <Route path='/about' element={<div><Navbar/><Footer/></div>}/>
                         <Route path="/product/:productId" element={<div><Navbar/><ProductDetail/><Footer/></div>}/>
                         <Route path='/designers' element={<div><Navbar/><Footer/></div>}/>
-                        <Route path='/shop' element={<div><Navbar/><Shop/><Footer/></div>}/>
+                        <Route path='/shop' element={<div><Navbar/><Shop /><Footer/></div>}/>
                         <Route path='/user/orderhistory' element={<div><Navbar/><OrderHistory/><Footer/></div>}/>
-                        <Route path='/dining-room' element={<div><Navbar/><DiningRoom/><Footer/></div>}/>
-                        <Route path='/bath-room' element={<div><Navbar/><Bathroom/><Footer/></div>}/>
+                        <Route path='/diningroom' element={<div><Navbar/><DiningRoom/><Footer/></div>}/>
+                        <Route path='/bathroom' element={<div><Navbar/><Bathroom/><Footer/></div>}/>
                         <Route path='/bedroom' element={<div><Navbar/><Bedroom/><Footer/></div>}/>
+                        <Route path='/livingroom' element={<div><Navbar/><LivingRoom/><Footer/></div>}/>
                     </Routes>
                 </BrowserRouter>
             </ShopContextProvider>
