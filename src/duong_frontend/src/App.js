@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ShopContextProvider from './components/context/ShopContext';  // Import your ShopContextProvider
-import { AllProducts } from './components/new_admin/AllProducts';
-import { AllArticles } from './components/new_admin/AllArticles';
-import { AllOrder } from './components/new_admin/AllOrder';
-import { AddProduct } from './components/new_admin/AddProduct';
-import { AddArticle } from './components/new_admin/AddArticle';
+import {AllProducts} from './components/new_admin/AllProducts';
+import {AllArticles} from './components/new_admin/AllArticles';
+import {AllOrder} from './components/new_admin/AllOrder';
+import {AddProduct} from './components/new_admin/AddProduct';
+import {AddArticle} from './components/new_admin/AddArticle';
 import Dashboard from './components/new_admin/Dashboard';
 import User from './components/new_admin/User';
 import Login from './pages/Login';
@@ -18,11 +18,18 @@ import Shop from "./pages/shop";
 import ArticleDetail from "./pages/ArticleDetail";
 import DiningRoom from './pages/DiningRoom';
 import Bathroom from './pages/Bathroom';
+import Bedroom from './pages/Bedroom';
 import OrderHistory from './pages/OrderHistory';
 import ProductDetail from './pages/ProductDetail';
+import About from './pages/About';
+import Warranty from './pages/Warranty';
+import Refund from './pages/Refund';
+import Articles from './pages/Articles';
+import LivingRoom from './pages/LivingRoom';
 
 
 function App() {
+<<<<<<< HEAD
   return (
     <div>
       <ShopContextProvider>  {/* Wrap the entire application with ShopContextProvider */}
@@ -52,10 +59,13 @@ function App() {
               </div>
             } />
             <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
-            <Route path='/user/diningroom' element={<div><Navbar /><DiningRoom/><Footer /></div>} />
-            <Route path='/user/bathroom' element={<div><Navbar /><Bathroom/><Footer /></div>} />
             <Route path='/article/:articleId' element={<div><Navbar /><ArticleDetail/><Footer /></div>} />
-
+            <Route path='/diningroom' element={<div><Navbar/><DiningRoom/><Footer/></div>}/>
+            <Route path='/bathroom' element={<div><Navbar/><Bathroom/><Footer/></div>}/>
+            <Route path='/bedroom' element={<div><Navbar/><Bedroom/><Footer/></div>}/>
+            <Route path='/livingroom' element={<div><Navbar/><LivingRoom/><Footer/></div>}/>
+            <Route path='/user/articles' element={<div><Navbar/><Articles/><Footer/></div>}/>
+            <Route path='/shop' element={<div><Navbar/><Shop /><Footer/></div>}/>
 
 
           </Routes>
@@ -63,6 +73,7 @@ function App() {
       </ShopContextProvider>
     </div>
   );
+
 }
 
 export default App;

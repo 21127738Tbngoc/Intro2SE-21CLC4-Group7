@@ -32,7 +32,7 @@ export const SearchBar = ({ setResults }) => {
 
   return (
     <div className="container-xxl w-75">
-      <div className="search-dropdown justify-content-center flex-column gap-3 position-relative">
+      <div className="search-dropdown justify-content-center flex-column gap-3 position-relative mb-4">
         <div className="search-box">
           <div className="d-flex flex-row g-4 d-flex">
             <div className="input-group">

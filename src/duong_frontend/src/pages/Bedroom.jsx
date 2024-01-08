@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
+import ProductCard from '../components/card/card';
 import '../components/common.css';
 import '../components/button/buttons.css';
 import '../components/styles/Room.css';
@@ -6,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/styles/Shop.css';
 import {toast} from 'react-toastify';
-
+import {Link, useNavigate} from 'react-router-dom';
 import {ShopContext} from '../components/context/ShopContext'
 
 const Bedroom = () => {
@@ -14,7 +15,7 @@ const Bedroom = () => {
     const [loading, setLoading] = useState(true);
     const {addToCart} = useContext(ShopContext);
     useEffect(() => {
-        document.title = "Bathroom";
+        document.title = "Bedroom";
         window.scrollTo(0, 0);
         fetchData();
     }, []);
@@ -28,7 +29,7 @@ const Bedroom = () => {
             let temp = await response.json();
             let data = []
             for (let i = 0; i < temp.length; i++) {
-                if (temp[i].room === 'Bathroom') {
+                if (temp[i].room === 'Bedroom') {
                     data.push(temp[i])
                 }
             }
@@ -76,9 +77,9 @@ const Bedroom = () => {
             components.push
             (
                 <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
-                    <h3 className="justify-content-center text-center"
-                        style={{fontStyle: "italic", color: "gray", alignContent: "center"}}>Coming
-                        soon!</h3>
+                <h3 className="justify-content-center text-center"
+                    style={{fontStyle: "italic", color: "gray", alignContent: "center"}}>Coming
+                    soon!</h3>
                 </div>
             )
         }
@@ -111,18 +112,18 @@ const Bedroom = () => {
             <ol className="breadcrumb">
                 <li><a href="/">HOME</a></li>
                 <li className="label"><a href="/shop">SHOP ALL</a></li>
-                <li className="button"><a href="/bathroom">BATHROOM</a></li>
+                <li className="button"><a href="/bedroom">BEDROOM</a></li>
             </ol>
             <div className="section row g-4">
                 <div className="d-flex flex-row justify-content-around">
                     {/* HERO IMAGE */}
-                    <img src="/imgs/shop/bathroom.jpg"
+                    <img src="/imgs/shop/bedroom.jpg"
                          style={{"width": "636px", "height": "500px", "object-fit": "cover"}}/>
 
                     {/* PAGE DESCRIPTION */}
                     <div className="col-12 col-xxl-4 d-flex flex-column">
                         <d3 style={{marginBottom: "0.5em"}}>
-                            Bathroom
+                            Bedroom
                         </d3>
                         <div>
                             <p>
@@ -163,10 +164,21 @@ const Bedroom = () => {
 
                 </div>
             </div>
-            {createSection('BATH', 'Bath Vanities',  "Bath Vanities")}
-            {createSection('STORAGE & SHELF', 'Bath shelf', "Bath Shelf")}
-            {createSection('LIGHT', "Wall Lighting", "Wall Lighting")}
-            {createSection('DECORATION', "Wall Decorations", "Wall Decorations")}
+
+            {/* BED & HEADBOARDS SECTION */}
+            {createSection('BED', 'Bed & Headboards', 'Bed')}
+
+            {/* DRESSERS & CHESTS SECTION */}
+            {createSection('STORAGE & SHELF', 'Dressers & Chests', 'Dresser')}
+
+            {/* KITCHEN ISLANDS SECTION */}
+            {createSection('TABLE', 'Nightstands', 'Nightstand')}
+
+            {/* CHILDREN BED */}
+            {createSection('BED', 'Children Bed', 'Children Bed')}
+            {/* LIGHTINGS SECTION */}
+            {createSection('CHAIRS & STOOLS', 'Bed Chairs & Benches', 'Bench')}
+
             <div className="m-2"></div>
 
         </div>
