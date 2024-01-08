@@ -41,8 +41,16 @@ const Bedroom = () => {
         }
     };
 
-    const createARowOf4 = (category) => {
-        let row = Data.filter(item => item.categories.includes(category))
+    const createARowOf4 = (categories) => {
+        let row = [];
+        for (let i = 0; i < categories.length; i++) {
+            row.push(...Data.filter(item => item.categories.includes(categories[i])))
+        }
+        row = [...new Set(row.map(obj => obj._id))]
+            .map(id => {
+                return row.find(obj => obj._id === id);
+            });
+
         let components = []
         for (let i = 0; i < row.length; i++) {
             if (row[i]) {
@@ -77,9 +85,9 @@ const Bedroom = () => {
             components.push
             (
                 <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
-                <h3 className="justify-content-center text-center"
-                    style={{fontStyle: "italic", color: "gray", alignContent: "center"}}>Coming
-                    soon!</h3>
+                    <h3 className="justify-content-center text-center"
+                        style={{fontStyle: "italic", color: "gray", alignContent: "center"}}>Coming
+                        soon!</h3>
                 </div>
             )
         }
@@ -107,79 +115,68 @@ const Bedroom = () => {
     }
 
     return (
-        <div className="container-fluid d-flex flex-column flex-shrink-0 page">
+        <div className="container-fluid d-flex flex-column flex-shrink-0 page mb-5">
             {/* BREADCRUMB */}
             <ol className="breadcrumb">
-                <li><a href="/">HOME</a></li>
-                <li className="label"><a href="/shop">SHOP ALL</a></li>
-                <li className="button"><a href="/bedroom">BEDROOM</a></li>
+                <li className="col-1"></li>
+                <li style={{color: "var(--tone-neutral-variant-60)"}}><a href="/">HOME</a></li>
+                <li style={{color: "var(--tone-neutral-variant-60)"}}><a href="/shop">SHOP ALL</a></li>
+                <li><a href="/bedroom">BEDROOM</a></li>
             </ol>
-            <div className="section row g-4">
-                <div className="d-flex flex-row justify-content-around">
-                    {/* HERO IMAGE */}
-                    <img src="/imgs/shop/bedroom.jpg"
-                         style={{"width": "636px", "height": "500px", "object-fit": "cover"}}/>
 
-                    {/* PAGE DESCRIPTION */}
-                    <div className="col-12 col-xxl-4 d-flex flex-column">
-                        <d3 style={{marginBottom: "0.5em"}}>
-                            Bedroom
-                        </d3>
-                        <div>
-                            <p>
-                                Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
+            <div className="container-fluid">
+                <div className="container">
+                    <div className="row g-4 d-flex">
+                        <div className="col-6">
+                            <img src="/imgs/room/bedroom.jpg" alt="bedroom"
+                                 style={{width: '100%', height: 'auto'}}/>
+                        </div>
+                        <div className="col-1"></div>
+                        <div className="col-5">
+                            <d3>BEDROOM</d3>
+                            <p className="p2" style={{
+                                marginTop: '48px',
+                                marginBottom: '20px',
+                                color: 'var(--scheme-on-background)'
+                            }}>Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
                                 Ipsum voluptate Est velit et ex labori osam dolor est inventore quo numquam. Labore
                                 voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis aliquid
                                 suscipit recusandae similique. Vero natus sed animi reiciendis. Quia id omnis aliquid
                                 suscipit recusandae similique. Vero natus sed animi reiciendis. Ipsum voluptate Est
-                                velit et ex labori osam dolor est inventore quo.
-                            </p>
-                            <br/>
-                            <p>
+                                velit et ex labori osam dolor est inventore quo.</p>
+                            <p className="p2" style={{marginBottom: '20px', color: 'var(--scheme-on-background)'}}>
                                 Labore voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis
                                 aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
                             </p>
-                            <br/>
                             <div className="d-flex flex-row gap-4">
-                                <div>
-                                    <p>Client</p><br/>
-                                    <p>Location</p><br/>
-                                    <p>Date</p><br/>
-                                    <p>Share</p><br/>
+                                <div className='flex-column'>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Client</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Location</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Date</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Share</p>
                                 </div>
-                                <div>
-                                    <p>Quode Interactive</p> <br/>
-                                    <p>New York, US</p><br/>
-                                    <p>March 14, 2023</p><br/>
-                                    <div className="d-flex flex-row">
-                                        <a href="#" className="mediaicon fa-brands fa-facebook"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-twitter"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-instagram"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-pinterest"></a>
+                                <div className='flex-column'>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Qode Interactive</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Newyork, US</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>March 14, 2023</p>
+                                    <div className="mediaIcon">
+                                        <a href="#" class="fa-brands fa-facebook"></a>
+                                        <a href="#" class="fa-brands fa-twitter"></a>
+                                        <a href="#" class="fa-brands fa-instagram"></a>
+                                        <a href="#" class="fa-brands fa-pinterest"></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            {/* BED & HEADBOARDS SECTION */}
-            {createSection('BED', 'Bed & Headboards', 'Bed')}
-
-            {/* DRESSERS & CHESTS SECTION */}
-            {createSection('STORAGE & SHELF', 'Dressers & Chests', 'Dresser')}
-
-            {/* KITCHEN ISLANDS SECTION */}
-            {createSection('TABLE', 'Nightstands', 'Nightstand')}
-
-            {/* CHILDREN BED */}
-            {createSection('BED', 'Children Bed', 'Children Bed')}
-            {/* LIGHTINGS SECTION */}
-            {createSection('CHAIRS & STOOLS', 'Bed Chairs & Benches', 'Bench')}
-
-            <div className="m-2"></div>
+            {createSection('BED', 'Bed & Headboards', ['Bed'])}
+            {createSection('STORAGE & SHELF', 'Dressers & Chests', ['Dresser'])}
+            {createSection('TABLE LIGHTING & NIGHTSTAND', 'Table lighting & Nightstands', ['Nightstand', 'Table Lighting'])}
+            {createSection('BED', 'Children Bed', ['Children Bed'])}
+            {createSection('DECORATION', 'Wall Decorations', ['Wall Decorations'])}
 
         </div>
     )

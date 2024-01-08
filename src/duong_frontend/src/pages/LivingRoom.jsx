@@ -113,11 +113,16 @@ const LivingRoom = () => {
     }
 
     return (
-        <div>
-            {/* Breadcrumb */}
-            <Breadcrumb/>
+        <div className="container-fluid d-flex flex-column flex-shrink-0 page mb-5">
+            {/* BREADCRUMB */}
+            <ol className="breadcrumb">
+                <li className="col-1"></li>
+                <li style={{color:"var(--tone-neutral-variant-60)"}}><a href="/">HOME</a></li>
+                <li style={{color:"var(--tone-neutral-variant-60)"}}><a href="/shop">SHOP ALL</a></li>
+                <li><a href="/livingroom">LIVING ROOM</a></li>
+            </ol>
             {/* Hero img*/}
-            <div className="container-fluid mt-5">
+            <div className="container-fluid">
                 <div className="container">
                     <div className="row g-4 d-flex">
                         <div className="col-6">
@@ -164,28 +169,20 @@ const LivingRoom = () => {
                     </div>
                 </div>
             </div>
-
-            <div className={"m-5"}></div>
-
             {/* Sofa & lounges */}
             {createSection('LIVING ROOM', 'Sofas & Benches', ['Sofa', 'Bench'])}
-            <div className={"m-5"}></div>
 
             {/* Accent chairs */}
             {createSection("LIVING ROOM", "Accent Chair", ["Accent Chair"])}
-            <div className={"m-5"}></div>
 
             {/* Coffe & accent tables */}
             {createSection("LIVING ROOM", "Coffee & Accent Tables", ["Accent Table"])}
-            <div className={"m-5"}></div>
 
             {/* TV stands & media consoles */}
             {createSection("LIVING ROOM", "TV Stand & Media Console", ["Media Console", "TV Stand"])}
-            <div className={"m-5"}></div>
 
             {/* Lighting & decoration */}
             {createSection("LIVING ROOM", "Lighting & Decoration", ['Ceiling Lighting', 'Floor Lighting'])}
-            <div className={"m-5"}></div>
         </div>
     );
 };
