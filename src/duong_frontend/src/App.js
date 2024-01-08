@@ -23,6 +23,7 @@ import ProductDetail from './pages/ProductDetail';
 import About from './pages/About';
 import Warranty from './pages/Warranty';
 import Refund from './pages/Refund';
+import LivingRoom from './pages/LivingRoom';
 
 function App() {
   return (
@@ -52,11 +53,11 @@ function App() {
                 <Footer />
               </div>
             } />
-            <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
-            <Route path='/user/diningroom' element={<div><Navbar /><DiningRoom/><Footer /></div>} />
-            <Route path='/user/bathroom' element={<div><Navbar /><Bathroom/><Footer /></div>} />
-            <Route path='/user/articledetail' element={<div><Navbar /><ArticleDetail/><Footer /></div>} />
-
+            <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory /><Footer /></div>} />
+            <Route path='/user/diningroom' element={<div><Navbar /><DiningRoom /><Footer /></div>} />
+            <Route path='/user/bathroom' element={<div><Navbar /><Bathroom /><Footer /></div>} />
+            <Route path='/user/articledetail' element={<div><Navbar /><ArticleDetail /><Footer /></div>} />
+            <Route path='/user/livingroom' element={<div><Navbar /><LivingRoom /><Footer /></div>} />
 
 
           </Routes>
