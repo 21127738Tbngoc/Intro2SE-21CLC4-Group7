@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { toast } from 'react-toastify';
 
-
 export const AllArticles = () => {
   const Token = localStorage.getItem('Token');
   const [articlesData, setArticlesData] = useState([]);
@@ -69,38 +68,40 @@ export const AllArticles = () => {
             {loading ? (
               <h4 className='pt-4'>Loading......</h4>
             ) : (
-              <table className='table'>
-                <thead>
-                  <tr className='tuble'>
-                    <th>Title</th>
-                    <th>Subtitle</th>
-                    <th>Author</th>
-                    <th>Description</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {articlesData.map((data, index) => (
-                    <tr className='table' key={index}>
-                      <td>{data.title}</td>
-                      <td>{data.subtitle}</td>
-                      <td>{data.author}</td>
-                      <td>{data.description}</td>
-                      <td>
-                        <button
-                          className='btn btn-danger'
-                          onClick={() => {
-                            deleteArticle(data._id);
-                          }}
-                        >
-                          Delete
-                        </button>
-                      </td>
+              <>
+                <table className='table'>
+                  <thead>
+                    <tr className='tuble'>
+                      <th>Title</th>
+                      <th>Subtitle</th>
+                      <th>Author</th>
+
+                      <th>Action</th>
                     </tr>
-                  ))}
-                </tbody>
+                  </thead>
+                  <tbody>
+                    {articlesData.map((data, index) => (
+                      <tr className='table' key={index}>
+                        <td>{data.title}</td>
+                        <td>{data.subtitle}</td>
+                        <td>{data.author}</td>
+
+                        <td>
+                          <button
+                            className='btn btn-danger'
+                            onClick={() => {
+                              deleteArticle(data._id);
+                            }}
+                          >
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
                 <h4>Total Number of Articles: {numArticles}</h4>
-              </table>
+              </>
             )}
           </Col>
         </Row>

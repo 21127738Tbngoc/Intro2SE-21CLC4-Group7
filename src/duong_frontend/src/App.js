@@ -21,6 +21,7 @@ import Bathroom from './pages/Bathroom';
 import OrderHistory from './pages/OrderHistory';
 import ProductDetail from './pages/ProductDetail';
 
+
 function App() {
   return (
     <div>
@@ -36,10 +37,13 @@ function App() {
             <Route path='dashboard/user' element={<User />} />
             <Route path='dashboard/add-articles' element={<AddArticle />} />
             <Route path='dashboard/all-orders' element={<AllOrder />} />
+            <Route path='dashboard/all-articles' element={<AllArticles />} />
+
+
             <Route path='/test/searchbar' element={<Searchbar />} />
             <Route path='/about' element={<div><Navbar /><Footer /></div>} />
             <Route path="/product/:productId" element={<div><Navbar /><ProductDetail /><Footer/></div>} />
-                        <Route path='/designers' element={<div><Navbar /><Footer /></div>} />
+            <Route path='/designers' element={<div><Navbar /><Footer /></div>} />
             <Route path='/test' element={
               <div>
                 <Navbar />
@@ -50,7 +54,7 @@ function App() {
             <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
             <Route path='/user/diningroom' element={<div><Navbar /><DiningRoom/><Footer /></div>} />
             <Route path='/user/bathroom' element={<div><Navbar /><Bathroom/><Footer /></div>} />
-            <Route path='/user/articledetail' element={<div><Navbar /><ArticleDetail/><Footer /></div>} />
+            <Route path='/article/:articleId' element={<div><Navbar /><ArticleDetail/><Footer /></div>} />
 
 
 

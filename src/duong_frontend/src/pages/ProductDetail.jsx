@@ -69,8 +69,7 @@ const ProductDetail = ({ Product }) => {
         fetchProduct();
     }, [productId]);
 
-    const abc=product.img
-    console.log(typeof abc)
+
     if (!product || !product.img) {
         return <div>Loading...</div>; // or any other loading state/component
     }
