@@ -3,7 +3,7 @@ import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle"
 
-import "./footer.css"
+import "../styles/footer.css"
 import "../button/buttons.css"
 
 const Footer = () => {

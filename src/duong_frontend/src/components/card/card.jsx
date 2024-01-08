@@ -1,5 +1,5 @@
 import React ,{ useContext }from 'react';
-import "./card.css"
+import "../styles/card.css"
 import "../button/buttons.css"
 import { ShopContext } from '../context/ShopContext'
 import "bootstrap/dist/css/bootstrap.min.css"

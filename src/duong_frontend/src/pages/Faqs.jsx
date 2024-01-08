@@ -3,7 +3,7 @@ import '../components/styles/Faqs.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
-import '../components/breadcrumb/breadcrumb.css';
+import '../components/styles/breadcrumb.css';
 
 const Faqs = () => {
   return (

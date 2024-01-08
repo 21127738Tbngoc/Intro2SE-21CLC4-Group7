@@ -6,7 +6,7 @@ import '../../public/bootstrap-5/css/bootstrap.min.css';
 import '../../public/bootstrap-5/js/bootstrap.bundle.min.js';
 import '../components/button/buttons.css';
 import '../components/common.css';
-import '../../src/components/breadcrumb/breadcrumb.css';
+import '../components/styles/breadcrumb.css';
 
 const Contact = () => {
   return (
