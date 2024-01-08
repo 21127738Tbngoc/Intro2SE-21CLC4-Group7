@@ -42,12 +42,9 @@ const User = () => {
   }, []);
 
   const deleteProduct = async (id) => {
-    // Implement the logic to delete user using MongoDB API
-    // You can make a DELETE request to your server's endpoint
-    // For example: `http://localhost:5000/api/users/${id}`
+
     try {
-      // Replace 'YOUR_TOKEN' with the actual token
-      const token = 'YOUR_TOKEN';
+
       const response = await fetch(`http://localhost:5000/api/users/${id}`, {
         method: 'DELETE',
         headers: {
