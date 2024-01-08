@@ -33,20 +33,20 @@
     filter: brightness(90%);
 }
 
-.product-thumbnail {
+.product-detail-main {
     margin: 2em 0 0 0;
     width: 100%;
     height: auto;
     position: relative; /* Required for z-index stacking */
 }
 
-.product-rating {
+.product-detail-rating {
     display: flex;
     flex-direction: row;
     height: 24px;
 }
 
-.product-rating p {
+.product-detail-rating p {
     line-height: 20px;
     margin: 0 0 0 8px;
     color: gray;
