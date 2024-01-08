@@ -15,6 +15,7 @@ import Navbar from './components/navbar/navbar';
 import Searchbar from "./components/searchbar/searchbar";
 import Home from './pages/Home';
 import Shop from "./pages/shop";
+import DiningRoom from './pages/DiningRoom';
 import OrderHistory from './pages/OrderHistory';
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
               </div>
             } />
             <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
+            <Route path='/user/diningroom' element={<div><Navbar /><DiningRoom/><Footer /></div>} />
 
           </Routes>
         </BrowserRouter>
