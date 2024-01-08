@@ -16,6 +16,7 @@ import Searchbar from "./components/searchbar/searchbar";
 import Home from './pages/Home';
 import Shop from "./pages/shop";
 import DiningRoom from './pages/DiningRoom';
+import Bathroom from './pages/Bathroom';
 import OrderHistory from './pages/OrderHistory';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
             } />
             <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
             <Route path='/user/diningroom' element={<div><Navbar /><DiningRoom/><Footer /></div>} />
+            <Route path='/user/bathroom' element={<div><Navbar /><Bathroom/><Footer /></div>} />
 
           </Routes>
         </BrowserRouter>
