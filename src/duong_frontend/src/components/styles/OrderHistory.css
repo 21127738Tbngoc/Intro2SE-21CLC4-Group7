@@ -1,3 +1,5 @@
+@import url(../common.css);
+
 .col {
     padding: 4rem;
 }
@@ -66,8 +68,13 @@ table {
 }
 
 th {
-    color: var(--Tone-Neutral-70, #ABACA6);
+    color: var(--Tone-Neutral-70, #ABACA6)!important ;
+    background: var(--scheme-background)!important ;
+} 
 
+td {
+
+    background: var(--scheme-background)!important ;
 }
 
 .rate-off {
