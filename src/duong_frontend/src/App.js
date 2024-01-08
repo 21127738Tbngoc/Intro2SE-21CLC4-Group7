@@ -57,7 +57,6 @@ function App() {
                         <Route path='/user/diningroom' element={<div><Navbar/><DiningRoom/><Footer/></div>}/>
                         <Route path='/user/bathroom' element={<div><Navbar/><Bathroom/><Footer/></div>}/>
                         <Route path='/user/articledetail' element={<div><Navbar/><ArticleDetail/><Footer/></div>}/>
-
                         <Route path='/about' element={<div><Navbar/><Footer/></div>}/>
                         <Route path="/product/:productId" element={<div><Navbar/><ProductDetail/><Footer/></div>}/>
                         <Route path='/designers' element={<div><Navbar/><Footer/></div>}/>
