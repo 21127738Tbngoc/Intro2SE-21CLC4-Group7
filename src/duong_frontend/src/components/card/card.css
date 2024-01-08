@@ -11,7 +11,9 @@
     display: inline-block;
     width: 100%;
 }
-
+.product-info h6 {
+    height: 48px;
+}
 .product-info .product-cat {
     color: var(--tone-neutral-60);
 }

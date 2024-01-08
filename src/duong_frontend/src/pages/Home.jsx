@@ -59,8 +59,8 @@ const Home = () => {
             <div className="container-fluid hero-banner">
                 <video src="/imgs/home/hero-banner.mp4" className="hero-banner" autoPlay muted loop></video>
                 <div className="container">
-                <d3 className="hero-display">WHERE WE TURN YOUR HOME INTO A MASTERPIECE</d3>
-                <button className="sec-btn btn-md button2 hero-btn">ABOUT US</button>
+                    <d3 className="hero-display">WHERE WE TURN YOUR HOME INTO A MASTERPIECE</d3>
+                    <button className="sec-btn btn-md button2 hero-btn">ABOUT US</button>
                 </div>
             </div>
 
@@ -145,19 +145,18 @@ const Home = () => {
             </div>
 
             {/* Designers */}
-            <div className="container-fluid">
-                <img src="/imgs/home/designer-bg.jpg" className="designer-bg" />
-                <div className="row">
-                <d1 className="designer-bg-display">MEET OUR TALENTED DESIGNERS</d1>
-                <button className="designer-btn sec-btn btn-nm button1">VIEW DESIGNERS</button> {/* Link to the designers section in About us page */}
-                </div>
+            <div className="container-fluid designer-bg">
+                <div className="row justify-content-center text-center">
+                    <d1 className="designer-bg-display">MEET OUR TALENTED DESIGNERS</d1>
+                    <button className="designer-btn sec-btn btn-nm button1">VIEW DESIGNERS</button> {/* Link to the designers section in About us page */}
+                </div>  
             </div>
             <div className="container-fluid designer-section">
                 <div className="row">
-                    <d5 className="designer-display">OUR DESIGNERS</d5>
+                    <d5 className="designer-display mb-5">OUR DESIGNERS</d5>
                 </div>
                 <div className="container">
-                    <div className="row g-4 mt-5"  style={{ marginBottom: '95px' }}>
+                    <div className="row g-4 mt-3"  style={{ marginBottom: '95px' }}>
                         <div className="col designer-left">
                             <d3 className="designer-name">LUCAS NILSSEN</d3>
                             <p className="designer-role title2">Product Designer</p>
@@ -209,7 +208,7 @@ const Home = () => {
             </div>
 
             {/* Articles */}
-            <div className="container-fluid">
+            <div className="container-fluid mb-2 mt-4">
                 <div className="row">
                     <d5 className="articles-display">ENJOY OUR ARTICLES</d5>
                 </div>
@@ -217,29 +216,29 @@ const Home = () => {
 
             <div className="container-fluid articles-section">
                 <div className="container">
-                    <div className="row g-4">
+                    <div className="row g-4" style={{ marginTop: '-4px'}}>
                         <div className="col">
-                            <h5 style={{ textAlign: 'right', marginRight: '48px' }}>LATEST NEWS</h5>
+                            <h5 style={{ textAlign: 'right', marginRight: '16px' }}>LATEST NEWS</h5>
                         </div>
                         <div className="col">
-                            <h5 style={{ textAlign: 'right' }}>INSPIRATIONS</h5>
+                            <h5 style={{ textAlign: 'right'}}>INSPIRATIONS</h5>
                         </div>
                     </div>
                     <div className="row g-4">
-                        <div className="col">
+                        <div className="col" style={{ marginTop: '200px'}}>
                             <d3 className="article-title mb-5">MANHATTAN PIED-À-TERRE FOR A NEW CHICAGO APARTMENT</d3>
-                            <div className="article-brief">
+                            <div className="article-brief mb-3">
                                 <img src="/imgs/home/quotation.png" className="article-quote" />
                                 <p className="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
                             </div>
-                            <button className="link-nm">CONTINUE READING</button>
+                            <button className="link-nm" style={{ padding: '0'}}>CONTINUE READING</button>
                         </div>
-                        <div className="col">
+                        <div className="col" style={{ marginTop: '30px'}}>
                             <img src="/imgs/home/articles-featured.jpg" className="article-featured" />
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mt-0">
                     <button className="articles-btn button1">VIEW ALL ARTICLES</button>
                 </div>
                 <div className="container">

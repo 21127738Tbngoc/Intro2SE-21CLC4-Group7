@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 import ProductCard from '../components/card/card';
+import { Link, useNavigate } from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import '../components/button/buttons.css';
 import '../components/common.css';
 import '../components/styles/Shop.css';
-import { toast } from 'react-toastify';
 
 const Shop = () => {
   const [productsData, setProductsData] = useState([]);
@@ -113,38 +118,93 @@ const Shop = () => {
   ];
   
 return (
-    <div className="container-fluid justify-content-center">
-        <p class="title1 shop-title">SHOP ALL</p>
-        <h2 class="shop-headline">All Products</h2>
-        <div className="container">
-            <div className="row g-4">
-                {/* Product filter */}
-                <div className="col-3">
-                    <div className="product-filter">
-                    <h5 className="mb-4" style={{ marginTop: '3em' }}>CATEGORIES</h5>
-                    {/* Add event handlers for checkbox changes */}
-                    {categoryData.map((category) => (
-                        <div className="form-check" key={category.value}>
-                            <input
-                                className="form-check-input"
-                                type="checkbox"
-                                id={category.id}
-                                name={category.name}
-                                value={category.value}
-                                checked={selectedCategories.includes(category.value)}
-                                onChange={() => handleCategoryChange(category.value)}
-                            />
-                            <label className="form-check-label p1" for={category.id}>
-                                {category.name}
-                            </label>
-                        </div>
-                  ))}
-                  <h5 className="mt-5 mb-4">TAGS</h5>
-                </div>
-                </div>
+    <div>
+        {/* Breadcrumb */}
   
-                {/* Product cards */}
-                <div className="col-9">{createComponents(productsData)}</div>
+        {/* Page name */}
+        <div className="container-fluid justify-content-center text-center">
+            <d3 className="page-name">SHOP ALL</d3>
+        </div>
+
+        {/* New arrivals */}
+        <div className="container-fluid banner-container">
+            <div className="banner-wrapper">
+                <img src="/imgs/shop/new-arrivals.jpg" class="banner" />
+                <video src="/imgs/shop/new-arrivals.mp4" className="banner-video" autoPlay loop muted></video>
+                <div className="banner-text">NEW ARRIVALS</div>
+            </div>
+        </div>
+
+        {/* Shop by room */}
+        <div className="container-fluid justify-content-center category">
+            <p className="title1 shop-title">SHOP BY ROOM</p>
+            <h2 className="shop-headline">Furniture by Rooms</h2>
+            {/* Living room */}
+            <div className="category-section justify-content-center">
+                <Link to="/livingroom" className="livingroom-link">
+                    <p className="living-room">LIVING ROOM</p>
+                    <img src="/imgs/shop/livingroom.jpg" alt="Living Room" className="living-img" />
+                </Link>
+            </div>
+            {/* Bedroom */}
+            <div className="category-section justify-content-center">
+                <Link to="/bedroom" className="bedroom-link">
+                    <p className="bed-room">BEDROOM</p>
+                    <img src="/imgs/shop/bedroom.jpg" alt="Bedroom" className="bed-img" />
+                </Link>
+            </div>
+            {/* Dining room */}
+            <div className="category-section justify-content-center">
+                <Link to="/diningroom" className="diningroom-link">
+                    <p className="dining-room">DINING ROOM</p>
+                    <img src="/imgs/shop/diningroom.jpg" alt="Dining Room" className="dining-img" />
+                </Link>
+            </div>
+            {/* Bathroom */}
+            <div className="category-section justify-content-center">
+                <Link to="/bathroom" className="bathroom-link">
+                    <p className="bath-room">BATHROOM</p>
+                    <img src="/imgs/shop/bathroom.jpg" alt="Bathroom" className="bath-img" />
+                </Link>
+            </div>
+        </div>
+
+        {/* All products */}
+        <div className="container-fluid justify-content-center">
+            <p class="title1 shop-title">SHOP ALL</p>
+            <h2 class="shop-headline">All Products</h2>
+            <div className="container">
+                <div className="row g-4">
+                    {/* Product filter */}
+                    <div className="col-3">
+                        <div className="product-filter">
+                        <h5 className="mb-4" style={{ marginTop: '3em' }}>CATEGORIES</h5>
+                        {/* Add event handlers for checkbox changes */}
+                        {categoryData.map((category) => (
+                            <div className="form-check" key={category.value}>
+                                <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    id={category.id}
+                                    name={category.name}
+                                    value={category.value}
+                                    checked={selectedCategories.includes(category.value)}
+                                    onChange={() => handleCategoryChange(category.value)}
+                                />
+                                <label className="form-check-label p1" for={category.id}>
+                                    {category.name}
+                                </label>
+                            </div>
+                      ))}
+                      <h5 className="mt-5 mb-4">TAGS</h5>
+                      <h5 className="mt-5 mb-4">PRICE RANGE</h5>
+                      <h5 className="mt-5 mb-4">RATING</h5>
+                    </div>
+                    </div>
+      
+                    {/* Product cards */}
+                    <div className="col-9">{createComponents(productsData)}</div>
+                </div>
             </div>
         </div>
     </div>
