@@ -27,7 +27,7 @@
     gap: 5rem;
 }
 
-.section .row:not(:last-of-type) {
+.section .row {
     margin-bottom: 5rem;
 }
 
