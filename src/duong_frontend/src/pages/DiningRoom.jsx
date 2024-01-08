@@ -87,7 +87,7 @@ const DiningRoom = () => {
             <div className="section row g-4">
                 <div className="d-flex flex-row justify-content-around">
                     {/* HERO IMAGE */}
-                    <img src="/imgs/articles/blog-big-3.jpg"
+                    <img src="/imgs/room/diningroom.jpg"
                          style={{"width": "636px", "height": "500px", "object-fit": "cover"}}/>
 
                     {/* PAGE DESCRIPTION */}

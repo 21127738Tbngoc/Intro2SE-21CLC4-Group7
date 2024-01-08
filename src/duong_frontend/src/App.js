@@ -29,7 +29,6 @@ import LivingRoom from './pages/LivingRoom';
 
 
 function App() {
-<<<<<<< HEAD
   return (
     <div>
       <ShopContextProvider>  {/* Wrap the entire application with ShopContextProvider */}
