@@ -53,10 +53,10 @@ const Articles = () =>{
                 {/* ARTICLES */}
                 <div className="col col-xxl-7">
                     <div className = "d-flex flex-column" style={{"gap":"4rem"}}>
-                        <div className = "d-flex flex-column justify-content-center gap-2">
+                        <div className = "d-flex flex-column gap-2">
                             <img src="/imgs/articles/blog-big-3.jpg" />
                             {/* ARTICLE TYPE */}
-                            <a href="" className ="button">MAINTENANCE</a>
+                            <a href="" className ="button3" style={{ textAlign: 'left' }}>MAINTENANCE</a>
                             <h4>How We Keep Brand Consistency in Our Visual Language — A Design System for Illustrations</h4>
                             <p1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et justo sed ipsum rhoncus varius. Vivamus scelerisque ipsum a ullamcorper iaculis. Sed eget tincidunt urna. Sed vestibulum ligula in turpis ultricies, quis volutpat lectus malesuada. Nulla facilisi. Cras sit amet nunc id enim faucibus bibendum. Quisque consectetur, odio non aliquam tincidunt.</p1>
                             <div className = "d-flex flex-row justify-content-between">
@@ -68,15 +68,15 @@ const Articles = () =>{
                                         <div className = "label3">Jul 25, 2023</div>
                                     </div>
                                 </div>
-                                <div class = "d-flex flex-column justify-content-center">
-                                    <a href="" className='button'>READ ARTICLE</a>
+                                <div class = "d-flex flex-column">
+                                    <a href="" className="button1">READ ARTICLE</a>
                                 </div>
                             </div>
                         </div>
                         <div className = "d-flex flex-column justify-content-center gap-2">
                             <img src="/imgs/articles/blog-big-3.jpg" />
                             {/* ARTICLE TYPE */}
-                            <a href="" className ="button">MAINTENANCE</a>
+                            <a href="" className ="button3">MAINTENANCE</a>
                             <h4>How We Keep Brand Consistency in Our Visual Language — A Design System for Illustrations</h4>
                             <p1>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam et justo sed ipsum rhoncus varius. Vivamus scelerisque ipsum a ullamcorper iaculis. Sed eget tincidunt urna. Sed vestibulum ligula in turpis ultricies, quis volutpat lectus malesuada. Nulla facilisi. Cras sit amet nunc id enim faucibus bibendum. Quisque consectetur, odio non aliquam tincidunt.</p1>
                             <div className = "d-flex flex-row justify-content-between">
@@ -144,7 +144,7 @@ const Articles = () =>{
                                 <img src="/imgs/articles/portfolio-lista-10.jpg" style={{"width":"166px", "height":"106px"}}/>
                                 <div className='d-flex flex-column'>
                                     {/* ARTICLE TYPE */}
-                                    <a href="" className ="button">ARCHITECTURE</a>
+                                    <a href="" className ="button2">ARCHITECTURE</a>
                                     <div className='d-flex flex-column gap-1'>
                                         <div className='title1'>Modern Texas home is beautiful and extremely kid-friendly</div>
                                         {/* PUBLISHER INFORMATION */}

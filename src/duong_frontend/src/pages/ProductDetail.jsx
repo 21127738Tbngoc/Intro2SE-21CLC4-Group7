@@ -83,13 +83,13 @@ const ProductDetail = ({ Product }) => {
                             {/* Images */}
                             <div className="left-display">
                                 <div className="product-img-list"  >
-                                    <img src={product.img[0]}  onClick={changeThumbnail} alt='haha' />
-                                    <img src={product.img[2]}   onClick={changeThumbnail} alt='haha'/>
-                                    <img src={product.img[3]}  onClick={changeThumbnail} alt='haha' />
-                                    <img src={product.img[4]}  onClick={changeThumbnail} alt='haha'/>
+                                    <img src={product.img[0]} onClick={changeThumbnail} alt='haha' />
+                                    <img src={product.img[2]} onClick={changeThumbnail} alt='haha'/>
+                                    <img src={product.img[3]} onClick={changeThumbnail} alt='haha' />
+                                    <img src={product.img[4]} onClick={changeThumbnail} alt='haha'/>
 
                                 </div>
-                                <img src={product.thumbnail} className="product-thumbnail" />
+                                <img src={product.thumbnail} className="product-detail-main" />
                             </div>
                         </div>
                         <div className="col">
@@ -101,12 +101,12 @@ const ProductDetail = ({ Product }) => {
                                 {/* Name */}
                                 <d4>{product.name}</d4>
                                 {/* Rating */}
-                                <div class="product-rating align-items-center">
+                                <div class="product-detail-rating align-items-center">
                                     <img src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921413/rating-${Math.round(product.rating)}.png`} alt="" />
                                     <p>13 customer reviews</p>
                                 </div>
                                 {/* Price */}
-                                <p className="product-price">{product.price}</p>
+                                <p className="product-detail-price">{product.price}</p>
                                 {/* Description */}
                                 <p className="p2">{product.desc}</p>
                                 <div className="d-flex">

@@ -57,7 +57,7 @@
     width: auto;
 }
 
-.product-price {
+.product-detail-price {
     font-size: 35px;
     color: var(--tone-primary-40);
 }
