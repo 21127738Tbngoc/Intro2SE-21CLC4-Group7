@@ -15,6 +15,7 @@ import Navbar from './components/navbar/navbar';
 import Searchbar from "./components/searchbar/searchbar";
 import Home from './pages/Home';
 import Shop from "./pages/shop";
+import OrderHistory from './pages/OrderHistory';
 
 function App() {
   return (
@@ -42,6 +43,8 @@ function App() {
                 <Footer />
               </div>
             } />
+            <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
+
           </Routes>
         </BrowserRouter>
       </ShopContextProvider>

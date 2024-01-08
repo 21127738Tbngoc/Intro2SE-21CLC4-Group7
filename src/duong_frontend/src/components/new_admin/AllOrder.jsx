@@ -148,10 +148,10 @@ export const AllOrder = () => {
                               value={data.status}
                               onChange={(e) => handleStatusChange(data._id, e.target.value)}
                             >
-                              <option value="pending">Pending</option>
-                              <option value="shipped">Shipped</option>
-                              <option value="completed">Completed</option>
-                              <option value="awaiting_return">Awaiting Return</option>
+                              <option value="PREPARING TO SHIP">PREPARING TO SHIP</option>
+                              <option value="IN TRANSIT">IN TRANSIT</option>
+                              <option value="DELIVERED">DELIVERED</option>
+                              <option value="CANCELED">CANCELED</option>
                             </Input>
                           </FormGroup>
                         </td>
@@ -162,7 +162,7 @@ export const AllOrder = () => {
                               cancelOrder(data._id);
                             }}
                           >
-                            Cancel
+                            DELETE ORDER
                           </button>
                         </td>
                       </tr>
