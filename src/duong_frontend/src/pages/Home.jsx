@@ -138,9 +138,7 @@ const Home = () => {
             {/* Featured products */}
             <div className="container-fluid">
                 <div className="container">
-                    {
-                        createComponents(productsData)
-                    }
+
                 </div>
             </div>
 

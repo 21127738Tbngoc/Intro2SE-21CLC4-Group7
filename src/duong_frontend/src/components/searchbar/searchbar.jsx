@@ -2,8 +2,8 @@ import React from "react";
 
 import './searchbar.css'
 
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap/dist/js/bootstrap.bundle"
+import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import color from "../Utils/color";
 
 // import Color from "../Utils/color"
@@ -23,7 +23,7 @@ const Searchbar = () => {
                     <div className="d-flex flex-row g-4 d-flex">
                         <div className="input-group">
                             <div className="input-group-text">
-                                <img src="/imgs/navbar/search-icon.svg" alt="Search"/>
+                                <img src="/imgs/navbar/search-icon.svg" alt="Search"  />
                             </div>
                             <input type="text" className="form-control out" id="searchtext"
                                    placeholder="What are you searching for?"
