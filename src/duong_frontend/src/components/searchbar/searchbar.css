@@ -13,6 +13,15 @@
     display: flex;
 }
 
+.input-group-text {
+    background-color: var(--scheme-background) !important;
+
+}
+
+input:focus {
+    background-color: var(--scheme-background) !important;
+}
+
 
 .search-label.disable-search-label{
     display: none;
