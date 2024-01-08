@@ -31,12 +31,8 @@
     position: relative;
     width: 110px;
     height: auto;
-    transition: filter 0.3s ease-in-out;
-}
-
-/* Add overlay on hover */
-.product-img-list img:hover {
-    filter: brightness(90%);
+    transition: filter 0.1s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
 }
 
 .product-detail-main {

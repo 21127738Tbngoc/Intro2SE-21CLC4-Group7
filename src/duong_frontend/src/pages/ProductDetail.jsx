@@ -28,8 +28,12 @@ const ProductDetail = ({ Product }) => {
     
         images.forEach(img => {
             if (img.src === newSrc) {
-                img.style.border = '2px solid black';
+                img.style.opacity = '1';
+                img.style.filter = 'none';
+                img.style.border = 'none';
             } else {
+                img.style.opacity = '0.9'; // Adjust the opacity as needed
+                img.style.filter = 'brightness(60%)'; // Apply the brightness filter
                 img.style.border = 'none';
             }
         });
@@ -44,6 +48,7 @@ const ProductDetail = ({ Product }) => {
     const plusQuantity = () => {
         setQuantity(quantity + 1);
     };
+
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -75,7 +80,6 @@ const ProductDetail = ({ Product }) => {
                     <div className="row g-4">
                         <div className="col left-display">
                             {/* Images */}
-                            
                                 <div className="product-img-list">
                                     <img src={product.img[0]} onClick={changeThumbnail} alt='haha' />
                                     <img src={product.img[2]} onClick={changeThumbnail} alt='haha'/>
@@ -83,10 +87,8 @@ const ProductDetail = ({ Product }) => {
                                     <img src={product.img[4]} onClick={changeThumbnail} alt='haha'/>
                                 </div>
                                 <img src={product.thumbnail} className="product-detail-main" />
-                            
                         </div>
                         <div className="col right-display" style={{ paddingLeft: '48px'}}>
-                            
                                 {/* Room & Categories */}
                                 <p className="button1 product-category" style={{ textAlign: 'left', color: 'var(--scheme-on-surface-variant)' }}>
                                     {product.room.toUpperCase()} • {product.categories && product.categories.map(category => category.toUpperCase()).join(" & ")}
