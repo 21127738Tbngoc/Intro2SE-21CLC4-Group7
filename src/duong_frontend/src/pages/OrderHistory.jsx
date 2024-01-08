@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ProductCard from '../components/card/card';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/common.css';
 import '../components/button/buttons.css';
 import '../components/styles/OrderHistory.css';
-//import '../../public/icons/fontawesome/css/all.min.css';
+// import '/icons/fontawesome/css/all.min.css'; 
 import { toast } from 'react-toastify';
 
 
@@ -48,12 +50,12 @@ const OrderHistory = () =>{
     // };
 
     return (
-        <div>
+        <div class = "container-fluid d-flex flex-row flex-shrink-0">
             {/* USER SECTION */}
             <div className = "col col-xxl-4 align-items-center">
                 <div className = "row g-4 d-flex justify-content-center flex-column gap-4">
                     <div className="d-flex flex-column gap-3">
-                        <img src="user.jpg" width="300px" className="useravt" />
+                        <img src="/imgs/avatars/avt-1.svg" width="300px" className="useravt" />
                         <h4 className="text-center m-0">Emily Rose Johnson</h4>
                     </div>
                     <h5 className ="m-0"> Profile</h5>    
@@ -92,11 +94,11 @@ const OrderHistory = () =>{
                     <button className="btn btn-secondary dropdown-toggle" type="button" id="status" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Status
                     </button>
-                    <div className="dropdown-menu" aria-labelledby="status">
-                        <a className="dropdown-item" href="#">Option 1</a>
-                        <a className="dropdown-item" href="#">Option 2</a>
-                        <a className="dropdown-item" href="#">Option 3</a>
-                    </div>
+                    <ul className="dropdown-menu" aria-labelledby="status">
+                        <li><a className="dropdown-item" href="#">Option 1</a></li>
+                        <li><a className="dropdown-item" href="#">Option 2</a></li>
+                        <li><a className="dropdown-item" href="#">Option 3</a></li>
+                    </ul>
                     </div>
                 </div>
                 <div>
