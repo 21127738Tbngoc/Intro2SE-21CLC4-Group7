@@ -13,10 +13,45 @@ export const AllOrder = () => {
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [editedOrder, setEditedOrder] = useState({});
 
+  const [modifiedOrderStatus, setModifiedOrderStatus] = useState({ orderId: '', status: '' });
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
     fetchData();
   }, []);
+
+  const handleStatusChange = (orderId, newStatus) => {
+    setModifiedOrderStatus({ orderId, status: newStatus });
+    updateOrderStatus(orderId, newStatus)
+  };
+
+  const updateOrderStatus = async (orderId, newStatus) => {
+    try {
+      const headers = {
+        'Content-Type': 'application/json',
+        token: ' bearer ' + Token,
+      };
+
+      const response = await fetch(`http://localhost:5000/api/orders/${orderId}`, {
+        method: 'PUT',
+        headers,
+        body: JSON.stringify({ status: newStatus }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to update order status');
+      }
+
+      toast.success('Order status updated');
+      fetchData();
+    } catch (error) {
+      console.error('Error updating order status:', error);
+      toast.error('Error updating order status');
+    }
+  };
+
+
 
   const fetchData = async () => {
     try {
@@ -99,14 +134,27 @@ export const AllOrder = () => {
                           <ul>
                             {data.products.map((product, productIndex) => (
                               <li key={productIndex}>
-                                Product ID: {product.productId}, Color: {product.variant.color}, Size: {product.variant.size}, Pattern: {product.variant.pattern}, Quantity: {product.quantity}
+                                Product ID: {product.productId}, Quantity: {product.quantity}
                               </li>
                             ))}
                           </ul>
                         </td>
                         <td>{data.subtotal}</td>
                         <td>{data.address}</td>
-                        <td>{data.status}</td>
+                        <td>
+                        <FormGroup>
+                            <Input
+                              type="select"
+                              value={data.status}
+                              onChange={(e) => handleStatusChange(data._id, e.target.value)}
+                            >
+                              <option value="pending">Pending</option>
+                              <option value="shipped">Shipped</option>
+                              <option value="completed">Completed</option>
+                              <option value="awaiting_return">Awaiting Return</option>
+                            </Input>
+                          </FormGroup>
+                        </td>
                         <td>
                           <button
                             className='btn btn-danger'
@@ -116,22 +164,11 @@ export const AllOrder = () => {
                           >
                             Cancel
                           </button>
-                          <button
-                            className='btn btn-warning'
-                            onClick={() => {
-                              console.log("khuya roi mai code tip hihi")
-                              //handledit (data);
-                            }}
-                          >
-                            Edit
-                          </button>
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
-                         
-      
               </>
             )}
           </Col>

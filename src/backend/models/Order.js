@@ -10,11 +10,6 @@ const OrderSchema = new  mongoose.Schema(
                 productId:{
                     type: String,
                 },
-                variant: {
-                    color: {type: String},
-                    size: {type: String},
-                    pattern: {String},
-                },
                 quantity:{
                     type: Number,
                     default: 1,
@@ -22,7 +17,7 @@ const OrderSchema = new  mongoose.Schema(
             },
         ],
         subtotal:{ type: Number, required:true},
-        address:{type:Number, required:true},
+        address:{type:String, required:true},
         status:{type: String, default: "pending"},
 
     },

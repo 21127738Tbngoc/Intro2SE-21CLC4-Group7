@@ -11,6 +11,14 @@ const Dashboard = () => {
   const [ordersData, setOrdersData] = useState([]);
   const [incomeData, setIncomeData] = useState([]);
 
+
+    const getCurrentMonth = () => {
+      const currentDate = new Date();
+      const currentMonth = currentDate.getMonth() + 1; // Tháng trong JavaScript bắt đầu từ 0
+      return currentMonth;
+    };
+
+
   useEffect(() => {
     const fetchData = async () => {
       // Fetch total products in real-time
@@ -79,7 +87,8 @@ const Dashboard = () => {
         setOrdersData(dataOrder.length);
 
         const dataIncome = await responseIncome.json();
-        setIncomeData(dataIncome[0].total)
+        const thisMonth=getCurrentMonth()
+        setIncomeData(dataIncome[thisMonth].total)
         console.log(incomeData)
 
 
