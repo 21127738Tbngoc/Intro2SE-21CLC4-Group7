@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { ShopContext } from '../context/ShopContext'
-import './navbar.css'
+import '../styles/navbar.css'
 import '../button/buttons.css'
 import '../Utils/searchbar'
-import '../searchbar/searchbar.css'
+import '../styles/searchbar.css'
 
 // import Searchbar from "../searchbar/searchbar"
 import CartModal from "./cart_modal";

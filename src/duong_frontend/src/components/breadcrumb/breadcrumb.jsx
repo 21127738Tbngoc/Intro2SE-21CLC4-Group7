@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './navbar.css';
+import '../styles/navbar.css'
 import '../button/buttons.css';
-import "./breadcrumb.css";
+import "../styles/breadcrumb.css";
 import '../Utils/searchbar';
 const Breadcrumb = () => {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './navbar.css'
+import '../styles/navbar.css'
 import '../button/buttons.css'
 
 const dropDownContent = () => {

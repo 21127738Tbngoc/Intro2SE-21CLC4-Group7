@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-
+import {Link, useNavigate} from 'react-router-dom';
+import Breadcrumb from "../components/breadcrumb/breadcrumb";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
@@ -39,8 +39,16 @@ const LivingRoom = () => {
             setLoading(false);
         }
     };
-    const createARowOf4 = (category) => {
-        let row = Data.filter(item => item.categories.includes(category))
+    const createARowOf4 = (categories) => {
+        let row = [];
+        for (let i = 0; i < categories.length; i++) {
+            row.push(...Data.filter(item => item.categories.includes(categories[i])))
+        }
+        row =[...new Set(row.map(obj => obj._id))]
+            .map(id => {
+                return row.find(obj => obj._id === id);
+            });
+
         let components = []
         for (let i = 0; i < row.length; i++) {
             if (row[i]) {
@@ -107,37 +115,48 @@ const LivingRoom = () => {
     return (
         <div>
             {/* Breadcrumb */}
-
+            <Breadcrumb/>
             {/* Hero img*/}
             <div className="container-fluid mt-5">
                 <div className="container">
                     <div className="row g-4 d-flex">
                         <div className="col-6">
-                            <img src="/imgs/room/livingroom.jpg" alt="livingroom" style={{ width: '100%', height: 'auto'}}/>
+                            <img src="/imgs/room/livingroom.jpg" alt="livingroom"
+                                 style={{width: '100%', height: 'auto'}}/>
                         </div>
                         <div className="col-1"></div>
                         <div className="col-5">
                             <d3>LIVING ROOM</d3>
-                            <p className="p2" style={{ marginTop: '48px', marginBottom: '20px', color: 'var(--scheme-on-background)' }}>Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis. Ipsum voluptate Est velit et ex labori osam dolor est inventore quo numquam. Labore voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis. Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis. Ipsum voluptate Est velit et ex labori osam dolor est inventore quo.</p>
-                            <p className="p2" style={{ marginBottom: '20px', color: 'var(--scheme-on-background)' }}>
-                            Labore voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
+                            <p className="p2" style={{
+                                marginTop: '48px',
+                                marginBottom: '20px',
+                                color: 'var(--scheme-on-background)'
+                            }}>Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
+                                Ipsum voluptate Est velit et ex labori osam dolor est inventore quo numquam. Labore
+                                voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis aliquid
+                                suscipit recusandae similique. Vero natus sed animi reiciendis. Quia id omnis aliquid
+                                suscipit recusandae similique. Vero natus sed animi reiciendis. Ipsum voluptate Est
+                                velit et ex labori osam dolor est inventore quo.</p>
+                            <p className="p2" style={{marginBottom: '20px', color: 'var(--scheme-on-background)'}}>
+                                Labore voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis
+                                aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
                             </p>
                             <div className="d-flex flex-row gap-4">
                                 <div className='flex-column'>
-                                    <p className="p2" style={{ marginBottom: '20px' }}>Client</p>
-                                    <p className="p2" style={{ marginBottom: '20px' }}>Location</p>
-                                    <p className="p2" style={{ marginBottom: '20px' }}>Date</p>
-                                    <p className="p2" style={{ marginBottom: '20px' }}>Share</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Client</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Location</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Date</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Share</p>
                                 </div>
                                 <div className='flex-column'>
-                                    <p className="p2" style={{ marginBottom: '20px' }}>Qode Interactive</p>
-                                    <p className="p2" style={{ marginBottom: '20px' }}>Newyork, US</p>
-                                    <p className="p2" style={{ marginBottom: '20px' }}>March 14, 2023</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Qode Interactive</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Newyork, US</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>March 14, 2023</p>
                                     <div className="mediaIcon">
-                                        <a href="#" class = "fa-brands fa-facebook"></a>
-                                        <a href="#" class = "fa-brands fa-twitter"></a>
-                                        <a href="#" class = "fa-brands fa-instagram"></a>
-                                        <a href="#" class = "fa-brands fa-pinterest"></a>
+                                        <a href="#" class="fa-brands fa-facebook"></a>
+                                        <a href="#" class="fa-brands fa-twitter"></a>
+                                        <a href="#" class="fa-brands fa-instagram"></a>
+                                        <a href="#" class="fa-brands fa-pinterest"></a>
                                     </div>
                                 </div>
                             </div>
@@ -146,71 +165,27 @@ const LivingRoom = () => {
                 </div>
             </div>
 
+            <div className={"m-5"}></div>
+
             {/* Sofa & lounges */}
-            <div className="container-fluid justify-content-center text-center" style={{ marginTop: '120px'}}>
-                <p className="title1" style={{ marginBottom: '12px'}}>LIVING ROOM</p>
-                <h2>Sofas & Benches</h2>
-            </div>
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="row g-4">
-                        {/* Products card */}
-                    </div>
-                </div>
-            </div>
+            {createSection('LIVING ROOM', 'Sofas & Benches', ['Sofa', 'Bench'])}
+            <div className={"m-5"}></div>
 
             {/* Accent chairs */}
-            <div className="container-fluid justify-content-center text-center" style={{ marginTop: '120px'}}>
-                <p className="title1" style={{ marginBottom: '12px'}}>LIVING ROOM</p>
-                <h2>Accent Chairs</h2>
-            </div>
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="row g-4">
-                        {/* Products card */}
-                    </div>
-                </div>
-            </div>
+            {createSection("LIVING ROOM", "Accent Chair", ["Accent Chair"])}
+            <div className={"m-5"}></div>
 
             {/* Coffe & accent tables */}
-            <div className="container-fluid justify-content-center text-center" style={{ marginTop: '120px'}}>
-                <p className="title1" style={{ marginBottom: '12px'}}>LIVING ROOM</p>
-                <h2>Coffe & Accent Tables</h2>
-            </div>
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="row g-4">
-                        {/* Products card */}
-                    </div>
-                </div>
-            </div>
+            {createSection("LIVING ROOM", "Coffee & Accent Tables", ["Accent Table"])}
+            <div className={"m-5"}></div>
 
             {/* TV stands & media consoles */}
-            <div className="container-fluid justify-content-center text-center" style={{ marginTop: '120px'}}>
-                <p className="title1" style={{ marginBottom: '12px'}}>LIVING ROOM</p>
-                <h2>Coffe & Accent Tables</h2>
-            </div>
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="row g-4">
-                        {/* Products card */}
-                    </div>
-                </div>
-            </div>
+            {createSection("LIVING ROOM", "TV Stand & Media Console", ["Media Console", "TV Stand"])}
+            <div className={"m-5"}></div>
 
             {/* Lighting & decoration */}
-            <div className="container-fluid justify-content-center text-center" style={{ marginTop: '120px'}}>
-                <p className="title1" style={{ marginBottom: '12px'}}>LIVING ROOM</p>
-                <h2>Lighting & Decoration</h2>
-            </div>
-            <div className="container-fluid">
-                <div className="container">
-                    <div className="row g-4">
-                        {/* Products card */}
-                    </div>
-                </div>
-            </div>
-
+            {createSection("LIVING ROOM", "Lighting & Decoration", ['Ceiling Lighting', 'Floor Lighting'])}
+            <div className={"m-5"}></div>
         </div>
     );
 };
