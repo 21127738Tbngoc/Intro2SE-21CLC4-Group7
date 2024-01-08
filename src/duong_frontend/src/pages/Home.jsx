@@ -145,19 +145,18 @@ const Home = () => {
             </div>
 
             {/* Designers */}
-            <div className="container-fluid">
-                <img src="/imgs/home/designer-bg.jpg" className="designer-bg" />
-                <div className="row">
-                <d1 className="designer-bg-display">MEET OUR TALENTED DESIGNERS</d1>
-                <button className="designer-btn sec-btn btn-nm button1">VIEW DESIGNERS</button> {/* Link to the designers section in About us page */}
-                </div>
+            <div className="container-fluid designer-bg">
+                <div className="row justify-content-center text-center">
+                    <d1 className="designer-bg-display">MEET OUR TALENTED DESIGNERS</d1>
+                    <button className="designer-btn sec-btn btn-nm button1">VIEW DESIGNERS</button> {/* Link to the designers section in About us page */}
+                </div>  
             </div>
             <div className="container-fluid designer-section">
                 <div className="row">
                     <d5 className="designer-display">OUR DESIGNERS</d5>
                 </div>
                 <div className="container">
-                    <div className="row g-4 mt-5"  style={{ marginBottom: '95px' }}>
+                    <div className="row g-4 mt-3"  style={{ marginBottom: '95px' }}>
                         <div className="col designer-left">
                             <d3 className="designer-name">LUCAS NILSSEN</d3>
                             <p className="designer-role title2">Product Designer</p>
@@ -209,20 +208,20 @@ const Home = () => {
             </div>
 
             {/* Articles */}
-            <div className="container-fluid">
+            <div className="container-fluid mb-2 mt-4">
                 <div className="row">
                     <d5 className="articles-display">ENJOY OUR ARTICLES</d5>
                 </div>
             </div>
 
-            <div className="container-fluid articles-section">
+            <div className="container-fluid articles-section align-content-center">
                 <div className="container">
-                    <div className="row g-4">
+                    <div className="row g-4 mb-0">
                         <div className="col">
-                            <h5 style={{ textAlign: 'right', marginRight: '48px' }}>LATEST NEWS</h5>
+                            <h5 style={{ textAlign: 'right', marginRight: '16px' }}>LATEST NEWS</h5>
                         </div>
                         <div className="col">
-                            <h5 style={{ textAlign: 'right' }}>INSPIRATIONS</h5>
+                            <h5 style={{ textAlign: 'right'}}>INSPIRATIONS</h5>
                         </div>
                     </div>
                     <div className="row g-4">

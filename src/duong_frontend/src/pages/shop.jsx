@@ -141,31 +141,31 @@ return (
             <h2 className="shop-headline">Furniture by Rooms</h2>
             {/* Living room */}
             <div className="category-section justify-content-center">
-                <a href="#" className="livingroom-link">
+                <Link to="/livingroom" className="livingroom-link">
                     <p className="living-room">LIVING ROOM</p>
                     <img src="/imgs/shop/livingroom.jpg" alt="Living Room" className="living-img" />
-                </a>
+                </Link>
             </div>
             {/* Bedroom */}
             <div className="category-section justify-content-center">
-                <a href="#" className="bedroom-link">
+                <Link to="/bedroom" className="bedroom-link">
                     <p className="bed-room">BEDROOM</p>
                     <img src="/imgs/shop/bedroom.jpg" alt="Bedroom" className="bed-img" />
-                </a>
+                </Link>
             </div>
             {/* Dining room */}
             <div className="category-section justify-content-center">
-                <a href="#" className="diningroom-link">
+                <Link to="/diningroom" className="diningroom-link">
                     <p className="dining-room">DINING ROOM</p>
                     <img src="/imgs/shop/diningroom.jpg" alt="Dining Room" className="dining-img" />
-                </a>
+                </Link>
             </div>
             {/* Bathroom */}
             <div className="category-section justify-content-center">
-                <a href="#" className="bathroom-link">
+                <Link to="/bathroom" className="bathroom-link">
                     <p className="bath-room">BATHROOM</p>
                     <img src="/imgs/shop/bathroom.jpg" alt="Bathroom" className="bath-img" />
-                </a>
+                </Link>
             </div>
         </div>
 
@@ -197,6 +197,8 @@ return (
                             </div>
                       ))}
                       <h5 className="mt-5 mb-4">TAGS</h5>
+                      <h5 className="mt-5 mb-4">PRICE RANGE</h5>
+                      <h5 className="mt-5 mb-4">RATING</h5>
                     </div>
                     </div>
       
