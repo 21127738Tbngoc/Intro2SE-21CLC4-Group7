@@ -16,8 +16,9 @@ const Navbar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('Token');
+        localStorage.removeItem('userId');
         console.log('Logout successful.');
-        // Thực hiện các hành động khác sau khi đăng xuất thành công
+
       };
 
     const { getTotalCartItems } = useContext(ShopContext);

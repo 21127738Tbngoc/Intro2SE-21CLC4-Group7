@@ -8,7 +8,6 @@ const productRoute = require("./routes/product");
 const orderRoute = require("./routes/order");
 const contactRoute=require("./routes/contact")
 const articleRoute=require("./routes/article");
-const shippingRoute= require("./routes/shipping");
 const paymentRoute=require("./routes/payment");
 
 //const stripeRoute = require("./routes/stripe");
@@ -32,7 +31,6 @@ app.use("/api/orders", orderRoute);
 app.use("/api/contact", contactRoute);
 app.use("/api/article", articleRoute);
 app.use("/api/payment", paymentRoute);
-app.use("/api/shipping", shippingRoute);
 //app.use("/api/checkout", stripeRoute);
 
 
