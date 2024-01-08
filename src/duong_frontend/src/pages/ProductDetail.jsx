@@ -1,9 +1,13 @@
-import React, { useState, useEffect, } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { toast } from 'react-toastify';
 import { Helmet } from '../components/helmet/Helmet';
 import { Container, Row, Col, FormGroup } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import ProductCard from "../components/card/card";
+import { useParams } from 'react-router-dom';
+import { ShopContext } from '../components/context/ShopContext'
+
+
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
@@ -11,28 +15,66 @@ import '../components/button/buttons.css';
 import '../components/common.css';
 import '../components/styles/ProductDetail.css';
 
-const ProductDetail = ({ Product, addToCart }) => {
+const ProductDetail = ({ Product }) => {
+    const { addToCart } = useContext(ShopContext);
+
+    const { productId } = useParams();
+
     const [quantity, setQuantity] = useState(1);
-  
+
     const changeThumbnail = (event) => {
-        const src = event.target.src;
+        const newSrc = event.target.src;
         const thumbnail = document.querySelector('.product-thumbnail');
-        thumbnail.src = src;
         const images = document.querySelectorAll('.product-img-list img');
-        images.forEach(img => img.style.border = 'none');
-        event.target.style.border = '2px solid black';
+    
+        thumbnail.src = newSrc;
+    
+        images.forEach(img => {
+            if (img.src === newSrc) {
+                img.style.border = '2px solid black';
+            } else {
+                img.style.border = 'none';
+            }
+        });
     };
-  
+    
+
     const minusQuantity = () => {
-      if (quantity > 1) {
-        setQuantity(quantity - 1);
-      }
-    };
-  
-    const plusQuantity = () => {
-      setQuantity(quantity + 1);
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
     };
 
+    const plusQuantity = () => {
+        setQuantity(quantity + 1);
+    };
+
+    const [product, setProduct] = useState(0);
+
+    useEffect(() => {
+        const fetchProduct = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/api/products/find/${productId}`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch product');
+                }
+                const productData = await response.json();
+
+                setProduct(productData);
+                console.log(product.img)
+            } catch (error) {
+                console.error(error);
+            }
+        };
+        fetchProduct();
+    }, [productId]);
+
+    const abc=product.img
+    console.log(typeof abc)
+    if (!product || !product.img) {
+        return <div>Loading...</div>; // or any other loading state/component
+    }
+    
     return (
         <div>
             <div className="container-fluid">
@@ -41,38 +83,36 @@ const ProductDetail = ({ Product, addToCart }) => {
                         <div className="col">
                             {/* Images */}
                             <div className="left-display">
-                                <div className="product-img-list">
-                                    <img src="/" onclick="changeThumbnail(event)"/>
-                                    <img src="/" onclick="changeThumbnail(event)"/>
-                                    <img src="/" onclick="changeThumbnail(event)"/>
-                                    <img src="/" onclick="changeThumbnail(event)"/>
-                                    <img src="/" onclick="changeThumbnail(event)"/>
+                                <div className="product-img-list"  >
+                                    <img src={product.img[0]}  onClick={changeThumbnail} alt='haha' />
+                                    <img src={product.img[2]}   onClick={changeThumbnail} alt='haha'/>
+                                    <img src={product.img[3]}  onClick={changeThumbnail} alt='haha' />
+                                    <img src={product.img[4]}  onClick={changeThumbnail} alt='haha'/>
+
                                 </div>
-                                <img src="/" className="product-thumbnail"/>
+                                <img src={product.thumbnail} className="product-thumbnail" />
                             </div>
                         </div>
                         <div className="col">
                             <div className="right-display">
                                 {/* Room & Categories */}
-                                <p className="button1 product-category">DINING ROOM • CHAIR & STOOL</p>
+                                <p className="button1 product-category">
+                                    {product.room} • {product.categories && product.categories.join(" & ")}
+                                </p>
                                 {/* Name */}
-                                <d4>STOCKHOLM MINIMAL CHAIR, OAK WOOD</d4>
+                                <d4>{product.name}</d4>
                                 {/* Rating */}
                                 <div class="product-rating align-items-center">
-                                    <img src="/imgs/card/rating-4.png" alt="" />
+                                    <img src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921413/rating-${Math.round(product.rating)}.png`} alt="" />
                                     <p>13 customer reviews</p>
                                 </div>
                                 {/* Price */}
-                                <p className="product-price"></p>
+                                <p className="product-price">{product.price}</p>
                                 {/* Description */}
-                                <p className="p2">Modern, sophisticated and undeniably inviting, our Wells two-piece sectional tucks plump cushions onto a slim frame supported by sustainably sourced solid wood legs with a natural finish. Low decks allow plenty of room for indulgent seat cushions that encourage you to linger. Tailored with top stitching and French seams on the cushions and a crisp micro-flange outlining the frames, the soft twill fabric suits active family life and cleans up beautifully.</p>
+                                <p className="p2">{product.desc}</p>
                                 <div className="d-flex">
-                                    <div className="product-quantity mb-2">
-                                        <input type="button" value="-" onclick="minusQuantity()" class="qty-btn" />
-                                        <input type="text" id="quantity" name="quantity" value="1" min="1" class="qty-input" />
-                                        <input type="button" value="+" onclick="plusQuantity()" class="qty-btn" />
-                                    </div>
-                                    <button className="prim-btn btn-md" style={{ width: '200px' }}>ADD TO CART</button>
+
+                                    <button className="prim-btn btn-md" style={{ width: '200px' }} onClick={() => { addToCart(product._id) }}>ADD TO CART</button>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +120,7 @@ const ProductDetail = ({ Product, addToCart }) => {
                 </div>
             </div>
         </div>
-      );
-    };
+    );
+};
 
 export default ProductDetail;

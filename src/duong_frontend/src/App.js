@@ -37,8 +37,8 @@ function App() {
             <Route path='dashboard/all-orders' element={<AllOrder />} />
             <Route path='/test/searchbar' element={<Searchbar />} />
             <Route path='/about' element={<div><Navbar /><Footer /></div>} />
-            <Route path='/detail' element={<div><Navbar /><ProductDetail /><Footer /></div>} />
-            <Route path='/designers' element={<div><Navbar /><Footer /></div>} />
+            <Route path="/product/:productId" element={<div><Navbar /><ProductDetail /><Footer/></div>} />
+                        <Route path='/designers' element={<div><Navbar /><Footer /></div>} />
             <Route path='/test' element={
               <div>
                 <Navbar />
@@ -49,6 +49,8 @@ function App() {
             <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
             <Route path='/user/diningroom' element={<div><Navbar /><DiningRoom/><Footer /></div>} />
             <Route path='/user/bathroom' element={<div><Navbar /><Bathroom/><Footer /></div>} />
+
+
 
           </Routes>
         </BrowserRouter>
