@@ -191,4 +191,4 @@ const Confirmation = () => {
   );
 }
 
-export default Checkout;
+export default Confirmation;
