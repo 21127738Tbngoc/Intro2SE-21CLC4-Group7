@@ -12,11 +12,7 @@ const Dashboard = () => {
   const [incomeData, setIncomeData] = useState([]);
 
 
-    const getCurrentMonth = () => {
-      const currentDate = new Date();
-      const currentMonth = currentDate.getMonth() + 1; // Tháng trong JavaScript bắt đầu từ 0
-      return currentMonth;
-    };
+
 
 
   useEffect(() => {
@@ -87,8 +83,7 @@ const Dashboard = () => {
         setOrdersData(dataOrder.length);
 
         const dataIncome = await responseIncome.json();
-        const thisMonth=getCurrentMonth()
-        setIncomeData(dataIncome[thisMonth].total)
+        setIncomeData(dataIncome[dataIncome.length-1].total)
         console.log(incomeData)
 
 

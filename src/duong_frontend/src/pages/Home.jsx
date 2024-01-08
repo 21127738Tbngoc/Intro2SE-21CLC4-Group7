@@ -153,7 +153,7 @@ const Home = () => {
             </div>
             <div className="container-fluid designer-section">
                 <div className="row">
-                    <d5 className="designer-display">OUR DESIGNERS</d5>
+                    <d5 className="designer-display mb-5">OUR DESIGNERS</d5>
                 </div>
                 <div className="container">
                     <div className="row g-4 mt-3"  style={{ marginBottom: '95px' }}>
@@ -214,9 +214,9 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="container-fluid articles-section align-content-center">
+            <div className="container-fluid articles-section">
                 <div className="container">
-                    <div className="row g-4 mb-0">
+                    <div className="row g-4" style={{ marginTop: '-4px'}}>
                         <div className="col">
                             <h5 style={{ textAlign: 'right', marginRight: '16px' }}>LATEST NEWS</h5>
                         </div>
@@ -225,20 +225,20 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="row g-4">
-                        <div className="col">
+                        <div className="col" style={{ marginTop: '200px'}}>
                             <d3 className="article-title mb-5">MANHATTAN PIED-À-TERRE FOR A NEW CHICAGO APARTMENT</d3>
-                            <div className="article-brief">
+                            <div className="article-brief mb-3">
                                 <img src="/imgs/home/quotation.png" className="article-quote" />
                                 <p className="p1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen</p>
                             </div>
-                            <button className="link-nm">CONTINUE READING</button>
+                            <button className="link-nm" style={{ padding: '0'}}>CONTINUE READING</button>
                         </div>
-                        <div className="col">
+                        <div className="col" style={{ marginTop: '30px'}}>
                             <img src="/imgs/home/articles-featured.jpg" className="article-featured" />
                         </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row mt-0">
                     <button className="articles-btn button1">VIEW ALL ARTICLES</button>
                 </div>
                 <div className="container">
