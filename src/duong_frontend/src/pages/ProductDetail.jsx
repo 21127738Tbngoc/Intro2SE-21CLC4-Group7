@@ -7,8 +7,6 @@ import ProductCard from "../components/card/card";
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../components/context/ShopContext'
 
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
@@ -82,7 +80,7 @@ const ProductDetail = ({ Product }) => {
                         <div className="col">
                             {/* Images */}
                             <div className="left-display">
-                                <div className="product-img-list"  >
+                                <div className="product-img-list">
                                     <img src={product.img[0]} onClick={changeThumbnail} alt='haha' />
                                     <img src={product.img[2]} onClick={changeThumbnail} alt='haha'/>
                                     <img src={product.img[3]} onClick={changeThumbnail} alt='haha' />

@@ -4,16 +4,26 @@ import './navbar.css';
 import '../button/buttons.css';
 import "./breadcrumb.css";
 import '../Utils/searchbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import '../components/button/buttons.css';
+import '../components/common.css';
+
 const Breadcrumb = () => {
     return (
-        <nav aria-label="breadcrumb" className="navbar-breadcrumb">
-            <ol className="breadcrumb">
-                <li className="breadcrumb-item breadcrumb-home"><a href="/">HOME</a></li>
-                <li className="breadcrumb-item breadcrumb-element"><a href="#">CART</a></li>
-                <li className="breadcrumb-item active breadcrumb-home breadcrumb-element" aria-current="page">Data</li>
-            </ol>
-        </nav>
-    )
+        <div className="container-fluid">
+            <div className="container">
+                <nav aria-label="breadcrumb" className="breadcrumb">
+                    <ol className="breadcrumb">
+                        <li className="breadcrumb-item p2"><a href="/">HOME</a></li>
+                        <li className="breadcrumb-item p2"><a href="/">CART</a></li>
+                        <li className="breadcrumb-item active button2" aria-current="page">ACTIVE</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        
+    );
 };
 
 export default Breadcrumb;
