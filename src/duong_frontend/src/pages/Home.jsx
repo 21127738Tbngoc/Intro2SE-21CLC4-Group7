@@ -59,8 +59,8 @@ const Home = () => {
             <div className="container-fluid hero-banner">
                 <video src="/imgs/home/hero-banner.mp4" className="hero-banner" autoPlay muted loop></video>
                 <div className="container">
-                <d3 className="hero-display">WHERE WE TURN YOUR HOME INTO A MASTERPIECE</d3>
-                <button className="sec-btn btn-md button2 hero-btn">ABOUT US</button>
+                    <d3 className="hero-display">WHERE WE TURN YOUR HOME INTO A MASTERPIECE</d3>
+                    <button className="sec-btn btn-md button2 hero-btn">ABOUT US</button>
                 </div>
             </div>
 
