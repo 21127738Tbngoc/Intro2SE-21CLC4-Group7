@@ -7,6 +7,7 @@ import '../components/button/buttons.css';
 import '../components/styles/LivingRoom.css';
 import {ShopContext} from "../components/context/ShopContext";
 import {toast} from "react-toastify";
+import ProductCard from "../components/card/card";
 
 const LivingRoom = () => {
 
@@ -53,29 +54,38 @@ const LivingRoom = () => {
         for (let i = 0; i < row.length; i++) {
             if (row[i]) {
                 components.push(
-                    <div className="card d-flex flex-column p-0 m-2" style={{marginTop: "0"}}>
-                        <div className="cardcontent d-flex flex-column gap-4">
-                            <img className="card-img-top" src={row[i].thumbnail}/>
-                            <div className="card-body d-flex flex-column justify-content-around p-0">
-                                <h6 className="card-title" style={{height: "3em"}}>{row[i].name}</h6>
-                                <div className="d-flex flex-row justify-content-between">
-                                    <p className="card-text p3">{row[i].categories.join(" & ")}</p>
-                                    <p className="title2 py-1 product-price">{row[i].price}</p>
-                                </div>
-                                <div className="justify-content-start">
-                                    <img style={{width: "50%", height: "auto"}}
-                                         src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(row[i].rating)}`}/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="product-buttons d-flex flex-row justify-content-between">
-                            <div onClick={() => {
-                                addToCart(row[i]._id)
-                            }} className="product-btn button2 no-right-border">ADD TO CART
-                            </div>
-                            <a href={`/product/${row[i]._id}`} className="product-btn button2"> VIEW PRODUCT </a>
-                        </div>
-                    </div>
+                    <ProductCard
+                        key={i}
+                        id={row[i]._id}
+                        name={row[i].name}
+                        thumbnail={row[i].thumbnail}
+                        img={row[i].img}
+                        price={row[i].price}
+                        categories={row[i].categories}
+                        rating = {row[i].rating}/>
+                    // <div className="card d-flex flex-column p-0 m-2" style={{marginTop: "0"}}>
+                    //     <div className="cardcontent d-flex flex-column gap-4">
+                    //         <img className="card-img-top" src={row[i].thumbnail}/>
+                    //         <div className="card-body d-flex flex-column justify-content-around p-0">
+                    //             <h6 className="card-title" style={{height: "3em"}}>{row[i].name}</h6>
+                    //             <div className="d-flex flex-row justify-content-between">
+                    //                 <p className="card-text p3">{row[i].categories.join(" & ")}</p>
+                    //                 <p className="title2 py-1 product-price">{row[i].price}</p>
+                    //             </div>
+                    //             <div className="justify-content-start">
+                    //                 <img style={{width: "50%", height: "auto"}}
+                    //                      src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(row[i].rating)}`}/>
+                    //             </div>
+                    //         </div>
+                    //     </div>
+                    //     <div className="product-buttons d-flex flex-row justify-content-between">
+                    //         <div onClick={() => {
+                    //             addToCart(row[i]._id)
+                    //         }} className="product-btn button2 no-right-border">ADD TO CART
+                    //         </div>
+                    //         <a href={`/product/${row[i]._id}`} className="product-btn button2"> VIEW PRODUCT </a>
+                    //     </div>
+                    // </div>
                 )
             }
         }
