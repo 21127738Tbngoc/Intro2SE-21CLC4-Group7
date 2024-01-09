@@ -49,8 +49,8 @@ router.delete("/:id", verifyTokenAndAdmin, async (req, res) => {
 //GET Article
 router.get("/find/:id", async (req, res) => {
   try {
-    const Article = await Article.findById(req.params.id);
-    res.status(200).json(Article);
+    const Articles = await Article.findById(req.params.id);
+    res.status(200).json(Articles);
   } catch (err) {
     res.status(500).json(err);
   }

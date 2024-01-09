@@ -1,6 +1,7 @@
-.breadcrumb {
-    padding: 24px 72px;
+/*.breadcrumb {
+    padding: 24px 0;
     border: 1px solid var(--scheme-outline);
+    border-top: none;
 }
 
 .breadcrumb li:not(:last-child) a:after{
@@ -9,22 +10,15 @@
 
 .breadcrumb a {
     color: var(--tone-primary-40);
-    font-weight: 600;
-}
-
-.mediaicon {
-    font-size: 18px;
-    width: 24px;
-    height:24px;
-    color: black;
-}
+    font-family: regular-font;
+}*/
 
 .title{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .page {
-    gap: 5rem;
+    gap: 2rem;
 }
 
 .section .row {
@@ -33,4 +27,18 @@
 
 .checked {
     color: orange;
+}
+
+.product-ctn {
+    margin-top: 2em;
+}
+
+.mediaIcon {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.mediaIcon a {
+    color: var(--scheme-on-background);
 }

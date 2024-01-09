@@ -1,12 +1,11 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
-import Breadcrumb from "../components/breadcrumb/breadcrumb";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
-import '../components/styles/LivingRoom.css';
 import {ShopContext} from "../components/context/ShopContext";
 import {toast} from "react-toastify";
+import '../components/common.css';
 
 const LivingRoom = () => {
 
@@ -53,28 +52,23 @@ const LivingRoom = () => {
         for (let i = 0; i < row.length; i++) {
             if (row[i]) {
                 components.push(
-                    <div className="card d-flex flex-column p-0 m-2" style={{marginTop: "0"}}>
-                        <div className="cardcontent d-flex flex-column gap-4">
-                            <img className="card-img-top" src={row[i].thumbnail}/>
-                            <div className="card-body d-flex flex-column justify-content-around p-0">
-                                <h6 className="card-title" style={{height: "3em"}}>{row[i].name}</h6>
-                                <div className="d-flex flex-row justify-content-between">
-                                    <p className="card-text p3">{row[i].categories.join(" & ")}</p>
-                                    <p className="title2 py-1 product-price">{row[i].price}</p>
+                    <div className="col-3">
+                            <div className="product-ctn">
+                                <div className="product-img">
+                                    <img src={row[i].thumbnail}/>
+                                    <span className="label2 tag-md tag-outline">SALE</span>
                                 </div>
-                                <div className="justify-content-start">
-                                    <img style={{width: "50%", height: "auto"}}
-                                         src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(row[i].rating)}`}/>
+                                <div className="product-info">
+                                    <h6>{row[i].name}</h6>
+                                    <p className="p3 product-cat">{row[i].categories.join(" & ")}</p>
+                                    <p className="title2 py-1 product-price">$ {row[i].price}</p>
+                                    <img className="rating-star" src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(row[i].rating)}`}/>
                                 </div>
                             </div>
-                        </div>
-                        <div className="product-buttons d-flex flex-row justify-content-between">
-                            <div onClick={() => {
-                                addToCart(row[i]._id)
-                            }} className="product-btn button2 no-right-border">ADD TO CART
+                            <div className="product-buttons justify-content-between">
+                                <div onClick = {()=>{addToCart(row[i]._id)}} className="product-btn button2 no-right-border">ADD TO CART</div>
+                                <a href={`/product/${row[i]._id}`} className="product-btn button2">VIEW PRODUCT</a>
                             </div>
-                            <a href={`/product/${row[i]._id}`} className="product-btn button2"> VIEW PRODUCT </a>
-                        </div>
                     </div>
                 )
             }
@@ -97,14 +91,14 @@ const LivingRoom = () => {
                 <div className="d-flex justify-content-center">
                     <div className="d-flex flex-column">
                         <div className="title text-center">
-                            <div className="title1">
+                            <div className="title1" style={{ marginTop: '64px'}}>
                                 {title1}
                             </div>
                             <h2>
                                 {_h2}
                             </h2>
                         </div>
-                        <div className={"col-12 d-flex flex-row flex-wrap"}>
+                        <div className={"row g-4"}>
                             {createARowOf4(category)}
                         </div>
                     </div>
@@ -113,21 +107,22 @@ const LivingRoom = () => {
     }
 
     return (
-        <div className="container-fluid d-flex flex-column flex-shrink-0 page mb-5">
-            {/* BREADCRUMB */}
-            <ol className="breadcrumb">
-                <li className="col-1"></li>
-                <li style={{color:"var(--tone-neutral-variant-60)"}}><a href="/">HOME</a></li>
-                <li style={{color:"var(--tone-neutral-variant-60)"}}><a href="/shop">SHOP ALL</a></li>
-                <li><a href="/livingroom">LIVING ROOM</a></li>
-            </ol>
+        <div className="container-fluid d-flex flex-column flex-shrink-0 page mb-5" style={{ boder: '1px solid var(--scheme-outline)', borderTop: 'none', borderLeft: 'none', borderRight: 'none'}}>
+            <div className="container">
+                <ol className="breadcrumb">
+                    <li style={{ color: 'var(--tone-on-background)' }}><a href="/">HOME</a></li>
+                    <li style={{ color: 'var(--tone-on-background)' }}><a href="/shop">SHOP ALL</a></li>
+                    <li><a href="/livingroom"><strong>LIVING ROOM</strong></a></li>   
+                </ol>
+            </div>
+            
             {/* Hero img*/}
             <div className="container-fluid">
                 <div className="container">
                     <div className="row g-4 d-flex">
                         <div className="col-6">
                             <img src="/imgs/room/livingroom.jpg" alt="livingroom"
-                                 style={{width: '100%', height: 'auto'}}/>
+                                 style={{width: '100%', height: 'auto' }}/>
                         </div>
                         <div className="col-1"></div>
                         <div className="col-5">

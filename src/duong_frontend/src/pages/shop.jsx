@@ -56,6 +56,8 @@ const Shop = () => {
 
   const createComponents = (data) => {
     const filteredData = filterProducts(data);
+    console.log(data)
+
     const components = [];
     for (let i = 0; i < filteredData.length - 3; i += 3) {
       components.push(
@@ -69,6 +71,7 @@ const Shop = () => {
             price={filteredData[i].price}
             categories={filteredData[i].categories}
             rating = {filteredData[i].rating}
+            tags={filteredData[i].tags}
           />
           <ProductCard
             key={i + 1}
@@ -79,6 +82,7 @@ const Shop = () => {
             price={filteredData[i + 1].price}
             categories={filteredData[i + 1].categories}
             rating = {filteredData[i+1].rating}
+            tags={filteredData[i].tags}
           />
           <ProductCard
             key={i + 2}
@@ -89,6 +93,7 @@ const Shop = () => {
             price={filteredData[i + 2].price}
             categories={filteredData[i + 2].categories}
             rating = {filteredData[i+2].rating}
+            tags={filteredData[i].tags}
           />
         </div>
       );
@@ -137,7 +142,7 @@ return (
         {/* New arrivals */}
         <div className="container-fluid banner-container">
             <div className="banner-wrapper">
-                <img src="/imgs/shop/new-arrivals.jpg" className="banner" />
+                <img src="/imgs/shop/new-arrivals.jpg" class="banner" />
                 <video src="/imgs/shop/new-arrivals.mp4" className="banner-video" autoPlay loop muted></video>
                 <div className="banner-text">NEW ARRIVALS</div>
             </div>
@@ -179,8 +184,8 @@ return (
 
         {/* All products */}
         <div className="container-fluid justify-content-center">
-            <p className="title1 shop-title">SHOP ALL</p>
-            <h2 className="shop-headline">All Products</h2>
+            <p class="title1 shop-title">SHOP ALL</p>
+            <h2 class="shop-headline">All Products</h2>
             <div className="container">
                 <div className="row g-4">
                     {/* Product filter */}

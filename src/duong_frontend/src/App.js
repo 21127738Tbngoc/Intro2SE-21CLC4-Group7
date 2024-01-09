@@ -27,7 +27,7 @@ import Refund from './pages/Refund';
 import Articles from './pages/Articles';
 import LivingRoom from './pages/LivingRoom';
 import Faqs from "./pages/Faqs";
-import Cart from './pages/Cart';
+import UserProfile from './pages/UserProfile';
 
 
 function App() {
@@ -51,7 +51,7 @@ function App() {
             <Route path='/test/searchbar' element={<Searchbar />} />
             <Route path='/about' element={<div><Navbar /><About/><Footer /></div>} />
             <Route path="/product/:productId" element={<div><Navbar /><ProductDetail /><Footer/></div>} />
-            <Route path='/designers' element={<div><Navbar /><Footer /></div>} />
+            <Route path='/profile' element={<div><Navbar /><UserProfile/><Footer /></div>} />
             <Route path='/test' element={
               <div>
                 <Navbar />
@@ -69,9 +69,7 @@ function App() {
             <Route path='/shop' element={<div><Navbar/><Shop /><Footer/></div>}/>
             <Route path='/faqs' element={<div><Navbar/><Faqs /><Footer/></div>}/>
             <Route path='/warranty' element={<div><Navbar/><Warranty /><Footer/></div>}/>
-
-            <Route path='/trietdeptrai' element={<div><Navbar/><Cart /><Footer/></div>}/>
-
+            
 
           </Routes>
         </BrowserRouter>

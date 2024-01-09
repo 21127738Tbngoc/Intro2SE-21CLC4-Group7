@@ -276,3 +276,9 @@ a h5 img {
     margin-right: 8px;
 }
 
+.navbar-cart {
+
+    background-color: none;
+    z-index: 999;
+    float: right;
+}

@@ -25,7 +25,7 @@ const Cartmodal = () => {
   const uniqueCartItems = Array.from(new Set(cartItems));
 
   return (
-    <div className="position-absolute navbar-cart">
+    <div className="navbar-cart">
       <div className="cart-list-section">
         <div className="d-flex flex-row-reverse">
           <h5 className="w-auto cart-close-btn">
