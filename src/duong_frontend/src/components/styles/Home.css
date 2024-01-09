@@ -339,17 +339,21 @@
 
 /*--Inquiry--*/
 .inquiry-section {
-    background: url("/public/imgs/home/inquiry-bg.jpg");
+    margin: 0!important;
+    background-image: url("/public/imgs/home/inquiry-bg.jpg");
+    width: 100%;
+    height: 600px;
     background-size: cover;
     margin-top: 64px;
     margin-bottom: 64px;
     background-repeat: no-repeat;
-    padding: 100px;
+    padding: 0;
     box-shadow: 0px 4px 25px 0px #9FAF8E;
     z-index: 0;
 }
 .inquiry-content {
     margin-left: 120px;
+    
 }
 .inquiry-btn {
     margin-top: 2rem;

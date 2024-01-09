@@ -358,10 +358,7 @@ const Home = () => {
                     </div>
                 </div>
 
-
-
-
-                <div className="container-fluid">
+                <div className="container-fluid mb-5">
                     <div className="row mt-0">
                         <a className="articles-btn button1" href={"/articles"}>VIEW ALL ARTICLES</a>
                     </div>
@@ -408,11 +405,11 @@ const Home = () => {
                 </div>
 
                 {/* Inquiry */}
-                <div className="container-fluid inquiry-section">
+                <div className="container-fluid inquiry-section" style={{ marginTop: '100px'}}>
                     <div className="container">
                         <div className="row g-4">
                             <div className="col"></div>
-                            <div className="col inquiry-content">
+                            <div className="col inquiry-content" style={{ marginTop: '64px'}}>
                                 <h4 className="mb-5">Complete the information and let us get in touch with you!</h4>
                                 <form>
                                     <div className="form-row">
@@ -478,7 +475,7 @@ const Home = () => {
                                 <ToastContainer />
                                 <div className="inquiry-btn justify-content-between">
                                     <button onClick={handleSendInquiry} className="btn-nm prim-btn me-3" id="send-btn">SEND INQUIRY</button>
-                                    <a className="btn-nm sec-btn" id="contact-btn" href='/contact'>CONTACT US</a>
+                                    <button className="btn-nm sec-btn" id="contact-btn" href='/contact'>CONTACT US</button>
                                 </div>
                             </div>
                         </div>

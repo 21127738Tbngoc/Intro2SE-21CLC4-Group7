@@ -463,9 +463,6 @@ html {
     border: 1px solid var(--scheme-outline);
     cursor: not-allowed;
 }
-.form-control::placeholder {
-    color: var(--scheme-on-surface-variant) !important; 
-}
 
 /*-- Tag / Badge --*/
 
