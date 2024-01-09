@@ -115,6 +115,16 @@ const Shop = () => {
     { value: 'Floor Lighting', id: 'check16', name: 'FLOOR LIGHTING' },
     { value: 'Wall Decor', id: 'check17', name: 'WALL DECORATION' },
   ];
+
+  const [hoveredImage, setHoveredImage] = useState(null);
+
+  const handleMouseEnter = (image) => {
+    setHoveredImage(image);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredImage(null);
+  };
   
 return (
     <div>
@@ -139,10 +149,10 @@ return (
             <p className="title1 shop-title">SHOP BY ROOM</p>
             <h2 className="shop-headline">Furniture by Rooms</h2>
             {/* Living room */}
-            <div className="category-section justify-content-center">
+            <div className="category-section justify-content-center" onMouseEnter={() => handleMouseEnter('living')} onMouseLeave={handleMouseLeave}>
                 <Link to="/livingroom" className="livingroom-link">
                     <p className="living-room">LIVING ROOM</p>
-                    <img src="/imgs/shop/livingroom.jpg" alt="Living Room" className="living-img" />
+                    <img src="/imgs/shop/livingroom.jpg" alt="Living Room" className={hoveredImage === 'living' ? 'living-img active' : 'living-img'} />
                 </Link>
             </div>
             {/* Bedroom */}

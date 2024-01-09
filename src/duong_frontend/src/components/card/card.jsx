@@ -13,13 +13,14 @@ function ProductCard(props) {
             <div className="product-ctn">
                 {/* Product img */}
                 <div className="product-img" >
-                    <img src={props.thumbnail} alt="product-img"></img>
+                    <img src={props.thumbnail} alt="product-img" />
+                    <span className="label2 tag-md tag-outline">SALE</span>
                 </div>
                 {/* Product info */}
                 <div className="product-info">
                     <h6>{props.name}</h6>
                     <p className="p3 product-cat">{props.categories.join(" & ")}</p>
-                    <p className="title2 py-1 product-price">${props.price}</p>
+                    <p className="title2 py-1 product-price">$ {props.price}</p>
                     <img className="rating-star" src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(props.rating)}`}/>
                 </div>
             </div>
