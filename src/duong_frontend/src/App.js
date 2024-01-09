@@ -27,6 +27,7 @@ import Refund from './pages/Refund';
 import Articles from './pages/Articles';
 import LivingRoom from './pages/LivingRoom';
 import Faqs from "./pages/Faqs";
+import Cart from './pages/Cart';
 
 
 function App() {
@@ -68,6 +69,8 @@ function App() {
             <Route path='/shop' element={<div><Navbar/><Shop /><Footer/></div>}/>
             <Route path='/faqs' element={<div><Navbar/><Faqs /><Footer/></div>}/>
             <Route path='/warranty' element={<div><Navbar/><Warranty /><Footer/></div>}/>
+
+            <Route path='/trietdeptrai' element={<div><Navbar/><Cart /><Footer/></div>}/>
 
 
           </Routes>
