@@ -10,7 +10,7 @@ const dropDownContent = () => {
         localStorage.removeItem('Token');
         localStorage.removeItem('userId');
         console.log('Logout successful.');
-        document.querySelector('#loginLink')
+        document.querySelector('#loginLink').click()
     };
     const id = localStorage.getItem("userId");
     if (id)

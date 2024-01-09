@@ -119,6 +119,7 @@ const UserProfile = () => {
             console.log("121 running")
             setLoading(true);
             const updateData = {
+                id: userId,
                 username: userData.username,
                 name: userData.name,
                 email: userData.email,
