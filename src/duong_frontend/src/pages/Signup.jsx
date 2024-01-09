@@ -82,11 +82,11 @@ const Signup = () => {
 
                 const token = response.data.accessToken;
                 localStorage.setItem('Token', token);
-
-                console.log(token);
-
+                localStorage.setItem('userId',JSON.stringify(response.data))
+                console.log(response)
                 setLoading(false);
                 toast.success('Successfully logged in');
+                navigate('/')
             } catch (error) {
                 setLoading(false);
                 toast.error(error.message || 'Signup failed');

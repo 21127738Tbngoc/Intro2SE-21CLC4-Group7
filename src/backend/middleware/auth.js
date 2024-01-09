@@ -28,7 +28,7 @@ router.post("/register", async (req, res)=>{
     const newUser=new User({
         avatar: req.body.avatar,
         phone: req.body.phone,
-        fullname: req.body.fullname,
+        name: req.body.fullname,
         address: req.body.address,
         username: req.body.username,
         email:req.body.email,
@@ -38,9 +38,7 @@ router.post("/register", async (req, res)=>{
 
     try{
         const savedUser= await newUser.save();
-        res.status(201).json(savedUser);
-
-
+        res.status(201).json(savedUser._id);
     }catch{
         res.status(500).json("err");
     }
