@@ -5,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
 import '../components/common.css';
-import '../components/styles/About.css';
 
 const Cart = () => {
   return (
@@ -28,7 +27,7 @@ const Cart = () => {
             <p className="d-inline-block p1">•</p>
             <p className="d-inline-block p1">CONFIRMATION</p>
         </div>
-        <div className="container-fluid-xxl d-flex justify-content-between cart-container" style="height: 1000px;">
+        <div className="container-fluid-xxl d-flex justify-content-between cart-container">
             {/* <!-- Cart list items --> */}
             <div className="cart-list-section">
                 <h3 className="cart-list-title">Cart Items (3)</h3>
