@@ -9,7 +9,7 @@ import "../button/buttons.css"
 const Footer = () => {
     return (
         <div>
-            <div className="container-fluid footer">
+            <div className="container-fluid footer mt-5">
                 <div className="container">
                     <div className="row g-4">
                         {/* <!-- Logo --> */}
