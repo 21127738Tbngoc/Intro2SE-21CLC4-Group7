@@ -28,7 +28,8 @@ import Articles from './pages/Articles';
 import LivingRoom from './pages/LivingRoom';
 import Faqs from "./pages/Faqs";
 import UserProfile from './pages/UserProfile';
-//import Cart from './pages/Cart';
+import Cart from './pages/Cart';
+import Contact from './pages/Contact';
 
 
 function App() {
@@ -53,7 +54,10 @@ function App() {
             <Route path='/about' element={<div><Navbar /><About/><Footer /></div>} />
             <Route path="/product/:productId" element={<div><Navbar /><ProductDetail /><Footer/></div>} />
             <Route path='/profile' element={<div><Navbar /><UserProfile/><Footer /></div>} />
+            <Route path='/contact' element={<div><Navbar /><Contact/><Footer /></div>} />
+
             <Route path='/test' element={
+
               <div>
                 <Navbar />
                 <Shop />
@@ -70,7 +74,7 @@ function App() {
             <Route path='/shop' element={<div><Navbar/><Shop /><Footer/></div>}/>
             <Route path='/faqs' element={<div><Navbar/><Faqs /><Footer/></div>}/>
             <Route path='/warranty' element={<div><Navbar/><Warranty /><Footer/></div>}/>
-            {/* <Route path='/cart' element={<div><Navbar/><Cart /><Footer/></div>}/> */}
+            <Route path='/cart' element={<div><Navbar/><Cart /><Footer/></div>}/>
 
 
           </Routes>

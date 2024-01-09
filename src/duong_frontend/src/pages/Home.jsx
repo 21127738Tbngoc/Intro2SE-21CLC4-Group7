@@ -478,7 +478,7 @@ const Home = () => {
                                 <ToastContainer />
                                 <div className="inquiry-btn justify-content-between">
                                     <button onClick={handleSendInquiry} className="btn-nm prim-btn me-3" id="send-btn">SEND INQUIRY</button>
-                                    <button className="btn-nm sec-btn" id="contact-btn">CONTACT US</button>
+                                    <a className="btn-nm sec-btn" id="contact-btn" href='/contact'>CONTACT US</a>
                                 </div>
                             </div>
                         </div>
