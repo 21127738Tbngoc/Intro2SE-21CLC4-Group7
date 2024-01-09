@@ -56,6 +56,7 @@ const Shop = () => {
 
   const createComponents = (data) => {
     const filteredData = filterProducts(data);
+
     const components = [];
     for (let i = 0; i < filteredData.length - 3; i += 3) {
       components.push(
@@ -137,7 +138,7 @@ return (
         {/* New arrivals */}
         <div className="container-fluid banner-container">
             <div className="banner-wrapper">
-                <img src="/imgs/shop/new-arrivals.jpg" className="banner" />
+                <img src="/imgs/shop/new-arrivals.jpg" class="banner" />
                 <video src="/imgs/shop/new-arrivals.mp4" className="banner-video" autoPlay loop muted></video>
                 <div className="banner-text">NEW ARRIVALS</div>
             </div>
@@ -179,8 +180,8 @@ return (
 
         {/* All products */}
         <div className="container-fluid justify-content-center">
-            <p className="title1 shop-title">SHOP ALL</p>
-            <h2 className="shop-headline">All Products</h2>
+            <p class="title1 shop-title">SHOP ALL</p>
+            <h2 class="shop-headline">All Products</h2>
             <div className="container">
                 <div className="row g-4">
                     {/* Product filter */}
