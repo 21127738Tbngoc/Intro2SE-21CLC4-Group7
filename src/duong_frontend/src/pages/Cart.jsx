@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../components/common.css';
 import '../components/styles/Cart.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';

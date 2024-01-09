@@ -41,7 +41,7 @@ td,th{
 } */
 
 @charset "utf-8";
-@import url("../../src/components/common.css");
+@import url("../common.css");
 
 p {
     /* margin-bottom: 0; */
