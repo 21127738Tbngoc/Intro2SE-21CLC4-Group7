@@ -1,3 +1,5 @@
+@import url("../common.css");
+
 .product-display{
     display: flex;
     flex-direction: row;

@@ -13,6 +13,8 @@
     font-family: regular-font;
 }*/
 
+@import url("../common.css");
+
 .title{
     margin-bottom: 2rem;
 }
