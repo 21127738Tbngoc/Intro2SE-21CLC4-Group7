@@ -116,7 +116,6 @@ const LivingRoom = () => {
                 </ol>
             </div>
             
-            
             {/* Hero img*/}
             <div className="container-fluid">
                 <div className="container">
