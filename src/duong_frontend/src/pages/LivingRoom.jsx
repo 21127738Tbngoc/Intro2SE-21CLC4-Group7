@@ -69,7 +69,7 @@ const LivingRoom = () => {
                                 <div onClick = {()=>{addToCart(row[i]._id)}} className="product-btn button2 no-right-border">ADD TO CART</div>
                                 <a href={`/product/${row[i]._id}`} className="product-btn button2">VIEW PRODUCT</a>
                             </div>
-                    </div>        
+                    </div>
                 )
             }
         }
