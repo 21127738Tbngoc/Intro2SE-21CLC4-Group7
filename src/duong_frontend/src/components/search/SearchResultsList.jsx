@@ -9,9 +9,9 @@ export const SearchResultsList = ({ results }) => {
   return (
 
     <div className="row g-4">
-      <div className=" d-inline-flex gap-1 center">
+      <div className=" d-inline-flex gap-1 center mb-5">
         <div className="results-list d-inline-flex"
-          style={{ color: color.ToneNeutral60}}
+          style={{ "background-color": "var(--scheme-background)"}}
         >
           {results.map((result, id) => {
             return <SearchResult result={result.name} key={id} className={"center"} />;

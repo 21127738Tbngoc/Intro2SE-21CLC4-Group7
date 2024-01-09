@@ -61,7 +61,7 @@ function App() {
               </div>
             } />
             <Route path='/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
-            <Route path='/article/:articleId' element={<div><Navbar /><ArticleDetail/><Footer /></div>} />
+            <Route path='/articles/:articleId' element={<div><Navbar /><ArticleDetail/><Footer /></div>} />
             <Route path='/diningroom' element={<div><Navbar/><DiningRoom/><Footer/></div>}/>
             <Route path='/bathroom' element={<div><Navbar/><Bathroom/><Footer/></div>}/>
             <Route path='/bedroom' element={<div><Navbar/><Bedroom/><Footer/></div>}/>

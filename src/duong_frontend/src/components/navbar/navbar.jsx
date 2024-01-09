@@ -121,7 +121,7 @@ const Navbar = () => {
 
                 {/*<!-- Logo --> */}
                 <div className="d-flex flex-row g-4 align-items-center" style={{marginLeft: '7rem'}}>
-                    <a href="/home">
+                    <a href="/">
                         <img src="/imgs/navbar/logo.svg" alt="Fitment" />
                     </a>
                 </div>
