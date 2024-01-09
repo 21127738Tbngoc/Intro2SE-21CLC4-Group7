@@ -221,7 +221,7 @@ const AddProduct = () => {
                         onChange={handleCategoryChange}
                         checked={categories.includes("Other")}
                       />
-                      Khong biet category gi nua ...
+                      Other
                     </label>
                   </div>
                 </FormGroup>
