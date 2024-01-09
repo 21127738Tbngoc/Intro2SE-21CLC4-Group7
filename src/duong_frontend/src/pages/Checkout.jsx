@@ -1,13 +1,74 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import '../components/common.css';
 import '../components/styles/Checkout.css';
 
-import '../../public/bootstrap-5/css/bootstrap.min.css';
-import '../../public/bootstrap-5/js/bootstrap.bundle.min.js';
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
 import '../components/common.css';
 
+
+import { ShopContext } from '../components/context/ShopContext';
+import { Link, useNavigate } from 'react-router-dom';
+
 const Checkout = () => {
+  const navigate = useNavigate();
+  const { getTotalCartItems, getTotalCartAmount, allProducts, cartItems, addToCart, removeallFromCart, remove1FromCart } = useContext(ShopContext);
+
+
+
+  const totalCartItems = getTotalCartItems() || 0;
+
+  const token=localStorage.getItem("Token");
+
+
+  const uniqueCartItems = Array.from(new Set(cartItems));
+
+
+  const [shippingInfo, setShippingInfo] = useState({
+    fullName: '',
+    address: '',
+  });
+
+
+  const handleProceedToConfirmation = async () => {
+    try {
+      const orderData = {
+        userId: shippingInfo.fullName,
+        address: shippingInfo.address,
+        products: uniqueCartItems.map(productId => ({
+          productId,
+          quantity: cartItems.filter(id => id === productId).length,
+        })),
+        subtotal:getTotalCartAmount() + 8.75 + 5
+      };
+      console.log(orderData);
+
+      const response = await fetch('http://localhost:5000/api/orders/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(orderData),
+    });
+
+
+      if (response.ok) {
+        // Order saved successfully, you can handle the success as needed
+        console.log('Order saved successfully');
+        navigate('/confirmation');
+      } else {
+        // Handle errors or show an error message
+        console.error('Failed to save order:', response.status, response.statusText);
+        // You might want to display an error message to the user
+      }
+    } catch (error) {
+      console.error('Error while saving order:', error);
+      // Handle unexpected errors
+    }
+  };
   return (
     <div className="container-fluid">
       <nav aria-label="breadcrumb" className="navbar-breadcrumb">
@@ -27,8 +88,6 @@ const Checkout = () => {
         <p className="d-inline-block p1">•</p>
         <p className="d-inline-block p1 page-sub-breadcrumb">CHECKOUT</p>
         <p className="d-inline-block p1">•</p>
-        <p className="d-inline-block p1">PAYMENT</p>
-        <p className="d-inline-block p1">•</p>
         <p className="d-inline-block p1">CONFIRMATION</p>
       </div>
       <div
@@ -37,119 +96,37 @@ const Checkout = () => {
         {/* <!-- Order infomation --> */}
         <div className="checkout-form">
           <form action="">
-            <div className="form-group row">
-              <h3 className="mb-4 px-0 checkout-title">Contact Information</h3>
-              <div className="col-xxl-11">
-                <label for="email">EMAIL</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="email"
-                  placeholder="nguyenvana@gmail.com"
-                  required
-                />
-                <img src="../../public/imgs/navbar/mail.svg" alt="" />
-              </div>
-              <div className="col-xxl-11">
-                <label for="phone">PHONE NUMBER</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="phone"
-                  placeholder="e.g Report a problem"
-                />
-                <img src="../../public/imgs/navbar/phone.svg" alt="" />
-              </div>
-            </div>
             <div className="form-group row my-4">
               <h3 className="my-4 px-0 checkout-title">Shipping Information</h3>
               <div className="row mb-4">
                 <div className="col-xxl-6 me-4">
-                  <label for="firstname">FIRST NAME *</label>
+                  <label htmlFor="firstname">FULL NAME *</label>
                   <input
                     type="text"
                     className="form-control"
                     id="firstname"
-                    placeholder="Van A"
+                    placeholder="Le Van Duong"
                     required
+                    onChange={(e) => setShippingInfo({ ...shippingInfo, fullName: e.target.value })}
                   />
-                  <img src="../../public/imgs/navbar/mail.svg" alt="" />
-                </div>
-                <div className="col-xxl-5">
-                  <label for="lastname">LAST NAME *</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="lastname"
-                    placeholder="e.g Report a problem"
-                  />
-                  <img src="../../public/imgs/navbar/phone.svg" alt="" />
                 </div>
               </div>
-
               <div className="row mb-4">
                 <div className="col-xxl-7 me-4">
-                  <label for="address">ADDRESS *</label>
+                  <label htmlFor="address">ADDRESS *</label>
                   <input
                     type="text"
                     className="form-control"
                     id="address"
                     placeholder="123 Street name, Ward name"
                     required
-                  />
-                  <img src="../../public/imgs/navbar/mail.svg" alt="" />
-                </div>
-                <div className="col-xxl-4">
-                  <label for="firstname">ADDRESS *</label>
-                  <select
-                    className="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn"
-                  >
-                    <option value="danh sach quan">District1</option>
-                    <option value="danh sach quan">District2</option>
-                  </select>
-                </div>
-              </div>
-              <div className="row mb-4">
-                <div className="col-xxl-4 me-3">
-                  <label for="city">CITY/PROVINCE *</label>
-                  <select
-                    className="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn"
-                  >
-                    <option value="danh sach thanh pho">HCM</option>
-                    <option value="danh sach thanh pho">HANOI</option>
-                  </select>
-                </div>
-                <div className="col-xxl-3 me-3">
-                  <label for="firstname">POSTAL CODE *</label>
-                  <input
-                    type="text"
-                    className="p-3 form-control"
-                    id="postal"
-                    placeholder="70000"
-                    required
+                    onChange={(e) => setShippingInfo({ ...shippingInfo, address: e.target.value })}
                   />
                 </div>
-                <div className="col-xxl-4">
-                  <label for="firstname">COUNTRY/REGION *</label>
-                  <select
-                    className="selectpicker form-control border-0 mb-1 rounded btn-md outline-btn"
-                  >
-                    <option value="danh sach nuoc">VIETNAM</option>
-                    <option value="danh sach nuoc">LAOS</option>
-                  </select>
-                </div>
               </div>
-              <div className="row mb-4">
-                <div className="col-xxl-12">
-                  <label for="title">SHIPPING NOTE</label>
-                  <textarea
-                    className="form-control w-100 h-100"
-                    id="title"
-                    placeholder="Notes about your order (e.g Special notes for delivery)"
-                  ></textarea>
-                </div>
               </div>
-            </div>
+
+              
             <div className="form-group row my-4">
               <h3 className="mb-4 px-0">Shipping Method</h3>
 
@@ -242,99 +219,47 @@ const Checkout = () => {
           <div className="order-summary">
             <h4 className="order-summary-title">ORDER SUMMARY</h4>
             <div className="order-summary-items">
-              <table className="table table-borderless">
-                <thead className="order-summary-items-header">
-                  <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">QTY</th>
-                    <th scope="col">PRICE</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td scope="row">
-                      <div className="d-flex align-bottom">
-                        <img
-                          src="../../public/imgs/shop-28-img-1.jpg"
-                          className="d-inline-block order-summary-item-img"
-                          alt="Product Image"
-                        />
-                        <div
-                          className="d-inline-block order-summary-item-info ms-3"
-                        >
-                          <p className="w-100 mb-0 subtitle2">
-                            Singapore Dark Rattan Arm Chair
-                          </p>
-                          <div className="d-inline">
-                            <p className="support d-inline">Size M</p>
-                            <p className="subtitle2 d-inline">.</p>
-                            <p className="support d-inline">Black</p>
-                            <p className="subtitle2 d-inline">.</p>
-                            <p className="support d-inline">SKU 001</p>
+              <ul className="your-cart-list">
+                {uniqueCartItems.map((productId) => {
+                  const product = allProducts.find((p) => String(p._id) === productId);
+                  if (product) {
+                    const itemCount = cartItems.filter((id) => id === productId).length;
+                    return (
+                      <li className="d-flex justify-content-between mb-2 cart-item" key={product._id}>
+                        <div className="d-flex align-items-center">
+                          <a href="#">
+                          </a>
+                        </div>
+                        <div className="d-flex align-bottom mx-5">
+                          <img src={product.thumbnail} className="d-inline-block cart-item-img" alt="Product Image" />
+                          <div className="d-inline-block cart-item-info ms-3">
+                            <p className="w-100 subtitle2">{product.name}</p>
+                            <div className="d-inline">
+                              <p className="support d-inline">Size M</p>
+                              <p className="subtitle2 d-inline">.</p>
+                              <p className="support d-inline">Black</p>
+                              <p className="subtitle2 d-inline">.</p>
+                              <p className="support d-inline">SKU 001</p>
+                            </div>
+                            <div className="mt-4">
+                              <p className="subtitle2 d-inline">${product.price}</p>
+                              <div className="d-inline cart-item-quantity mx-3">
+                                <p className="p3 d-inline">x{itemCount}</p>
+                              </div>
+                              <p className="subtitle2 d-inline">${product.price * itemCount}</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </td>
-                    <td className="order-summary-item-quantity"><p>2</p></td>
-                    <td className="order-summary-item-price"><p>$3,000</p></td>
-                  </tr>
-                  <tr>
-                    <td scope="row">
-                      <div className="d-flex align-bottom">
-                        <img
-                          src="../../public/imgs/shop-28-img-1.jpg"
-                          className="d-inline-block order-summary-item-img"
-                          alt="Product Image"
-                        />
-                        <div
-                          className="d-inline-block order-summary-item-info ms-3"
-                        >
-                          <p className="w-100 mb-0 subtitle2">
-                            Singapore Dark Rattan Arm Chair
-                          </p>
-                          <div className="d-inline">
-                            <p className="support d-inline">Size M</p>
-                            <p className="subtitle2 d-inline">.</p>
-                            <p className="support d-inline">Black</p>
-                            <p className="subtitle2 d-inline">.</p>
-                            <p className="support d-inline">SKU 001</p>
-                          </div>
+                        <div className="d-flex align-items-center">
+                          <a href="#">
+                          </a>
                         </div>
-                      </div>
-                    </td>
-                    <td className="order-summary-item-quantity"><p>2</p></td>
-                    <td className="order-summary-item-price"><p>$3,000</p></td>
-                  </tr>
-                  <tr>
-                    <td scope="row">
-                      <div className="d-flex align-bottom">
-                        <img
-                          src="../../public/imgs/shop-28-img-1.jpg"
-                          className="d-inline-block order-summary-item-img"
-                          alt="Product Image"
-                        />
-                        <div
-                          className="d-inline-block order-summary-item-info ms-3"
-                        >
-                          <p className="w-100 mb-0 subtitle2">
-                            Singapore Dark Rattan Arm Chair
-                          </p>
-                          <div className="d-inline">
-                            <p className="support d-inline">Size M</p>
-                            <p className="subtitle2 d-inline">.</p>
-                            <p className="support d-inline">Black</p>
-                            <p className="subtitle2 d-inline">.</p>
-                            <p className="support d-inline">SKU 001</p>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td className="order-summary-item-quantity"><p>2</p></td>
-                    <td className="order-summary-item-price"><p>$3,000</p></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                      </li>
+                    );
+                  }
+                  return null;
+                })}
+              </ul>            </div>
             <ul className="order-summary-cost-section">
               <li className="d-flex justify-content-between order-summary-cost">
                 <p className="title1">Shipping cost</p>
@@ -350,45 +275,22 @@ const Checkout = () => {
               </li>
               <li className="d-flex justify-content-between order-summary-cost">
                 <p className="title1">Subtotal</p>
-                <p className="cost-money">$ 4,890</p>
+                <p className="cost-money">$ {getTotalCartAmount()}</p>
               </li>
             </ul>
-            <div className="invoice-counpon-section">
-              <p className="title2">Discount Code or Coupon</p>
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Enter your code here"
-                  aria-label="Search"
-                />
-                <button className="tert-i-btn tert-btn btn-sm" type="submit">
-                  APPLY
-                </button>
-              </form>
-            </div>
-            <img src="../../public/imgs/navbar/line.svg" alt="line" />
             <div
               className="d-flex justify-content-between order-summary-total-section"
             >
               <p className="title1">Total Cost</p>
-              <h4>$ 4,895</h4>
+              <h4>$ {getTotalCartAmount() + 8.75 + 5}</h4>
             </div>
             <a href="#">
-              <button className="prim-btn btn-nm w-100 invoice-checkout">
-                PROCEED TO CHECKOUT
-              </button>
+              <a className="prim-btn btn-nm w-100 invoice-checkout"  onClick={handleProceedToConfirmation}>
+                PROCEED TO COMFIRMATION
+              </a>
             </a>
             <a href="#">
-              <div className="d-flex link-md">
-                <p className="d-inline mx-auto">
-                  <img
-                    src="../../public/imgs/navbar/arrow-left-icon.svg"
-                    alt="arrow"
-                    className="me-2"
-                  />BACK TO SHOPPING
-                </p>
-              </div>
+
             </a>
           </div>
         </div>
