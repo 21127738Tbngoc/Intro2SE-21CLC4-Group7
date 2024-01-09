@@ -14,7 +14,18 @@ const UserProfile = () => {
 
     const [editable, setEditable] = useState(false);
     const [loading, setLoading] = useState(true);
-    const [userData, setData] = useState({})
+    const [userData, setUserData] = useState({
+            username: '',
+            name: '',
+            email: '',
+            phone: '',
+            address: '',
+            avatar: '',
+            password: '',
+            district: '',
+            city: '',
+            country: ''
+    })
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -33,8 +44,7 @@ const UserProfile = () => {
                     throw new Error('Failed to fetch data');
                 }
                 let temp = await response.json();
-                setData(temp)
-                console.log(userData)
+                setUserData(temp);
                 setLoading(false);
             } catch (error) {
                 toast.error('Error fetching data');
@@ -78,7 +88,7 @@ const UserProfile = () => {
             // Upload image to Cloudinary
             const signatureResponse = await axios.get("http://localhost:5000/get-signature");
             const files = document.querySelector("#formFile").files;
-
+            console.log("93 running")
             // Check if there are files to upload
             if (files.length > 0) {
                 const data = new FormData();
@@ -106,25 +116,24 @@ const UserProfile = () => {
             } else {
                 setAvatar(userData.avatar)
             }
-
+            console.log("121 running")
             setLoading(true);
             const updateData = {
-                username: username || userData.username,
-                name: name || userData.name,
-                email: email || userData.email,
-                phone: phone || userData.phone,
-                address: address + ", " + district + ", " + city + ", " + country + "." || userData.address,
-                avatar: avatar,
-                password: password,
+                username: userData.username,
+                name: userData.name,
+                email: userData.email,
+                phone: userData.phone,
+                address: userData.address + (district ===''? "" : ", " + district) + (city===''? "" : ", " + city) + (country===''? "." : ", " + country+"."),
+                avatar: userData.avatar,
             };
-
+            console.log("132 running")
             try {
                 console.log(updateData)
                 const headers = {
                     'Content-Type': 'application/json',
                     token: ' bearer ' + Token,
                 };
-
+                console.log("139 running")
                 const response = await fetch(`http://localhost:5000/api/users/${userId}`, {
                     method: 'PUT',
                     headers,
@@ -157,13 +166,14 @@ const UserProfile = () => {
                             type="file"
                             id="formFile" // Corrected id
                             className="form-control form-md"
-                            files={avatar}
+                            files={userData.avatar}
                             onChange={(e) => {
                                 if (e.target.files.length > 0) {
-                                    setAvatar(e.target.files[0])
-                                } else {
-                                    setAvatar(null)
+                                    setUserData({...userData,"avatar": e.target.files[0]})
                                 }
+                                else {
+                                    setUserData(userData)
+                            }
                             }}
                         />
                         <img src="/imgs/profile/camera-btn.png" alt="camera-btn" style={{
@@ -205,11 +215,11 @@ const UserProfile = () => {
                                             disabled={!editable}
                                             value={userData.name}
                                             onChange={(e) => {
-                                                setName(e.target.value)
+                                                setUserData({...userData, "name": e.target.value})
                                             }}
                                         />
-                                        {/*<img src="/imgs/profile/edit.svg" alt="edit" className="trailing-icon"*/}
-                                        {/*     onClick={handleIconClick}/>*/}
+                                        <img src="/imgs/profile/edit.svg" alt="edit" className="trailing-icon"
+                                             onClick={handleIconClick}/>
                                     </div>
                                 </div>
                                 {/* Username */}
@@ -222,11 +232,11 @@ const UserProfile = () => {
                                             type="text"
                                             placeholder="example@email.us.com"
                                             className="form-control form-md"
-                                            disabled={!editable}
+                                            disabled
                                             value={userData.username}
-                                            onChange={(e) => {
-                                                setUsername(e.target.value)
-                                            }}
+                                            // onChange={(e) => {
+                                            //     setUserData({...userData, "username": e.target.value})
+                                            // }}
                                         />
                                     </div>
                                 </div>
@@ -245,7 +255,7 @@ const UserProfile = () => {
                                             disabled={!editable}
                                             value={userData.email}
                                             onChange={(e) => {
-                                                setEmail(e.target.value)
+                                                setUserData({...userData, "email": e.target.value})
                                             }}
                                         />
                                         {/*<img src="/imgs/profile/edit.svg" alt="edit" className="trailing-icon"*/}
@@ -265,7 +275,7 @@ const UserProfile = () => {
                                             disabled={!editable}
                                             value={userData.phone}
                                             onChange={(e) => {
-                                                setPhone(e.target.value)
+                                                setUserData({...userData, "phone": e.target.value})
                                             }}
                                         />
                                         {/*<img src="/imgs/profile/edit.svg" alt="edit" className="trailing-icon"*/}
@@ -283,7 +293,7 @@ const UserProfile = () => {
                                         type="password"
                                         className="form-control form-md"
                                         placeholder="•••••••••••••••••"
-                                        onChange={(e) => setPassword(e.target.value)}
+                                        // onChange={(e) => setUserData({...userData, "password": e.target.value})}
                                         disabled
                                     />
                                     {/*<img src="/imgs/profile/edit.svg" alt="edit" className="trailing-icon"*/}
@@ -310,7 +320,7 @@ const UserProfile = () => {
                                         className="form-control form-md"
                                         placeholder="1234 Elm Street, Spring Field"
                                         value={userData.address}
-                                        onChange={(e) => setAddress(e.target.value)}
+                                        onChange={(e) => setUserData({...userData, "address": e.target.value})}
                                         disabled={!editable}
                                     />
                                     {/*<img src="/imgs/profile/edit.svg" alt="edit" className="trailing-icon"*/}
