@@ -30,7 +30,8 @@ import Faqs from "./pages/Faqs";
 import UserProfile from './pages/UserProfile';
 import Cart from './pages/Cart';
 import Contact from './pages/Contact';
-
+import Checkout from './pages/Checkout';
+import Confirmation from './pages/Confirmation'
 
 function App() {
   return (
@@ -55,6 +56,10 @@ function App() {
             <Route path="/product/:productId" element={<div><Navbar /><ProductDetail /><Footer/></div>} />
             <Route path='/profile' element={<div><Navbar /><UserProfile/><Footer /></div>} />
             <Route path='/contact' element={<div><Navbar /><Contact/><Footer /></div>} />
+            <Route path='/checkout' element={<div><Navbar /><Checkout/><Footer /></div>} />
+            <Route path='/confirmation' element={<div><Navbar /><Confirmation/><Footer /></div>} />
+
+
 
             <Route path='/test' element={
 

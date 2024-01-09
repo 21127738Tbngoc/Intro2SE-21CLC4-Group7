@@ -86,8 +86,8 @@ const Cartmodal = () => {
           <h4>${getTotalCartAmount()}</h4>
         </div>
         <div className="d-flex">
-          <button className="prim-btn btn-md w-50 me-2">VIEW CART</button>
-          <button className="sec-btn btn-md w-50">CHECKOUT</button>
+          <a className="prim-btn btn-md w-50 me-2"href='/cart' >VIEW CART</a>
+          <a className="sec-btn btn-md w-50" href='/checkout'>CHECKOUT</a>
         </div>
       </div>
     </div>
