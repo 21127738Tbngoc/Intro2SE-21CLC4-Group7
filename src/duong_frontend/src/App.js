@@ -28,6 +28,7 @@ import Articles from './pages/Articles';
 import LivingRoom from './pages/LivingRoom';
 import Faqs from "./pages/Faqs";
 import UserProfile from './pages/UserProfile';
+//import Cart from './pages/Cart';
 
 
 function App() {
@@ -59,7 +60,7 @@ function App() {
                 <Footer />
               </div>
             } />
-            <Route path='/user/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
+            <Route path='/orderhistory' element={<div><Navbar /><OrderHistory/><Footer /></div>} />
             <Route path='/article/:articleId' element={<div><Navbar /><ArticleDetail/><Footer /></div>} />
             <Route path='/diningroom' element={<div><Navbar/><DiningRoom/><Footer/></div>}/>
             <Route path='/bathroom' element={<div><Navbar/><Bathroom/><Footer/></div>}/>
@@ -69,7 +70,8 @@ function App() {
             <Route path='/shop' element={<div><Navbar/><Shop /><Footer/></div>}/>
             <Route path='/faqs' element={<div><Navbar/><Faqs /><Footer/></div>}/>
             <Route path='/warranty' element={<div><Navbar/><Warranty /><Footer/></div>}/>
-            
+            {/* <Route path='/cart' element={<div><Navbar/><Cart /><Footer/></div>}/> */}
+
 
           </Routes>
         </BrowserRouter>
