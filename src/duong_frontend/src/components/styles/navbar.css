@@ -110,6 +110,7 @@ a h5 img {
 
 /*-- Cart modal --*/
 .navbar-cart {
+    position: fixed;
     top: 0;
     right: 0;
     width: 524px;

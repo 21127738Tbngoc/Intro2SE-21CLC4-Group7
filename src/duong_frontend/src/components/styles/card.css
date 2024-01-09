@@ -64,6 +64,7 @@
 .product-buttons {
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
     /* Distribute space between buttons */
 }
 
