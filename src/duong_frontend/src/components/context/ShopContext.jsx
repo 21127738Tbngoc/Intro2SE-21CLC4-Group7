@@ -6,8 +6,10 @@ const ShopContextProvider = (props) => {
     let lastStage = JSON.parse(localStorage.getItem("cart"))
     if (lastStage === null)
     {
-        lastStage.cartItems = [];
-        lastStage.allProducts = [];
+        lastStage = {
+            cartItems : [],
+            allProducts: []
+        }
     }
     const [cartItems, setCartItems] = useState(lastStage.cartItems || []);
     const [allProducts, setAllProducts] = useState(lastStage.allProducts || []);
