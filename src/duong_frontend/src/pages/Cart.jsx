@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import '../components/common.css';
 import '../components/styles/Cart.css';
 
-import '../../public/bootstrap-5/css/bootstrap.min.css';
-import '../../public/bootstrap-5/js/bootstrap.bundle.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
 import '../components/common.css';
-import '../components/styles/breadcrumb.css';
+import '../components/styles/About.css';
 
 const Cart = () => {
   return (

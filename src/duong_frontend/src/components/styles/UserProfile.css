@@ -10,3 +10,16 @@
     z-index: -1;
 }
 
+.profile-btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.profile-btn button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center !important;
+}
