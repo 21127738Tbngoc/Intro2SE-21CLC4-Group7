@@ -56,6 +56,7 @@ const Shop = () => {
 
   const createComponents = (data) => {
     const filteredData = filterProducts(data);
+
     const components = [];
     for (let i = 0; i < filteredData.length - 3; i += 3) {
       components.push(
@@ -114,6 +115,16 @@ const Shop = () => {
     { value: 'Floor Lighting', id: 'check16', name: 'FLOOR LIGHTING' },
     { value: 'Wall Decor', id: 'check17', name: 'WALL DECORATION' },
   ];
+
+  const [hoveredImage, setHoveredImage] = useState(null);
+
+  const handleMouseEnter = (image) => {
+    setHoveredImage(image);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredImage(null);
+  };
   
 return (
     <div>
@@ -127,7 +138,7 @@ return (
         {/* New arrivals */}
         <div className="container-fluid banner-container">
             <div className="banner-wrapper">
-                <img src="/imgs/shop/new-arrivals.jpg" className="banner" />
+                <img src="/imgs/shop/new-arrivals.jpg" class="banner" />
                 <video src="/imgs/shop/new-arrivals.mp4" className="banner-video" autoPlay loop muted></video>
                 <div className="banner-text">NEW ARRIVALS</div>
             </div>
@@ -138,10 +149,10 @@ return (
             <p className="title1 shop-title">SHOP BY ROOM</p>
             <h2 className="shop-headline">Furniture by Rooms</h2>
             {/* Living room */}
-            <div className="category-section justify-content-center">
+            <div className="category-section justify-content-center" onMouseEnter={() => handleMouseEnter('living')} onMouseLeave={handleMouseLeave}>
                 <Link to="/livingroom" className="livingroom-link">
                     <p className="living-room">LIVING ROOM</p>
-                    <img src="/imgs/shop/livingroom.jpg" alt="Living Room" className="living-img" />
+                    <img src="/imgs/shop/livingroom.jpg" alt="Living Room" className={hoveredImage === 'living' ? 'living-img active' : 'living-img'} />
                 </Link>
             </div>
             {/* Bedroom */}
@@ -169,8 +180,8 @@ return (
 
         {/* All products */}
         <div className="container-fluid justify-content-center">
-            <p className="title1 shop-title">SHOP ALL</p>
-            <h2 className="shop-headline">All Products</h2>
+            <p class="title1 shop-title">SHOP ALL</p>
+            <h2 class="shop-headline">All Products</h2>
             <div className="container">
                 <div className="row g-4">
                     {/* Product filter */}
