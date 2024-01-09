@@ -8,13 +8,14 @@ import "bootstrap/dist/js/bootstrap.bundle"
 
 function ProductCard(props) {
     const {addToCart}=useContext(ShopContext);
+    console.log(props.tags)
     return (
         <div className="col">
             <div className="product-ctn">
                 {/* Product img */}
                 <div className="product-img" >
                     <img src={props.thumbnail} alt="product-img" />
-                    <span className="label2 tag-md tag-outline">SALE</span>
+                    <span className="label2 tag-md tag-outline">{props.tags}</span>
                 </div>
                 {/* Product info */}
                 <div className="product-info">
