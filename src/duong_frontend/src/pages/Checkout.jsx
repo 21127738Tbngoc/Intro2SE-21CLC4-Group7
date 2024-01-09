@@ -30,43 +30,37 @@ const Checkout = () => {
   const [shippingInfo, setShippingInfo] = useState({
     fullName: '',
     address: '',
+    email: '',
+    phone: '',
   });
-
 
   const handleProceedToConfirmation = async () => {
     try {
       const orderData = {
         userId: shippingInfo.fullName,
         address: shippingInfo.address,
+        email: shippingInfo.email, // Include email in order data
+        phone: shippingInfo.phone, // Include phone in order data
         products: uniqueCartItems.map(productId => ({
           productId,
           quantity: cartItems.filter(id => id === productId).length,
         })),
-        subtotal:getTotalCartAmount() + 8.75 + 5
+        subtotal: getTotalCartAmount() + 8.75 + 5,
       };
-      console.log(orderData);
+
+      // ... (existing code)
 
       const response = await fetch('http://localhost:5000/api/orders/', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(orderData),
-    });
+      });
 
-
-      if (response.ok) {
-        // Order saved successfully, you can handle the success as needed
-        console.log('Order saved successfully');
-        navigate('/confirmation');
-      } else {
-        // Handle errors or show an error message
-        console.error('Failed to save order:', response.status, response.statusText);
-        // You might want to display an error message to the user
-      }
+      // ... (existing code)
     } catch (error) {
-      console.error('Error while saving order:', error);
-      // Handle unexpected errors
+      // ... (existing code)
     }
   };
   return (
@@ -125,6 +119,33 @@ const Checkout = () => {
                 </div>
               </div>
               </div>
+              {/* Add email and phone fields */}
+            <div className="row mb-4">
+              <div className="col-xxl-7 me-4">
+                <label htmlFor="email">EMAIL *</label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  placeholder="example@example.com"
+                  required
+                  onChange={(e) => setShippingInfo({ ...shippingInfo, email: e.target.value })}
+                />
+              </div>
+            </div>
+            <div className="row mb-4">
+              <div className="col-xxl-7 me-4">
+                <label htmlFor="phone">PHONE *</label>
+                <input
+                  type="tel"
+                  className="form-control"
+                  id="phone"
+                  placeholder="123-456-7890"
+                  required
+                  onChange={(e) => setShippingInfo({ ...shippingInfo, phone: e.target.value })}
+                />
+              </div>
+            </div>
 
               
             <div className="form-group row my-4">
