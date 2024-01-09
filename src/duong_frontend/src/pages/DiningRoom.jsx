@@ -8,12 +8,12 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/styles/Shop.css';
 import {toast} from 'react-toastify';
 import {Link, useNavigate} from 'react-router-dom';
-import { ShopContext } from '../components/context/ShopContext'
+import {ShopContext} from '../components/context/ShopContext'
 
 const DiningRoom = () => {
     let [Data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
-    const {addToCart}=useContext(ShopContext);
+    const {addToCart} = useContext(ShopContext);
     useEffect(() => {
         document.title = "Dining Room";
         window.scrollTo(0, 0);
@@ -41,8 +41,16 @@ const DiningRoom = () => {
         }
     };
 
-    const createARowOf4 = (category, ) => {
-        let row = Data.filter(item => item.categories.includes(category))
+    const createARowOf4 = (categories) => {
+        let row = [];
+        for (let i = 0; i < categories.length; i++) {
+            row.push(...Data.filter(item => item.categories.includes(categories[i])))
+        }
+        row = [...new Set(row.map(obj => obj._id))]
+            .map(id => {
+                return row.find(obj => obj._id === id);
+            });
+
         let components = []
         for (let i = 0; i < row.length; i++) {
             if (row[i]) {
@@ -51,205 +59,129 @@ const DiningRoom = () => {
                         <div className="cardcontent d-flex flex-column gap-4">
                             <img className="card-img-top" src={row[i].thumbnail}/>
                             <div className="card-body d-flex flex-column justify-content-around p-0">
-                                <h6 className="card-title" style={{"height": "3em"}}>{row[i].name}</h6>
+                                <h6 className="card-title" style={{height: "3em"}}>{row[i].name}</h6>
                                 <div className="d-flex flex-row justify-content-between">
                                     <p className="card-text p3">{row[i].categories.join(" & ")}</p>
                                     <p className="title2 py-1 product-price">{row[i].price}</p>
                                 </div>
                                 <div className="justify-content-start">
-                                    <img style={{width: "50%", height:"auto"}} src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(row[i].rating)}`}/>
+                                    <img style={{width: "50%", height: "auto"}}
+                                         src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(row[i].rating)}`}/>
                                 </div>
                             </div>
                         </div>
                         <div className="product-buttons d-flex flex-row justify-content-between">
-                            <div onClick = {()=> {addToCart(row[i]._id)}} className="product-btn button2 no-right-border">ADD TO CART</div>
+                            <div onClick={() => {
+                                addToCart(row[i]._id)
+                            }} className="product-btn button2 no-right-border">ADD TO CART
+                            </div>
                             <a href={`/product/${row[i]._id}`} className="product-btn button2"> VIEW PRODUCT </a>
                         </div>
                     </div>
                 )
             }
         }
-        if (components.length===0) {components.push
-        (
-            <h3 className={"justify-content-center"} style={{fontStyle:"italic", color:"gray"}}>Coming soon!</h3>
-        )}
+        if (components.length === 0) {
+            components.push
+            (
+                <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
+                    <h3 className="justify-content-center text-center"
+                        style={{fontStyle: "italic", color: "gray", alignContent: "center"}}>Coming
+                        soon!</h3>
+                </div>
+            )
+        }
         return components;
     };
 
+    const createSection = (title1, _h2, category) => {
+        return (
+            <div className="container">
+                <div className="d-flex justify-content-center">
+                    <div className="d-flex flex-column">
+                        <div className="title text-center">
+                            <div className="title1">
+                                {title1}
+                            </div>
+                            <h2>
+                                {_h2}
+                            </h2>
+                        </div>
+                        <div className={"col-12 d-flex flex-row flex-wrap"}>
+                            {createARowOf4(category)}
+                        </div>
+                    </div>
+                </div>
+            </div>)
+    }
+
     return (
-        <div className="container-fluid d-flex flex-column flex-shrink-0 page">
+        <div className="container-fluid d-flex flex-column flex-shrink-0 page mb-5">
             {/* BREADCRUMB */}
             <ol className="breadcrumb">
-                <li><a href="/">HOME</a></li>
-                <li className="label"><a href="/shop">SHOP ALL</a></li>
-                <li className="button"><a href="/dining-room">DINING ROOM</a></li>
+                <li className="col-1"></li>
+                <li style={{color: "var(--tone-neutral-variant-60)"}}><a href="/">HOME</a></li>
+                <li style={{color: "var(--tone-neutral-variant-60)"}}><a href="/shop">SHOP ALL</a></li>
+                <li><a href="/diningroom">DINING ROOM</a></li>
             </ol>
-            <div className="section row g-4">
-                <div className="d-flex flex-row justify-content-around">
-                    {/* HERO IMAGE */}
-                    <img src="/imgs/room/diningroom.jpg"
-                         style={{"width": "636px", "height": "500px", "object-fit": "cover"}}/>
-
-                    {/* PAGE DESCRIPTION */}
-                    <div className="col-12 col-xxl-4 d-flex flex-column">
-                        <d3 style={{marginBottom:"0.5em"}}>
-                            Dining Room
-                        </d3>
-                        <div>
-                            <p>
-                                Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
+            <div className="container-fluid">
+                <div className="container">
+                    <div className="row g-4 d-flex">
+                        <div className="col-6">
+                            <img src="/imgs/room/diningroom.jpg" alt="diningroom"
+                                 style={{width: '100%', height: 'auto'}}/>
+                        </div>
+                        <div className="col-1"></div>
+                        <div className="col-5">
+                            <d3>DINING ROOM</d3>
+                            <p className="p2" style={{
+                                marginTop: '48px',
+                                marginBottom: '20px',
+                                color: 'var(--scheme-on-background)'
+                            }}>Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
                                 Ipsum voluptate Est velit et ex labori osam dolor est inventore quo numquam. Labore
                                 voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis aliquid
                                 suscipit recusandae similique. Vero natus sed animi reiciendis. Quia id omnis aliquid
                                 suscipit recusandae similique. Vero natus sed animi reiciendis. Ipsum voluptate Est
-                                velit et ex labori osam dolor est inventore quo.
-                            </p>
-                            <br/>
-                            <p>
+                                velit et ex labori osam dolor est inventore quo.</p>
+                            <p className="p2" style={{marginBottom: '20px', color: 'var(--scheme-on-background)'}}>
                                 Labore voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis
                                 aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
                             </p>
-                            <br/>
                             <div className="d-flex flex-row gap-4">
-                                <div>
-                                    <p>Client</p><br/>
-                                    <p>Location</p><br/>
-                                    <p>Date</p><br/>
-                                    <p>Share</p><br/>
+                                <div className='flex-column'>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Client</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Location</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Date</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Share</p>
                                 </div>
-                                <div>
-                                    <p>Quode Interactive</p> <br/>
-                                    <p>New York, US</p><br/>
-                                    <p>March 14, 2023</p><br/>
-                                    <div className="d-flex flex-row">
-                                        <a href="#" className="mediaicon fa-brands fa-facebook"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-twitter"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-instagram"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-pinterest"></a>
+                                <div className='flex-column'>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Qode Interactive</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Newyork, US</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>March 14, 2023</p>
+                                    <div className="mediaIcon">
+                                        <a href="#" className="fa-brands fa-facebook"></a>
+                                        <a href="#" className="fa-brands fa-twitter"></a>
+                                        <a href="#" className="fa-brands fa-instagram"></a>
+                                        <a href="#" className="fa-brands fa-pinterest"></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                </div>
-            </div>
             {/* DINING TABLES SECTION */}
-                <div className="justify-content-center">
-                    <div className="d-flex flex-column justify-content-center flex-shrink-0 flex-grow-1">
-                        <div className="title text-center">
-                            <div className="title1">
-                                DESK & TABLES
-                            </div>
-                            <h2>
-                                Dining Tables
-                            </h2>
-                        </div>
-                        {/*Dining Table*/}
-                        <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
-                            {createARowOf4('Dining Table')}
-                        </div>
-                    </div>
-                </div>
-            {/* DINING CHAIRS SECTION */
-            }
-            <div className="section row g-4">
-                <div className="d-flex justify-content-center">
-                    <div className="d-flex flex-column justify-content-center">
-                        <div className="title text-center">
-                            <div className="title1">
-                                CHAIR & STOOL
-                            </div>
-                            <h2>
-                                Dining Chairs
-                            </h2>
-                        </div>
-                        <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
-                            {createARowOf4('Dining Chair')}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* BAR CARTS & CARBINETS SECTION */
-            }
-            <div className="section row g-4">
-                <div className="d-flex justify-content-center">
-                    <div className="d-flex flex-column justify-content-center">
-                        <div className="title text-center">
-                            <div className="title1">
-                                STORAGE & SHELF
-                            </div>
-                            <h2>
-                                Bar Carts & Cabinets
-                            </h2>
-                        </div>
-                        <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
-                            {createARowOf4('Carbinet')}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* KITCHEN ISLANDS SECTION */
-            }
-            <div className="section row g-4">
-                <div className="d-flex justify-content-center">
-                    <div className="d-flex flex-column justify-content-center">
-                        <div className="title text-center">
-                            <div className="title1">
-                                STORAGE & SHELF
-                            </div>
-                            <h2>
-                                Kitchen Islands
-                            </h2>
-                        </div>
-                        <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
-                            {createARowOf4('Kitchen Islands')}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* BAR & COUNTER STOOLS SECTION */
-            }
-            <div className="section row g-4">
-                <div className="d-flex justify-content-center">
-                    <div className="d-flex flex-column justify-content-center">
-                        <div className="title text-center">
-                            <div className="title1">
-                                CHAIR & STOOL
-                            </div>
-                            <h2>
-                                Bar & Counter Stools
-                            </h2>
-                        </div>
-                        <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
-                            {createARowOf4('Bar')}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* LIGHTINGS SECTION */
-            }
-            <div className="section row g-4">
-                <div className="d-flex justify-content-center">
-                    <div className="d-flex flex-column justify-content-center">
-                        <div className="title text-center">
-                            <div className="title1">
-                                LIGHTING & DECOR
-                            </div>
-                            <h2>
-                                Lightings
-                            </h2>
-                        </div>
-                        <div className={"col-12 d-flex flex-row flex-wrap justify-content-center"}>
-                            {createARowOf4('Ceiling Lighting')}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="m-2"></div>
+            {createSection('TABLE', 'Dining Tables', ['Dining Table'])}
+            {/* DINING CHAIRS SECTION */}
+            {createSection('CHAIR', 'Dining Chairs', ['Dining Chair'])}
+            {/* BAR CARTS & CARBINETS SECTION */}
+            {createSection('CART & CARBINET', 'Bar Carts & Carbinets', ['Bar Cart', 'Carbinet'])}
+            {/* LIGHTINGS SECTION */}
+            {createSection('LIGHTING', 'Ceiling Lighting', ['Ceiling Lighting'])}
         </div>
-    )
-        ;
+    );
 }
 
 export default DiningRoom

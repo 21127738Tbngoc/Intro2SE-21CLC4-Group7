@@ -9,7 +9,7 @@ import {toast} from 'react-toastify';
 
 import {ShopContext} from '../components/context/ShopContext'
 
-const Bedroom = () => {
+const Bathroom = () => {
     let [Data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const {addToCart} = useContext(ShopContext);
@@ -39,9 +39,16 @@ const Bedroom = () => {
             setLoading(false);
         }
     };
+    const createARowOf4 = (categories) => {
+        let row = [];
+        for (let i = 0; i < categories.length; i++) {
+            row.push(...Data.filter(item => item.categories.includes(categories[i])))
+        }
+        row = [...new Set(row.map(obj => obj._id))]
+            .map(id => {
+                return row.find(obj => obj._id === id);
+            });
 
-    const createARowOf4 = (category) => {
-        let row = Data.filter(item => item.categories.includes(category))
         let components = []
         for (let i = 0; i < row.length; i++) {
             if (row[i]) {
@@ -106,72 +113,69 @@ const Bedroom = () => {
     }
 
     return (
-        <div className="container-fluid d-flex flex-column flex-shrink-0 page">
+        <div className="container-fluid d-flex flex-column flex-shrink-0 page mb-5">
             {/* BREADCRUMB */}
             <ol className="breadcrumb">
-                <li><a href="/">HOME</a></li>
-                <li className="label"><a href="/shop">SHOP ALL</a></li>
-                <li className="button"><a href="/bathroom">BATHROOM</a></li>
+                <li className="col-1"></li>
+                <li style={{color: "var(--tone-neutral-variant-60)"}}><a href="/">HOME</a></li>
+                <li style={{color: "var(--tone-neutral-variant-60)"}}><a href="/shop">SHOP ALL</a></li>
+                <li><a href="/bathroom">BATHROOM</a></li>
             </ol>
-            <div className="section row g-4">
-                <div className="d-flex flex-row justify-content-around">
-                    {/* HERO IMAGE */}
-                    <img src="/imgs/shop/bathroom.jpg"
-                         style={{"width": "636px", "height": "500px", "object-fit": "cover"}}/>
-
-                    {/* PAGE DESCRIPTION */}
-                    <div className="col-12 col-xxl-4 d-flex flex-column">
-                        <d3 style={{marginBottom: "0.5em"}}>
-                            Bathroom
-                        </d3>
-                        <div>
-                            <p>
-                                Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
+            <div className="container-fluid">
+                <div className="container">
+                    <div className="row g-4 d-flex">
+                        <div className="col-6">
+                            <img src="/imgs/room/bathroom.jpg" alt="bathroom"
+                                 style={{width: '100%', height: 'auto'}}/>
+                        </div>
+                        <div className="col-1"></div>
+                        <div className="col-5">
+                            <d3>BATHROOM</d3>
+                            <p className="p2" style={{
+                                marginTop: '48px',
+                                marginBottom: '20px',
+                                color: 'var(--scheme-on-background)'
+                            }}>Quia id omnis aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
                                 Ipsum voluptate Est velit et ex labori osam dolor est inventore quo numquam. Labore
                                 voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis aliquid
                                 suscipit recusandae similique. Vero natus sed animi reiciendis. Quia id omnis aliquid
                                 suscipit recusandae similique. Vero natus sed animi reiciendis. Ipsum voluptate Est
-                                velit et ex labori osam dolor est inventore quo.
-                            </p>
-                            <br/>
-                            <p>
+                                velit et ex labori osam dolor est inventore quo.</p>
+                            <p className="p2" style={{marginBottom: '20px', color: 'var(--scheme-on-background)'}}>
                                 Labore voluptas nihil molestiae sint delectus sint sequi voluptatem. Quia id omnis
                                 aliquid suscipit recusandae similique. Vero natus sed animi reiciendis.
                             </p>
-                            <br/>
                             <div className="d-flex flex-row gap-4">
-                                <div>
-                                    <p>Client</p><br/>
-                                    <p>Location</p><br/>
-                                    <p>Date</p><br/>
-                                    <p>Share</p><br/>
+                                <div className='flex-column'>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Client</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Location</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Date</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Share</p>
                                 </div>
-                                <div>
-                                    <p>Quode Interactive</p> <br/>
-                                    <p>New York, US</p><br/>
-                                    <p>March 14, 2023</p><br/>
-                                    <div className="d-flex flex-row">
-                                        <a href="#" className="mediaicon fa-brands fa-facebook"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-twitter"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-instagram"></a>
-                                        <a href="#" className="mediaicon fa-brands fa-pinterest"></a>
+                                <div className='flex-column'>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Qode Interactive</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>Newyork, US</p>
+                                    <p className="p2" style={{marginBottom: '20px'}}>March 14, 2023</p>
+                                    <div className="mediaIcon">
+                                        <a href="#" className="fa-brands fa-facebook"></a>
+                                        <a href="#" className="fa-brands fa-twitter"></a>
+                                        <a href="#" className="fa-brands fa-instagram"></a>
+                                        <a href="#" className="fa-brands fa-pinterest"></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-            {createSection('BATH', 'Bath Vanities',  "Bath Vanities")}
-            {createSection('STORAGE & SHELF', 'Bath shelf', "Bath Shelf")}
-            {createSection('LIGHT', "Wall Lighting", "Wall Lighting")}
-            {createSection('DECORATION', "Wall Decorations", "Wall Decorations")}
-            <div className="m-2"></div>
+
+            {createSection('BATH', 'Bath Vanities', ["Bath Vanities"])}
+            {createSection('STORAGE & SHELF', 'Bath Shelf', ["Bath Shelf"])}
+            {createSection('LIGHT', "Wall Lighting & Decorations", ["Wall Lighting", "Wall Decorations"])}
 
         </div>
     )
 
 }
 
-export default Bedroom
+export default Bathroom
