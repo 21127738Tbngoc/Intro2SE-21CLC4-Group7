@@ -178,7 +178,7 @@ const Home = () => {
             </div>
 
             {/* Designers */}
-            <div className="container-fluid designer-bg">
+            <div className="container-fluid designer-bg" style={{ marginTop: '56px'}}>
                 <div className="row justify-content-center text-center">
                     <d1 className="designer-bg-display">MEET OUR TALENTED DESIGNERS</d1>
                     <button className="designer-btn sec-btn btn-nm button1">VIEW DESIGNERS</button>
@@ -279,6 +279,8 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div className="container-fluid">
                 <div className="row mt-0">
                     <button className="articles-btn button1">VIEW ALL ARTICLES</button>
                 </div>

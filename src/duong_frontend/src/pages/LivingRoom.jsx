@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../components/button/buttons.css';
 import {ShopContext} from "../components/context/ShopContext";
 import {toast} from "react-toastify";
+import '../components/common.css';
 
 const LivingRoom = () => {
 
@@ -68,7 +69,7 @@ const LivingRoom = () => {
                                 <div onClick = {()=>{addToCart(row[i]._id)}} className="product-btn button2 no-right-border">ADD TO CART</div>
                                 <a href={`/product/${row[i]._id}`} className="product-btn button2">VIEW PRODUCT</a>
                             </div>
-                    </div>        
+                    </div>
                 )
             }
         }
@@ -106,15 +107,16 @@ const LivingRoom = () => {
     }
 
     return (
-        <div className="container-fluid d-flex flex-column flex-shrink-0 page mb-5">
+        <div className="container-fluid d-flex flex-column flex-shrink-0 page mb-5" style={{ boder: '1px solid var(--scheme-outline)', borderTop: 'none', borderLeft: 'none', borderRight: 'none'}}>
             <div className="container">
                 <ol className="breadcrumb">
-                    <li className="col-1"></li>
-                    <li style={{color:"var(--tone-neutral-variant-60)"}}><a href="/">HOME</a></li>
-                    <li style={{color:"var(--tone-neutral-variant-60)"}}><a href="/shop">SHOP ALL</a></li>
-                    <li><a href="/livingroom">LIVING ROOM</a></li>
+                    <li style={{ color: 'var(--tone-on-background)' }}><a href="/">HOME</a></li>
+                    <li style={{ color: 'var(--tone-on-background)' }}><a href="/shop">SHOP ALL</a></li>
+                    <li><a href="/livingroom"><strong>LIVING ROOM</strong></a></li>   
                 </ol>
             </div>
+            
+            
             {/* Hero img*/}
             <div className="container-fluid">
                 <div className="container">

@@ -56,23 +56,23 @@ const DiningRoom = () => {
             if (row[i]) {
                 components.push(
                     <div className="col-3">
-                            <div className="product-ctn">
-                                <div className="product-img">
-                                    <img src={row[i].thumbnail}/>
-                                    <span className="label2 tag-md tag-outline">SALE</span>
-                                </div>
-                                <div className="product-info">
-                                    <h6>{row[i].name}</h6>
-                                    <p className="p3 product-cat">{row[i].categories.join(" & ")}</p>
-                                    <p className="title2 py-1 product-price">$ {row[i].price}</p>
-                                    <img className="rating-star" src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(row[i].rating)}`}/>
-                                </div>
+                        <div className="product-ctn">
+                            <div className="product-img">
+                                <img src={row[i].thumbnail}/>
+                                <span className="label2 tag-md tag-outline">SALE</span>
                             </div>
-                            <div className="product-buttons justify-content-between">
-                                <div onClick = {()=>{addToCart(row[i]._id)}} className="product-btn button2 no-right-border">ADD TO CART</div>
-                                <a href={`/product/${row[i]._id}`} className="product-btn button2">VIEW PRODUCT</a>
+                            <div className="product-info">
+                                <h6>{row[i].name}</h6>
+                                <p className="p3 product-cat">{row[i].categories.join(" & ")}</p>
+                                <p className="title2 py-1 product-price">$ {row[i].price}</p>
+                                <img className="rating-star" src={`https://res.cloudinary.com/dxsvumas8/image/upload/v1703921412/rating-${Math.round(row[i].rating)}`}/>
                             </div>
-                    </div> 
+                        </div>
+                        <div className="product-buttons justify-content-between">
+                            <div onClick = {()=>{addToCart(row[i]._id)}} className="product-btn button2 no-right-border">ADD TO CART</div>
+                            <a href={`/product/${row[i]._id}`} className="product-btn button2">VIEW PRODUCT</a>
+                        </div>
+                    </div>
                 )
             }
         }
