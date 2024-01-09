@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext, } from 'react';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import { Helmet } from '../components/helmet/Helmet';
 import { Container, Row, Col, FormGroup } from 'reactstrap';
 import { Link, useNavigate } from 'react-router-dom';
@@ -20,6 +20,41 @@ const Home = () => {
     const [loading, setLoading] = useState(true);
     const { addToCart } = useContext(ShopContext);
     const [articlesData, setArticlesData] = useState([]);
+    const [inquiryInfo, setInquiryInfo] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        inquiry: ""
+    });
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setInquiryInfo((prevInfo) => ({
+            ...prevInfo,
+            [name]: value
+        }));
+    };
+    const handleSendInquiry = async () => {
+        try {
+            const response = await fetch('http://localhost:5000/api/contact/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(inquiryInfo),
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to send inquiry');
+            }
+
+            // Xử lý logic khi gửi inquiry thành công (có thể hiển thị thông báo)
+            toast.success('Inquiry sent successfully');
+
+        } catch (error) {
+            console.error('Error sending inquiry:', error);
+            toast.error('Error sending inquiry');
+        }
+    };
     function truncateString(str, maxLength) {
         if (str.length <= maxLength) {
             return str;
@@ -29,7 +64,7 @@ const Home = () => {
     }
     const HtmlRenderer = ({ htmlString }) => {
         return <div dangerouslySetInnerHTML={{ __html: htmlString }} />;
-      };
+    };
 
     const fetchArticleData = async () => {
         try {
@@ -314,7 +349,7 @@ const Home = () => {
                                 <div className="article-brief mb-3">
                                     <p className="p1"><HtmlRenderer htmlString={articlesData[0].description} /></p>
                                 </div>
-                                <button className="link-nm" style={{ padding: '0' } }>CONTINUE READING</button>
+                                <button className="link-nm" style={{ padding: '0' }}>CONTINUE READING</button>
                             </div>
                             <div className="col" style={{ marginTop: '30px' }}>
                                 <img src={articlesData[0].thumbnail} className="article-featured" />
@@ -337,7 +372,7 @@ const Home = () => {
                                     <img src={articlesData[0].thumbnail} className="article-img" />
                                     <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                     <h5 className="article-name">{articlesData[0].title}</h5>
-                               <div className="author align-items-center">
+                                    <div className="author align-items-center">
                                         <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" />
                                         <p className="label3 author-name me-1">{articlesData[0].author} </p>
                                         <p className="article-date"> • {articlesData[0].createdAt} • </p>
@@ -349,7 +384,7 @@ const Home = () => {
                                     <img src={articlesData[1].thumbnail} className="article-img" />
                                     <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                     <h5 className="article-name">{articlesData[1].title}</h5>
-                               <div className="author align-items-center">
+                                    <div className="author align-items-center">
                                         <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" />
                                         <p className="label3 author-name me-1">{articlesData[1].author} </p>
                                         <p className="article-date"> • {articlesData[1].createdAt} • </p>
@@ -361,7 +396,7 @@ const Home = () => {
                                     <img src={articlesData[2].thumbnail} className="article-img" />
                                     <p className="subtitle1 article-tag mt-4">TOURISM</p>
                                     <h5 className="article-name">{articlesData[2].title}</h5>
-                               <div className="author align-items-center">
+                                    <div className="author align-items-center">
                                         <img src="/imgs/avatars/avt-23.png" className="author-avatar me-2" />
                                         <p className="label3 author-name me-1">{articlesData[2].author} </p>
                                         <p className="article-date"> • {articlesData[2].createdAt} • </p>
@@ -383,47 +418,66 @@ const Home = () => {
                                     <div className="form-row">
                                         {/* Full name */}
                                         <div className="col mb-3">
-                                            <label for="fullName" className="form-label label1">
+                                            <label htmlFor="fullName" className="form-label label1">
                                                 Full name
                                             </label>
                                             <div className="input-with-icon">
                                                 <input
                                                     type="text"
+                                                    name="name"
                                                     placeholder="Enter your full name"
                                                     className="form-control form-nm"
                                                     required
+                                                    onChange={handleInputChange}
                                                 />
                                             </div>
                                         </div>
                                         {/* Phone */}
                                         <div className="col mb-3">
-                                            <label for="userName" className="form-label label1">
+                                            <label htmlFor="phone" className="form-label label1">
                                                 Phone
                                             </label>
                                             <div className="input-with-icon">
                                                 <input
                                                     type="text"
+                                                    name="phone"
                                                     placeholder="Enter your phone"
                                                     className="form-control form-nm"
                                                     required
+                                                    onChange={handleInputChange}
                                                 />
                                             </div>
                                         </div>
                                     </div>
                                     <div className="mb-4">
-                                        <label for="email" className="form-label label1">Email</label>
+                                        <label htmlFor="email" className="form-label label1">Email</label>
                                         <div className="input-with-icon">
                                             <input
                                                 type="email"
+                                                name="email"
                                                 className="form-control form-nm"
                                                 placeholder="Enter your email address here"
                                                 required
+                                                onChange={handleInputChange}
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="mb-4">
+                                        <label htmlFor="inquiry" className="form-label label1">Inquiry</label>
+                                        <div className="input-with-icon">
+                                            <textarea
+                                                name="inquiry"
+                                                className="form-control form-nm"
+                                                placeholder="Enter your inquiry here"
+                                                required
+                                                onChange={handleInputChange}
                                             />
                                         </div>
                                     </div>
                                 </form>
+                                <ToastContainer />
                                 <div className="inquiry-btn justify-content-between">
-                                    <button className="btn-nm prim-btn me-3" id="send-btn">SEND INQUIRY</button>
+                                    <button onClick={handleSendInquiry} className="btn-nm prim-btn me-3" id="send-btn">SEND INQUIRY</button>
                                     <button className="btn-nm sec-btn" id="contact-btn">CONTACT US</button>
                                 </div>
                             </div>
@@ -432,6 +486,7 @@ const Home = () => {
                 </div>
 
             </div>
+            
         );
     }
 }
