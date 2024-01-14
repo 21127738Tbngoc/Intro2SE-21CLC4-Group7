@@ -83,17 +83,17 @@
     --scheme-on-surface: #1A1C19;
     --scheme-surface-variant: #E1E4D7;
     --scheme-on-surface-variant: #44483F;
-    --scheme-outline: #75796E;
+    --scheme-outline: #A1B096;
     /*----------Feedback----------*/
     /*--Error--*/
-    --feedback-error-error: #F04438;
-    --feedback-error-on-error: #FEE4E2;
+    --feedback-error: #F04438;
+    --feedback-on-error: #FEE4E2;
     /*--Warning--*/
-    --feedback-warning-warning: #FDB022;
-    --feedback-warning-on-warning: #FFEDCC;
+    --feedback-warning: #FDB022;
+    --feedback-on-warning: #FFEDCC;
     /*--Success--*/
-    --feedback-success-success: #12B76A;
-    --feedback-success-on-success: #D1FADF;
+    --feedback-success: #12B76A;
+    --feedback-on-success: #D1FADF;
 }
 
 /*--Typography--*/
@@ -105,23 +105,23 @@
 }
 @font-face {
     font-family: bold-font;
-    src: url("../../public/fonts/AutautGrotesk-Bold.ttf"),
-         url("../../public/fonts/AutautGrotesk-Bold.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Bold.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Bold.woff");
 }   
 @font-face {
     font-family: semibold-font;
-    src: url("../../public/fonts/AutautGrotesk-Semibold.ttf"),
-         url("../../public/fonts/AutautGrotesk-Semibold.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Semibold.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Semibold.woff");
 }
 @font-face {
     font-family: medium-font;
-    src: url("../../public/fonts/AutautGrotesk-Medium.ttf"),
-         url("../../public/fonts/AutautGrotesk-Medium.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Medium.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Medium.woff");
 }
 @font-face {
     font-family: regular-font;
-    src: url("../../public/fonts/AutautGrotesk-Regular.ttf"),
-         url("../../public/fonts/AutautGrotesk-Regular.woff");
+    src: url("../../public/fonts/SF-Pro-Text-Regular.ttf"),
+         url("../../public/fonts/SF-Pro-Text-Regular.woff");
 }
 
 /*---------Font family---------*/
@@ -150,7 +150,6 @@ h1, h2, h3, h4, h5, h6 {
 /*---Body---*/
 p, .p1, .p2, .p3 {
     font-family: regular-font;
-    padding-top: 0.2rem;
 }
 
 .label1, .label2, .label3 {
@@ -159,13 +158,8 @@ p, .p1, .p2, .p3 {
 
 .support {
     font-family: medium-font;
-    padding-top: 0;
 }
 
-.product-price {
-    float: right;
-    font-family: medium-font, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 /*---------Font size---------*/
 /*---Display---*/
 d1 {
@@ -322,6 +316,8 @@ body {
 
 /*-- Link --*/
 a {
+    font-family: regular-font;
+    box-sizing: border-box;
     color: var(--tone-secondary-60);
     text-decoration: none;
 }
@@ -331,28 +327,277 @@ a:hover {
 }
 
 .slide-border {
-  position: relative;
-  text-decoration: none;
-  color: var(--tone-secondary-60);
-  display: inline-block; /* Ensures the width fits the content */
-  border-bottom: 1px solid transparent; /* Transparent border initially */
-  transition: border-bottom-color 0.6s ease; /* Transition effect on border color */
+    position: relative;
+    text-decoration: none;
+    color: var(--tone-secondary-60);
+    display: inline-block; /* Ensures the width fits the content */
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.8s ease;
 }
 
 .slide-border::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: var(--tone-secondary-60);
-  transition: width 0.6s ease, /* Transition effect for the sliding border width */
-              transform 0.6s ease; /* Transition effect for sliding from left */
-  transform-origin: left; /* Ensures transform origin is from the left */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    top: 1;
+    height: 1px;
+    background-color: var(--tone-secondary-60);
+    transition: width 0.8s ease, transform 0.8s ease;
+    transform-origin: left;
 }
 
 .slide-border:hover::before {
-  width: 100%; /* Slide in effect by expanding the width */
-  transform: scaleX(1); /* Scale the element from left to right */
+    width: 100%;
+    transform: scaleX(1);
+}
+
+/*-- Form --*/
+.form, .form-control, .input {
+    background: none;
+    border: 1.2px solid var(--scheme-outline);
+    border-radius: 4px;
+}
+
+.form-control {
+    padding: 16px;
+}
+
+.form-label {
+    color: var(--scheme-on-surface-variant);
+    font-family: semibold-font;
+}
+
+.form-control::placeholder {
+    font-family: regular-font;
+    color: var(--tone-neutral-variant-70);
+}
+
+/*-- Form size --*/
+.form-nm {
+    height: 60px;
+    padding: 16px 16px;
+    font-size: 18px;
+    font-family: regular-font;
+}
+
+.form-md {
+    height: 48px;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: regular-font;
+}
+
+.form-sm {
+    height: 40px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-family: regular-font;
+}
+
+.form-nm-icon {
+    height: 60px;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-family: regular-font;
+}
+
+.form-md-icon {
+    height: 48px;
+    padding: 12px 48px;
+    font-size: 16px;
+    font-family: regular-font;
+}
+
+.form-sm-icon {
+    height: 40px;
+    padding: 8px 48px;
+    font-size: 16px;
+    font-family: regular-font;
+}
+
+/*-- Input with icon --*/
+.input-with-icon {
+    position: relative;
+}
+
+.leading-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+.trailing-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/*-- Form states --*/
+form input:hover {
+    background: var(--tone-secondary-90);
+    border: 1.5px solid var(--tone-primary-40);
+}
+
+form input:focus {
+    background: none !important;
+    border: 1.5px solid var(--tone-primary-40) !important;
+    box-shadow: 0 0 0 0.25rem var(--scheme-secondary-container) !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.form-control:disabled {
+    background-color: var(--scheme-background) !important;
+    border: 1px solid var(--scheme-outline);
+    cursor: not-allowed;
+}
+
+/*-- Tag / Badge --*/
+
+/*------Product tag------*/
+/*--Size--*/
+.tag-nm {
+    border-radius: 3px;
+    display: inline-block;
+    padding: 6px 12px;
+    justify-content: center;
+    align-items: center; 
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+}
+.tag-md {
+    border-radius: 3px;
+    display: inline-block;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+}
+.tag-sm {
+    border-radius: 3px;
+    display: inline-block;
+    padding: 4px 12px;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    left: 1rem;
+    position: absolute;
+}
+/*--Style--*/
+.tag-fill {
+    background: var(--tone-primary-40);
+    color: var(--scheme-on-primary);
+    text-align: center;
+}
+.tag-outline {
+    background-color: none;
+    border: 1px solid var(--tone-primary-40);
+    color: var(--tone-primary-40);
+    text-align: center;
+}
+.tag-dark {
+    background-color: var(--scheme-secondary-container);
+    color: var(--scheme-on-secondary-container);
+    text-align: center;
+}
+
+/*--Select controls--*/
+.form-check {
+    margin: 0 0 16px 0;
+}
+.form-check-input {
+    margin: 0;
+}
+.form-check input[type=checkbox] {
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid var(--tone-primary-40);
+    background-color: var(--scheme-background);
+    box-shadow: none;
+    margin-right: 1em;
+}
+.form-check input[type=checkbox]:hover {
+    border: 1.5px solid var(--tone-primary-40);
+    background-color: var(--tone-secondary-90);
+}
+.form-check input[type=checkbox]:checked {
+    background: url("../../public/imgs/signup/checked.svg");
+    background-repeat: no-repeat;
+    border: none;
+}
+.form-check-label {
+    color: var(--scheme-on-background);
+    line-height: 24px;
+    font-family: regular-font;
+    margin-bottom: 0;
+}
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}   
+.input-with-icon {
+    flex: 1;
+}
+.file-input-container {
+    margin-bottom: 20px;
+}
+
+.file-input {
+    overflow: hidden;
+    position: relative;
+}
+
+.file-input input[type="file"] {
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10%;
+    width: 90%;
+    max-width: 100%;
+    z-index: -1;
+}
+.file-button {
+    border: 1px solid var(--scheme-outline);
+    border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    opacity: 1;
+}
+.file-input input:hover {
+    background: none;
+    border: 1px solid var(--scheme-outline);
+}
+
+/* Breadcrumb */
+
+.breadcrumb li:not(:last-child) a:after{
+    content: " /\00a0 ";  
+    margin-right: 8px;
+    margin-left: 8px;  
+}
+
+.breadcrumb a {
+    color: var(--tone-primary-40);
+    font-family: regular-font;
 }

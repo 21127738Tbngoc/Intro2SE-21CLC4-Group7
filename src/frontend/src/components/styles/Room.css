@@ -1,0 +1,46 @@
+/*.breadcrumb {
+    padding: 24px 0;
+    border: 1px solid var(--scheme-outline);
+    border-top: none;
+}
+
+.breadcrumb li:not(:last-child) a:after{
+    content: " /\00a0 ";    
+}
+
+.breadcrumb a {
+    color: var(--tone-primary-40);
+    font-family: regular-font;
+}*/
+
+@import url("../common.css");
+
+.title{
+    margin-bottom: 2rem;
+}
+
+.page {
+    gap: 2rem;
+}
+
+.section .row {
+    margin-bottom: 5rem;
+}
+
+.checked {
+    color: orange;
+}
+
+.product-ctn {
+    margin-top: 2em;
+}
+
+.mediaIcon {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.mediaIcon a {
+    color: var(--scheme-on-background);
+}

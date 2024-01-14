@@ -6,21 +6,27 @@ button {
     font-family: semibold-font;
     text-align: center;
 }
+a {
+    font-family: regular-font;
+}
 /*---------Button---------*/
 /*--- Size ---*/
 .btn-nm {
     font-size: 18px;
-    padding: 20px 24px;
+    padding: 18px 24px;
+    height: 60px;
 }
 
 .btn-md {
     font-size: 16px;
-    padding: 15px 24px;
+    padding: 14px 24px;
+    height: 48px;
 }
 
 .btn-sm {
     font-size: 14px;
-    padding: 13px 24px;
+    padding: 10px 24px;
+    height: 40px;
 }
 
 /* Button hierarchy */
@@ -52,19 +58,28 @@ button {
     transition: background-color 0.3s ease;
 }
 
-a.link-nm{
+.link-nm {
+    background: none;
+    border: none;
+    font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 18px;
     text-decoration: none;
 }
 
-a.link-md{
+.link-md {
+    background: none;
+    border: none;
+    font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 16px;
     text-decoration: none;
 }
 
-a.link-sm{
+.link-sm {
+    background: none;
+    border: none;
+    font-family: semibold-font;
     color: var(--tone-primary-40);
     font-size: 14px;
     text-decoration: none;
@@ -101,6 +116,11 @@ a.link-sm{
     border: none;
 }
 
+.link-nm:hover, .link-md:hover, .link-sm:hover {
+    color: var(--tone-primary-50);
+    text-decoration: underline;
+}
+
 .link-disabled {
     color: var(--tone-neutral-80) !important;
     cursor: default !important;
@@ -114,6 +134,9 @@ a.link-sm{
     width: 60px;
     border: none;
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .i-btn-md {
@@ -122,6 +145,9 @@ a.link-sm{
     width: 48px;
     border: none;
     font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .i-btn-sm {
@@ -129,8 +155,11 @@ a.link-sm{
     height: 40px;
     width: 40px;
     border: none;
-    padding: 11px;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 /*--- Hierarchy---*/
@@ -154,7 +183,7 @@ a.link-sm{
 
 .outline-i-btn {
     background: none;
-    border: 1px solid var(--tone-primary-40);
+    border: 1.5px solid var(--tone-primary-40);
     transition: background-color 0.3s ease;
 }
 
@@ -188,6 +217,6 @@ a.link-sm{
 
 .noborder-i-btn:hover {
     background: none;
-    border: 1px solid var(--tone-primary-40);
+    border: 1.5px solid var(--tone-primary-40);
     transition: .4s;
 }

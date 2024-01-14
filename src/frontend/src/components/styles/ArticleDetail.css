@@ -1,0 +1,14 @@
+.pagecontent .row{
+    margin-bottom: 2rem;
+}
+
+.useravt {
+    border-radius: 50%;
+}
+
+.tag {
+    border: 1px solid var(--tone-primary-40, #46692A);
+    padding: 6px 12px;
+    border-radius: 3px;
+
+}

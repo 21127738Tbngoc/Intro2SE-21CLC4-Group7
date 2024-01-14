@@ -9,9 +9,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../button/buttons.css">
     <link rel="stylesheet" href="../common.css">
-    <link rel="stylesheet" href="./navbar.css">
-    <!-- Icons -->
-<title>Navbar</title>
+    <link rel="stylesheet" href="../styles/navbar.css">
+    <title>Navbar</title>
 </head>
 <body>
     <!-- Navbar -->
@@ -29,6 +28,7 @@
             <div class="d-flex flex-row g-4 align-items-center">
                 <h5><img src="../../../public/imgs/navbar/logo.svg" alt="Fitment"></h5>
             </div>
+
             <!-- Cart & Account -->
             <div class="d-flex align-items-center">
                 <div class="d-flex flex-row align-items-center">
@@ -39,9 +39,27 @@
                         <p class="support align-items-center">0</p>
                     </div>
                 </div>
-                <div class="d-flex flex-row align-items-center">
-                    <h5 class="mx-2"><img src="../../../public/imgs/navbar/profile-icon.svg" alt="Profile"></h5>
-                    <p class="button2 align-items-center">ACCOUNT</p>
+                <div class="dropdown">
+                    <div class="d-flex flex-row align-items-center" id="dropdownToggle">
+                      <h5 class="mx-2"><img src="../../../public/imgs/navbar/profile-icon.svg" alt="Profile"></h5>
+                      <p class="button2 align-items-center" id="dropdownButton">ACCOUNT</p>
+                    </div>
+                    <ul class="dropdown-content" id="dropdownContent">
+                        <!-- Login -->
+                        <li>
+                            <a href="#" id="signIn" class="list-item">
+                                <img src="../../../public/imgs/navbar/login.svg" alt="login">
+                                <span>Sign In</span>
+                            </a>
+                        </li>
+                        <!-- Sign Up -->
+                        <li>
+                            <a href="#" id="signUp" class="list-item">
+                                <img src="../../../public/imgs/navbar/signup.svg" alt="login">
+                                <span>Sign Up</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -54,90 +72,90 @@
                         <img src="../../../public/imgs/navbar/close-icon.svg" alt="Close icon">
                     </h5>
                 </div>
-                <h2 class="navbar-cart-title">Shopping Cart</h2>
+                <h3 class="navbar-cart-title">Shopping Cart</h3>
                 <ul class="cart-item-list-section">
-                    <li class="d-flex justify-content-between mb-2 cart-item ">
-                        <img src="../../../public/imgs/navbar/productimg.png" alt="Product Image">
-                        <div class="cart-item-info mx-auto">
-                            <p class="subtitle2">Singapore Dark Rattan Arm Chair</p>
+                    <li class="d-flex justify-content-between mb-1 cart-item ">
+                        <img src="../../../public/imgs/product/Eskil/shop-28-img-1.jpg" class="cart-item-img" alt="Product Image">
+                        <div class="cart-item-info my-auto">
+                            <p class="title2">Singapore Dark Rattan Arm Chair</p>
                             <div class="d-inline">
                                 <p class="support d-inline">Size M</p>
-                                <p class="subtitle2 d-inline">.</p>
+                                <p class="d-inline">|</p>
                                 <p class="support d-inline">Black</p>
-                                <p class="subtitle2 d-inline">.</p>
+                                <p class="d-inline">|</p>
                                 <p class="support d-inline">SKU 001</p>
                             </div>
-                            <div class="mt-2 cart-item-quantity-section">
-                                <p class="subtitle2 d-inline">$ 1,500</p>
+                            <div class="mt-2">
+                                <p class="d-inline product-price">1,500</p>
                                 <div class="d-inline cart-item-quantity mx-3">
                                     <img src="../../../public/imgs/navbar/minus.svg" alt="Dot">
                                     <p class="p3 d-inline">2</p>
                                     <img src="../../../public/imgs/navbar/plus.svg" alt="Dot">
                                 </div>
-                                <p class="subtitle2 d-inline">$ 3,000</p>
+                                <p class="d-inline product-price">3,000</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
                             <a href="#">
-                                <button class="outline-i-btn i-btn-nm">
+                                <button class="outline-i-btn i-btn-sm">
                                     <img src="../../../public/imgs/navbar/trashcan.svg" alt="trashcan">
                                 </button>
                             </a>
                         </div>
                     </li>
-                    <li class="d-flex justify-content-between mb-2 cart-item ">
-                        <img src="../../../public/imgs/navbar/productimg.png" alt="Product Image">
-                        <div class="cart-item-info mx-auto">
-                            <p class="subtitle2">Singapore Dark Rattan Arm Chair</p>
+                    <li class="d-flex justify-content-between mb-1 cart-item ">
+                        <img src="../../../public/imgs/product/Eskil/shop-5-img-1.jpg" class="cart-item-img" alt="Product Image">
+                        <div class="cart-item-info my-auto">
+                            <p class="title2">Singapore Dark Rattan Arm Chair</p>
                             <div class="d-inline">
                                 <p class="support d-inline">Size M</p>
-                                <p class="subtitle2 d-inline">.</p>
+                                <p class="d-inline">|</p>
                                 <p class="support d-inline">Black</p>
-                                <p class="subtitle2 d-inline">.</p>
+                                <p class="d-inline">|</p>
                                 <p class="support d-inline">SKU 001</p>
                             </div>
                             <div class="mt-2">
-                                <p class="subtitle2 d-inline">$ 1,500</p>
+                                <p class="d-inline product-price">1,500</p>
                                 <div class="d-inline cart-item-quantity mx-3">
                                     <img src="../../../public/imgs/navbar/minus.svg" alt="Dot">
                                     <p class="p3 d-inline">2</p>
                                     <img src="../../../public/imgs/navbar/plus.svg" alt="Dot">
                                 </div>
-                                <p class="subtitle2 d-inline">$ 3,000</p>
+                                <p class="d-inline product-price">3,000</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
                             <a href="#">
-                                <button class="outline-i-btn i-btn-nm">
+                                <button class="outline-i-btn i-btn-sm">
                                     <img src="../../../public/imgs/navbar/trashcan.svg" alt="trashcan">
                                 </button>
                             </a>
                         </div>
                     </li>
-                    <li class="d-flex justify-content-between mb-2 cart-item ">
-                        <img src="../../../public/imgs/navbar/productimg.png" alt="Product Image">
-                        <div class="cart-item-info mx-auto">
-                            <p class="subtitle2">Singapore Dark Rattan Arm Chair</p>
+                    <li class="d-flex justify-content-between mb-1 cart-item ">
+                        <img src="../../../public/imgs/product/Eskil/lamp-01-hover-img.jpg" class="cart-item-img" alt="Product Image">
+                        <div class="cart-item-info my-auto">
+                            <p class="title2">Singapore Dark Rattan Arm Chair</p>
                             <div class="d-inline">
                                 <p class="support d-inline">Size M</p>
-                                <p class="subtitle2 d-inline">.</p>
+                                <p class="d-inline">|</p>
                                 <p class="support d-inline">Black</p>
-                                <p class="subtitle2 d-inline">.</p>
+                                <p class="d-inline">|</p>
                                 <p class="support d-inline">SKU 001</p>
                             </div>
                             <div class="mt-2">
-                                <p class="subtitle2 d-inline">$ 1,500</p>
+                                <p class="d-inline product-price">1,500</p>
                                 <div class="d-inline cart-item-quantity mx-3">
                                     <img src="../../../public/imgs/navbar/minus.svg" alt="Dot">
                                     <p class="p3 d-inline">2</p>
                                     <img src="../../../public/imgs/navbar/plus.svg" alt="Dot">
                                 </div>
-                                <p class="subtitle2 d-inline">$ 3,000</p>
+                                <p class="d-inline product-price">3,000</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center">
                             <a href="#">
-                                <button class="outline-i-btn i-btn-nm">
+                                <button class="outline-i-btn i-btn-sm">
                                     <img src="../../../public/imgs/navbar/trashcan.svg" alt="trashcan">
                                 </button>
                             </a>
@@ -146,22 +164,27 @@
                 </ul>
                 <div class="d-flex justify-content-between align-content-center cart-total-section">
                     <h4>TOTAL</h4>
-                    <h4> $ 4,895</h4>
+                    <h4 class="product-price">$ 4,895</h4>
                 </div>
-                <button class="prim-btn btn-nm w-100">
-                    SIGN UP
-                </button>
+                <div class="d-flex">
+                    <button class="prim-btn btn-md w-50 me-2">
+                        VIEW CART
+                    </button>
+                    <button class="sec-btn btn-md w-50">
+                        CHECKOUT
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+
     <!-- Megamenu -->
     <div class="container-fluid navbar-menu">
         <div class="container-xxl d-flex">
-            <!--<div class="row g-4 w-100 ">-->
                 <div class="col-xxl-7">
-                    <div class="row">
+                    <div class="d-flex">
                         <div class="col-xxl-3">
-                            <d4>ABOUT</d4>
+                            <d5>ABOUT</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">ABOUT US</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">OUR PARTNERS</a></li>
@@ -169,7 +192,7 @@
                             </ul>
                         </div>
                         <div class="col-xxl-3">
-                            <d4>SHOP</d4>
+                            <d5>SHOP</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">SHOP ALL</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">LIVING ROOM</a></li>
@@ -179,7 +202,7 @@
                             </ul>
                         </div>
                         <div class="col-xxl-3 ">
-                            <d4>SUPPORT</d4>
+                            <d5>SUPPORT</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">FAQS</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">CONTACT</a></li>
@@ -187,9 +210,9 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="d-flex">
                         <div class="col-xxl-3">
-                            <d4>SERVICE</d4>
+                            <d5>SERVICE</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">MAINTENANCE</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">ASSEMBLY</a></li>
@@ -198,7 +221,7 @@
                             </ul>
                         </div>
                         <div class="col-xxl-3 ">
-                            <d4>MEDIA</d4>
+                            <d5>MEDIA</d5>
                             <ul class="flex-column mt-3">
                                 <li class="p1 mb-2"><a href="#" class="slide-border">ARTICLES</a></li>
                                 <li class="p1 mb-2"><a href="#" class="slide-border">COMMUNITY</a></li>
@@ -245,9 +268,11 @@
                         <a href="#" class="button1 view-more-btn">View more</a>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </div>
+
+    <!-- Body -->
     <div class="content-page">
         <p >
             dasdasdsadasdLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -493,6 +518,6 @@
             
         </p>
     </div>
-    <script src="./navbar.js"></script>
+    <script src="./navbar_.js"></script>
 </body>
 </html>

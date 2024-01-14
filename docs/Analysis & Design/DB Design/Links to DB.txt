@@ -1,0 +1,5 @@
+Link to MongoDB Compass:
+http://se.wn06kv0.mongodb.net/?retryWrites=true&w=majority&fbclid=IwAR2uDVFExjgXPESrCwXngFyQFdFJ3HRyAGHAg884X9BjftY5L68pOznPS6Q
+
+Link to Sample Database:
+https://docs.google.com/spreadsheets/d/13KxjZk-Psft2nTjoUB92Z0n95fWqIJfD/edit?usp=sharing&ouid=111996132435274948417&rtpof=true&sd=true
